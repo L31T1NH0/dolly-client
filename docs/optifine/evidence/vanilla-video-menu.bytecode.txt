@@ -1,0 +1,200 @@
+CLASS ayb SHA256 8553dafbdb6303a0962edd7777ed7a61cc3017fde5131c992d0bb8281aa7749c
+
+METHOD b ()V
+    0 aload_0            
+    1 ldc                options.videoTitle
+    3 iconst_0           
+    4 anewarray          java/lang/Object
+    7 invokestatic       bnq.a:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+   10 putfield           ayb.a:Ljava/lang/String;
+   13 aload_0            
+   14 getfield           ayb.n:Ljava/util/List;
+   17 invokeinterface    java/util/List.clear:()V 0100
+   22 aload_0            
+   23 getfield           ayb.n:Ljava/util/List;
+   26 new                avs
+   29 dup                
+   30 sipush             200
+   33 aload_0            
+   34 getfield           ayb.l:I
+   37 iconst_2           
+   38 idiv               
+   39 bipush             100
+   41 isub               
+   42 aload_0            
+   43 getfield           ayb.m:I
+   46 bipush             27
+   48 isub               
+   49 ldc                gui.done
+   51 iconst_0           
+   52 anewarray          java/lang/Object
+   55 invokestatic       bnq.a:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+   58 invokespecial      avs.<init>:(IIILjava/lang/String;)V
+   61 invokeinterface    java/util/List.add:(Ljava/lang/Object;)Z 0200
+   66 pop                
+   67 getstatic          bqs.P:Z
+   70 ifne               172
+   73 getstatic          ayb.i:[Lavh$a;
+   76 arraylength        
+   77 iconst_1           
+   78 isub               
+   79 anewarray          avh$a
+   82 astore_1           
+   83 iconst_0           
+   84 istore_2           
+   85 getstatic          ayb.i:[Lavh$a;
+   88 astore_3           
+   89 aload_3            
+   90 arraylength        
+   91 istore             4
+   93 iconst_0           
+   94 istore             5
+   96 iload              5
+   98 iload              4
+  100 if_icmpge          134
+  103 aload_3            
+  104 iload              5
+  106 aaload             
+  107 astore             6
+  109 aload              6
+  111 getstatic          avh$a.x:Lavh$a;
+  114 if_acmpne          120
+  117 goto               134
+  120 aload_1            
+  121 iload_2            
+  122 aload              6
+  124 aastore            
+  125 iinc               0201
+  128 iinc               0501
+  131 goto               96
+  134 aload_0            
+  135 new                awf
+  138 dup                
+  139 aload_0            
+  140 getfield           ayb.j:Lave;
+  143 aload_0            
+  144 getfield           ayb.l:I
+  147 aload_0            
+  148 getfield           ayb.m:I
+  151 bipush             32
+  153 aload_0            
+  154 getfield           ayb.m:I
+  157 bipush             32
+  159 isub               
+  160 bipush             25
+  162 aload_1            
+  163 invokespecial      awf.<init>:(Lave;IIIII[Lavh$a;)V
+  166 putfield           ayb.h:Lawd;
+  169 goto               209
+  172 aload_0            
+  173 new                awf
+  176 dup                
+  177 aload_0            
+  178 getfield           ayb.j:Lave;
+  181 aload_0            
+  182 getfield           ayb.l:I
+  185 aload_0            
+  186 getfield           ayb.m:I
+  189 bipush             32
+  191 aload_0            
+  192 getfield           ayb.m:I
+  195 bipush             32
+  197 isub               
+  198 bipush             25
+  200 getstatic          ayb.i:[Lavh$a;
+  203 invokespecial      awf.<init>:(Lave;IIIII[Lavh$a;)V
+  206 putfield           ayb.h:Lawd;
+  209 return             
+
+
+METHOD <clinit> ()V
+    0 bipush             16
+    2 anewarray          avh$a
+    5 dup                
+    6 iconst_0           
+    7 getstatic          avh$a.l:Lavh$a;
+   10 aastore            
+   11 dup                
+   12 iconst_1           
+   13 getstatic          avh$a.f:Lavh$a;
+   16 aastore            
+   17 dup                
+   18 iconst_2           
+   19 getstatic          avh$a.m:Lavh$a;
+   22 aastore            
+   23 dup                
+   24 iconst_3           
+   25 getstatic          avh$a.i:Lavh$a;
+   28 aastore            
+   29 dup                
+   30 iconst_4           
+   31 getstatic          avh$a.h:Lavh$a;
+   34 aastore            
+   35 dup                
+   36 iconst_5           
+   37 getstatic          avh$a.g:Lavh$a;
+   40 aastore            
+   41 dup                
+   42 bipush             6
+   44 getstatic          avh$a.n:Lavh$a;
+   47 aastore            
+   48 dup                
+   49 bipush             7
+   51 getstatic          avh$a.d:Lavh$a;
+   54 aastore            
+   55 dup                
+   56 bipush             8
+   58 getstatic          avh$a.k:Lavh$a;
+   61 aastore            
+   62 dup                
+   63 bipush             9
+   65 getstatic          avh$a.o:Lavh$a;
+   68 aastore            
+   69 dup                
+   70 bipush             10
+   72 getstatic          avh$a.v:Lavh$a;
+   75 aastore            
+   76 dup                
+   77 bipush             11
+   79 getstatic          avh$a.w:Lavh$a;
+   82 aastore            
+   83 dup                
+   84 bipush             12
+   86 getstatic          avh$a.D:Lavh$a;
+   89 aastore            
+   90 dup                
+   91 bipush             13
+   93 getstatic          avh$a.P:Lavh$a;
+   96 aastore            
+   97 dup                
+   98 bipush             14
+  100 getstatic          avh$a.x:Lavh$a;
+  103 aastore            
+  104 dup                
+  105 bipush             15
+  107 getstatic          avh$a.R:Lavh$a;
+  110 aastore            
+  111 putstatic          ayb.i:[Lavh$a;
+  114 return             
+
+CLASS avh$a SHA256 cd2a4d073e8016ea4548f55806783b7f2e4618305e51616566bffbfbd69c2ac0
+
+METHOD <clinit> ()V [EXCERPT offsets 430..447]
+
+  430 new                avh$a
+
+  433 dup                
+
+  434 ldc_w              USE_VBO
+
+  437 bipush             23
+
+  439 ldc_w              options.vbo
+
+  442 iconst_0           
+
+  443 iconst_1           
+
+  444 invokespecial      avh$a.<init>:(Ljava/lang/String;ILjava/lang/String;ZZ)V
+
+  447 putstatic          avh$a.x:Lavh$a;

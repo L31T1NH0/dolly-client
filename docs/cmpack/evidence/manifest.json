@@ -1,0 +1,91 @@
+{
+  "archive_sha256": "43e45120f1ffaf8793b692427a9b6eea376aadc56b054c608861b548a51722cc",
+  "app_jar_sha256": "464347bee470967072e3b7a2536d95e1f87645c1a02d2f8b0f120fcc9ebc4a80",
+  "classes": [
+    {
+      "class": "D",
+      "sha256": "2298e939b8beba4f267d32f214524f785d8cb9d91a8bc4b8c1868901a6a5295b",
+      "methods": [
+        "<init>"
+      ]
+    },
+    {
+      "class": "ir",
+      "sha256": "039df8e43227cedd8280a354d77b7923d704a8e1b42819f43270128bf552562a",
+      "methods": [
+        "gr",
+        "gy",
+        "c",
+        "hC (excerpt)"
+      ]
+    },
+    {
+      "class": "zX",
+      "sha256": "be841bdcbde09187daf7c89a962daa9a03085cb4b2f1719fde48b78999e93d51",
+      "methods": [
+        "at"
+      ]
+    },
+    {
+      "class": "zI",
+      "sha256": "e51c12ed4b312fee6d1a0b42d35898ca1f183ca63035aeaa46d959ce9233fee6",
+      "methods": [
+        "at",
+        "q (DF)LPY;"
+      ]
+    },
+    {
+      "class": "wn",
+      "sha256": "fd6f6160d0461b91662e22bb336cbb75284ec8f8692755bae13f30c9c06f30b1",
+      "methods": [
+        "vh"
+      ]
+    },
+    {
+      "class": "kB",
+      "sha256": "33b277021666d64c986ab15a13530f7609c3f70e8191895739b9bb8d22c2d8d3",
+      "methods": [
+        "kU"
+      ]
+    },
+    {
+      "class": "an",
+      "sha256": "39c77799700ac42be2c414e4b148e397380597d7873288a6d07914b2de2201ee",
+      "methods": [
+        "<init>"
+      ]
+    },
+    {
+      "class": "afM",
+      "sha256": "4b5205af3bf7f64e3c182acda72d371bd49af9d4262aebef51da3a52d2ec3218",
+      "methods": [
+        "auD",
+        "auF"
+      ]
+    },
+    {
+      "class": "afN",
+      "sha256": "761cb4b19ebc5b8aecfe10d1cea107314c2cba059d13e63c78ee30444ebb34b1",
+      "methods": [
+        "Vl"
+      ]
+    },
+    {
+      "class": "ng",
+      "sha256": "72a59e757862a0cb02e420eeab5d3e83c79744f7ee07fbc3c3b7d797a456f968",
+      "methods": [
+        "mH",
+        "r"
+      ]
+    },
+    {
+      "class": "bP",
+      "sha256": "253a44471467a8a7dbb67562bcb70bb81032fbcbfc31589bab3f649f84602c06",
+      "methods": [
+        "s",
+        "ak"
+      ]
+    }
+  ],
+  "method": "Static JVM bytecode inspection. Constant pool references resolved; original instruction offsets retained. Selected classes also inspected with JDK javap. No target code executed."
+}

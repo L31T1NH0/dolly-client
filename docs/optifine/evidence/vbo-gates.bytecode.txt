@@ -1,0 +1,626 @@
+# OptiFine 1.8.9 HD_U_M5 — VBO eligibility / settings evidence
+# Static JVM disassembly excerpts; offsets retained. Not recovered original source.
+# OptiFine archive SHA-256: 2739760a70fca6ae5c7dc817bcc6283f18f55e38fa23778da7f387a6b724b2c4
+# Vanilla input SHA-256: 14f0d96d1a56fb4f5c3b2233d00699525893fe5ce3dcf181e7de59120595d298
+# Patched class identity from reconstruction; declared MD5 verified. No target execution.
+# Only intervals explicitly listed below are retained; other code omitted.
+
+===========================================================================
+SOURCE vanilla CLASS bqs SHA-256 88a51a8c7cb80d5c24a1788597dd06837ea00c2987d30beb5fce1e32aee40da5
+METHOD f ()Z
+    0 getstatic          bqs.P:Z
+    3 ifeq               22
+    6 invokestatic       ave.A:()Lave;
+    9 getfield           ave.t:Lavh;
+   12 getfield           avh.u:Z
+   15 ifeq               22
+   18 iconst_1           
+   19 goto               23
+   22 iconst_0           
+   23 ireturn            
+
+===========================================================================
+SOURCE vanilla CLASS bqs SHA-256 88a51a8c7cb80d5c24a1788597dd06837ea00c2987d30beb5fce1e32aee40da5
+METHOD i ()Z
+    0 getstatic          bqs.l:Z
+    3 ifeq               22
+    6 invokestatic       ave.A:()Lave;
+    9 getfield           ave.t:Lavh;
+   12 getfield           avh.f:Z
+   15 ifeq               22
+   18 iconst_1           
+   19 goto               23
+   22 iconst_0           
+   23 ireturn            
+
+===========================================================================
+SOURCE vanilla CLASS avh SHA-256 a239340264ca29805ca53e52609e0d4d27d692244534c5d575dd346e6c64e399
+METHOD <init> (Lave;Ljava/io/File;)V
+# EXCERPT offsets 92..104; other code omitted
+   92 aload_0            
+   93 iconst_1           
+   94 putfield           avh.t:Z
+   97 aload_0            
+   98 iconst_0           
+   99 putfield           avh.u:Z
+  102 aload_0            
+  103 iconst_1           
+  104 putfield           avh.v:Z
+
+===========================================================================
+SOURCE patched CLASS bqs SHA-256 6e51da6383889c601142ab90c8f48fb3d5418eb6c3431458651d2f8389560ff3
+METHOD f ()Z
+    0 invokestatic       Config.isMultiTexture:()Z
+    3 ifeq               8
+    6 iconst_0           
+    7 ireturn            
+    8 invokestatic       Config.isRenderRegions:()Z
+   11 ifeq               22
+   14 getstatic          bqs.vboRegions:Z
+   17 ifne               22
+   20 iconst_0           
+   21 ireturn            
+   22 getstatic          bqs.P:Z
+   25 ifeq               44
+   28 invokestatic       ave.A:()Lave;
+   31 getfield           ave.t:Lavh;
+   34 getfield           avh.u:Z
+   37 ifeq               44
+   40 iconst_1           
+   41 goto               45
+   44 iconst_0           
+   45 ireturn            
+
+===========================================================================
+SOURCE patched CLASS bqs SHA-256 6e51da6383889c601142ab90c8f48fb3d5418eb6c3431458651d2f8389560ff3
+METHOD i ()Z
+    0 invokestatic       Config.isFastRender:()Z
+    3 ifeq               8
+    6 iconst_0           
+    7 ireturn            
+    8 invokestatic       Config.isAntialiasing:()Z
+   11 ifeq               16
+   14 iconst_0           
+   15 ireturn            
+   16 getstatic          bqs.l:Z
+   19 ifeq               38
+   22 invokestatic       ave.A:()Lave;
+   25 getfield           ave.t:Lavh;
+   28 getfield           avh.f:Z
+   31 ifeq               38
+   34 iconst_1           
+   35 goto               39
+   38 iconst_0           
+   39 ireturn            
+
+===========================================================================
+SOURCE patched CLASS avh SHA-256 d5b070893c86317bb5fefb6d2984e09c96129ebe4036be2e52910e9d2d69ae14
+METHOD <init> (Lave;Ljava/io/File;)V
+# EXCERPT offsets 92..104; other code omitted
+   92 aload_0            
+   93 iconst_1           
+   94 putfield           avh.t:Z
+   97 aload_0            
+   98 iconst_0           
+   99 putfield           avh.u:Z
+  102 aload_0            
+  103 iconst_1           
+  104 putfield           avh.v:Z
+
+===========================================================================
+SOURCE patched CLASS bqs SHA-256 6e51da6383889c601142ab90c8f48fb3d5418eb6c3431458651d2f8389560ff3
+METHOD a ()V
+# EXCERPT offsets 0..225; other code omitted
+    0 invokestatic       Config.initDisplay:()V
+    3 invokestatic       org/lwjgl/opengl/GLContext.getCapabilities:()Lorg/lwjgl/opengl/ContextCapabilities;
+    6 astore_0           
+    7 aload_0            
+    8 getfield           org/lwjgl/opengl/ContextCapabilities.GL_ARB_multitexture:Z
+   11 ifeq               25
+   14 aload_0            
+   15 getfield           org/lwjgl/opengl/ContextCapabilities.OpenGL13:Z
+   18 ifne               25
+   21 iconst_1           
+   22 goto               26
+   25 iconst_0           
+   26 putstatic          bqs.W:Z
+   29 aload_0            
+   30 getfield           org/lwjgl/opengl/ContextCapabilities.GL_ARB_texture_env_combine:Z
+   33 ifeq               47
+   36 aload_0            
+   37 getfield           org/lwjgl/opengl/ContextCapabilities.OpenGL13:Z
+   40 ifne               47
+   43 iconst_1           
+   44 goto               48
+   47 iconst_0           
+   48 putstatic          bqs.X:Z
+   51 aload_0            
+   52 getfield           org/lwjgl/opengl/ContextCapabilities.OpenGL31:Z
+   55 putstatic          bqs.openGL31:Z
+   58 getstatic          bqs.openGL31:Z
+   61 ifeq               77
+   64 ldc                36662
+   66 putstatic          bqs.GL_COPY_READ_BUFFER:I
+   69 ldc                36663
+   71 putstatic          bqs.GL_COPY_WRITE_BUFFER:I
+   74 goto               87
+   77 ldc                36662
+   79 putstatic          bqs.GL_COPY_READ_BUFFER:I
+   82 ldc                36663
+   84 putstatic          bqs.GL_COPY_WRITE_BUFFER:I
+   87 getstatic          bqs.openGL31:Z
+   90 ifne               100
+   93 aload_0            
+   94 getfield           org/lwjgl/opengl/ContextCapabilities.GL_ARB_copy_buffer:Z
+   97 ifeq               104
+  100 iconst_1           
+  101 goto               105
+  104 iconst_0           
+  105 istore_1           
+  106 aload_0            
+  107 getfield           org/lwjgl/opengl/ContextCapabilities.OpenGL14:Z
+  110 istore_2           
+  111 iload_1            
+  112 ifeq               123
+  115 iload_2            
+  116 ifeq               123
+  119 iconst_1           
+  120 goto               124
+  123 iconst_0           
+  124 putstatic          bqs.vboRegions:Z
+  127 getstatic          bqs.vboRegions:Z
+  130 ifne               225
+  133 new                java/util/ArrayList
+  136 dup                
+  137 invokespecial      java/util/ArrayList.<init>:()V
+  140 astore_3           
+  141 iload_1            
+  142 ifne               154
+  145 aload_3            
+  146 ldc                OpenGL 1.3, ARB_copy_buffer
+  148 invokeinterface    java/util/List.add:(Ljava/lang/Object;)Z 0200
+  153 pop                
+  154 iload_2            
+  155 ifne               167
+  158 aload_3            
+  159 ldc                OpenGL 1.4
+  161 invokeinterface    java/util/List.add:(Ljava/lang/Object;)Z 0200
+  166 pop                
+  167 new                java/lang/StringBuilder
+  170 dup                
+  171 invokespecial      java/lang/StringBuilder.<init>:()V
+  174 ldc                VboRegions not supported, missing: 
+  176 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  179 aload_3            
+  180 invokestatic       Config.listToString:(Ljava/util/List;)Ljava/lang/String;
+  183 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  186 invokevirtual      java/lang/StringBuilder.toString:()Ljava/lang/String;
+  189 astore             4
+  191 aload              4
+  193 invokestatic       Config.dbg:(Ljava/lang/String;)V
+  196 new                java/lang/StringBuilder
+  199 dup                
+  200 invokespecial      java/lang/StringBuilder.<init>:()V
+  203 getstatic          bqs.Z:Ljava/lang/String;
+  206 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  209 aload              4
+  211 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  214 ldc                
+  216 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  219 invokevirtual      java/lang/StringBuilder.toString:()Ljava/lang/String;
+  222 putstatic          bqs.Z:Ljava/lang/String;
+  225 getstatic          bqs.W:Z
+# EXCERPT offsets 1679..1722; other code omitted
+ 1679 aload_0            
+ 1680 getfield           org/lwjgl/opengl/ContextCapabilities.OpenGL15:Z
+ 1683 ifne               1697
+ 1686 aload_0            
+ 1687 getfield           org/lwjgl/opengl/ContextCapabilities.GL_ARB_vertex_buffer_object:Z
+ 1690 ifeq               1697
+ 1693 iconst_1           
+ 1694 goto               1698
+ 1697 iconst_0           
+ 1698 putstatic          bqs.ab:Z
+ 1701 aload_0            
+ 1702 getfield           org/lwjgl/opengl/ContextCapabilities.OpenGL15:Z
+ 1705 ifne               1714
+ 1708 getstatic          bqs.ab:Z
+ 1711 ifeq               1718
+ 1714 iconst_1           
+ 1715 goto               1719
+ 1718 iconst_0           
+ 1719 putstatic          bqs.P:Z
+ 1722 new                java/lang/StringBuilder
+
+===========================================================================
+SOURCE patched CLASS bqs SHA-256 6e51da6383889c601142ab90c8f48fb3d5418eb6c3431458651d2f8389560ff3
+METHOD glCopyBufferSubData (IIJJJ)V
+    0 getstatic          bqs.openGL31:Z
+    3 ifeq               19
+    6 iload_0            
+    7 iload_1            
+    8 lload_2            
+    9 lload              4
+   11 lload              6
+   13 invokestatic       org/lwjgl/opengl/GL31.glCopyBufferSubData:(IIJJJ)V
+   16 goto               29
+   19 iload_0            
+   20 iload_1            
+   21 lload_2            
+   22 lload              4
+   24 lload              6
+   26 invokestatic       org/lwjgl/opengl/ARBCopyBuffer.glCopyBufferSubData:(IIJJJ)V
+   29 return             
+
+===========================================================================
+SOURCE disasm CLASS Config SHA-256 8530b8c8f9690c07f881dbf32a9ad579b0639f2701f5eff8a673c101ce3627aa
+METHOD isVbo ()Z
+    0 invokestatic       bqs.f:()Z
+    3 ireturn            
+
+===========================================================================
+SOURCE disasm CLASS Config SHA-256 8530b8c8f9690c07f881dbf32a9ad579b0639f2701f5eff8a673c101ce3627aa
+METHOD isMultiTexture ()Z
+    0 invokestatic       Config.getAnisotropicFilterLevel:()I
+    3 iconst_1           
+    4 if_icmple          9
+    7 iconst_1           
+    8 ireturn            
+    9 invokestatic       Config.getAntialiasingLevel:()I
+   12 ifle               17
+   15 iconst_1           
+   16 ireturn            
+   17 iconst_0           
+   18 ireturn            
+
+===========================================================================
+SOURCE disasm CLASS Config SHA-256 8530b8c8f9690c07f881dbf32a9ad579b0639f2701f5eff8a673c101ce3627aa
+METHOD isRenderRegions ()Z
+    0 getstatic          Config.gameSettings:Lavh;
+    3 getfield           avh.ofRenderRegions:Z
+    6 ireturn            
+
+===========================================================================
+SOURCE disasm CLASS Config SHA-256 8530b8c8f9690c07f881dbf32a9ad579b0639f2701f5eff8a673c101ce3627aa
+METHOD isFastRender ()Z
+    0 getstatic          Config.gameSettings:Lavh;
+    3 getfield           avh.ofFastRender:Z
+    6 ireturn            
+
+===========================================================================
+SOURCE disasm CLASS Config SHA-256 8530b8c8f9690c07f881dbf32a9ad579b0639f2701f5eff8a673c101ce3627aa
+METHOD getAnisotropicFilterLevel ()I
+    0 getstatic          Config.gameSettings:Lavh;
+    3 getfield           avh.ofAfLevel:I
+    6 ireturn            
+
+===========================================================================
+SOURCE disasm CLASS Config SHA-256 8530b8c8f9690c07f881dbf32a9ad579b0639f2701f5eff8a673c101ce3627aa
+METHOD getAntialiasingLevel ()I
+    0 getstatic          Config.antialiasingLevel:I
+    3 ireturn            
+
+===========================================================================
+SOURCE disasm CLASS Config SHA-256 8530b8c8f9690c07f881dbf32a9ad579b0639f2701f5eff8a673c101ce3627aa
+METHOD isAntialiasing ()Z
+    0 invokestatic       Config.getAntialiasingLevel:()I
+    3 ifle               10
+    6 iconst_1           
+    7 goto               11
+   10 iconst_0           
+   11 ireturn            
+
+===========================================================================
+SOURCE patched CLASS avh SHA-256 d5b070893c86317bb5fefb6d2984e09c96129ebe4036be2e52910e9d2d69ae14
+METHOD <init> (Lave;Ljava/io/File;)V
+# EXCERPT offsets 900..936; other code omitted
+  900 aload_0            
+  901 invokestatic       Config.isSingleProcessor:()Z
+  904 putfield           avh.ofSmoothWorld:Z
+  907 aload_0            
+  908 invokestatic       Config.isSingleProcessor:()Z
+  911 putfield           avh.ofLazyChunkLoading:Z
+  914 aload_0            
+  915 iconst_0           
+  916 putfield           avh.ofRenderRegions:Z
+  919 aload_0            
+  920 iconst_0           
+  921 putfield           avh.ofSmartAnimations:Z
+  924 aload_0            
+  925 fconst_1           
+  926 putfield           avh.ofAoLevel:F
+  929 aload_0            
+  930 iconst_0           
+  931 putfield           avh.ofAaLevel:I
+  934 aload_0            
+  935 iconst_1           
+  936 putfield           avh.ofAfLevel:I
+# EXCERPT offsets 1102..1114; other code omitted
+ 1102 aload_0            
+ 1103 iconst_0           
+ 1104 putfield           avh.ofFastMath:Z
+ 1107 aload_0            
+ 1108 iconst_0           
+ 1109 putfield           avh.ofFastRender:Z
+ 1112 aload_0            
+ 1113 iconst_0           
+ 1114 putfield           avh.ofTranslucentBlocks:I
+
+===========================================================================
+SOURCE patched CLASS avh SHA-256 d5b070893c86317bb5fefb6d2984e09c96129ebe4036be2e52910e9d2d69ae14
+METHOD a (Lavh$a;I)V
+# EXCERPT offsets 735..768; other code omitted
+  735 aload_1            
+  736 getstatic          avh$a.x:Lavh$a;
+  739 if_acmpne          768
+  742 aload_0            
+  743 aload_0            
+  744 getfield           avh.u:Z
+  747 ifne               754
+  750 iconst_1           
+  751 goto               755
+  754 iconst_0           
+  755 putfield           avh.u:Z
+  758 aload_0            
+  759 getfield           avh.ay:Lave;
+  762 getfield           ave.g:Lbfr;
+  765 invokevirtual      bfr.a:()V
+  768 aload_1            
+
+===========================================================================
+SOURCE patched CLASS avh SHA-256 d5b070893c86317bb5fefb6d2984e09c96129ebe4036be2e52910e9d2d69ae14
+METHOD setOptionValueOF (Lavh$a;I)V
+# EXCERPT offsets 1581..1653; other code omitted
+ 1581 aload_1            
+ 1582 getstatic          avh$a.FAST_RENDER:Lavh$a;
+ 1585 if_acmpne          1653
+ 1588 aload_0            
+ 1589 getfield           avh.ofFastRender:Z
+ 1592 ifne               1617
+ 1595 invokestatic       Config.isShaders:()Z
+ 1598 ifeq               1617
+ 1601 ldc_w              of.message.fr.shaders1
+ 1604 invokestatic       net/optifine/Lang.get:(Ljava/lang/String;)Ljava/lang/String;
+ 1607 ldc_w              of.message.fr.shaders2
+ 1610 invokestatic       net/optifine/Lang.get:(Ljava/lang/String;)Ljava/lang/String;
+ 1613 invokestatic       Config.showGuiMessage:(Ljava/lang/String;Ljava/lang/String;)V
+ 1616 return             
+ 1617 aload_0            
+ 1618 aload_0            
+ 1619 getfield           avh.ofFastRender:Z
+ 1622 ifne               1629
+ 1625 iconst_1           
+ 1626 goto               1630
+ 1629 iconst_0           
+ 1630 putfield           avh.ofFastRender:Z
+ 1633 aload_0            
+ 1634 getfield           avh.ofFastRender:Z
+ 1637 ifeq               1650
+ 1640 aload_0            
+ 1641 getfield           avh.ay:Lave;
+ 1644 getfield           ave.o:Lbfk;
+ 1647 invokevirtual      bfk.b:()V
+ 1650 invokestatic       Config.updateFramebufferSize:()V
+ 1653 aload_1            
+# EXCERPT offsets 1745..1778; other code omitted
+ 1745 aload_1            
+ 1746 getstatic          avh$a.RENDER_REGIONS:Lavh$a;
+ 1749 if_acmpne          1778
+ 1752 aload_0            
+ 1753 aload_0            
+ 1754 getfield           avh.ofRenderRegions:Z
+ 1757 ifne               1764
+ 1760 iconst_1           
+ 1761 goto               1765
+ 1764 iconst_0           
+ 1765 putfield           avh.ofRenderRegions:Z
+ 1768 aload_0            
+ 1769 getfield           avh.ay:Lave;
+ 1772 getfield           ave.g:Lbfr;
+ 1775 invokevirtual      bfr.a:()V
+ 1778 aload_1            
+
+===========================================================================
+SOURCE patched CLASS avh SHA-256 d5b070893c86317bb5fefb6d2984e09c96129ebe4036be2e52910e9d2d69ae14
+METHOD loadOfOptions ()V
+# EXCERPT offsets 73..122; other code omitted
+   73 aload              4
+   75 iconst_0           
+   76 aaload             
+   77 ldc_w              ofRenderDistanceChunks
+   80 invokevirtual      java/lang/String.equals:(Ljava/lang/Object;)Z
+   83 ifeq               122
+   86 aload              4
+   88 arraylength        
+   89 iconst_2           
+   90 if_icmplt          122
+   93 aload_0            
+   94 aload              4
+   96 iconst_1           
+   97 aaload             
+   98 invokestatic       java/lang/Integer.valueOf:(Ljava/lang/String;)Ljava/lang/Integer;
+  101 invokevirtual      java/lang/Integer.intValue:()I
+  104 putfield           avh.c:I
+  107 aload_0            
+  108 aload_0            
+  109 getfield           avh.c:I
+  112 iconst_2           
+  113 sipush             1024
+  116 invokestatic       Config.limit:(III)I
+  119 putfield           avh.c:I
+  122 aload              4
+# EXCERPT offsets 2370..2420; other code omitted
+ 2372 invokevirtual      java/lang/Boolean.booleanValue:()Z
+ 2375 putfield           avh.ofLazyChunkLoading:Z
+ 2378 aload              4
+ 2380 iconst_0           
+ 2381 aaload             
+ 2382 ldc_w              ofRenderRegions
+ 2385 invokevirtual      java/lang/String.equals:(Ljava/lang/Object;)Z
+ 2388 ifeq               2412
+ 2391 aload              4
+ 2393 arraylength        
+ 2394 iconst_2           
+ 2395 if_icmplt          2412
+ 2398 aload_0            
+ 2399 aload              4
+ 2401 iconst_1           
+ 2402 aaload             
+ 2403 invokestatic       java/lang/Boolean.valueOf:(Ljava/lang/String;)Ljava/lang/Boolean;
+ 2406 invokevirtual      java/lang/Boolean.booleanValue:()Z
+ 2409 putfield           avh.ofRenderRegions:Z
+ 2412 aload              4
+ 2414 iconst_0           
+ 2415 aaload             
+ 2416 ldc_w              ofSmartAnimations
+ 2419 invokevirtual      java/lang/String.equals:(Ljava/lang/Object;)Z
+# EXCERPT offsets 2770..2820; other code omitted
+ 2770 putfield           avh.ofFastMath:Z
+ 2773 aload_0            
+ 2774 getfield           avh.ofFastMath:Z
+ 2777 putstatic          ns.fastMath:Z
+ 2780 aload              4
+ 2782 iconst_0           
+ 2783 aaload             
+ 2784 ldc_w              ofFastRender
+ 2787 invokevirtual      java/lang/String.equals:(Ljava/lang/Object;)Z
+ 2790 ifeq               2814
+ 2793 aload              4
+ 2795 arraylength        
+ 2796 iconst_2           
+ 2797 if_icmplt          2814
+ 2800 aload_0            
+ 2801 aload              4
+ 2803 iconst_1           
+ 2804 aaload             
+ 2805 invokestatic       java/lang/Boolean.valueOf:(Ljava/lang/String;)Ljava/lang/Boolean;
+ 2808 invokevirtual      java/lang/Boolean.booleanValue:()Z
+ 2811 putfield           avh.ofFastRender:Z
+ 2814 aload              4
+ 2816 iconst_0           
+ 2817 aaload             
+ 2818 ldc_w              ofTranslucentBlocks
+
+===========================================================================
+SOURCE patched CLASS avh SHA-256 d5b070893c86317bb5fefb6d2984e09c96129ebe4036be2e52910e9d2d69ae14
+METHOD resetSettings ()V
+# EXCERPT offsets 78..90; other code omitted
+   78 aload_0            
+   79 iconst_1           
+   80 putfield           avh.D:Z
+   83 aload_0            
+   84 iconst_0           
+   85 putfield           avh.u:Z
+   88 aload_0            
+   89 iconst_0           
+   90 putfield           avh.aO:Z
+# EXCERPT offsets 135..157; other code omitted
+  135 aload_0            
+  136 iconst_0           
+  137 putfield           avh.ofLazyChunkLoading:Z
+  140 aload_0            
+  141 iconst_0           
+  142 putfield           avh.ofRenderRegions:Z
+  145 aload_0            
+  146 iconst_0           
+  147 putfield           avh.ofFastMath:Z
+  150 aload_0            
+  151 iconst_0           
+  152 putfield           avh.ofFastRender:Z
+  155 aload_0            
+  156 iconst_0           
+  157 putfield           avh.ofTranslucentBlocks:I
+
+===========================================================================
+SOURCE patched CLASS bfr SHA-256 a60c44bbc5535e985b1c4b3549bb298b126e3039074aa910f99da97378250619
+METHOD a ()V
+# EXCERPT offsets 0..194; other code omitted
+    0 aload_0            
+    1 getfield           bfr.k:Lbdb;
+    4 ifnull             289
+    7 aload_0            
+    8 iconst_1           
+    9 putfield           bfr.ac:Z
+   12 getstatic          afi.t:Lahs;
+   15 invokestatic       Config.isTreesFancy:()Z
+   18 invokevirtual      ahs.b:(Z)V
+   21 getstatic          afi.u:Lahs;
+   24 invokestatic       Config.isTreesFancy:()Z
+   27 invokevirtual      ahs.b:(Z)V
+   30 invokestatic       bgf.updateAoLightValue:()V
+   33 invokestatic       Config.isDynamicLights:()Z
+   36 ifeq               42
+   39 invokestatic       net/optifine/DynamicLights.clear:()V
+   42 invokestatic       net/optifine/SmartAnimations.update:()V
+   45 aload_0            
+   46 aload_0            
+   47 getfield           bfr.h:Lave;
+   50 getfield           ave.t:Lavh;
+   53 getfield           avh.c:I
+   56 putfield           bfr.P:I
+   59 aload_0            
+   60 aload_0            
+   61 getfield           bfr.P:I
+   64 bipush             16
+   66 imul               
+   67 putfield           bfr.renderDistance:I
+   70 aload_0            
+   71 aload_0            
+   72 getfield           bfr.renderDistance:I
+   75 aload_0            
+   76 getfield           bfr.renderDistance:I
+   79 imul               
+   80 putfield           bfr.renderDistanceSq:I
+   83 aload_0            
+   84 getfield           bfr.Y:Z
+   87 istore_1           
+   88 aload_0            
+   89 invokestatic       bqs.f:()Z
+   92 putfield           bfr.Y:Z
+   95 iload_1            
+   96 ifeq               131
+   99 aload_0            
+  100 getfield           bfr.Y:Z
+  103 ifne               131
+  106 aload_0            
+  107 new                bft
+  110 dup                
+  111 invokespecial      bft.<init>:()V
+  114 putfield           bfr.O:Lbfh;
+  117 aload_0            
+  118 new                bhr
+  121 dup                
+  122 invokespecial      bhr.<init>:()V
+  125 putfield           bfr.a:Lbhu;
+  128 goto               164
+  131 iload_1            
+  132 ifne               164
+  135 aload_0            
+  136 getfield           bfr.Y:Z
+  139 ifeq               164
+  142 aload_0            
+  143 new                bfy
+  146 dup                
+  147 invokespecial      bfy.<init>:()V
+  150 putfield           bfr.O:Lbfh;
+  153 aload_0            
+  154 new                bhv
+  157 dup                
+  158 invokespecial      bhv.<init>:()V
+  161 putfield           bfr.a:Lbhu;
+  164 aload_0            
+  165 invokespecial      bfr.q:()V
+  168 aload_0            
+  169 invokespecial      bfr.p:()V
+  172 aload_0            
+  173 invokespecial      bfr.o:()V
+  176 aload_0            
+  177 getfield           bfr.o:Lbga;
+  180 ifnull             190
+  183 aload_0            
+  184 getfield           bfr.o:Lbga;
+  187 invokevirtual      bga.a:()V
+  190 aload_0            
+  191 invokevirtual      bfr.e:()V
+  194 aload_0            
+

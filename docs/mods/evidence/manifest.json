@@ -1,0 +1,179 @@
+{
+  "method": "Static ZIP metadata and JVM bytecode inspection. No target execution or benchmark. Offsets in javap output are method bytecode offsets.",
+  "javap": "OpenJDK 21.0.12.1: java -m jdk.jdeps/com.sun.tools.javap.Main -classpath <artifact> -c -p <classes>; FoamFix additionally -s; hooks additionally -v.",
+  "artifacts": [
+    {
+      "path": "references/modrinth-mods.zip",
+      "bytes": 3745521,
+      "sha256": "05fdd2d880f937159920bec91a436c52567725fabfe3f129cca711b78c49a031",
+      "entries": 2,
+      "class_count": 0,
+      "class_major_versions": []
+    },
+    {
+      "path": "references/krypton-0.3.2.jar",
+      "bytes": 268849,
+      "sha256": "0b4a648b9c2f048247f849712aff58b2bac5b27b60c0072bb6bf493ad8b79fef",
+      "entries": 57,
+      "class_count": 25,
+      "class_major_versions": [
+        69
+      ]
+    },
+    {
+      "path": "build/reference-mods/entityculling-forge-mc1.8.9-1.5.0.jar",
+      "bytes": 3659166,
+      "sha256": "36c82bfedcc8d34744006fe794bfec9e951db3589b264444507b07c5f331fd6d",
+      "entries": 2604,
+      "class_count": 2475,
+      "class_major_versions": [
+        49,
+        50,
+        52
+      ]
+    },
+    {
+      "path": "build/reference-mods/foamfix-0.6.3a-anarchy-1.8.x.jar",
+      "bytes": 86043,
+      "sha256": "03fa102a9ad8dc580f9de2ac1689b30a89ceab5a5ee614f96d27915362c45f5c",
+      "entries": 77,
+      "class_count": 63,
+      "class_major_versions": [
+        52
+      ]
+    }
+  ],
+  "baseline": {
+    "path": "/home/leite/.local/share/PrismLauncher/libraries/com/mojang/minecraft/1.8.9/minecraft-1.8.9-client.jar",
+    "bytes": 8461484,
+    "sha256": "14f0d96d1a56fb4f5c3b2233d00699525893fe5ce3dcf181e7de59120595d298"
+  },
+  "rea": {
+    "modrinth_inspection": "ev_b216c82c621d49f64b5d3861ebd800dbf15319d2fb43b2483b3bdac3cefcf0b8",
+    "modrinth_inventory": "ev_0c8c53094cfb5cd7730297b3031192a27a34938d78ef2774c021a1c0900ca32c",
+    "modrinth_graph_manifest": "agm_b3137481654af9f29bec215bb270c8e81d2ea956f53462b596e30b9f9a18487f",
+    "krypton_record": "krypton-rea.json"
+  },
+  "evidence_files": [
+    {
+      "path": "docs/mods/evidence/entityculling-hooks.verbose.txt",
+      "bytes": 33342,
+      "sha256": "8d6a59a6ada40a7d740b19f96a2a9dea34e6394c744b7a253ae730c4e45edf4f"
+    },
+    {
+      "path": "docs/mods/evidence/entityculling-metadata.txt",
+      "bytes": 2570,
+      "sha256": "18cb52523807e6b4b53848184712b97bacd7d4d01071264d1698ca3a418443b7"
+    },
+    {
+      "path": "docs/mods/evidence/entityculling.bytecode.txt",
+      "bytes": 127227,
+      "sha256": "9d4016cd418785785260ab0bd06d6a27f4b5e8a067a8a7f2bc6ad650b30cf208"
+    },
+    {
+      "path": "docs/mods/evidence/foamfix-ProxyClient.txt",
+      "bytes": 3922,
+      "sha256": "ec4473486d5407e7c8a9f3c89582f7afd7fb7534a1b0e318399dfcad590ff5ee"
+    },
+    {
+      "path": "docs/mods/evidence/foamfix-client_Deduplicator.txt",
+      "bytes": 58471,
+      "sha256": "124751bf2216280a69fe9c54a1784edfd6b703d838f3ce8e62f54b283ded6fc8"
+    },
+    {
+      "path": "docs/mods/evidence/foamfix-client_FoamFixDynamicItemModels.txt",
+      "bytes": 3095,
+      "sha256": "1b80709935701422f6f3536e2dcf543dd5d5fcce3b16c3058c8588fe57cbe4ca"
+    },
+    {
+      "path": "docs/mods/evidence/foamfix-client_FoamFixModelDeduplicate.txt",
+      "bytes": 8453,
+      "sha256": "89f1d42509a27e974826163a822c6c7d935e96d91ac717fb05ccda880edf9976"
+    },
+    {
+      "path": "docs/mods/evidence/foamfix-client_FoamFixModelRegistryDuplicateWipe.txt",
+      "bytes": 10114,
+      "sha256": "e65d43a33b93eb85d4ddac9b1dc38023846a1fa77f505fded94b79640acadb63"
+    },
+    {
+      "path": "docs/mods/evidence/foamfix-client_FoamyItemLayerModel.txt",
+      "bytes": 21831,
+      "sha256": "e5c8e5e6f66f27b102028338b5067e52ea622acea7d661d989911b4c9197f7fd"
+    },
+    {
+      "path": "docs/mods/evidence/foamfix-client_FoamyItemLayerModel_Dynamic3DItemModel.txt",
+      "bytes": 9432,
+      "sha256": "75fd80cc6e7894649dab217a9fced588ca0c2ef5c99c17a263b8a651f5e5131b"
+    },
+    {
+      "path": "docs/mods/evidence/foamfix-client_FoamyItemLayerModel_DynamicItemModel.txt",
+      "bytes": 9714,
+      "sha256": "ca988b27a198315bcbf07d34249290e7cd80f4eca3e0e9325fbc942448f59097"
+    },
+    {
+      "path": "docs/mods/evidence/foamfix-common_FoamyBlockState.txt",
+      "bytes": 7101,
+      "sha256": "3f04c6b3ffa30e30a25b2a205c6d3e848de64eda731825de09a73212d5b63f8b"
+    },
+    {
+      "path": "docs/mods/evidence/foamfix-common_PropertyValueMapper.txt",
+      "bytes": 15552,
+      "sha256": "9e34bd0447d5ce87a3b054937061f523a55534ae0e21055dfface19f5ce4186b"
+    },
+    {
+      "path": "docs/mods/evidence/foamfix-coremod_BlockPosPatch.txt",
+      "bytes": 10693,
+      "sha256": "ff1f95e623b981660b1a76f7c56a07d9441b81afac205ff982aa5c3f66be15ec"
+    },
+    {
+      "path": "docs/mods/evidence/foamfix-coremod_FoamFixTransformer.txt",
+      "bytes": 31549,
+      "sha256": "95f5b58297e84356fd9f93ebb9d606e0f4f852c72893cad3db80e66edea1772e"
+    },
+    {
+      "path": "docs/mods/evidence/foamfix-extra.txt",
+      "bytes": 21773,
+      "sha256": "d4d1cadcf40b0e9f7c99250b20a747a33f5c6cbcc11a0f8eb2fe960b8d13bbfc"
+    },
+    {
+      "path": "docs/mods/evidence/foamfix-manifest.json",
+      "bytes": 2374,
+      "sha256": "175a6043170299b769782a9a0d45068dcce6dff3008d0454b31edc5217a87624"
+    },
+    {
+      "path": "docs/mods/evidence/foamfix-shared_FoamFixConfig.txt",
+      "bytes": 10663,
+      "sha256": "6def9e28c241b949ef7a51df61c2203a1696872b3287eaf96eb62c9733d16f66"
+    },
+    {
+      "path": "docs/mods/evidence/krypton-init.bytecode.txt",
+      "bytes": 6409,
+      "sha256": "6d1da30e166b43df1fbbe511bd55b3f37ff7088784ba0dba9365cae565554120"
+    },
+    {
+      "path": "docs/mods/evidence/krypton-metadata.json",
+      "bytes": 2743,
+      "sha256": "a14a8b30a3f88efb41a01966291713140bdfc85843296274e7fb4932466e89e4"
+    },
+    {
+      "path": "docs/mods/evidence/krypton-microopt.bytecode.txt",
+      "bytes": 13847,
+      "sha256": "18ddab2ce2efd4b471b4f121cd611a01f626a26e061a2300476accef41f44155"
+    },
+    {
+      "path": "docs/mods/evidence/krypton-pipeline.bytecode.txt",
+      "bytes": 51277,
+      "sha256": "989390255b0d809338180b2b1aa9e89de0c69993c8de7494925346338df07d15"
+    },
+    {
+      "path": "docs/mods/evidence/krypton-rea.json",
+      "bytes": 107051,
+      "sha256": "ad2c9d36e296287e4c4901895e8b5ab5bfc6f3c8e0316f20bec49a9bca04da3b"
+    },
+    {
+      "path": "docs/mods/evidence/vanilla-network.bytecode.txt",
+      "bytes": 114786,
+      "sha256": "0cd9a7fd8412964b59bcc214254f0b291c1f43bd94b51705c7fcb7095f27a3ca"
+    }
+  ]
+}

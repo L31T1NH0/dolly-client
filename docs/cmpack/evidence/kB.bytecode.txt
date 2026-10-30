@@ -1,0 +1,38 @@
+CLASS kB EXTENDS js
+
+METHOD kU ()V
+    0 aload_0            
+    1 getfield           kB.B:Lir;
+    4 getfield           ir.Gk:LacQ;
+    7 invokevirtual      acQ.arS:()Lz;
+   10 getfield           z.T:LC;
+   13 invokevirtual      C.K:()Lan;
+   16 invokevirtual      an.ad:()Z
+   19 ifeq               56
+   22 invokestatic       org/lwjgl/input/Keyboard.getEventCharacter:()C
+   25 istore_1           
+   26 invokestatic       org/lwjgl/input/Keyboard.getEventKey:()I
+   29 istore_2           
+   30 invokestatic       org/lwjgl/input/Keyboard.getEventKeyState:()Z
+   33 ifne               47
+   36 iload_2            
+   37 ifne               53
+   40 iload_1            
+   41 invokestatic       java/lang/Character.isDefined:(C)Z
+   44 ifeq               53
+   47 aload_0            
+   48 iload_1            
+   49 iload_2            
+   50 invokevirtual      kB.q:(CI)V
+   53 goto               72
+   56 invokestatic       org/lwjgl/input/Keyboard.getEventKeyState:()Z
+   59 ifeq               72
+   62 aload_0            
+   63 invokestatic       org/lwjgl/input/Keyboard.getEventCharacter:()C
+   66 invokestatic       org/lwjgl/input/Keyboard.getEventKey:()I
+   69 invokevirtual      kB.q:(CI)V
+   72 aload_0            
+   73 getfield           kB.B:Lir;
+   76 invokevirtual      ir.gO:()V
+   79 return             
+

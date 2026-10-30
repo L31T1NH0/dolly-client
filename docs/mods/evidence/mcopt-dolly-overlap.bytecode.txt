@@ -1,0 +1,588 @@
+
+CLASS bct
+  public void a(float);
+    Code:
+       0: aload_0
+       1: getfield      #211                // Field k:Z
+       4: ifne          635
+       7: aload_0
+       8: getfield      #86                 // Field j:Z
+      11: ifeq          635
+      14: aload_0
+      15: invokespecial #214                // Method checkResetDisplayList:()V
+      18: aload_0
+      19: getfield      #216                // Field t:Z
+      22: ifne          30
+      25: aload_0
+      26: fload_1
+      27: invokespecial #218                // Method d:(F)V
+      30: iconst_0
+      31: istore_2
+      32: aload_0
+      33: getfield      #68                 // Field textureLocation:Ljy;
+      36: ifnull        74
+      39: aload_0
+      40: getfield      #78                 // Field renderGlobal:Lbfr;
+      43: getfield      #223                // Field bfr.renderOverlayDamaged:Z
+      46: ifne          74
+      49: aload_0
+      50: getfield      #78                 // Field renderGlobal:Lbfr;
+      53: getfield      #226                // Field bfr.renderOverlayEyes:Z
+      56: ifeq          60
+      59: return
+      60: invokestatic  #232                // Method bfl.getBoundTexture:()I
+      63: istore_2
+      64: invokestatic  #236                // Method Config.getTextureManager:()Lbmj;
+      67: aload_0
+      68: getfield      #68                 // Field textureLocation:Ljy;
+      71: invokevirtual #241                // Method bmj.a:(Ljy;)V
+      74: aload_0
+      75: getfield      #243                // Field modelUpdater:Lnet/optifine/entity/model/anim/ModelUpdater;
+      78: ifnull        88
+      81: aload_0
+      82: getfield      #243                // Field modelUpdater:Lnet/optifine/entity/model/anim/ModelUpdater;
+      85: invokevirtual #248                // Method net/optifine/entity/model/anim/ModelUpdater.update:()V
+      88: aload_0
+      89: getfield      #62                 // Field scaleX:F
+      92: fconst_1
+      93: fcmpl
+      94: ifne          115
+      97: aload_0
+      98: getfield      #64                 // Field scaleY:F
+     101: fconst_1
+     102: fcmpl
+     103: ifne          115
+     106: aload_0
+     107: getfield      #66                 // Field scaleZ:F
+     110: fconst_1
+     111: fcmpl
+     112: ifeq          119
+     115: iconst_1
+     116: goto          120
+     119: iconst_0
+     120: istore_3
+     121: aload_0
+     122: getfield      #250                // Field o:F
+     125: aload_0
+     126: getfield      #252                // Field p:F
+     129: aload_0
+     130: getfield      #254                // Field q:F
+     133: invokestatic  #256                // Method bfl.b:(FFF)V
+     136: aload_0
+     137: getfield      #258                // Field f:F
+     140: fconst_0
+     141: fcmpl
+     142: ifne          439
+     145: aload_0
+     146: getfield      #260                // Field g:F
+     149: fconst_0
+     150: fcmpl
+     151: ifne          439
+     154: aload_0
+     155: getfield      #262                // Field h:F
+     158: fconst_0
+     159: fcmpl
+     160: ifne          439
+     163: aload_0
+     164: getfield      #201                // Field c:F
+     167: fconst_0
+     168: fcmpl
+     169: ifne          292
+     172: aload_0
+     173: getfield      #203                // Field d:F
+     176: fconst_0
+     177: fcmpl
+     178: ifne          292
+     181: aload_0
+     182: getfield      #205                // Field e:F
+     185: fconst_0
+     186: fcmpl
+     187: ifne          292
+     190: iload_3
+     191: ifeq          209
+     194: aload_0
+     195: getfield      #62                 // Field scaleX:F
+     198: aload_0
+     199: getfield      #64                 // Field scaleY:F
+     202: aload_0
+     203: getfield      #66                 // Field scaleZ:F
+     206: invokestatic  #264                // Method bfl.a:(FFF)V
+     209: aload_0
+     210: getfield      #265                // Field u:I
+     213: invokestatic  #268                // Method bfl.o:(I)V
+     216: aload_0
+     217: getfield      #134                // Field m:Ljava/util/List;
+     220: ifnull        264
+     223: iconst_0
+     224: istore        4
+     226: iload         4
+     228: aload_0
+     229: getfield      #134                // Field m:Ljava/util/List;
+     232: invokeinterface #271,  1          // InterfaceMethod java/util/List.size:()I
+     237: if_icmpge     264
+     240: aload_0
+     241: getfield      #134                // Field m:Ljava/util/List;
+     244: iload         4
+     246: invokeinterface #275,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+     251: checkcast     #2                  // class bct
+     254: fload_1
+     255: invokevirtual #277                // Method a:(F)V
+     258: iinc          4, 1
+     261: goto          226
+     264: iload_3
+     265: ifeq          609
+     268: fconst_1
+     269: aload_0
+     270: getfield      #62                 // Field scaleX:F
+     273: fdiv
+     274: fconst_1
+     275: aload_0
+     276: getfield      #64                 // Field scaleY:F
+     279: fdiv
+     280: fconst_1
+     281: aload_0
+     282: getfield      #66                 // Field scaleZ:F
+     285: fdiv
+     286: invokestatic  #264                // Method bfl.a:(FFF)V
+     289: goto          609
+     292: aload_0
+     293: getfield      #201                // Field c:F
+     296: fload_1
+     297: fmul
+     298: aload_0
+     299: getfield      #203                // Field d:F
+     302: fload_1
+     303: fmul
+     304: aload_0
+     305: getfield      #205                // Field e:F
+     308: fload_1
+     309: fmul
+     310: invokestatic  #256                // Method bfl.b:(FFF)V
+     313: iload_3
+     314: ifeq          332
+     317: aload_0
+     318: getfield      #62                 // Field scaleX:F
+     321: aload_0
+     322: getfield      #64                 // Field scaleY:F
+     325: aload_0
+     326: getfield      #66                 // Field scaleZ:F
+     329: invokestatic  #264                // Method bfl.a:(FFF)V
+     332: aload_0
+     333: getfield      #265                // Field u:I
+     336: invokestatic  #268                // Method bfl.o:(I)V
+     339: aload_0
+     340: getfield      #134                // Field m:Ljava/util/List;
+     343: ifnull        387
+     346: iconst_0
+     347: istore        4
+     349: iload         4
+     351: aload_0
+     352: getfield      #134                // Field m:Ljava/util/List;
+     355: invokeinterface #271,  1          // InterfaceMethod java/util/List.size:()I
+     360: if_icmpge     387
+     363: aload_0
+     364: getfield      #134                // Field m:Ljava/util/List;
+     367: iload         4
+     369: invokeinterface #275,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+     374: checkcast     #2                  // class bct
+     377: fload_1
+     378: invokevirtual #277                // Method a:(F)V
+     381: iinc          4, 1
+     384: goto          349
+     387: iload_3
+     388: ifeq          412
+     391: fconst_1
+     392: aload_0
+     393: getfield      #62                 // Field scaleX:F
+     396: fdiv
+     397: fconst_1
+     398: aload_0
+     399: getfield      #64                 // Field scaleY:F
+     402: fdiv
+     403: fconst_1
+     404: aload_0
+     405: getfield      #66                 // Field scaleZ:F
+     408: fdiv
+     409: invokestatic  #264                // Method bfl.a:(FFF)V
+     412: aload_0
+     413: getfield      #201                // Field c:F
+     416: fneg
+     417: fload_1
+     418: fmul
+     419: aload_0
+     420: getfield      #203                // Field d:F
+     423: fneg
+     424: fload_1
+     425: fmul
+     426: aload_0
+     427: getfield      #205                // Field e:F
+     430: fneg
+     431: fload_1
+     432: fmul
+     433: invokestatic  #256                // Method bfl.b:(FFF)V
+     436: goto          609
+     439: invokestatic  #280                // Method bfl.E:()V
+     442: aload_0
+     443: getfield      #201                // Field c:F
+     446: fload_1
+     447: fmul
+     448: aload_0
+     449: getfield      #203                // Field d:F
+     452: fload_1
+     453: fmul
+     454: aload_0
+     455: getfield      #205                // Field e:F
+     458: fload_1
+     459: fmul
+     460: invokestatic  #256                // Method bfl.b:(FFF)V
+     463: aload_0
+     464: getfield      #262                // Field h:F
+     467: fconst_0
+     468: fcmpl
+     469: ifeq          486
+     472: aload_0
+     473: getfield      #262                // Field h:F
+     476: ldc_w         #281                // float 57.295776f
+     479: fmul
+     480: fconst_0
+     481: fconst_0
+     482: fconst_1
+     483: invokestatic  #284                // Method bfl.b:(FFFF)V
+     486: aload_0
+     487: getfield      #260                // Field g:F
+     490: fconst_0
+     491: fcmpl
+     492: ifeq          509
+     495: aload_0
+     496: getfield      #260                // Field g:F
+     499: ldc_w         #281                // float 57.295776f
+     502: fmul
+     503: fconst_0
+     504: fconst_1
+     505: fconst_0
+     506: invokestatic  #284                // Method bfl.b:(FFFF)V
+     509: aload_0
+     510: getfield      #258                // Field f:F
+     513: fconst_0
+     514: fcmpl
+     515: ifeq          532
+     518: aload_0
+     519: getfield      #258                // Field f:F
+     522: ldc_w         #281                // float 57.295776f
+     525: fmul
+     526: fconst_1
+     527: fconst_0
+     528: fconst_0
+     529: invokestatic  #284                // Method bfl.b:(FFFF)V
+     532: iload_3
+     533: ifeq          551
+     536: aload_0
+     537: getfield      #62                 // Field scaleX:F
+     540: aload_0
+     541: getfield      #64                 // Field scaleY:F
+     544: aload_0
+     545: getfield      #66                 // Field scaleZ:F
+     548: invokestatic  #264                // Method bfl.a:(FFF)V
+     551: aload_0
+     552: getfield      #265                // Field u:I
+     555: invokestatic  #268                // Method bfl.o:(I)V
+     558: aload_0
+     559: getfield      #134                // Field m:Ljava/util/List;
+     562: ifnull        606
+     565: iconst_0
+     566: istore        4
+     568: iload         4
+     570: aload_0
+     571: getfield      #134                // Field m:Ljava/util/List;
+     574: invokeinterface #271,  1          // InterfaceMethod java/util/List.size:()I
+     579: if_icmpge     606
+     582: aload_0
+     583: getfield      #134                // Field m:Ljava/util/List;
+     586: iload         4
+     588: invokeinterface #275,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+     593: checkcast     #2                  // class bct
+     596: fload_1
+     597: invokevirtual #277                // Method a:(F)V
+     600: iinc          4, 1
+     603: goto          568
+     606: invokestatic  #286                // Method bfl.F:()V
+     609: aload_0
+     610: getfield      #250                // Field o:F
+     613: fneg
+     614: aload_0
+     615: getfield      #252                // Field p:F
+     618: fneg
+     619: aload_0
+     620: getfield      #254                // Field q:F
+     623: fneg
+     624: invokestatic  #256                // Method bfl.b:(FFF)V
+     627: iload_2
+     628: ifeq          635
+     631: iload_2
+     632: invokestatic  #288                // Method bfl.i:(I)V
+     635: return
+
+
+CLASS bct
+  private void d(float);
+    Code:
+       0: aload_0
+       1: getfield      #265                // Field u:I
+       4: ifne          15
+       7: aload_0
+       8: iconst_1
+       9: invokestatic  #297                // Method avd.a:(I)I
+      12: putfield      #265                // Field u:I
+      15: aload_0
+      16: getfield      #265                // Field u:I
+      19: sipush        4864
+      22: invokestatic  #303                // Method org/lwjgl/opengl/GL11.glNewList:(II)V
+      25: invokestatic  #308                // Method bfx.a:()Lbfx;
+      28: invokevirtual #311                // Method bfx.c:()Lbfd;
+      31: astore_2
+      32: iconst_0
+      33: istore_3
+      34: iload_3
+      35: aload_0
+      36: getfield      #94                 // Field l:Ljava/util/List;
+      39: invokeinterface #271,  1          // InterfaceMethod java/util/List.size:()I
+      44: if_icmpge     71
+      47: aload_0
+      48: getfield      #94                 // Field l:Ljava/util/List;
+      51: iload_3
+      52: invokeinterface #275,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+      57: checkcast     #166                // class bcr
+      60: aload_2
+      61: fload_1
+      62: invokevirtual #316                // Method bcr.a:(Lbfd;F)V
+      65: iinc          3, 1
+      68: goto          34
+      71: iconst_0
+      72: istore_3
+      73: iload_3
+      74: aload_0
+      75: getfield      #58                 // Field spriteList:Ljava/util/List;
+      78: invokeinterface #271,  1          // InterfaceMethod java/util/List.size:()I
+      83: if_icmpge     116
+      86: aload_0
+      87: getfield      #58                 // Field spriteList:Ljava/util/List;
+      90: iload_3
+      91: invokeinterface #275,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+      96: checkcast     #318                // class net/optifine/model/ModelSprite
+      99: astore        4
+     101: aload         4
+     103: invokestatic  #308                // Method bfx.a:()Lbfx;
+     106: fload_1
+     107: invokevirtual #322                // Method net/optifine/model/ModelSprite.render:(Lbfx;F)V
+     110: iinc          3, 1
+     113: goto          73
+     116: invokestatic  #325                // Method org/lwjgl/opengl/GL11.glEndList:()V
+     119: aload_0
+     120: iconst_1
+     121: putfield      #216                // Field t:Z
+     124: return
+
+
+CLASS amy
+  public alz g(cj);
+    Code:
+       0: aload_0
+       1: getfield      #101                // Field i:Ladm;
+       4: invokevirtual #318                // Method adm.G:()Ladr;
+       7: getstatic     #323                // Field adr.g:Ladr;
+      10: if_acmpne     67
+      13: aconst_null
+      14: astore_2
+      15: aload_1
+      16: invokevirtual #258                // Method cj.o:()I
+      19: bipush        60
+      21: if_icmpne     31
+      24: getstatic     #326                // Field afi.cv:Lafh;
+      27: invokevirtual #330                // Method afh.Q:()Lalz;
+      30: astore_2
+      31: aload_1
+      32: invokevirtual #258                // Method cj.o:()I
+      35: bipush        70
+      37: if_icmpne     52
+      40: aload_1
+      41: invokevirtual #170                // Method cj.n:()I
+      44: aload_1
+      45: invokevirtual #172                // Method cj.p:()I
+      48: invokestatic  #335                // Method anu.b:(II)Lalz;
+      51: astore_2
+      52: aload_2
+      53: ifnonnull     65
+      56: getstatic     #277                // Field afi.a:Lafh;
+      59: invokevirtual #330                // Method afh.Q:()Lalz;
+      62: goto          66
+      65: aload_2
+      66: areturn
+      67: aload_1
+      68: invokevirtual #258                // Method cj.o:()I
+      71: iflt          140
+      74: aload_1
+      75: invokevirtual #258                // Method cj.o:()I
+      78: iconst_4
+      79: ishr
+      80: aload_0
+      81: getfield      #70                 // Field d:[Lamz;
+      84: arraylength
+      85: if_icmpge     140
+      88: aload_0
+      89: getfield      #70                 // Field d:[Lamz;
+      92: aload_1
+      93: invokevirtual #258                // Method cj.o:()I
+      96: iconst_4
+      97: ishr
+      98: aaload
+      99: astore_2
+     100: aload_2
+     101: ifnull        140
+     104: aload_1
+     105: invokevirtual #170                // Method cj.n:()I
+     108: bipush        15
+     110: iand
+     111: istore_3
+     112: aload_1
+     113: invokevirtual #258                // Method cj.o:()I
+     116: bipush        15
+     118: iand
+     119: istore        4
+     121: aload_1
+     122: invokevirtual #172                // Method cj.p:()I
+     125: bipush        15
+     127: iand
+     128: istore        5
+     130: aload_2
+     131: iload_3
+     132: iload         4
+     134: iload         5
+     136: invokevirtual #338                // Method amz.a:(III)Lalz;
+     139: areturn
+     140: getstatic     #277                // Field afi.a:Lafh;
+     143: invokevirtual #330                // Method afh.Q:()Lalz;
+     146: areturn
+     147: astore_2
+     148: aload_2
+     149: ldc_w         #340                // String Getting block state
+     152: invokestatic  #285                // Method b.a:(Ljava/lang/Throwable;Ljava/lang/String;)Lb;
+     155: astore_3
+     156: aload_3
+     157: ldc_w         #296                // String Block being got
+     160: invokevirtual #299                // Method b.a:(Ljava/lang/String;)Lc;
+     163: astore        4
+     165: aload         4
+     167: ldc_w         #301                // String Location
+     170: new           #10                 // class amy$3
+     173: dup
+     174: aload_0
+     175: aload_1
+     176: invokespecial #341                // Method amy$3."<init>":(Lamy;Lcj;)V
+     179: invokevirtual #308                // Method c.a:(Ljava/lang/String;Ljava/util/concurrent/Callable;)V
+     182: new           #286                // class e
+     185: dup
+     186: aload_3
+     187: invokespecial #289                // Method e."<init>":(Lb;)V
+     190: athrow
+    Exception table:
+       from    to  target type
+          67   139   147   Class java/lang/Throwable
+         140   146   147   Class java/lang/Throwable
+
+
+CLASS VboRegion
+  public void drawArrays(int, net.optifine.render.VboRange);
+    Code:
+       0: aload_0
+       1: getfield      #63                 // Field drawMode:I
+       4: iload_1
+       5: if_icmpeq     64
+       8: aload_0
+       9: getfield      #59                 // Field bufferIndexVertex:Ljava/nio/IntBuffer;
+      12: invokevirtual #274                // Method java/nio/IntBuffer.position:()I
+      15: ifle          59
+      18: new           #276                // class java/lang/IllegalArgumentException
+      21: dup
+      22: new           #200                // class java/lang/StringBuilder
+      25: dup
+      26: invokespecial #201                // Method java/lang/StringBuilder."<init>":()V
+      29: ldc_w         #278                // String Mixed region draw modes:
+      32: invokevirtual #207                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      35: aload_0
+      36: getfield      #63                 // Field drawMode:I
+      39: invokevirtual #223                // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+      42: ldc_w         #280                // String  !=
+      45: invokevirtual #207                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      48: iload_1
+      49: invokevirtual #223                // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+      52: invokevirtual #214                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      55: invokespecial #281                // Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+      58: athrow
+      59: aload_0
+      60: iload_1
+      61: putfield      #63                 // Field drawMode:I
+      64: aload_0
+      65: getfield      #59                 // Field bufferIndexVertex:Ljava/nio/IntBuffer;
+      68: aload_2
+      69: invokevirtual #107                // Method net/optifine/render/VboRange.getPosition:()I
+      72: invokevirtual #284                // Method java/nio/IntBuffer.put:(I)Ljava/nio/IntBuffer;
+      75: pop
+      76: aload_0
+      77: getfield      #61                 // Field bufferCountVertex:Ljava/nio/IntBuffer;
+      80: aload_2
+      81: invokevirtual #110                // Method net/optifine/render/VboRange.getSize:()I
+      84: invokevirtual #284                // Method java/nio/IntBuffer.put:(I)Ljava/nio/IntBuffer;
+      87: pop
+      88: return
+
+
+CLASS VboRegion
+  public void finishDraw(bfy);
+    Code:
+       0: aload_0
+       1: invokevirtual #79                 // Method bindBuffer:()V
+       4: aload_1
+       5: invokevirtual #290                // Method bfy.a:()V
+       8: aload_0
+       9: getfield      #59                 // Field bufferIndexVertex:Ljava/nio/IntBuffer;
+      12: invokevirtual #294                // Method java/nio/IntBuffer.flip:()Ljava/nio/Buffer;
+      15: pop
+      16: aload_0
+      17: getfield      #61                 // Field bufferCountVertex:Ljava/nio/IntBuffer;
+      20: invokevirtual #294                // Method java/nio/IntBuffer.flip:()Ljava/nio/Buffer;
+      23: pop
+      24: aload_0
+      25: getfield      #63                 // Field drawMode:I
+      28: aload_0
+      29: getfield      #59                 // Field bufferIndexVertex:Ljava/nio/IntBuffer;
+      32: aload_0
+      33: getfield      #61                 // Field bufferCountVertex:Ljava/nio/IntBuffer;
+      36: invokestatic  #300                // Method bfl.glMultiDrawArrays:(ILjava/nio/IntBuffer;Ljava/nio/IntBuffer;)V
+      39: aload_0
+      40: getfield      #59                 // Field bufferIndexVertex:Ljava/nio/IntBuffer;
+      43: aload_0
+      44: getfield      #59                 // Field bufferIndexVertex:Ljava/nio/IntBuffer;
+      47: invokevirtual #302                // Method java/nio/IntBuffer.capacity:()I
+      50: invokevirtual #305                // Method java/nio/IntBuffer.limit:(I)Ljava/nio/Buffer;
+      53: pop
+      54: aload_0
+      55: getfield      #61                 // Field bufferCountVertex:Ljava/nio/IntBuffer;
+      58: aload_0
+      59: getfield      #61                 // Field bufferCountVertex:Ljava/nio/IntBuffer;
+      62: invokevirtual #302                // Method java/nio/IntBuffer.capacity:()I
+      65: invokevirtual #305                // Method java/nio/IntBuffer.limit:(I)Ljava/nio/Buffer;
+      68: pop
+      69: aload_0
+      70: getfield      #46                 // Field positionTop:I
+      73: aload_0
+      74: getfield      #136                // Field sizeUsed:I
+      77: bipush        11
+      79: imul
+      80: bipush        10
+      82: idiv
+      83: if_icmple     91
+      86: aload_0
+      87: iconst_1
+      88: invokespecial #153                // Method compactRanges:(I)V
+      91: return
+

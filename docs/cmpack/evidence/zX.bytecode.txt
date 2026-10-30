@@ -1,0 +1,54 @@
+CLASS zX EXTENDS zI
+
+METHOD at (F)LQt;
+    0 aload_0            
+    1 instanceof         jp
+    4 ifeq               28
+    7 invokestatic       acQ.asg:()LacQ;
+   10 invokevirtual      acQ.arZ:()LD;
+   13 getfield           D.bl:LbP;
+   16 invokevirtual      bP.ak:()Z
+   19 ifeq               28
+   22 aload_0            
+   23 fload_1            
+   24 invokespecial      zI.at:(F)LQt;
+   27 areturn            
+   28 fload_1            
+   29 fconst_1           
+   30 fcmpl              
+   31 ifne               47
+   34 aload_0            
+   35 aload_0            
+   36 getfield           zX.aPe:F
+   39 aload_0            
+   40 getfield           zX.aRU:F
+   43 invokevirtual      zX.j:(FF)LQt;
+   46 areturn            
+   47 aload_0            
+   48 getfield           zX.aPw:F
+   51 aload_0            
+   52 getfield           zX.aPe:F
+   55 aload_0            
+   56 getfield           zX.aPw:F
+   59 fsub               
+   60 fload_1            
+   61 fmul               
+   62 fadd               
+   63 fstore_2           
+   64 aload_0            
+   65 getfield           zX.aSA:F
+   68 aload_0            
+   69 getfield           zX.aRU:F
+   72 aload_0            
+   73 getfield           zX.aSA:F
+   76 fsub               
+   77 fload_1            
+   78 fmul               
+   79 fadd               
+   80 fstore_3           
+   81 aload_0            
+   82 fload_2            
+   83 fload_3            
+   84 invokevirtual      zX.j:(FF)LQt;
+   87 areturn            
+

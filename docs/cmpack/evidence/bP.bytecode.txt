@@ -1,0 +1,46 @@
+CLASS bP EXTENDS java/lang/Object
+
+METHOD s (Z)LbP;
+    0 aload_0            
+    1 getstatic          bQ.lZ:LbQ;
+    4 putfield           bP.lS:LbQ;
+    7 aload_0            
+    8 sipush             -13822
+   11 iconst_1           
+   12 iand               
+   13 iload_1            
+   14 invokestatic       java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+   17 invokespecial      bP.q:(ILjava/lang/Object;)V
+   20 aload_0            
+   21 getfield           bP.lT:LM;
+   24 getfield           M.bX:Ljava/util/Set;
+   27 aload_0            
+   28 invokeinterface    java/util/Set.add:(Ljava/lang/Object;)Z 0200
+   33 pop                
+   34 aload_0            
+   35 areturn            
+
+
+METHOD ak ()Z
+    0 aload_0            
+    1 getfield           bP.lT:LM;
+    4 getfield           M.bS:Z
+    7 ifeq               28
+   10 aload_0            
+   11 getfield           bP.lT:LM;
+   14 invokevirtual      M.ad:()Z
+   17 ifne               28
+   20 sipush             -7872
+   23 sipush             5256
+   26 iand               
+   27 ireturn            
+   28 aload_0            
+   29 getfield           bP.lV:Ljava/util/List;
+   32 sipush             5089
+   35 bipush             22
+   37 iand               
+   38 invokeinterface    java/util/List.get:(I)Ljava/lang/Object; 0200
+   43 checkcast          java/lang/Boolean
+   46 invokevirtual      java/lang/Boolean.booleanValue:()Z
+   49 ireturn            
+

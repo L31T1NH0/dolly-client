@@ -1,0 +1,724 @@
+Static JVM bytecode; reconstructed class bytes verified against MD5 declared in OptiFine patch archive. No target code executed. Methods selected by signature; snippets retain original JVM offsets.
+
+CLASS bmt SHA256 99e232f777e1fd6544cee059fe378effacc6625636357e5be983e2491596f248
+
+METHOD <init> (Lbmu;)V
+    0 aload_0            
+    1 invokespecial      java/lang/Object.<init>:()V
+    4 aload_0            
+    5 aload_1            
+    6 putfield           bmt.b:Lbmu;
+    9 aload_0            
+   10 invokestatic       bqs.e:()I
+   13 putfield           bmt.a:I
+   16 return             
+
+
+METHOD a ()V
+    0 getstatic          bqs.R:I
+    3 aload_0            
+    4 getfield           bmt.a:I
+    7 invokestatic       bqs.g:(II)V
+   10 return             
+
+
+METHOD a (Ljava/nio/ByteBuffer;)V
+    0 aload_0            
+    1 getfield           bmt.vboRegion:Lnet/optifine/render/VboRegion;
+    4 ifnull             20
+    7 aload_0            
+    8 getfield           bmt.vboRegion:Lnet/optifine/render/VboRegion;
+   11 aload_1            
+   12 aload_0            
+   13 getfield           bmt.vboRange:Lnet/optifine/render/VboRange;
+   16 invokevirtual      net/optifine/render/VboRegion.bufferData:(Ljava/nio/ByteBuffer;Lnet/optifine/render/VboRange;)V
+   19 return             
+   20 aload_0            
+   21 invokevirtual      bmt.a:()V
+   24 getstatic          bqs.R:I
+   27 aload_1            
+   28 ldc                35044
+   30 invokestatic       bqs.a:(ILjava/nio/ByteBuffer;I)V
+   33 aload_0            
+   34 invokevirtual      bmt.b:()V
+   37 aload_0            
+   38 aload_1            
+   39 invokevirtual      java/nio/ByteBuffer.limit:()I
+   42 aload_0            
+   43 getfield           bmt.b:Lbmu;
+   46 invokevirtual      bmu.g:()I
+   49 idiv               
+   50 putfield           bmt.c:I
+   53 return             
+
+
+METHOD a (I)V
+    0 aload_0            
+    1 getfield           bmt.drawMode:I
+    4 ifle               12
+    7 aload_0            
+    8 getfield           bmt.drawMode:I
+   11 istore_1           
+   12 aload_0            
+   13 getfield           bmt.vboRegion:Lnet/optifine/render/VboRegion;
+   16 ifnull             34
+   19 aload_0            
+   20 getfield           bmt.vboRegion:Lnet/optifine/render/VboRegion;
+   23 iload_1            
+   24 aload_0            
+   25 getfield           bmt.vboRange:Lnet/optifine/render/VboRange;
+   28 invokevirtual      net/optifine/render/VboRegion.drawArrays:(ILnet/optifine/render/VboRange;)V
+   31 goto               43
+   34 iload_1            
+   35 iconst_0           
+   36 aload_0            
+   37 getfield           bmt.c:I
+   40 invokestatic       org/lwjgl/opengl/GL11.glDrawArrays:(III)V
+   43 return             
+
+
+METHOD b ()V
+    0 getstatic          bqs.R:I
+    3 iconst_0           
+    4 invokestatic       bqs.g:(II)V
+    7 return             
+
+
+METHOD c ()V
+    0 aload_0            
+    1 getfield           bmt.a:I
+    4 iflt               19
+    7 aload_0            
+    8 getfield           bmt.a:I
+   11 invokestatic       bqs.g:(I)V
+   14 aload_0            
+   15 iconst_m1          
+   16 putfield           bmt.a:I
+   19 return             
+
+
+METHOD setVboRegion (Lnet/optifine/render/VboRegion;)V
+    0 aload_1            
+    1 ifnonnull          5
+    4 return             
+    5 aload_0            
+    6 invokevirtual      bmt.c:()V
+    9 aload_0            
+   10 aload_1            
+   11 putfield           bmt.vboRegion:Lnet/optifine/render/VboRegion;
+   14 aload_0            
+   15 new                net/optifine/render/VboRange
+   18 dup                
+   19 invokespecial      net/optifine/render/VboRange.<init>:()V
+   22 putfield           bmt.vboRange:Lnet/optifine/render/VboRange;
+   25 return             
+
+
+CLASS bfz SHA256 39489af9cdbc61b8960f2a7a87e33943c0196837033e95cc1a7de5f3c895c053
+
+METHOD a (Lbfd;)V
+    0 aload_1            
+    1 invokevirtual      bfd.i:()I
+    4 bipush             7
+    6 if_icmpne          30
+    9 invokestatic       Config.isQuadsToTriangles:()Z
+   12 ifeq               30
+   15 aload_1            
+   16 invokevirtual      bfd.quadsToTriangles:()V
+   19 aload_0            
+   20 getfield           bfz.a:Lbmt;
+   23 aload_1            
+   24 invokevirtual      bfd.i:()I
+   27 invokevirtual      bmt.setDrawMode:(I)V
+   30 aload_0            
+   31 getfield           bfz.a:Lbmt;
+   34 aload_1            
+   35 invokevirtual      bfd.f:()Ljava/nio/ByteBuffer;
+   38 invokevirtual      bmt.a:(Ljava/nio/ByteBuffer;)V
+   41 aload_1            
+   42 invokevirtual      bfd.b:()V
+   45 return             
+
+
+METHOD a (Lbmt;)V
+    0 aload_0            
+    1 aload_1            
+    2 putfield           bfz.a:Lbmt;
+    5 return             
+
+CLASS bga SHA256 2df1de7b5b74f7de37172369f732ba0e53c8634af9f85a544e3c7ab269f4606d
+
+METHOD updateVboRegion (Lbht;)V
+    0 aload_1            
+    1 invokevirtual      bht.j:()Lcj;
+    4 astore_2           
+    5 aload_2            
+    6 invokevirtual      cj.n:()I
+    9 bipush             8
+   11 ishr               
+   12 bipush             8
+   14 ishl               
+   15 istore_3           
+   16 aload_2            
+   17 invokevirtual      cj.p:()I
+   20 bipush             8
+   22 ishr               
+   23 bipush             8
+   25 ishl               
+   26 istore             4
+   28 new                adg
+   31 dup                
+   32 iload_3            
+   33 iload              4
+   35 invokespecial      adg.<init>:(II)V
+   38 astore             5
+   40 getstatic          bht.ENUM_WORLD_BLOCK_LAYERS:[Ladf;
+   43 astore             6
+   45 aload_0            
+   46 getfield           bga.mapVboRegions:Ljava/util/Map;
+   49 aload              5
+   51 invokeinterface    java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object; 0200
+   56 checkcast          [Lnet/optifine/render/VboRegion;
+   59 astore             7
+   61 aload              7
+   63 ifnonnull          122
+   66 aload              6
+   68 arraylength        
+   69 anewarray          net/optifine/render/VboRegion
+   72 astore             7
+   74 iconst_0           
+   75 istore             8
+   77 iload              8
+   79 aload              6
+   81 arraylength        
+   82 if_icmpge          108
+   85 aload              7
+   87 iload              8
+   89 new                net/optifine/render/VboRegion
+   92 dup                
+   93 aload              6
+   95 iload              8
+   97 aaload             
+   98 invokespecial      net/optifine/render/VboRegion.<init>:(Ladf;)V
+  101 aastore            
+  102 iinc               0801
+  105 goto               77
+  108 aload_0            
+  109 getfield           bga.mapVboRegions:Ljava/util/Map;
+  112 aload              5
+  114 aload              7
+  116 invokeinterface    java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 0300
+  121 pop                
+  122 iconst_0           
+  123 istore             8
+  125 iload              8
+  127 aload              6
+  129 arraylength        
+  130 if_icmpge          162
+  133 aload              7
+  135 iload              8
+  137 aaload             
+  138 astore             9
+  140 aload              9
+  142 ifnull             156
+  145 aload_1            
+  146 iload              8
+  148 invokevirtual      bht.b:(I)Lbmt;
+  151 aload              9
+  153 invokevirtual      bmt.setVboRegion:(Lnet/optifine/render/VboRegion;)V
+  156 iinc               0801
+  159 goto               125
+  162 return             
+
+
+METHOD deleteVboRegions ()V
+    0 aload_0            
+    1 getfield           bga.mapVboRegions:Ljava/util/Map;
+    4 invokeinterface    java/util/Map.keySet:()Ljava/util/Set; 0100
+    9 astore_1           
+   10 aload_1            
+   11 invokeinterface    java/util/Set.iterator:()Ljava/util/Iterator; 0100
+   16 astore_2           
+   17 aload_2            
+   18 invokeinterface    java/util/Iterator.hasNext:()Z 0100
+   23 ifeq               94
+   26 aload_2            
+   27 invokeinterface    java/util/Iterator.next:()Ljava/lang/Object; 0100
+   32 checkcast          adg
+   35 astore_3           
+   36 aload_0            
+   37 getfield           bga.mapVboRegions:Ljava/util/Map;
+   40 aload_3            
+   41 invokeinterface    java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object; 0200
+   46 checkcast          [Lnet/optifine/render/VboRegion;
+   49 astore             4
+   51 iconst_0           
+   52 istore             5
+   54 iload              5
+   56 aload              4
+   58 arraylength        
+   59 if_icmpge          91
+   62 aload              4
+   64 iload              5
+   66 aaload             
+   67 astore             6
+   69 aload              6
+   71 ifnull             79
+   74 aload              6
+   76 invokevirtual      net/optifine/render/VboRegion.deleteGlBuffers:()V
+   79 aload              4
+   81 iload              5
+   83 aconst_null        
+   84 aastore            
+   85 iinc               0501
+   88 goto               54
+   91 goto               17
+   94 aload_0            
+   95 getfield           bga.mapVboRegions:Ljava/util/Map;
+   98 invokeinterface    java/util/Map.clear:()V 0100
+  103 return             
+
+CLASS bfy SHA256 b970d66c99f7bd40110c6104e8c231bea7e427db19bfe08c117c543faeaa715c
+
+METHOD a (Ladf;)V
+    0 aload_0            
+    1 getfield           bfy.b:Z
+    4 ifeq               245
+    7 invokestatic       Config.isRenderRegions:()Z
+   10 ifeq               153
+   13 ldc                -2147483648
+   15 istore_2           
+   16 ldc                -2147483648
+   18 istore_3           
+   19 aconst_null        
+   20 astore             4
+   22 aload_0            
+   23 getfield           bfy.a:Ljava/util/List;
+   26 invokeinterface    java/util/List.iterator:()Ljava/util/Iterator; 0100
+   31 astore             5
+   33 aload              5
+   35 invokeinterface    java/util/Iterator.hasNext:()Z 0100
+   40 ifeq               137
+   43 aload              5
+   45 invokeinterface    java/util/Iterator.next:()Ljava/lang/Object; 0100
+   50 checkcast          bht
+   53 astore             6
+   55 aload              6
+   57 aload_1            
+   58 invokevirtual      adf.ordinal:()I
+   61 invokevirtual      bht.b:(I)Lbmt;
+   64 astore             7
+   66 aload              7
+   68 invokevirtual      bmt.getVboRegion:()Lnet/optifine/render/VboRegion;
+   71 astore             8
+   73 aload              8
+   75 aload              4
+   77 if_acmpne          98
+   80 iload_2            
+   81 aload              6
+   83 getfield           bht.regionX:I
+   86 if_icmpne          98
+   89 iload_3            
+   90 aload              6
+   92 getfield           bht.regionZ:I
+   95 if_icmpeq          127
+   98 aload              4
+  100 ifnull             111
+  103 aload_0            
+  104 iload_2            
+  105 iload_3            
+  106 aload              4
+  108 invokespecial      bfy.drawRegion:(IILnet/optifine/render/VboRegion;)V
+  111 aload              6
+  113 getfield           bht.regionX:I
+  116 istore_2           
+  117 aload              6
+  119 getfield           bht.regionZ:I
+  122 istore_3           
+  123 aload              8
+  125 astore             4
+  127 aload              7
+  129 bipush             7
+  131 invokevirtual      bmt.a:(I)V
+  134 goto               33
+  137 aload              4
+  139 ifnull             150
+  142 aload_0            
+  143 iload_2            
+  144 iload_3            
+  145 aload              4
+  147 invokespecial      bfy.drawRegion:(IILnet/optifine/render/VboRegion;)V
+  150 goto               226
+  153 aload_0            
+  154 getfield           bfy.a:Ljava/util/List;
+  157 invokeinterface    java/util/List.iterator:()Ljava/util/Iterator; 0100
+  162 astore_2           
+  163 aload_2            
+  164 invokeinterface    java/util/Iterator.hasNext:()Z 0100
+  169 ifeq               226
+  172 aload_2            
+  173 invokeinterface    java/util/Iterator.next:()Ljava/lang/Object; 0100
+  178 checkcast          bht
+  181 astore_3           
+  182 aload_3            
+  183 aload_1            
+  184 invokevirtual      adf.ordinal:()I
+  187 invokevirtual      bht.b:(I)Lbmt;
+  190 astore             4
+  192 invokestatic       bfl.E:()V
+  195 aload_0            
+  196 aload_3            
+  197 invokevirtual      bfy.a:(Lbht;)V
+  200 aload_3            
+  201 invokevirtual      bht.f:()V
+  204 aload              4
+  206 invokevirtual      bmt.a:()V
+  209 aload_0            
+  210 invokevirtual      bfy.a:()V
+  213 aload              4
+  215 bipush             7
+  217 invokevirtual      bmt.a:(I)V
+  220 invokestatic       bfl.F:()V
+  223 goto               163
+  226 getstatic          bqs.R:I
+  229 iconst_0           
+  230 invokestatic       bqs.g:(II)V
+  233 invokestatic       bfl.G:()V
+  236 aload_0            
+  237 getfield           bfy.a:Ljava/util/List;
+  240 invokeinterface    java/util/List.clear:()V 0100
+  245 return             
+
+
+METHOD a ()V
+    0 invokestatic       Config.isShaders:()Z
+    3 ifeq               10
+    6 invokestatic       net/optifine/shaders/ShadersRender.setupArrayPointersVbo:()V
+    9 return             
+   10 iconst_3           
+   11 sipush             5126
+   14 bipush             28
+   16 lconst_0           
+   17 invokestatic       org/lwjgl/opengl/GL11.glVertexPointer:(IIIJ)V
+   20 iconst_4           
+   21 sipush             5121
+   24 bipush             28
+   26 ldc2_w             000000000000000c
+   29 invokestatic       org/lwjgl/opengl/GL11.glColorPointer:(IIIJ)V
+   32 iconst_2           
+   33 sipush             5126
+   36 bipush             28
+   38 ldc2_w             0000000000000010
+   41 invokestatic       org/lwjgl/opengl/GL11.glTexCoordPointer:(IIIJ)V
+   44 getstatic          bqs.r:I
+   47 invokestatic       bqs.l:(I)V
+   50 iconst_2           
+   51 sipush             5122
+   54 bipush             28
+   56 ldc2_w             0000000000000018
+   59 invokestatic       org/lwjgl/opengl/GL11.glTexCoordPointer:(IIIJ)V
+   62 getstatic          bqs.q:I
+   65 invokestatic       bqs.l:(I)V
+   68 return             
+
+
+METHOD a (DDD)V
+    0 aload_0            
+    1 dload_1            
+    2 putfield           bfy.viewEntityX:D
+    5 aload_0            
+    6 dload_3            
+    7 putfield           bfy.viewEntityY:D
+   10 aload_0            
+   11 dload              5
+   13 putfield           bfy.viewEntityZ:D
+   16 aload_0            
+   17 dload_1            
+   18 dload_3            
+   19 dload              5
+   21 invokespecial      bfh.a:(DDD)V
+   24 return             
+
+
+METHOD drawRegion (IILnet/optifine/render/VboRegion;)V
+    0 invokestatic       bfl.E:()V
+    3 aload_0            
+    4 iload_1            
+    5 iconst_0           
+    6 iload_2            
+    7 invokevirtual      bfy.preRenderRegion:(III)V
+   10 aload_3            
+   11 aload_0            
+   12 invokevirtual      net/optifine/render/VboRegion.finishDraw:(Lbfy;)V
+   15 invokestatic       bfl.F:()V
+   18 return             
+
+
+METHOD preRenderRegion (III)V
+    0 iload_1            
+    1 i2d                
+    2 aload_0            
+    3 getfield           bfy.viewEntityX:D
+    6 dsub               
+    7 d2f                
+    8 iload_2            
+    9 i2d                
+   10 aload_0            
+   11 getfield           bfy.viewEntityY:D
+   14 dsub               
+   15 d2f                
+   16 iload_3            
+   17 i2d                
+   18 aload_0            
+   19 getfield           bfy.viewEntityZ:D
+   22 dsub               
+   23 d2f                
+   24 invokestatic       bfl.b:(FFF)V
+   27 return             
+
+CLASS bht SHA256 c3c70f03dd2d95fb6be30e5869b4f470a97a5ec21284d832d2bb522519cd37d9
+
+METHOD a (Lcj;)V
+    0 aload_0            
+    1 invokevirtual      bht.h:()V
+    4 aload_0            
+    5 aload_1            
+    6 putfield           bht.f:Lcj;
+    9 bipush             8
+   11 istore_2           
+   12 aload_0            
+   13 aload_1            
+   14 invokevirtual      cj.n:()I
+   17 iload_2            
+   18 ishr               
+   19 iload_2            
+   20 ishl               
+   21 putfield           bht.regionX:I
+   24 aload_0            
+   25 aload_1            
+   26 invokevirtual      cj.p:()I
+   29 iload_2            
+   30 ishr               
+   31 iload_2            
+   32 ishl               
+   33 putfield           bht.regionZ:I
+   36 aload_0            
+   37 new                aug
+   40 dup                
+   41 aload_1            
+   42 aload_1            
+   43 bipush             16
+   45 bipush             16
+   47 bipush             16
+   49 invokevirtual      cj.a:(III)Lcj;
+   52 invokespecial      aug.<init>:(Lcj;Lcj;)V
+   55 putfield           bht.c:Laug;
+   58 aload_0            
+   59 invokespecial      bht.m:()V
+   62 iconst_0           
+   63 istore_3           
+   64 iload_3            
+   65 aload_0            
+   66 getfield           bht.positionOffsets16:[Lcj;
+   69 arraylength        
+   70 if_icmpge          86
+   73 aload_0            
+   74 getfield           bht.positionOffsets16:[Lcj;
+   77 iload_3            
+   78 aconst_null        
+   79 aastore            
+   80 iinc               0301
+   83 goto               64
+   86 aload_0            
+   87 iconst_0           
+   88 putfield           bht.renderChunksOffset16Updated:Z
+   91 aload_0            
+   92 iconst_0           
+   93 putfield           bht.renderChunkNeighboursUpated:Z
+   96 iconst_0           
+   97 istore_3           
+   98 iload_3            
+   99 aload_0            
+  100 getfield           bht.renderChunkNeighbours:[Lbht;
+  103 arraylength        
+  104 if_icmpge          132
+  107 aload_0            
+  108 getfield           bht.renderChunkNeighbours:[Lbht;
+  111 iload_3            
+  112 aaload             
+  113 astore             4
+  115 aload              4
+  117 ifnull             126
+  120 aload              4
+  122 iconst_0           
+  123 putfield           bht.renderChunkNeighboursUpated:Z
+  126 iinc               0301
+  129 goto               98
+  132 aload_0            
+  133 aconst_null        
+  134 putfield           bht.chunk:Lamy;
+  137 aload_0            
+  138 aconst_null        
+  139 putfield           bht.boundingBoxParent:Lnet/optifine/render/AabbFrame;
+  142 return             
+
+
+METHOD a (Lbfd;Lcj;)V
+    0 aload_1            
+    1 bipush             7
+    3 getstatic          bms.a:Lbmu;
+    6 invokevirtual      bfd.a:(ILbmu;)V
+    9 invokestatic       Config.isRenderRegions:()Z
+   12 ifeq               79
+   15 bipush             8
+   17 istore_3           
+   18 aload_2            
+   19 invokevirtual      cj.n:()I
+   22 iload_3            
+   23 ishr               
+   24 iload_3            
+   25 ishl               
+   26 istore             4
+   28 aload_2            
+   29 invokevirtual      cj.o:()I
+   32 iload_3            
+   33 ishr               
+   34 iload_3            
+   35 ishl               
+   36 istore             5
+   38 aload_2            
+   39 invokevirtual      cj.p:()I
+   42 iload_3            
+   43 ishr               
+   44 iload_3            
+   45 ishl               
+   46 istore             6
+   48 aload_0            
+   49 getfield           bht.regionX:I
+   52 istore             4
+   54 aload_0            
+   55 getfield           bht.regionZ:I
+   58 istore             6
+   60 aload_1            
+   61 iload              4
+   63 ineg               
+   64 i2d                
+   65 iload              5
+   67 ineg               
+   68 i2d                
+   69 iload              6
+   71 ineg               
+   72 i2d                
+   73 invokevirtual      bfd.c:(DDD)V
+   76 goto               101
+   79 aload_1            
+   80 aload_2            
+   81 invokevirtual      cj.n:()I
+   84 ineg               
+   85 i2d                
+   86 aload_2            
+   87 invokevirtual      cj.o:()I
+   90 ineg               
+   91 i2d                
+   92 aload_2            
+   93 invokevirtual      cj.p:()I
+   96 ineg               
+   97 i2d                
+   98 invokevirtual      bfd.c:(DDD)V
+  101 return             
+
+
+CLASS bho SHA256 381976963d303e09ea0fba4fe4c0b0ec6db24db0b4da10e88fce999904e372c7
+
+METHOD a (Ladf;Lbfd;Lbht;Lbhq;)Lcom/google/common/util/concurrent/ListenableFuture;
+    0 invokestatic       ave.A:()Lave;
+    3 invokevirtual      ave.aJ:()Z
+    6 ifeq               62
+    9 invokestatic       bqs.f:()Z
+   12 ifeq               31
+   15 aload_0            
+   16 aload_2            
+   17 aload_3            
+   18 aload_1            
+   19 invokevirtual      adf.ordinal:()I
+   22 invokevirtual      bht.b:(I)Lbmt;
+   25 invokespecial      bho.a:(Lbfd;Lbmt;)V
+   28 goto               47
+   31 aload_0            
+   32 aload_2            
+   33 aload_3            
+   34 checkcast          bhs
+   37 aload_1            
+   38 aload              4
+   40 invokevirtual      bhs.a:(Ladf;Lbhq;)I
+   43 aload_3            
+   44 invokespecial      bho.a:(Lbfd;ILbht;)V
+   47 aload_2            
+   48 dconst_0           
+   49 dconst_0           
+   50 dconst_0           
+   51 invokevirtual      bfd.c:(DDD)V
+   54 aconst_null        
+   55 checkcast          java/lang/Object
+   58 invokestatic       com/google/common/util/concurrent/Futures.immediateFuture:(Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
+   61 areturn            
+   62 new                bho$3
+   65 dup                
+   66 aload_0            
+   67 aload_1            
+   68 aload_2            
+   69 aload_3            
+   70 aload              4
+   72 invokespecial      bho$3.<init>:(Lbho;Ladf;Lbfd;Lbht;Lbhq;)V
+   75 aconst_null        
+   76 checkcast          java/lang/Object
+   79 invokestatic       com/google/common/util/concurrent/ListenableFutureTask.create:(Ljava/lang/Runnable;Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFutureTask;
+   82 astore             5
+   84 aload_0            
+   85 getfield           bho.h:Ljava/util/Queue;
+   88 dup                
+   89 astore             6
+   91 monitorenter       
+   92 aload_0            
+   93 getfield           bho.h:Ljava/util/Queue;
+   96 aload              5
+   98 invokeinterface    java/util/Queue.add:(Ljava/lang/Object;)Z 0200
+  103 pop                
+  104 aload              5
+  106 aload              6
+  108 monitorexit        
+  109 areturn            
+  110 astore             7
+  112 aload              6
+  114 monitorexit        
+  115 aload              7
+  117 athrow             
+
+
+METHOD a (Lbfd;ILbht;)V
+    0 iload_2            
+    1 sipush             4864
+    4 invokestatic       org/lwjgl/opengl/GL11.glNewList:(II)V
+    7 invokestatic       bfl.E:()V
+   10 aload_3            
+   11 invokevirtual      bht.f:()V
+   14 aload_0            
+   15 getfield           bho.f:Lbfe;
+   18 aload_1            
+   19 invokevirtual      bfe.a:(Lbfd;)V
+   22 invokestatic       bfl.F:()V
+   25 invokestatic       org/lwjgl/opengl/GL11.glEndList:()V
+   28 return             
+
+
+METHOD a (Lbfd;Lbmt;)V
+    0 aload_0            
+    1 getfield           bho.g:Lbfz;
+    4 aload_2            
+    5 invokevirtual      bfz.a:(Lbmt;)V
+    8 aload_0            
+    9 getfield           bho.g:Lbfz;
+   12 aload_1            
+   13 invokevirtual      bfz.a:(Lbfd;)V
+   16 return             
+

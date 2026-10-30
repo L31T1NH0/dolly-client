@@ -1,0 +1,512 @@
+Compiled from "FoamFixTransformer.java"
+public class pl.asie.foamfix.coremod.FoamFixTransformer implements net.minecraft.launchwrapper.IClassTransformer {
+  private static final com.google.common.collect.Multimap<java.lang.String, pl.asie.foamfix.coremod.TransformerFunction> transformFunctions;
+    descriptor: Lcom/google/common/collect/Multimap;
+
+  public pl.asie.foamfix.coremod.FoamFixTransformer();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: invokespecial #24                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static byte[] replaceConstructor(byte[], java.lang.String, java.lang.String, java.lang.String, java.lang.String...);
+    descriptor: ([BLjava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)[B
+    Code:
+       0: new           #30                 // class org/objectweb/asm/ClassReader
+       3: dup
+       4: aload_0
+       5: invokespecial #33                 // Method org/objectweb/asm/ClassReader."<init>":([B)V
+       8: astore        5
+      10: new           #35                 // class org/objectweb/asm/ClassWriter
+      13: dup
+      14: iconst_0
+      15: invokespecial #38                 // Method org/objectweb/asm/ClassWriter."<init>":(I)V
+      18: astore        6
+      20: aload         5
+      22: new           #40                 // class pl/asie/foamfix/coremod/FoamFixConstructorReplacer
+      25: dup
+      26: aload_2
+      27: aload_3
+      28: aload         4
+      30: invokespecial #43                 // Method pl/asie/foamfix/coremod/FoamFixConstructorReplacer."<init>":(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
+      33: ldc           #44                 // int 327680
+      35: aload         6
+      37: invokevirtual #48                 // Method pl/asie/foamfix/coremod/FoamFixConstructorReplacer.getClassVisitor:(ILorg/objectweb/asm/ClassVisitor;)Lorg/objectweb/asm/ClassVisitor;
+      40: iconst_0
+      41: invokevirtual #52                 // Method org/objectweb/asm/ClassReader.accept:(Lorg/objectweb/asm/ClassVisitor;I)V
+      44: aload         6
+      46: invokevirtual #56                 // Method org/objectweb/asm/ClassWriter.toByteArray:()[B
+      49: areturn
+
+  public static byte[] spliceClasses(byte[], java.lang.String, java.lang.String, java.lang.String...);
+    descriptor: ([BLjava/lang/String;Ljava/lang/String;[Ljava/lang/String;)[B
+    Code:
+       0: ldc           #2                  // class pl/asie/foamfix/coremod/FoamFixTransformer
+       2: invokevirtual #78                 // Method java/lang/Class.getClassLoader:()Ljava/lang/ClassLoader;
+       5: checkcast     #80                 // class net/minecraft/launchwrapper/LaunchClassLoader
+       8: aload_1
+       9: invokevirtual #84                 // Method net/minecraft/launchwrapper/LaunchClassLoader.getClassBytes:(Ljava/lang/String;)[B
+      12: astore        4
+      14: aload_0
+      15: aload         4
+      17: aload_1
+      18: aload_2
+      19: aload_3
+      20: invokestatic  #87                 // Method spliceClasses:([B[BLjava/lang/String;Ljava/lang/String;[Ljava/lang/String;)[B
+      23: areturn
+      24: astore        4
+      26: new           #89                 // class java/lang/RuntimeException
+      29: dup
+      30: aload         4
+      32: invokespecial #92                 // Method java/lang/RuntimeException."<init>":(Ljava/lang/Throwable;)V
+      35: athrow
+    Exception table:
+       from    to  target type
+           0    23    24   Class java/io/IOException
+
+  public static byte[] spliceClasses(byte[], byte[], java.lang.String, java.lang.String, java.lang.String...);
+    descriptor: ([B[BLjava/lang/String;Ljava/lang/String;[Ljava/lang/String;)[B
+    Code:
+       0: aload_1
+       1: ifnonnull     36
+       4: new           #89                 // class java/lang/RuntimeException
+       7: dup
+       8: new           #98                 // class java/lang/StringBuilder
+      11: dup
+      12: invokespecial #99                 // Method java/lang/StringBuilder."<init>":()V
+      15: ldc           #101                // String Class
+      17: invokevirtual #105                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      20: aload_2
+      21: invokevirtual #105                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      24: ldc           #107                // String  not found! This is a FoamFix bug!
+      26: invokevirtual #105                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      29: invokevirtual #111                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      32: invokespecial #114                // Method java/lang/RuntimeException."<init>":(Ljava/lang/String;)V
+      35: athrow
+      36: aload         4
+      38: invokestatic  #120                // Method com/google/common/collect/Sets.newHashSet:([Ljava/lang/Object;)Ljava/util/HashSet;
+      41: astore        5
+      43: aload         4
+      45: invokestatic  #126                // Method com/google/common/collect/Lists.newArrayList:([Ljava/lang/Object;)Ljava/util/ArrayList;
+      48: astore        6
+      50: new           #30                 // class org/objectweb/asm/ClassReader
+      53: dup
+      54: aload_0
+      55: invokespecial #33                 // Method org/objectweb/asm/ClassReader."<init>":([B)V
+      58: astore        7
+      60: new           #30                 // class org/objectweb/asm/ClassReader
+      63: dup
+      64: aload_1
+      65: invokespecial #33                 // Method org/objectweb/asm/ClassReader."<init>":([B)V
+      68: astore        8
+      70: new           #35                 // class org/objectweb/asm/ClassWriter
+      73: dup
+      74: iconst_0
+      75: invokespecial #38                 // Method org/objectweb/asm/ClassWriter."<init>":(I)V
+      78: astore        9
+      80: aload_2
+      81: bipush        46
+      83: bipush        47
+      85: invokevirtual #132                // Method java/lang/String.replace:(CC)Ljava/lang/String;
+      88: astore        10
+      90: aload_3
+      91: bipush        46
+      93: bipush        47
+      95: invokevirtual #132                // Method java/lang/String.replace:(CC)Ljava/lang/String;
+      98: astore        11
+     100: new           #17                 // class pl/asie/foamfix/coremod/FoamFixTransformer$1
+     103: dup
+     104: aload         10
+     106: aload         11
+     108: invokespecial #135                // Method pl/asie/foamfix/coremod/FoamFixTransformer$1."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+     111: astore        12
+     113: new           #137                // class org/objectweb/asm/tree/ClassNode
+     116: dup
+     117: invokespecial #138                // Method org/objectweb/asm/tree/ClassNode."<init>":()V
+     120: astore        13
+     122: new           #137                // class org/objectweb/asm/tree/ClassNode
+     125: dup
+     126: invokespecial #138                // Method org/objectweb/asm/tree/ClassNode."<init>":()V
+     129: astore        14
+     131: aload         7
+     133: aload         13
+     135: iconst_0
+     136: invokevirtual #52                 // Method org/objectweb/asm/ClassReader.accept:(Lorg/objectweb/asm/ClassVisitor;I)V
+     139: aload         8
+     141: new           #140                // class org/objectweb/asm/commons/RemappingClassAdapter
+     144: dup
+     145: aload         14
+     147: aload         12
+     149: invokespecial #143                // Method org/objectweb/asm/commons/RemappingClassAdapter."<init>":(Lorg/objectweb/asm/ClassVisitor;Lorg/objectweb/asm/commons/Remapper;)V
+     152: bipush        8
+     154: invokevirtual #52                 // Method org/objectweb/asm/ClassReader.accept:(Lorg/objectweb/asm/ClassVisitor;I)V
+     157: aload         14
+     159: getfield      #147                // Field org/objectweb/asm/tree/ClassNode.interfaces:Ljava/util/List;
+     162: invokeinterface #153,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+     167: astore        15
+     169: aload         15
+     171: invokeinterface #165,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+     176: ifeq          243
+     179: aload         15
+     181: invokeinterface #169,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+     186: checkcast     #128                // class java/lang/String
+     189: astore        16
+     191: aload         16
+     193: ldc           #171                // String IFoamFix
+     195: invokevirtual #175                // Method java/lang/String.contains:(Ljava/lang/CharSequence;)Z
+     198: ifeq          240
+     201: aload         13
+     203: getfield      #147                // Field org/objectweb/asm/tree/ClassNode.interfaces:Ljava/util/List;
+     206: aload         16
+     208: invokeinterface #179,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     213: pop
+     214: getstatic     #185                // Field java/lang/System.out:Ljava/io/PrintStream;
+     217: new           #98                 // class java/lang/StringBuilder
+     220: dup
+     221: invokespecial #99                 // Method java/lang/StringBuilder."<init>":()V
+     224: ldc           #187                // String Added INTERFACE:
+     226: invokevirtual #105                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     229: aload         16
+     231: invokevirtual #105                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     234: invokevirtual #111                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     237: invokevirtual #192                // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+     240: goto          169
+     243: iconst_0
+     244: istore        15
+     246: iload         15
+     248: aload         14
+     250: getfield      #194                // Field org/objectweb/asm/tree/ClassNode.methods:Ljava/util/List;
+     253: invokeinterface #198,  1          // InterfaceMethod java/util/List.size:()I
+     258: if_icmpge     593
+     261: aload         5
+     263: aload         14
+     265: getfield      #194                // Field org/objectweb/asm/tree/ClassNode.methods:Ljava/util/List;
+     268: iload         15
+     270: invokeinterface #202,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+     275: checkcast     #204                // class org/objectweb/asm/tree/MethodNode
+     278: getfield      #207                // Field org/objectweb/asm/tree/MethodNode.name:Ljava/lang/String;
+     281: invokeinterface #209,  2          // InterfaceMethod java/util/Set.contains:(Ljava/lang/Object;)Z
+     286: ifeq          587
+     289: aload         14
+     291: getfield      #194                // Field org/objectweb/asm/tree/ClassNode.methods:Ljava/util/List;
+     294: iload         15
+     296: invokeinterface #202,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+     301: checkcast     #204                // class org/objectweb/asm/tree/MethodNode
+     304: astore        16
+     306: iconst_0
+     307: istore        17
+     309: iconst_0
+     310: istore        18
+     312: iload         18
+     314: aload         13
+     316: getfield      #194                // Field org/objectweb/asm/tree/ClassNode.methods:Ljava/util/List;
+     319: invokeinterface #198,  1          // InterfaceMethod java/util/List.size:()I
+     324: if_icmpge     528
+     327: aload         13
+     329: getfield      #194                // Field org/objectweb/asm/tree/ClassNode.methods:Ljava/util/List;
+     332: iload         18
+     334: invokeinterface #202,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+     339: checkcast     #204                // class org/objectweb/asm/tree/MethodNode
+     342: getfield      #207                // Field org/objectweb/asm/tree/MethodNode.name:Ljava/lang/String;
+     345: aload         16
+     347: getfield      #207                // Field org/objectweb/asm/tree/MethodNode.name:Ljava/lang/String;
+     350: invokevirtual #212                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+     353: ifeq          522
+     356: aload         13
+     358: getfield      #194                // Field org/objectweb/asm/tree/ClassNode.methods:Ljava/util/List;
+     361: iload         18
+     363: invokeinterface #202,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+     368: checkcast     #204                // class org/objectweb/asm/tree/MethodNode
+     371: getfield      #215                // Field org/objectweb/asm/tree/MethodNode.desc:Ljava/lang/String;
+     374: aload         16
+     376: getfield      #215                // Field org/objectweb/asm/tree/MethodNode.desc:Ljava/lang/String;
+     379: invokevirtual #212                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+     382: ifeq          522
+     385: aload         13
+     387: getfield      #194                // Field org/objectweb/asm/tree/ClassNode.methods:Ljava/util/List;
+     390: iload         18
+     392: invokeinterface #202,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+     397: checkcast     #204                // class org/objectweb/asm/tree/MethodNode
+     400: astore        19
+     402: getstatic     #185                // Field java/lang/System.out:Ljava/io/PrintStream;
+     405: new           #98                 // class java/lang/StringBuilder
+     408: dup
+     409: invokespecial #99                 // Method java/lang/StringBuilder."<init>":()V
+     412: ldc           #217                // String Spliced in METHOD:
+     414: invokevirtual #105                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     417: aload_3
+     418: invokevirtual #105                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     421: ldc           #219                // String .
+     423: invokevirtual #105                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     426: aload         16
+     428: getfield      #207                // Field org/objectweb/asm/tree/MethodNode.name:Ljava/lang/String;
+     431: invokevirtual #105                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     434: invokevirtual #111                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     437: invokevirtual #192                // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+     440: aload         13
+     442: getfield      #194                // Field org/objectweb/asm/tree/ClassNode.methods:Ljava/util/List;
+     445: iload         18
+     447: aload         16
+     449: invokeinterface #223,  3          // InterfaceMethod java/util/List.set:(ILjava/lang/Object;)Ljava/lang/Object;
+     454: pop
+     455: aload         19
+     457: new           #98                 // class java/lang/StringBuilder
+     460: dup
+     461: invokespecial #99                 // Method java/lang/StringBuilder."<init>":()V
+     464: aload         6
+     466: aload         6
+     468: aload         19
+     470: getfield      #207                // Field org/objectweb/asm/tree/MethodNode.name:Ljava/lang/String;
+     473: invokeinterface #227,  2          // InterfaceMethod java/util/List.indexOf:(Ljava/lang/Object;)I
+     478: bipush        -2
+     480: iand
+     481: invokeinterface #202,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+     486: checkcast     #128                // class java/lang/String
+     489: invokevirtual #105                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     492: ldc           #229                // String _foamfix_old
+     494: invokevirtual #105                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     497: invokevirtual #111                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     500: putfield      #207                // Field org/objectweb/asm/tree/MethodNode.name:Ljava/lang/String;
+     503: aload         13
+     505: getfield      #194                // Field org/objectweb/asm/tree/ClassNode.methods:Ljava/util/List;
+     508: aload         19
+     510: invokeinterface #179,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     515: pop
+     516: iconst_1
+     517: istore        17
+     519: goto          528
+     522: iinc          18, 1
+     525: goto          312
+     528: iload         17
+     530: ifne          587
+     533: getstatic     #185                // Field java/lang/System.out:Ljava/io/PrintStream;
+     536: new           #98                 // class java/lang/StringBuilder
+     539: dup
+     540: invokespecial #99                 // Method java/lang/StringBuilder."<init>":()V
+     543: ldc           #231                // String Added METHOD:
+     545: invokevirtual #105                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     548: aload_3
+     549: invokevirtual #105                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     552: ldc           #219                // String .
+     554: invokevirtual #105                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     557: aload         16
+     559: getfield      #207                // Field org/objectweb/asm/tree/MethodNode.name:Ljava/lang/String;
+     562: invokevirtual #105                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     565: invokevirtual #111                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     568: invokevirtual #192                // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+     571: aload         13
+     573: getfield      #194                // Field org/objectweb/asm/tree/ClassNode.methods:Ljava/util/List;
+     576: aload         16
+     578: invokeinterface #179,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     583: pop
+     584: iconst_1
+     585: istore        17
+     587: iinc          15, 1
+     590: goto          246
+     593: iconst_0
+     594: istore        15
+     596: iload         15
+     598: aload         14
+     600: getfield      #234                // Field org/objectweb/asm/tree/ClassNode.fields:Ljava/util/List;
+     603: invokeinterface #198,  1          // InterfaceMethod java/util/List.size:()I
+     608: if_icmpge     865
+     611: aload         5
+     613: aload         14
+     615: getfield      #234                // Field org/objectweb/asm/tree/ClassNode.fields:Ljava/util/List;
+     618: iload         15
+     620: invokeinterface #202,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+     625: checkcast     #236                // class org/objectweb/asm/tree/FieldNode
+     628: getfield      #237                // Field org/objectweb/asm/tree/FieldNode.name:Ljava/lang/String;
+     631: invokeinterface #209,  2          // InterfaceMethod java/util/Set.contains:(Ljava/lang/Object;)Z
+     636: ifeq          859
+     639: aload         14
+     641: getfield      #234                // Field org/objectweb/asm/tree/ClassNode.fields:Ljava/util/List;
+     644: iload         15
+     646: invokeinterface #202,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+     651: checkcast     #236                // class org/objectweb/asm/tree/FieldNode
+     654: astore        16
+     656: iconst_0
+     657: istore        17
+     659: iconst_0
+     660: istore        18
+     662: iload         18
+     664: aload         13
+     666: getfield      #234                // Field org/objectweb/asm/tree/ClassNode.fields:Ljava/util/List;
+     669: invokeinterface #198,  1          // InterfaceMethod java/util/List.size:()I
+     674: if_icmpge     800
+     677: aload         13
+     679: getfield      #234                // Field org/objectweb/asm/tree/ClassNode.fields:Ljava/util/List;
+     682: iload         18
+     684: invokeinterface #202,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+     689: checkcast     #236                // class org/objectweb/asm/tree/FieldNode
+     692: getfield      #237                // Field org/objectweb/asm/tree/FieldNode.name:Ljava/lang/String;
+     695: aload         16
+     697: getfield      #237                // Field org/objectweb/asm/tree/FieldNode.name:Ljava/lang/String;
+     700: invokevirtual #212                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+     703: ifeq          794
+     706: aload         13
+     708: getfield      #234                // Field org/objectweb/asm/tree/ClassNode.fields:Ljava/util/List;
+     711: iload         18
+     713: invokeinterface #202,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+     718: checkcast     #236                // class org/objectweb/asm/tree/FieldNode
+     721: getfield      #238                // Field org/objectweb/asm/tree/FieldNode.desc:Ljava/lang/String;
+     724: aload         16
+     726: getfield      #238                // Field org/objectweb/asm/tree/FieldNode.desc:Ljava/lang/String;
+     729: invokevirtual #212                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+     732: ifeq          794
+     735: getstatic     #185                // Field java/lang/System.out:Ljava/io/PrintStream;
+     738: new           #98                 // class java/lang/StringBuilder
+     741: dup
+     742: invokespecial #99                 // Method java/lang/StringBuilder."<init>":()V
+     745: ldc           #240                // String Spliced in FIELD:
+     747: invokevirtual #105                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     750: aload_3
+     751: invokevirtual #105                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     754: ldc           #219                // String .
+     756: invokevirtual #105                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     759: aload         16
+     761: getfield      #237                // Field org/objectweb/asm/tree/FieldNode.name:Ljava/lang/String;
+     764: invokevirtual #105                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     767: invokevirtual #111                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     770: invokevirtual #192                // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+     773: aload         13
+     775: getfield      #234                // Field org/objectweb/asm/tree/ClassNode.fields:Ljava/util/List;
+     778: iload         18
+     780: aload         16
+     782: invokeinterface #223,  3          // InterfaceMethod java/util/List.set:(ILjava/lang/Object;)Ljava/lang/Object;
+     787: pop
+     788: iconst_1
+     789: istore        17
+     791: goto          800
+     794: iinc          18, 1
+     797: goto          662
+     800: iload         17
+     802: ifne          859
+     805: getstatic     #185                // Field java/lang/System.out:Ljava/io/PrintStream;
+     808: new           #98                 // class java/lang/StringBuilder
+     811: dup
+     812: invokespecial #99                 // Method java/lang/StringBuilder."<init>":()V
+     815: ldc           #242                // String Added FIELD:
+     817: invokevirtual #105                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     820: aload_3
+     821: invokevirtual #105                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     824: ldc           #219                // String .
+     826: invokevirtual #105                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     829: aload         16
+     831: getfield      #237                // Field org/objectweb/asm/tree/FieldNode.name:Ljava/lang/String;
+     834: invokevirtual #105                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     837: invokevirtual #111                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     840: invokevirtual #192                // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+     843: aload         13
+     845: getfield      #234                // Field org/objectweb/asm/tree/ClassNode.fields:Ljava/util/List;
+     848: aload         16
+     850: invokeinterface #179,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     855: pop
+     856: iconst_1
+     857: istore        17
+     859: iinc          15, 1
+     862: goto          596
+     865: aload         13
+     867: aload         9
+     869: invokevirtual #245                // Method org/objectweb/asm/tree/ClassNode.accept:(Lorg/objectweb/asm/ClassVisitor;)V
+     872: aload         9
+     874: invokevirtual #56                 // Method org/objectweb/asm/ClassWriter.toByteArray:()[B
+     877: areturn
+
+  public static void init();
+    descriptor: ()V
+    Code:
+       0: getstatic     #276                // Field pl/asie/foamfix/shared/FoamFixShared.config:Lpl/asie/foamfix/shared/FoamFixConfig;
+       3: getfield      #281                // Field pl/asie/foamfix/shared/FoamFixConfig.geSmallPropertyStorage:Z
+       6: ifeq          47
+       9: getstatic     #283                // Field transformFunctions:Lcom/google/common/collect/Multimap;
+      12: ldc_w         #285                // String net.minecraft.block.state.BlockStateContainer
+      15: new           #15                 // class pl/asie/foamfix/coremod/FoamFixTransformer$2
+      18: dup
+      19: invokespecial #286                // Method pl/asie/foamfix/coremod/FoamFixTransformer$2."<init>":()V
+      22: invokeinterface #292,  3          // InterfaceMethod com/google/common/collect/Multimap.put:(Ljava/lang/Object;Ljava/lang/Object;)Z
+      27: pop
+      28: getstatic     #283                // Field transformFunctions:Lcom/google/common/collect/Multimap;
+      31: ldc_w         #294                // String net.minecraftforge.common.property.ExtendedBlockState
+      34: new           #13                 // class pl/asie/foamfix/coremod/FoamFixTransformer$3
+      37: dup
+      38: invokespecial #295                // Method pl/asie/foamfix/coremod/FoamFixTransformer$3."<init>":()V
+      41: invokeinterface #292,  3          // InterfaceMethod com/google/common/collect/Multimap.put:(Ljava/lang/Object;Ljava/lang/Object;)Z
+      46: pop
+      47: getstatic     #276                // Field pl/asie/foamfix/shared/FoamFixShared.config:Lpl/asie/foamfix/shared/FoamFixConfig;
+      50: getfield      #298                // Field pl/asie/foamfix/shared/FoamFixConfig.clDynamicItemModels:Z
+      53: ifeq          75
+      56: getstatic     #283                // Field transformFunctions:Lcom/google/common/collect/Multimap;
+      59: ldc_w         #300                // String net.minecraftforge.client.model.ItemLayerModel
+      62: new           #11                 // class pl/asie/foamfix/coremod/FoamFixTransformer$4
+      65: dup
+      66: invokespecial #301                // Method pl/asie/foamfix/coremod/FoamFixTransformer$4."<init>":()V
+      69: invokeinterface #292,  3          // InterfaceMethod com/google/common/collect/Multimap.put:(Ljava/lang/Object;Ljava/lang/Object;)Z
+      74: pop
+      75: getstatic     #276                // Field pl/asie/foamfix/shared/FoamFixShared.config:Lpl/asie/foamfix/shared/FoamFixConfig;
+      78: getfield      #304                // Field pl/asie/foamfix/shared/FoamFixConfig.geReplaceSimpleName:Z
+      81: ifeq          103
+      84: getstatic     #283                // Field transformFunctions:Lcom/google/common/collect/Multimap;
+      87: ldc_w         #306                // String net.minecraft.world.World
+      90: new           #9                  // class pl/asie/foamfix/coremod/FoamFixTransformer$5
+      93: dup
+      94: invokespecial #307                // Method pl/asie/foamfix/coremod/FoamFixTransformer$5."<init>":()V
+      97: invokeinterface #292,  3          // InterfaceMethod com/google/common/collect/Multimap.put:(Ljava/lang/Object;Ljava/lang/Object;)Z
+     102: pop
+     103: return
+
+  public byte[] transform(java.lang.String, java.lang.String, byte[]);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;[B)[B
+    Code:
+       0: aload_3
+       1: ifnonnull     6
+       4: aconst_null
+       5: areturn
+       6: aload_3
+       7: astore        4
+       9: getstatic     #276                // Field pl/asie/foamfix/shared/FoamFixShared.config:Lpl/asie/foamfix/shared/FoamFixConfig;
+      12: getfield      #312                // Field pl/asie/foamfix/shared/FoamFixConfig.geBlockPosPatch:Z
+      15: ifeq          52
+      18: ldc_w         #314                // String net.minecraft.util.math.Vec3i
+      21: aload_2
+      22: invokevirtual #212                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+      25: ifeq          38
+      28: aload         4
+      30: invokestatic  #320                // Method pl/asie/foamfix/coremod/BlockPosPatch.patchVec3i:([B)[B
+      33: astore        4
+      35: goto          52
+      38: aload         4
+      40: ldc_w         #322                // String net.minecraft.util.math.BlockPos$MutableBlockPos
+      43: aload_2
+      44: invokevirtual #212                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+      47: invokestatic  #326                // Method pl/asie/foamfix/coremod/BlockPosPatch.patchOtherClass:([BZ)[B
+      50: astore        4
+      52: getstatic     #283                // Field transformFunctions:Lcom/google/common/collect/Multimap;
+      55: aload_2
+      56: invokeinterface #329,  2          // InterfaceMethod com/google/common/collect/Multimap.get:(Ljava/lang/Object;)Ljava/util/Collection;
+      61: invokeinterface #332,  1          // InterfaceMethod java/util/Collection.iterator:()Ljava/util/Iterator;
+      66: astore        5
+      68: aload         5
+      70: invokeinterface #165,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+      75: ifeq          105
+      78: aload         5
+      80: invokeinterface #169,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      85: checkcast     #334                // class pl/asie/foamfix/coremod/TransformerFunction
+      88: astore        6
+      90: aload         6
+      92: aload         4
+      94: aload_2
+      95: invokeinterface #337,  3          // InterfaceMethod pl/asie/foamfix/coremod/TransformerFunction.transform:([BLjava/lang/String;)[B
+     100: astore        4
+     102: goto          68
+     105: aload         4
+     107: areturn
+
+  static {};
+    descriptor: ()V
+    Code:
+       0: invokestatic  #348                // Method com/google/common/collect/HashMultimap.create:()Lcom/google/common/collect/HashMultimap;
+       3: putstatic     #283                // Field transformFunctions:Lcom/google/common/collect/Multimap;
+       6: return
+}

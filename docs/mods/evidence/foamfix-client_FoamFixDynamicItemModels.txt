@@ -1,0 +1,55 @@
+Compiled from "FoamFixDynamicItemModels.java"
+public class pl.asie.foamfix.client.FoamFixDynamicItemModels {
+  public pl.asie.foamfix.client.FoamFixDynamicItemModels();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: invokespecial #16                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void register();
+    descriptor: ()V
+    Code:
+       0: ldc           #23                 // class net/minecraftforge/client/model/ModelLoaderRegistry
+       2: iconst_1
+       3: anewarray     #25                 // class java/lang/String
+       6: dup
+       7: iconst_0
+       8: ldc           #27                 // String loaders
+      10: aastore
+      11: invokestatic  #33                 // Method pl/asie/foamfix/util/MethodHandleHelper.findFieldGetter:(Ljava/lang/Class;[Ljava/lang/String;)Ljava/lang/invoke/MethodHandle;
+      14: astore_0
+      15: aload_0
+      16: invokevirtual #39                 // Method java/lang/invoke/MethodHandle.invoke:()Ljava/util/Set;
+      19: astore_1
+      20: aload_1
+      21: getstatic     #43                 // Field net/minecraftforge/client/model/ItemLayerModel$Loader.instance:Lnet/minecraftforge/client/model/ItemLayerModel$Loader;
+      24: invokeinterface #49,  2           // InterfaceMethod java/util/Set.remove:(Ljava/lang/Object;)Z
+      29: pop
+      30: aload_1
+      31: getstatic     #53                 // Field pl/asie/foamfix/client/FoamFixDynamicItemModels$Loader.INSTANCE:Lpl/asie/foamfix/client/FoamFixDynamicItemModels$Loader;
+      34: invokeinterface #56,  2           // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+      39: pop
+      40: goto          53
+      43: astore_1
+      44: new           #58                 // class java/lang/RuntimeException
+      47: dup
+      48: aload_1
+      49: invokespecial #61                 // Method java/lang/RuntimeException."<init>":(Ljava/lang/Throwable;)V
+      52: athrow
+      53: return
+    Exception table:
+       from    to  target type
+          15    40    43   Class java/lang/Throwable
+
+  public net.minecraftforge.client.model.IFlexibleBakedModel bake(net.minecraftforge.client.model.IModelState, net.minecraft.client.renderer.vertex.VertexFormat, com.google.common.base.Function<net.minecraft.util.ResourceLocation, net.minecraft.client.renderer.texture.TextureAtlasSprite>);
+    descriptor: (Lnet/minecraftforge/client/model/IModelState;Lnet/minecraft/client/renderer/vertex/VertexFormat;Lcom/google/common/base/Function;)Lnet/minecraftforge/client/model/IFlexibleBakedModel;
+    Code:
+       0: aload_0
+       1: checkcast     #12                 // class net/minecraftforge/client/model/ItemLayerModel
+       4: aload_1
+       5: aload_2
+       6: aload_3
+       7: invokestatic  #74                 // Method pl/asie/foamfix/client/FoamyItemLayerModel.bake:(Lnet/minecraftforge/client/model/ItemLayerModel;Lnet/minecraftforge/client/model/IModelState;Lnet/minecraft/client/renderer/vertex/VertexFormat;Lcom/google/common/base/Function;)Lnet/minecraftforge/client/model/IFlexibleBakedModel;
+      10: areturn
+}

@@ -1,0 +1,1292 @@
+# CMClient module defaults — static JVM evidence
+# App JAR SHA-256: 464347bee470967072e3b7a2536d95e1f87645c1a02d2f8b0f120fcc9ebc4a80
+# Normalized disassembly: CONST folds integer expressions, STRING resolves pools.
+# Offsets remain original JVM offsets. This is not original recovered Java source.
+# No client execution; loaded user configuration was not supplied.
+
+===========================================================================
+CLASS M SHA-256 6796498331e57fd51253690d2f904a4d81fc5b9cfa8c34372668d608c901fcb5
+METHOD <init> (Ljava/lang/String;IZ)V
+    0 aload_0            
+    1 invokespecial      java/lang/Object.<init>:()V
+    4 aload_0            
+    5 invokestatic       ir.hj:()Lir;
+    8 putfield           M.bW:Lir;
+   11 aload_0            
+   12 invokestatic       com/google/common/collect/Sets.newLinkedHashSet:()Ljava/util/LinkedHashSet;
+   15 putfield           M.bX:Ljava/util/Set;
+   18 aload_0            
+   19 aload_1            
+   20 putfield           M.ca:Ljava/lang/String;
+   23 aload_0            
+   24 aload_1            
+   25 getstatic          q.q:[Ljava/lang/String;
+   28 CONST 186
+   43 aaload               // STRING  
+   44 getstatic          q.q:[Ljava/lang/String;
+   47 CONST 104
+   62 aaload               // STRING  
+   63 invokevirtual      java/lang/String.replace:(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+   66 invokevirtual      java/lang/String.toLowerCase:()Ljava/lang/String;
+   69 putfield           M.bV:Ljava/lang/String;
+   72 aload_0            
+   73 new                Qg
+   76 dup                
+   77 new                java/lang/StringBuilder
+   80 dup                
+   81 invokespecial      java/lang/StringBuilder.<init>:()V
+   84 getstatic          q.q:[Ljava/lang/String;
+   87 CONST 586
+  102 aaload               // STRING client/icons/modules/
+  103 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  106 aload_0            
+  107 getfield           M.bV:Ljava/lang/String;
+  110 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  113 getstatic          q.q:[Ljava/lang/String;
+  116 CONST 587
+  131 aaload               // STRING .png
+  132 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  135 invokevirtual      java/lang/StringBuilder.toString:()Ljava/lang/String;
+  138 invokespecial      Qg.<init>:(Ljava/lang/String;)V
+  141 putfield           M.bY:LQg;
+  144 aload_0            
+  145 iload_2            
+  146 putfield           M.bR:I
+  149 aload_0            
+  150 aload_0            
+  151 instanceof         L
+  154 putfield           M.bU:Z
+  157 iload_3            
+  158 ifeq               207
+  161 aload_0            
+  162 getfield           M.bW:Lir;
+  165 getfield           ir.Gk:LacQ;
+  168 invokevirtual      acQ.arS:()Lz;
+  171 getfield           z.T:LC;
+  174 invokevirtual      C.M:()Ljava/util/LinkedHashSet;
+  177 aload_0            
+  178 invokevirtual      java/util/LinkedHashSet.add:(Ljava/lang/Object;)Z
+  181 pop                
+  182 aload_0            
+  183 getfield           M.bW:Lir;
+  186 getfield           ir.Gk:LacQ;
+  189 invokevirtual      acQ.arS:()Lz;
+  192 getfield           z.T:LC;
+  195 invokevirtual      C.L:()Ljava/util/concurrent/ConcurrentHashMap;
+  198 aload_0            
+  199 invokevirtual      java/lang/Object.getClass:()Ljava/lang/Class;
+  202 aload_0            
+  203 invokevirtual      java/util/concurrent/ConcurrentHashMap.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  206 pop                
+  207 return             
+
+
+===========================================================================
+CLASS M SHA-256 6796498331e57fd51253690d2f904a4d81fc5b9cfa8c34372668d608c901fcb5
+METHOD w (Z)V
+    0 aload_0            
+    1 iload_1            
+    2 putfield           M.bT:Z
+    5 return             
+
+
+===========================================================================
+CLASS M SHA-256 6796498331e57fd51253690d2f904a4d81fc5b9cfa8c34372668d608c901fcb5
+METHOD ad ()Z
+    0 aload_0            
+    1 getfield           M.bT:Z
+    4 ireturn            
+
+
+===========================================================================
+CLASS bP SHA-256 253a44471467a8a7dbb67562bcb70bb81032fbcbfc31589bab3f649f84602c06
+METHOD ak ()Z
+    0 aload_0            
+    1 getfield           bP.lT:LM;
+    4 getfield           M.bS:Z
+    7 ifeq               28
+   10 aload_0            
+   11 getfield           bP.lT:LM;
+   14 invokevirtual      M.ad:()Z
+   17 ifne               28
+   20 CONST 0
+   27 ireturn            
+   28 aload_0            
+   29 getfield           bP.lV:Ljava/util/List;
+   32 CONST 0
+   38 invokeinterface    java/util/List.get:(I)Ljava/lang/Object; 0200
+   43 checkcast          java/lang/Boolean
+   46 invokevirtual      java/lang/Boolean.booleanValue:()Z
+   49 ireturn            
+
+
+===========================================================================
+CLASS au SHA-256 76ffbd98fca295f4b3c0da4345cbb98f4acc4b8c0bdcd0ba237507e257bcfb2c
+METHOD <init> ()V
+    0 aload_0            
+    1 getstatic          q.q:[Ljava/lang/String;
+    4 CONST 419
+   19 aaload               // STRING Old Animations
+   20 CONST 16
+   27 invokespecial      M.<init>:(Ljava/lang/String;I)V
+   30 aload_0            
+   31 putstatic          au.fI:Lau;
+   34 aload_0            
+   35 CONST 1
+   42 putfield           au.bS:Z
+   45 new                bP
+   48 dup                
+   49 aload_0            
+   50 getstatic          q.q:[Ljava/lang/String;
+   53 CONST 419
+   68 aaload               // STRING Old Animations
+   69 invokespecial      bP.<init>:(LM;Ljava/lang/String;)V
+   72 pop                
+   73 aload_0            
+   74 new                bP
+   77 dup                
+   78 aload_0            
+   79 getstatic          q.q:[Ljava/lang/String;
+   82 CONST 420
+   97 aaload               // STRING 1.7 blocking
+   98 invokespecial      bP.<init>:(LM;Ljava/lang/String;)V
+  101 CONST 1
+  107 invokevirtual      bP.s:(Z)LbP;
+  110 putfield           au.fH:LbP;
+  113 aload_0            
+  114 new                bP
+  117 dup                
+  118 aload_0            
+  119 getstatic          q.q:[Ljava/lang/String;
+  122 CONST 421
+  137 aaload               // STRING 1.7 sword hitting
+  138 invokespecial      bP.<init>:(LM;Ljava/lang/String;)V
+  141 CONST 1
+  148 invokevirtual      bP.s:(Z)LbP;
+  151 putfield           au.fJ:LbP;
+  154 aload_0            
+  155 new                bP
+  158 dup                
+  159 aload_0            
+  160 getstatic          q.q:[Ljava/lang/String;
+  163 CONST 422
+  178 aaload               // STRING 1.7 eating
+  179 invokespecial      bP.<init>:(LM;Ljava/lang/String;)V
+  182 CONST 1
+  189 invokevirtual      bP.s:(Z)LbP;
+  192 putfield           au.fG:LbP;
+  195 aload_0            
+  196 new                bP
+  199 dup                
+  200 aload_0            
+  201 getstatic          q.q:[Ljava/lang/String;
+  204 CONST 423
+  219 aaload               // STRING 1.7 attacking
+  220 invokespecial      bP.<init>:(LM;Ljava/lang/String;)V
+  223 CONST 1
+  230 invokevirtual      bP.s:(Z)LbP;
+  233 putfield           au.fM:LbP;
+  236 aload_0            
+  237 new                bP
+  240 dup                
+  241 aload_0            
+  242 getstatic          q.q:[Ljava/lang/String;
+  245 CONST 424
+  260 aaload               // STRING 1.7 armor damage color
+  261 invokespecial      bP.<init>:(LM;Ljava/lang/String;)V
+  264 CONST 1
+  271 invokevirtual      bP.s:(Z)LbP;
+  274 putfield           au.fO:LbP;
+  277 aload_0            
+  278 new                bP
+  281 dup                
+  282 aload_0            
+  283 getstatic          q.q:[Ljava/lang/String;
+  286 CONST 425
+  301 aaload               // STRING 1.7 items held
+  302 invokespecial      bP.<init>:(LM;Ljava/lang/String;)V
+  305 CONST 0
+  312 invokevirtual      bP.s:(Z)LbP;
+  315 putfield           au.fP:LbP;
+  318 aload_0            
+  319 new                bP
+  322 dup                
+  323 aload_0            
+  324 getstatic          q.q:[Ljava/lang/String;
+  327 CONST 426
+  342 aaload               // STRING 1.7 bow position
+  343 invokespecial      bP.<init>:(LM;Ljava/lang/String;)V
+  346 CONST 0
+  352 invokevirtual      bP.s:(Z)LbP;
+  355 putfield           au.fK:LbP;
+  358 aload_0            
+  359 new                bP
+  362 dup                
+  363 aload_0            
+  364 getstatic          q.q:[Ljava/lang/String;
+  367 CONST 427
+  382 aaload               // STRING 1.7 fishing rod position
+  383 invokespecial      bP.<init>:(LM;Ljava/lang/String;)V
+  386 CONST 0
+  393 invokevirtual      bP.s:(Z)LbP;
+  396 putfield           au.fL:LbP;
+  399 aload_0            
+  400 new                bP
+  403 dup                
+  404 aload_0            
+  405 getstatic          q.q:[Ljava/lang/String;
+  408 CONST 428
+  423 aaload               // STRING 1.7 heart bar
+  424 invokespecial      bP.<init>:(LM;Ljava/lang/String;)V
+  427 CONST 1
+  433 invokevirtual      bP.s:(Z)LbP;
+  436 putfield           au.fN:LbP;
+  439 return             
+
+===========================================================================
+CLASS O SHA-256 88d707328cd0fc484bc94a987b71bf791ad46223af43614b91fa845134e40b17
+METHOD <init> ()V
+    0 aload_0            
+    1 getstatic          q.q:[Ljava/lang/String;
+    4 CONST 79
+   19 aaload               // STRING Animations
+   20 CONST 16
+   27 invokespecial      M.<init>:(Ljava/lang/String;I)V
+   30 aload_0            
+   31 putstatic          O.cw:LO;
+   34 aload_0            
+   35 CONST 1
+   42 putfield           O.bS:Z
+   45 new                bP
+   48 dup                
+   49 aload_0            
+   50 getstatic          q.q:[Ljava/lang/String;
+   53 CONST 79
+   68 aaload               // STRING Animations
+   69 invokespecial      bP.<init>:(LM;Ljava/lang/String;)V
+   72 pop                
+   73 aload_0            
+   74 new                bP
+   77 dup                
+   78 aload_0            
+   79 getstatic          q.q:[Ljava/lang/String;
+   82 CONST 80
+   97 aaload               // STRING GUI Animation
+   98 invokespecial      bP.<init>:(LM;Ljava/lang/String;)V
+  101 CONST 1
+  108 invokevirtual      bP.s:(Z)LbP;
+  111 putfield           O.cz:LbP;
+  114 aload_0            
+  115 new                bP
+  118 dup                
+  119 aload_0            
+  120 getstatic          q.q:[Ljava/lang/String;
+  123 CONST 81
+  138 aaload               // STRING GUI Animation Speed
+  139 invokespecial      bP.<init>:(LM;Ljava/lang/String;)V
+  142 CONST 3
+  149 invokestatic       java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+  152 invokevirtual      bP.q:(Ljava/lang/Number;)LbP;
+  155 CONST 1
+  162 CONST 10
+  169 CONST 1
+  176 invokevirtual      bP.t:(III)LbP;
+  179 putfield           O.cv:LbP;
+  182 aload_0            
+  183 new                bP
+  186 dup                
+  187 aload_0            
+  188 getstatic          q.q:[Ljava/lang/String;
+  191 CONST 82
+  206 aaload               // STRING Sneak Animation
+  207 invokespecial      bP.<init>:(LM;Ljava/lang/String;)V
+  210 CONST 1
+  217 invokevirtual      bP.s:(Z)LbP;
+  220 putfield           O.cy:LbP;
+  223 aload_0            
+  224 new                bP
+  227 dup                
+  228 aload_0            
+  229 getstatic          q.q:[Ljava/lang/String;
+  232 CONST 83
+  247 aaload               // STRING Sneak Animation Speed
+  248 invokespecial      bP.<init>:(LM;Ljava/lang/String;)V
+  251 ldc                0.9041095972061157
+  253 ldc                9.401515007019043
+  255 fmul               
+  256 invokestatic       java/lang/Float.valueOf:(F)Ljava/lang/Float;
+  259 invokevirtual      bP.q:(Ljava/lang/Number;)LbP;
+  262 ldc                1.58695650100708
+  264 ldc                3.1506850719451904
+  266 fmul               
+  267 ldc                0.5529412031173706
+  269 ldc                18.085105895996094
+  271 fmul               
+  272 ldc                4.9375
+  274 ldc                0.10126582533121109
+  276 fmul               
+  277 invokevirtual      bP.q:(FFF)LbP;
+  280 putfield           O.cA:LbP;
+  283 aload_0            
+  284 new                bP
+  287 dup                
+  288 aload_0            
+  289 getstatic          q.q:[Ljava/lang/String;
+  292 CONST 84
+  307 aaload               // STRING Chunk Animation
+  308 invokespecial      bP.<init>:(LM;Ljava/lang/String;)V
+  311 CONST 0
+  318 invokevirtual      bP.s:(Z)LbP;
+  321 putfield           O.cx:LbP;
+  324 aload_0            
+  325 CONST 1
+  330 invokevirtual      O.w:(Z)V
+  333 return             
+
+===========================================================================
+CLASS aw SHA-256 300101bbb18330f00e0ac6c9a19dd1bad475b56fb883bc19434d2a12344f3144
+METHOD <init> ()V
+    0 aload_0            
+    1 getstatic          q.q:[Ljava/lang/String;
+    4 CONST 435
+   19 aaload               // STRING Particles
+   20 CONST 14
+   27 invokespecial      M.<init>:(Ljava/lang/String;I)V
+   30 new                bP
+   33 dup                
+   34 aload_0            
+   35 getstatic          q.q:[Ljava/lang/String;
+   38 CONST 436
+   53 aaload               // STRING Particles Options
+   54 invokespecial      bP.<init>:(LM;Ljava/lang/String;)V
+   57 pop                
+   58 aload_0            
+   59 new                bP
+   62 dup                
+   63 aload_0            
+   64 getstatic          q.q:[Ljava/lang/String;
+   67 CONST 437
+   82 aaload               // STRING Always critical
+   83 invokespecial      bP.<init>:(LM;Ljava/lang/String;)V
+   86 CONST 0
+   93 invokevirtual      bP.s:(Z)LbP;
+   96 putfield           aw.fY:LbP;
+   99 aload_0            
+  100 new                bP
+  103 dup                
+  104 aload_0            
+  105 getstatic          q.q:[Ljava/lang/String;
+  108 CONST 438
+  123 aaload               // STRING Always sharpness
+  124 invokespecial      bP.<init>:(LM;Ljava/lang/String;)V
+  127 CONST 0
+  132 invokevirtual      bP.s:(Z)LbP;
+  135 putfield           aw.fX:LbP;
+  138 aload_0            
+  139 new                bP
+  142 dup                
+  143 aload_0            
+  144 getstatic          q.q:[Ljava/lang/String;
+  147 CONST 439
+  162 aaload               // STRING Critical particle multiplier
+  163 invokespecial      bP.<init>:(LM;Ljava/lang/String;)V
+  166 CONST 1
+  173 invokestatic       java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+  176 invokevirtual      bP.q:(Ljava/lang/Number;)LbP;
+  179 CONST 1
+  186 CONST 20
+  193 CONST 1
+  200 invokevirtual      bP.t:(III)LbP;
+  203 putfield           aw.fW:LbP;
+  206 aload_0            
+  207 new                bP
+  210 dup                
+  211 aload_0            
+  212 getstatic          q.q:[Ljava/lang/String;
+  215 CONST 440
+  230 aaload               // STRING Sharpness particle multiplier
+  231 invokespecial      bP.<init>:(LM;Ljava/lang/String;)V
+  234 CONST 1
+  241 invokestatic       java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+  244 invokevirtual      bP.q:(Ljava/lang/Number;)LbP;
+  247 CONST 1
+  254 CONST 20
+  260 CONST 1
+  267 invokevirtual      bP.t:(III)LbP;
+  270 putfield           aw.fZ:LbP;
+  273 return             
+
+===========================================================================
+CLASS aO SHA-256 65eef646b112f7b5c338767be4e281eb2c11e19e831dbe61ef0089e825234005
+METHOD <init> ()V
+    0 aload_0            
+    1 getstatic          q.q:[Ljava/lang/String;
+    4 CONST 544
+   19 aaload               // STRING Toggle Sprint
+   20 CONST 16
+   27 invokespecial      N.<init>:(Ljava/lang/String;I)V
+   30 aload_0            
+   31 getstatic          q.q:[Ljava/lang/String;
+   34 CONST 545
+   49 aaload               // STRING Sprinting (Example)
+   50 putfield           aO.hv:Ljava/lang/String;
+   53 aload_0            
+   54 getstatic          q.q:[Ljava/lang/String;
+   57 CONST 546
+   72 aaload               // STRING Sprinting (Vanilla)
+   73 putfield           aO.hH:Ljava/lang/String;
+   76 aload_0            
+   77 getstatic          q.q:[Ljava/lang/String;
+   80 CONST 547
+   95 aaload               // STRING Sprinting (Key Held)
+   96 putfield           aO.hy:Ljava/lang/String;
+   99 aload_0            
+  100 getstatic          q.q:[Ljava/lang/String;
+  103 CONST 548
+  118 aaload               // STRING Sprinting (Toggled)
+  119 putfield           aO.hs:Ljava/lang/String;
+  122 aload_0            
+  123 getstatic          q.q:[Ljava/lang/String;
+  126 CONST 549
+  141 aaload               // STRING Sneaking (Key Held)
+  142 putfield           aO.hI:Ljava/lang/String;
+  145 aload_0            
+  146 getstatic          q.q:[Ljava/lang/String;
+  149 CONST 550
+  164 aaload               // STRING Sneaking (Toggled)
+  165 putfield           aO.hJ:Ljava/lang/String;
+  168 aload_0            
+  169 getstatic          q.q:[Ljava/lang/String;
+  172 CONST 551
+  187 aaload               // STRING Flying
+  188 putfield           aO.hG:Ljava/lang/String;
+  191 aload_0            
+  192 getstatic          q.q:[Ljava/lang/String;
+  195 CONST 552
+  210 aaload               // STRING Riding
+  211 putfield           aO.hF:Ljava/lang/String;
+  214 aload_0            
+  215 getstatic          q.q:[Ljava/lang/String;
+  218 CONST 553
+  233 aaload               // STRING Flying (Descending)
+  234 putfield           aO.hu:Ljava/lang/String;
+  237 aload_0            
+  238 getfield           aO.ch:LbP;
+  241 CONST 1
+  248 invokevirtual      bP.s:(Z)LbP;
+  251 pop                
+  252 new                bP
+  255 dup                
+  256 aload_0            
+  257 getstatic          q.q:[Ljava/lang/String;
+  260 CONST 554
+  275 aaload               // STRING Toggle Sprint Options
+  276 invokespecial      bP.<init>:(LM;Ljava/lang/String;)V
+  279 pop                
+  280 aload_0            
+  281 new                bP
+  284 dup                
+  285 aload_0            
+  286 getstatic          q.q:[Ljava/lang/String;
+  289 CONST 555
+  304 aaload               // STRING Show Status Text
+  305 invokespecial      bP.<init>:(LM;Ljava/lang/String;)V
+  308 CONST 1
+  315 invokevirtual      bP.s:(Z)LbP;
+  318 putfield           aO.hE:LbP;
+  321 aload_0            
+  322 new                bP
+  325 dup                
+  326 aload_0            
+  327 getstatic          q.q:[Ljava/lang/String;
+  330 CONST 544
+  345 aaload               // STRING Toggle Sprint
+  346 invokespecial      bP.<init>:(LM;Ljava/lang/String;)V
+  349 CONST 1
+  356 invokevirtual      bP.s:(Z)LbP;
+  359 putfield           aO.hK:LbP;
+  362 aload_0            
+  363 new                bP
+  366 dup                
+  367 aload_0            
+  368 getstatic          q.q:[Ljava/lang/String;
+  371 CONST 556
+  386 aaload               // STRING Toggle Sneak
+  387 invokespecial      bP.<init>:(LM;Ljava/lang/String;)V
+  390 CONST 0
+  397 invokevirtual      bP.s:(Z)LbP;
+  400 putfield           aO.ht:LbP;
+  403 aload_0            
+  404 getfield           aO.cg:LbP;
+  407 CONST 0
+  414 invokevirtual      bP.s:(Z)LbP;
+  417 pop                
+  418 aload_0            
+  419 getfield           aO.cs:LbP;
+  422 CONST 1
+  428 invokestatic       java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+  431 invokevirtual      bP.q:(Ljava/lang/Number;)LbP;
+  434 pop                
+  435 aload_0            
+  436 CONST 1
+  443 invokevirtual      aO.w:(Z)V
+  446 aload_0            
+  447 new                B
+  450 dup                
+  451 getstatic          b.ai:Lb;
+  454 ldc                62.39999771118164
+  456 ldc                0.06410256773233414
+  458 fmul               
+  459 ldc                -11.612902641296387
+  461 ldc                0.3444444537162781
+  463 fmul               
+  464 invokespecial      B.<init>:(Lb;FF)V
+  467 invokevirtual      aO.q:(LB;)V
+  470 return             
+
+===========================================================================
+CLASS aO SHA-256 65eef646b112f7b5c338767be4e281eb2c11e19e831dbe61ef0089e825234005
+METHOD aa ()V [excerpt offsets 0..458]
+    0 aload_0            
+    1 getfield           aO.bW:Lir;
+    4 getfield           ir.FL:LkB;
+    7 ifnull             11
+   10 return             
+   11 aload_0            
+   12 getfield           aO.bW:Lir;
+   15 getfield           ir.Gv:Lwj;
+   18 getfield           wj.aEG:Lwn;
+   21 invokevirtual      wn.ck:()I
+   24 istore_1           
+   25 aload_0            
+   26 getfield           aO.bW:Lir;
+   29 getfield           ir.Gv:Lwj;
+   32 getfield           wj.aHg:Lwn;
+   35 invokevirtual      wn.ck:()I
+   38 istore_2           
+   39 iload_1            
+   40 invokestatic       ahe.kg:(I)Z
+   43 istore_3           
+   44 iload_2            
+   45 invokestatic       ahe.kg:(I)Z
+   48 istore             4
+   50 aload_0            
+   51 getfield           aO.ht:LbP;
+   54 invokevirtual      bP.ak:()Z
+   57 ifeq               189
+   60 aload_0            
+   61 getfield           aO.bW:Lir;
+   64 getfield           ir.Ft:Ljp;
+   67 getfield           jp.bfQ:LEj;
+   70 getfield           Ej.bhz:Z
+   73 ifne               189
+   76 aload_0            
+   77 getfield           aO.bW:Lir;
+   80 getfield           ir.FP:Z
+   83 ifeq               189
+   86 iload              4
+   88 ifeq               119
+   91 aload_0            
+   92 getfield           aO.hD:Z
+   95 ifne               119
+   98 aload_0            
+   99 invokestatic       java/lang/System.currentTimeMillis:()J
+  102 putfield           aO.hC:J
+  105 aload_0            
+  106 CONST 1
+  113 putfield           aO.hD:Z
+  116 goto               189
+  119 iload              4
+  121 ifne               189
+  124 aload_0            
+  125 getfield           aO.hD:Z
+  128 ifeq               189
+  131 invokestatic       java/lang/System.currentTimeMillis:()J
+  134 aload_0            
+  135 getfield           aO.hC:J
+  138 lsub               
+  139 ldc2_w             0000000049111d2c
+  142 ldc2_w             2e1a9d910682a1bd
+  145 land               
+  146 lcmp               
+  147 ifge               178
+  150 aload_0            
+  151 aload_0            
+  152 getfield           aO.hx:Z
+  155 ifne               168
+  158 CONST 1
+  165 goto               175
+  168 CONST 0
+  175 putfield           aO.hx:Z
+  178 aload_0            
+  179 CONST 0
+  186 putfield           aO.hD:Z
+  189 aload_0            
+  190 getfield           aO.hK:LbP;
+  193 invokevirtual      bP.ak:()Z
+  196 ifeq               314
+  199 aload_0            
+  200 getfield           aO.bW:Lir;
+  203 getfield           ir.Ft:Ljp;
+  206 getfield           jp.bfQ:LEj;
+  209 getfield           Ej.bhz:Z
+  212 ifne               314
+  215 iload_3            
+  216 ifeq               246
+  219 aload_0            
+  220 getfield           aO.hz:Z
+  223 ifne               246
+  226 aload_0            
+  227 invokestatic       java/lang/System.currentTimeMillis:()J
+  230 putfield           aO.hB:J
+  233 aload_0            
+  234 CONST 1
+  240 putfield           aO.hz:Z
+  243 goto               314
+  246 iload_3            
+  247 ifne               314
+  250 aload_0            
+  251 getfield           aO.hz:Z
+  254 ifeq               314
+  257 invokestatic       java/lang/System.currentTimeMillis:()J
+  260 aload_0            
+  261 getfield           aO.hB:J
+  264 lsub               
+  265 ldc2_w             baab71e18e4bedad
+  268 ldc2_w             000000000000116e
+  271 land               
+  272 lcmp               
+  273 ifge               304
+  276 aload_0            
+  277 aload_0            
+  278 getfield           aO.hA:Z
+  281 ifne               294
+  284 CONST 1
+  291 goto               301
+  294 CONST 0
+  301 putfield           aO.hA:Z
+  304 aload_0            
+  305 CONST 0
+  311 putfield           aO.hz:Z
+  314 aload_0            
+  315 getfield           aO.bW:Lir;
+  318 getfield           ir.Ft:Ljp;
+  321 getfield           jp.Jt:LPW;
+  324 astore             5
+  326 aload_0            
+  327 getfield           aO.ht:LbP;
+  330 invokevirtual      bP.ak:()Z
+  333 ifeq               385
+  336 aload_0            
+  337 getfield           aO.bW:Lir;
+  340 getfield           ir.Ft:Ljp;
+  343 getfield           jp.bfQ:LEj;
+  346 getfield           Ej.bhz:Z
+  349 ifne               385
+  352 iload_2            
+  353 iload              4
+  355 ifne               365
+  358 aload_0            
+  359 getfield           aO.hx:Z
+  362 ifeq               375
+  365 CONST 1
+  372 goto               382
+  375 CONST 0
+  382 invokestatic       wn.q:(IZ)V
+  385 aload_0            
+  386 getfield           aO.hK:LbP;
+  389 invokevirtual      bP.ak:()Z
+  392 ifeq               433
+  395 aload_0            
+  396 getfield           aO.hA:Z
+  399 ifeq               433
+  402 iload_1            
+  403 aload              5
+  405 getfield           PW.aSk:F
+  408 fconst_0           
+  409 fcmpl              
+  410 ifle               423
+  413 CONST 1
+  420 goto               430
+  423 CONST 0
+  430 invokestatic       wn.q:(IZ)V
+  433 aload_0            
+  434 getfield           aO.ht:LbP;
+  437 invokevirtual      bP.ak:()Z
+  440 ifne               453
+  443 aload_0            
+  444 getfield           aO.hK:LbP;
+  447 invokevirtual      bP.ak:()Z
+  450 ifeq               458
+  453 aload              5
+  455 invokevirtual      PW.Vo:()V
+  458 aload_0            
+
+
+===========================================================================
+CLASS C SHA-256 d815e0648fa7972140778f88cedf0c42181b2e1aa5cc326d8614191e67518102
+METHOD init ()V
+    0 new                aT
+    3 dup                
+    4 invokespecial      aT.<init>:()V
+    7 pop                
+    8 new                P
+   11 dup                
+   12 invokespecial      P.<init>:()V
+   15 pop                
+   16 new                Q
+   19 dup                
+   20 invokespecial      Q.<init>:()V
+   23 pop                
+   24 new                R
+   27 dup                
+   28 invokespecial      R.<init>:()V
+   31 pop                
+   32 new                S
+   35 dup                
+   36 invokespecial      S.<init>:()V
+   39 pop                
+   40 new                V
+   43 dup                
+   44 invokespecial      V.<init>:()V
+   47 pop                
+   48 new                aJ
+   51 dup                
+   52 invokespecial      aJ.<init>:()V
+   55 pop                
+   56 new                X
+   59 dup                
+   60 invokespecial      X.<init>:()V
+   63 pop                
+   64 new                U
+   67 dup                
+   68 invokespecial      U.<init>:()V
+   71 pop                
+   72 new                T
+   75 dup                
+   76 invokespecial      T.<init>:()V
+   79 pop                
+   80 new                aD
+   83 dup                
+   84 invokespecial      aD.<init>:()V
+   87 pop                
+   88 new                aA
+   91 dup                
+   92 invokespecial      aA.<init>:()V
+   95 pop                
+   96 new                ad
+   99 dup                
+  100 invokespecial      ad.<init>:()V
+  103 pop                
+  104 new                aa
+  107 dup                
+  108 invokespecial      aa.<init>:()V
+  111 pop                
+  112 new                ag
+  115 dup                
+  116 invokespecial      ag.<init>:()V
+  119 pop                
+  120 new                aq
+  123 dup                
+  124 invokespecial      aq.<init>:()V
+  127 pop                
+  128 new                aN
+  131 dup                
+  132 invokespecial      aN.<init>:()V
+  135 pop                
+  136 new                aj
+  139 dup                
+  140 invokespecial      aj.<init>:()V
+  143 pop                
+  144 new                au
+  147 dup                
+  148 invokespecial      au.<init>:()V
+  151 pop                
+  152 new                O
+  155 dup                
+  156 invokespecial      O.<init>:()V
+  159 pop                
+  160 new                Y
+  163 dup                
+  164 invokespecial      Y.<init>:()V
+  167 pop                
+  168 new                av
+  171 dup                
+  172 invokespecial      av.<init>:()V
+  175 pop                
+  176 new                ax
+  179 dup                
+  180 invokespecial      ax.<init>:()V
+  183 pop                
+  184 new                af
+  187 dup                
+  188 invokespecial      af.<init>:()V
+  191 pop                
+  192 new                aQ
+  195 dup                
+  196 invokespecial      aQ.<init>:()V
+  199 pop                
+  200 new                aH
+  203 dup                
+  204 invokespecial      aH.<init>:()V
+  207 pop                
+  208 aload_0            
+  209 new                aS
+  212 dup                
+  213 invokespecial      aS.<init>:()V
+  216 putfield           C.az:LaS;
+  219 new                ay
+  222 dup                
+  223 invokespecial      ay.<init>:()V
+  226 pop                
+  227 new                W
+  230 dup                
+  231 invokespecial      W.<init>:()V
+  234 pop                
+  235 new                aB
+  238 dup                
+  239 invokespecial      aB.<init>:()V
+  242 pop                
+  243 new                aI
+  246 dup                
+  247 invokespecial      aI.<init>:()V
+  250 pop                
+  251 new                aE
+  254 dup                
+  255 invokespecial      aE.<init>:()V
+  258 pop                
+  259 new                aC
+  262 dup                
+  263 invokespecial      aC.<init>:()V
+  266 pop                
+  267 new                aK
+  270 dup                
+  271 invokespecial      aK.<init>:()V
+  274 pop                
+  275 new                aR
+  278 dup                
+  279 invokespecial      aR.<init>:()V
+  282 pop                
+  283 new                aM
+  286 dup                
+  287 invokespecial      aM.<init>:()V
+  290 pop                
+  291 new                aO
+  294 dup                
+  295 invokespecial      aO.<init>:()V
+  298 pop                
+  299 new                ae
+  302 dup                
+  303 invokespecial      ae.<init>:()V
+  306 pop                
+  307 new                ar
+  310 dup                
+  311 invokespecial      ar.<init>:()V
+  314 pop                
+  315 new                ao
+  318 dup                
+  319 invokespecial      ao.<init>:()V
+  322 pop                
+  323 new                ah
+  326 dup                
+  327 invokespecial      ah.<init>:()V
+  330 pop                
+  331 new                ai
+  334 dup                
+  335 invokespecial      ai.<init>:()V
+  338 pop                
+  339 new                aw
+  342 dup                
+  343 invokespecial      aw.<init>:()V
+  346 pop                
+  347 new                aW
+  350 dup                
+  351 invokespecial      aW.<init>:()V
+  354 pop                
+  355 new                az
+  358 dup                
+  359 invokespecial      az.<init>:()V
+  362 pop                
+  363 new                ak
+  366 dup                
+  367 invokespecial      ak.<init>:()V
+  370 pop                
+  371 new                ap
+  374 dup                
+  375 invokespecial      ap.<init>:()V
+  378 pop                
+  379 new                aP
+  382 dup                
+  383 invokespecial      aP.<init>:()V
+  386 pop                
+  387 new                as
+  390 dup                
+  391 invokespecial      as.<init>:()V
+  394 pop                
+  395 new                aG
+  398 dup                
+  399 invokespecial      aG.<init>:()V
+  402 pop                
+  403 new                ac
+  406 dup                
+  407 invokespecial      ac.<init>:()V
+  410 pop                
+  411 new                ab
+  414 dup                
+  415 invokespecial      ab.<init>:()V
+  418 pop                
+  419 new                aF
+  422 dup                
+  423 invokespecial      aF.<init>:()V
+  426 pop                
+  427 aload_0            
+  428 new                an
+  431 dup                
+  432 invokespecial      an.<init>:()V
+  435 putfield           C.aA:Lan;
+  438 aload_0            
+  439 aload_0            
+  440 getfield           C.ay:Ljava/util/LinkedHashSet;
+  443 invokevirtual      java/util/LinkedHashSet.stream:()Ljava/util/stream/Stream;
+  446 invokedynamic      (18, 0, 149) 0000
+  451 invokeinterface    java/util/stream/Stream.sorted:(Ljava/util/Comparator;)Ljava/util/stream/Stream; 0200
+  456 invokedynamic      (18, 1, 151) 0000
+  461 invokestatic       java/util/stream/Collectors.toCollection:(Ljava/util/function/Supplier;)Ljava/util/stream/Collector;
+  464 invokeinterface    java/util/stream/Stream.collect:(Ljava/util/stream/Collector;)Ljava/lang/Object; 0200
+  469 checkcast          java/util/LinkedHashSet
+  472 putfield           C.ay:Ljava/util/LinkedHashSet;
+  475 return             
+
+
+===========================================================================
+CLASS z SHA-256 a9a46d0d6b710d4a2bd45e635473afb813c00638c7d5e1096da23041fd9cb4ed
+METHOD m ()V [excerpt offsets 0..203]
+    0 aload_0            
+    1 getfield           z.U:Lorg/apache/logging/log4j/core/Logger;
+    4 getstatic          q.q:[Ljava/lang/String;
+    7 CONST 33
+   22 aaload               // STRING Loading client directory...
+   23 invokevirtual      org/apache/logging/log4j/core/Logger.info:(Ljava/lang/String;)V
+   26 aload_0            
+   27 invokespecial      z.z:()V
+   30 aload_0            
+   31 getfield           z.U:Lorg/apache/logging/log4j/core/Logger;
+   34 getstatic          q.q:[Ljava/lang/String;
+   37 CONST 34
+   52 aaload               // STRING Loading settings manager...
+   53 invokevirtual      org/apache/logging/log4j/core/Logger.info:(Ljava/lang/String;)V
+   56 aload_0            
+   57 new                D
+   60 dup                
+   61 invokespecial      D.<init>:()V
+   64 putfield           z.aa:LD;
+   67 aload_0            
+   68 getfield           z.U:Lorg/apache/logging/log4j/core/Logger;
+   71 getstatic          q.q:[Ljava/lang/String;
+   74 CONST 35
+   89 aaload               // STRING Loading modules...
+   90 invokevirtual      org/apache/logging/log4j/core/Logger.info:(Ljava/lang/String;)V
+   93 aload_0            
+   94 new                C
+   97 dup                
+   98 invokespecial      C.<init>:()V
+  101 dup_x1             
+  102 putfield           z.T:LC;
+  105 invokevirtual      C.init:()V
+  108 aload_0            
+  109 getfield           z.U:Lorg/apache/logging/log4j/core/Logger;
+  112 getstatic          q.q:[Ljava/lang/String;
+  115 CONST 36
+  130 aaload               // STRING Loading configuration...
+  131 invokevirtual      org/apache/logging/log4j/core/Logger.info:(Ljava/lang/String;)V
+  134 aload_0            
+  135 new                x
+  138 dup                
+  139 aload_0            
+  140 CONST 2
+  146 anewarray          m
+  149 dup                
+  150 CONST 0
+  157 aload_0            
+  158 new                c
+  161 dup                
+  162 aload_0            
+  163 invokespecial      c.<init>:(Lz;)V
+  166 dup_x1             
+  167 putfield           z.ac:Lc;
+  170 aastore            
+  171 dup                
+  172 CONST 1
+  179 aload_0            
+  180 new                v
+  183 dup                
+  184 aload_0            
+  185 invokespecial      v.<init>:(Lz;)V
+  188 dup_x1             
+  189 putfield           z.N:Lv;
+  192 aastore            
+  193 invokespecial      x.<init>:(Lz;[Lm;)V
+  196 dup_x1             
+  197 putfield           z.X:Lx;
+  200 invokevirtual      x.A:()V
+  203 aload_0            
+
+===========================================================================
+CLASS x SHA-256 543905dfacab075773da5c6d38252bfc162d911723a3db5b565e709ac1bc508a
+METHOD A ()V
+    0 aload_0            
+    1 getfield           x.ad:Ljava/util/List;
+    4 aload_0            
+    5 invokedynamic      (18, 0, 35) 0000
+   10 invokeinterface    java/util/List.forEach:(Ljava/util/function/Consumer;)V 0200
+   15 return             
+
+
+===========================================================================
+CLASS x SHA-256 543905dfacab075773da5c6d38252bfc162d911723a3db5b565e709ac1bc508a
+METHOD B ()V
+    0 aload_0            
+    1 getfield           x.ad:Ljava/util/List;
+    4 aload_0            
+    5 invokedynamic      (18, 1, 35) 0000
+   10 invokeinterface    java/util/List.forEach:(Ljava/util/function/Consumer;)V 0200
+   15 return             
+
+
+===========================================================================
+CLASS x SHA-256 543905dfacab075773da5c6d38252bfc162d911723a3db5b565e709ac1bc508a
+METHOD w (Lm;)V
+    0 aload_0            
+    1 getfield           x.ae:Lz;
+    4 invokevirtual      z.x:()Lorg/apache/logging/log4j/core/Logger;
+    7 getstatic          q.q:[Ljava/lang/String;
+   10 CONST 51
+   25 aaload               // STRING Loading {} config...
+   26 CONST 1
+   33 anewarray          java/lang/Object
+   36 dup                
+   37 CONST 0
+   44 aload_1            
+   45 getfield           m.at:Ljava/lang/String;
+   48 aastore            
+   49 invokevirtual      org/apache/logging/log4j/core/Logger.info:(Ljava/lang/String;[Ljava/lang/Object;)V
+   52 aload_1            
+   53 invokevirtual      m.D:()V
+   56 aload_0            
+   57 getfield           x.ae:Lz;
+   60 invokevirtual      z.x:()Lorg/apache/logging/log4j/core/Logger;
+   63 getstatic          q.q:[Ljava/lang/String;
+   66 CONST 52
+   81 aaload               // STRING Loaded {} config.
+   82 CONST 1
+   89 anewarray          java/lang/Object
+   92 dup                
+   93 CONST 0
+  100 aload_1            
+  101 getfield           m.at:Ljava/lang/String;
+  104 aastore            
+  105 invokevirtual      org/apache/logging/log4j/core/Logger.info:(Ljava/lang/String;[Ljava/lang/Object;)V
+  108 return             
+
+===========================================================================
+CLASS m SHA-256 4143442bbf7cb555490de946779c42ca9a27c028972fb466cfaba25595626cae
+METHOD q (Lcom/google/gson/JsonObject;Ljava/lang/String;Ljava/util/function/Consumer;)V
+    0 aload_1            
+    1 ifnull             23
+    4 aload_1            
+    5 aload_2            
+    6 invokevirtual      com/google/gson/JsonObject.get:(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+    9 ifnull             23
+   12 aload_3            
+   13 aload_1            
+   14 aload_2            
+   15 invokevirtual      com/google/gson/JsonObject.get:(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+   18 invokeinterface    java/util/function/Consumer.accept:(Ljava/lang/Object;)V 0200
+   23 return             
+
+===========================================================================
+CLASS v SHA-256 eeff34a926e8e193116cabda7136e1aa0435e556c0d9794f6f856f99c1f4e11b
+METHOD D ()V
+    0 aload_0            
+    1 invokevirtual      v.G:()V
+    4 aload_0            
+    5 getfield           v.as:Ljava/io/File;
+    8 invokestatic       ahb.p:(Ljava/io/File;)Lcom/google/gson/JsonObject;
+   11 astore_1           
+   12 aload_0            
+   13 aload_1            
+   14 getstatic          q.q:[Ljava/lang/String;
+   17 CONST 55
+   32 aaload               // STRING version
+   33 aload_0            
+   34 invokedynamic      (18, 0, 133) 0000
+   39 invokevirtual      v.q:(Lcom/google/gson/JsonObject;Ljava/lang/String;Ljava/util/function/Consumer;)V
+   42 aload_0            
+   43 getfield           v.ar:Lz;
+   46 getfield           z.T:LC;
+   49 invokevirtual      C.M:()Ljava/util/LinkedHashSet;
+   52 invokevirtual      java/util/LinkedHashSet.iterator:()Ljava/util/Iterator;
+   55 astore_2           
+   56 aload_2            
+   57 invokeinterface    java/util/Iterator.hasNext:()Z 0100
+   62 ifeq               94
+   65 aload_2            
+   66 invokeinterface    java/util/Iterator.next:()Ljava/lang/Object; 0100
+   71 checkcast          M
+   74 astore_3           
+   75 aload_0            
+   76 aload_1            
+   77 aload_3            
+   78 invokevirtual      M.ae:()Ljava/lang/String;
+   81 aload_0            
+   82 aload_3            
+   83 invokedynamic      (18, 1, 134) 0000
+   88 invokevirtual      v.q:(Lcom/google/gson/JsonObject;Ljava/lang/String;Ljava/util/function/Consumer;)V
+   91 goto               56
+   94 return             
+
+
+===========================================================================
+CLASS v SHA-256 eeff34a926e8e193116cabda7136e1aa0435e556c0d9794f6f856f99c1f4e11b
+METHOD t (LM;Lcom/google/gson/JsonElement;)V
+    0 aload_2            
+    1 invokevirtual      com/google/gson/JsonElement.getAsJsonObject:()Lcom/google/gson/JsonObject;
+    4 astore_3           
+    5 aload_0            
+    6 aload_3            
+    7 getstatic          q.q:[Ljava/lang/String;
+   10 CONST 62
+   25 aaload               // STRING enabled
+   26 aload_1            
+   27 invokedynamic      (18, 2, 132) 0000
+   32 invokevirtual      v.q:(Lcom/google/gson/JsonObject;Ljava/lang/String;Ljava/util/function/Consumer;)V
+   35 aload_1            
+   36 invokevirtual      M.T:()Z
+   39 ifeq               131
+   42 aload_0            
+   43 aload_3            
+   44 getstatic          q.q:[Ljava/lang/String;
+   47 CONST 63
+   62 aaload               // STRING posX
+   63 aload_1            
+   64 invokedynamic      (18, 3, 132) 0000
+   69 invokevirtual      v.q:(Lcom/google/gson/JsonObject;Ljava/lang/String;Ljava/util/function/Consumer;)V
+   72 aload_0            
+   73 aload_3            
+   74 getstatic          q.q:[Ljava/lang/String;
+   77 CONST 64
+   91 aaload               // STRING posY
+   92 aload_1            
+   93 invokedynamic      (18, 4, 132) 0000
+   98 invokevirtual      v.q:(Lcom/google/gson/JsonObject;Ljava/lang/String;Ljava/util/function/Consumer;)V
+  101 aload_0            
+  102 aload_3            
+  103 getstatic          q.q:[Ljava/lang/String;
+  106 CONST 65
+  121 aaload               // STRING anchorPoint
+  122 aload_1            
+  123 invokedynamic      (18, 5, 132) 0000
+  128 invokevirtual      v.q:(Lcom/google/gson/JsonObject;Ljava/lang/String;Ljava/util/function/Consumer;)V
+  131 aload_1            
+  132 getfield           M.bX:Ljava/util/Set;
+  135 invokeinterface    java/util/Set.isEmpty:()Z 0100
+  140 ifne               223
+  143 aload_3            
+  144 getstatic          q.q:[Ljava/lang/String;
+  147 CONST 66
+  162 aaload               // STRING properties
+  163 invokevirtual      com/google/gson/JsonObject.getAsJsonObject:(Ljava/lang/String;)Lcom/google/gson/JsonObject;
+  166 astore             4
+  168 aload_1            
+  169 getfield           M.bX:Ljava/util/Set;
+  172 invokeinterface    java/util/Set.iterator:()Ljava/util/Iterator; 0100
+  177 astore             5
+  179 aload              5
+  181 invokeinterface    java/util/Iterator.hasNext:()Z 0100
+  186 ifeq               223
+  189 aload              5
+  191 invokeinterface    java/util/Iterator.next:()Ljava/lang/Object; 0100
+  196 checkcast          bP
+  199 astore             6
+  201 aload_0            
+  202 aload              4
+  204 aload              6
+  206 invokevirtual      bP.ae:()Ljava/lang/String;
+  209 aload_0            
+  210 aload              6
+  212 invokedynamic      (18, 6, 135) 0000
+  217 invokevirtual      v.q:(Lcom/google/gson/JsonObject;Ljava/lang/String;Ljava/util/function/Consumer;)V
+  220 goto               179
+  223 return             
+
+===========================================================================
+CLASS v SHA-256 eeff34a926e8e193116cabda7136e1aa0435e556c0d9794f6f856f99c1f4e11b
+METHOD q (LM;Lcom/google/gson/JsonElement;)V
+    0 aload_0            
+    1 aload_1            
+    2 invokevirtual      com/google/gson/JsonElement.getAsBoolean:()Z
+    5 invokevirtual      M.w:(Z)V
+    8 return             
+
+
+===========================================================================
+CLASS acQ SHA-256 7be0b85720fc130daf2c30d25fecd14bc9d43f8a91edef56b9d6f9bc60461ea3
+METHOD q (LaeE;)V
+    0 aload_0            
+    1 invokevirtual      acQ.arS:()Lz;
+    4 getfield           z.T:LC;
+    7 invokevirtual      C.M:()Ljava/util/LinkedHashSet;
+   10 invokedynamic      (18, 9, 746) 0000
+   15 invokevirtual      java/util/LinkedHashSet.forEach:(Ljava/util/function/Consumer;)V
+   18 return             
+
+
+===========================================================================
+CLASS z SHA-256 a9a46d0d6b710d4a2bd45e635473afb813c00638c7d5e1096da23041fd9cb4ed
+METHOD v ()V
+    0 aload_0            
+    1 getfield           z.M:Ljava/util/List;
+    4 invokeinterface    java/util/List.clear:()V 0100
+    9 aload_0            
+   10 getfield           z.T:LC;
+   13 invokevirtual      C.M:()Ljava/util/LinkedHashSet;
+   16 invokevirtual      java/util/LinkedHashSet.stream:()Ljava/util/stream/Stream;
+   19 invokedynamic      (18, 1, 228) 0000
+   24 invokeinterface    java/util/stream/Stream.filter:(Ljava/util/function/Predicate;)Ljava/util/stream/Stream; 0200
+   29 aload_0            
+   30 invokedynamic      (18, 2, 189) 0000
+   35 invokeinterface    java/util/stream/Stream.forEach:(Ljava/util/function/Consumer;)V 0200
+   40 return             
+
+
+===========================================================================
+CLASS x — javap BootstrapMethods (selected entries)
+  0: #29 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #49 (Ljava/lang/Object;)V
+      #31 REF_invokeSpecial x.w:(Lm;)V
+      #50 (Lm;)V
+  1: #29 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #49 (Ljava/lang/Object;)V
+      #30 REF_invokeSpecial x.q:(Lm;)V
+      #50 (Lm;)V
+===========================================================================
+CLASS z — javap BootstrapMethods (selected entries)
+  1: #142 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #238 (Ljava/lang/Object;)Z
+      #141 REF_invokeVirtual M.ad:()Z
+      #235 (LM;)Z
+  4: #142 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #237 (Ljava/lang/Object;)V
+      #140 REF_invokeVirtual M.ac:()V
+      #234 (LM;)V
+===========================================================================
+CLASS acQ — javap BootstrapMethods (selected entries)
+  9: #659 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #1087 (Ljava/lang/Object;)V
+      #646 REF_invokeVirtual M.aa:()V
+      #1069 (LM;)V

@@ -1,0 +1,109 @@
+Compiled from "FoamyBlockState.java"
+public class pl.asie.foamfix.common.FoamyBlockState extends net.minecraft.block.state.BlockState$StateImplementation {
+  protected final pl.asie.foamfix.common.PropertyValueMapper owner;
+    descriptor: Lpl/asie/foamfix/common/PropertyValueMapper;
+
+  protected final com.google.common.collect.ImmutableMap<net.minecraft.block.properties.IProperty, java.lang.Comparable> field_177237_b;
+    descriptor: Lcom/google/common/collect/ImmutableMap;
+
+  protected int value;
+    descriptor: I
+
+  public pl.asie.foamfix.common.FoamyBlockState(pl.asie.foamfix.common.PropertyValueMapper, net.minecraft.block.Block, com.google.common.collect.ImmutableMap<net.minecraft.block.properties.IProperty, java.lang.Comparable>);
+    descriptor: (Lpl/asie/foamfix/common/PropertyValueMapper;Lnet/minecraft/block/Block;Lcom/google/common/collect/ImmutableMap;)V
+    Code:
+       0: aload_0
+       1: aload_2
+       2: aload_3
+       3: invokespecial #20                 // Method net/minecraft/block/state/BlockState$StateImplementation."<init>":(Lnet/minecraft/block/Block;Lcom/google/common/collect/ImmutableMap;)V
+       6: aload_0
+       7: aload_1
+       8: putfield      #22                 // Field owner:Lpl/asie/foamfix/common/PropertyValueMapper;
+      11: aload_0
+      12: aload_3
+      13: putfield      #24                 // Field field_177237_b:Lcom/google/common/collect/ImmutableMap;
+      16: return
+
+  public <T extends java.lang.Comparable<T>, V extends T> net.minecraft.block.state.IBlockState func_177226_a(net.minecraft.block.properties.IProperty<T>, V);
+    descriptor: (Lnet/minecraft/block/properties/IProperty;Ljava/lang/Comparable;)Lnet/minecraft/block/state/IBlockState;
+    Code:
+       0: aload_0
+       1: getfield      #24                 // Field field_177237_b:Lcom/google/common/collect/ImmutableMap;
+       4: aload_1
+       5: invokevirtual #37                 // Method com/google/common/collect/ImmutableMap.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       8: checkcast     #39                 // class java/lang/Comparable
+      11: astore_3
+      12: aload_3
+      13: ifnonnull     58
+      16: new           #41                 // class java/lang/IllegalArgumentException
+      19: dup
+      20: new           #43                 // class java/lang/StringBuilder
+      23: dup
+      24: invokespecial #46                 // Method java/lang/StringBuilder."<init>":()V
+      27: ldc           #48                 // String Cannot set property
+      29: invokevirtual #52                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      32: aload_1
+      33: invokevirtual #55                 // Method java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+      36: ldc           #57                 // String  as it does not exist in
+      38: invokevirtual #52                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      41: aload_0
+      42: invokevirtual #61                 // Method func_177230_c:()Lnet/minecraft/block/Block;
+      45: invokevirtual #67                 // Method net/minecraft/block/Block.func_176194_O:()Lnet/minecraft/block/state/BlockState;
+      48: invokevirtual #55                 // Method java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+      51: invokevirtual #71                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      54: invokespecial #74                 // Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+      57: athrow
+      58: aload_3
+      59: aload_2
+      60: if_acmpne     65
+      63: aload_0
+      64: areturn
+      65: aload_0
+      66: getfield      #22                 // Field owner:Lpl/asie/foamfix/common/PropertyValueMapper;
+      69: aload_0
+      70: getfield      #76                 // Field value:I
+      73: aload_1
+      74: aload_2
+      75: invokevirtual #82                 // Method pl/asie/foamfix/common/PropertyValueMapper.withProperty:(ILnet/minecraft/block/properties/IProperty;Ljava/lang/Comparable;)Lnet/minecraft/block/state/IBlockState;
+      78: astore        4
+      80: aload         4
+      82: ifnonnull     144
+      85: new           #41                 // class java/lang/IllegalArgumentException
+      88: dup
+      89: new           #43                 // class java/lang/StringBuilder
+      92: dup
+      93: invokespecial #46                 // Method java/lang/StringBuilder."<init>":()V
+      96: ldc           #48                 // String Cannot set property
+      98: invokevirtual #52                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     101: aload_1
+     102: invokevirtual #55                 // Method java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+     105: ldc           #84                 // String  to
+     107: invokevirtual #52                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     110: aload_2
+     111: invokevirtual #55                 // Method java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+     114: ldc           #86                 // String  on block
+     116: invokevirtual #52                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     119: getstatic     #90                 // Field net/minecraft/block/Block.field_149771_c:Lnet/minecraft/util/RegistryNamespacedDefaultedByKey;
+     122: aload_0
+     123: invokevirtual #61                 // Method func_177230_c:()Lnet/minecraft/block/Block;
+     126: invokevirtual #95                 // Method net/minecraft/util/RegistryNamespacedDefaultedByKey.func_177774_c:(Ljava/lang/Object;)Ljava/lang/Object;
+     129: invokevirtual #55                 // Method java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+     132: ldc           #97                 // String , it is not an allowed value
+     134: invokevirtual #52                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     137: invokevirtual #71                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     140: invokespecial #74                 // Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+     143: athrow
+     144: aload         4
+     146: areturn
+
+  public void func_177235_a(java.util.Map<java.util.Map<net.minecraft.block.properties.IProperty, java.lang.Comparable>, net.minecraft.block.state.BlockState$StateImplementation>);
+    descriptor: (Ljava/util/Map;)V
+    Code:
+       0: aload_0
+       1: aload_0
+       2: getfield      #22                 // Field owner:Lpl/asie/foamfix/common/PropertyValueMapper;
+       5: aload_0
+       6: invokevirtual #114                // Method pl/asie/foamfix/common/PropertyValueMapper.generateValue:(Lnet/minecraft/block/state/IBlockState;)I
+       9: putfield      #76                 // Field value:I
+      12: return
+}

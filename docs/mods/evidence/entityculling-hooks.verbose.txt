@@ -1,0 +1,646 @@
+Classfile jar:file:///home/leite/Documents/GitHub/dolly-client/build/reference-mods/entityculling-forge-mc1.8.9-1.5.0.jar!/dev/tr7zw/entityculling/mixin/WorldRendererMixin.class
+  Last modified Dec 31, 1969; size 2921 bytes
+  SHA-256 checksum 805aeeb7456b3cd67fd00b55ca778764ec78c658aa0fa5d9e46db464dae6c7cb
+  Compiled from "WorldRendererMixin.java"
+public abstract class dev.tr7zw.entityculling.mixin.WorldRendererMixin
+  minor version: 0
+  major version: 52
+  flags: (0x0421) ACC_PUBLIC, ACC_SUPER, ACC_ABSTRACT
+  this_class: #2                          // dev/tr7zw/entityculling/mixin/WorldRendererMixin
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 3, attributes: 2
+Constant pool:
+    #1 = Utf8               dev/tr7zw/entityculling/mixin/WorldRendererMixin
+    #2 = Class              #1            // dev/tr7zw/entityculling/mixin/WorldRendererMixin
+    #3 = Utf8               java/lang/Object
+    #4 = Class              #3            // java/lang/Object
+    #5 = Utf8               WorldRendererMixin.java
+    #6 = Utf8               Lorg/spongepowered/asm/mixin/Mixin;
+    #7 = Utf8               value
+    #8 = Utf8               Lnet/minecraft/client/renderer/entity/RenderManager;
+    #9 = Utf8               <init>
+   #10 = Utf8               ()V
+   #11 = NameAndType        #9:#10        // "<init>":()V
+   #12 = Methodref          #4.#11        // java/lang/Object."<init>":()V
+   #13 = Utf8               this
+   #14 = Utf8               Ldev/tr7zw/entityculling/mixin/WorldRendererMixin;
+   #15 = Utf8               func_78713_a
+   #16 = Utf8               (Lnet/minecraft/entity/Entity;)Lnet/minecraft/client/renderer/entity/Render;
+   #17 = Utf8               Lorg/spongepowered/asm/mixin/Shadow;
+   #18 = Utf8               doRenderEntity
+   #19 = Utf8               (Lnet/minecraft/entity/Entity;DDDFFZLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V
+   #20 = Utf8               Lorg/spongepowered/asm/mixin/injection/Inject;
+   #21 = Utf8               at
+   #22 = Utf8               Lorg/spongepowered/asm/mixin/injection/At;
+   #23 = Utf8               HEAD
+   #24 = Utf8               method
+   #25 = Utf8               cancellable
+   #26 = Integer            1
+   #27 = Utf8               dev/tr7zw/entityculling/access/Cullable
+   #28 = Class              #27           // dev/tr7zw/entityculling/access/Cullable
+   #29 = Utf8               isForcedVisible
+   #30 = Utf8               ()Z
+   #31 = NameAndType        #29:#30       // isForcedVisible:()Z
+   #32 = InterfaceMethodref #28.#31       // dev/tr7zw/entityculling/access/Cullable.isForcedVisible:()Z
+   #33 = Utf8               isCulled
+   #34 = NameAndType        #33:#30       // isCulled:()Z
+   #35 = InterfaceMethodref #28.#34       // dev/tr7zw/entityculling/access/Cullable.isCulled:()Z
+   #36 = NameAndType        #15:#16       // func_78713_a:(Lnet/minecraft/entity/Entity;)Lnet/minecraft/client/renderer/entity/Render;
+   #37 = Methodref          #2.#36        // dev/tr7zw/entityculling/mixin/WorldRendererMixin.func_78713_a:(Lnet/minecraft/entity/Entity;)Lnet/minecraft/client/renderer/entity/Render;
+   #38 = Utf8               dev/tr7zw/entityculling/access/EntityRendererInter
+   #39 = Class              #38           // dev/tr7zw/entityculling/access/EntityRendererInter
+   #40 = Utf8               dev/tr7zw/entityculling/EntityCullingModBase
+   #41 = Class              #40           // dev/tr7zw/entityculling/EntityCullingModBase
+   #42 = Utf8               instance
+   #43 = Utf8               Ldev/tr7zw/entityculling/EntityCullingModBase;
+   #44 = NameAndType        #42:#43       // instance:Ldev/tr7zw/entityculling/EntityCullingModBase;
+   #45 = Fieldref           #41.#44       // dev/tr7zw/entityculling/EntityCullingModBase.instance:Ldev/tr7zw/entityculling/EntityCullingModBase;
+   #46 = Utf8               config
+   #47 = Utf8               Ldev/tr7zw/entityculling/Config;
+   #48 = NameAndType        #46:#47       // config:Ldev/tr7zw/entityculling/Config;
+   #49 = Fieldref           #41.#48       // dev/tr7zw/entityculling/EntityCullingModBase.config:Ldev/tr7zw/entityculling/Config;
+   #50 = Utf8               dev/tr7zw/entityculling/Config
+   #51 = Class              #50           // dev/tr7zw/entityculling/Config
+   #52 = Utf8               renderNametagsThroughWalls
+   #53 = Utf8               Z
+   #54 = NameAndType        #52:#53       // renderNametagsThroughWalls:Z
+   #55 = Fieldref           #51.#54       // dev/tr7zw/entityculling/Config.renderNametagsThroughWalls:Z
+   #56 = Utf8               shadowShouldShowName
+   #57 = Utf8               (Lnet/minecraft/entity/Entity;)Z
+   #58 = NameAndType        #56:#57       // shadowShouldShowName:(Lnet/minecraft/entity/Entity;)Z
+   #59 = InterfaceMethodref #39.#58       // dev/tr7zw/entityculling/access/EntityRendererInter.shadowShouldShowName:(Lnet/minecraft/entity/Entity;)Z
+   #60 = Utf8               shadowRenderNameTag
+   #61 = Utf8               (Lnet/minecraft/entity/Entity;DDD)V
+   #62 = NameAndType        #60:#61       // shadowRenderNameTag:(Lnet/minecraft/entity/Entity;DDD)V
+   #63 = InterfaceMethodref #39.#62       // dev/tr7zw/entityculling/access/EntityRendererInter.shadowRenderNameTag:(Lnet/minecraft/entity/Entity;DDD)V
+   #64 = Utf8               skippedEntities
+   #65 = Utf8               I
+   #66 = NameAndType        #64:#65       // skippedEntities:I
+   #67 = Fieldref           #41.#66       // dev/tr7zw/entityculling/EntityCullingModBase.skippedEntities:I
+   #68 = Utf8               org/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable
+   #69 = Class              #68           // org/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable
+   #70 = Utf8               cancel
+   #71 = NameAndType        #70:#10       // cancel:()V
+   #72 = Methodref          #69.#71       // org/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable.cancel:()V
+   #73 = Utf8               renderedEntities
+   #74 = NameAndType        #73:#65       // renderedEntities:I
+   #75 = Fieldref           #41.#74       // dev/tr7zw/entityculling/EntityCullingModBase.renderedEntities:I
+   #76 = Utf8               setOutOfCamera
+   #77 = Utf8               (Z)V
+   #78 = NameAndType        #76:#77       // setOutOfCamera:(Z)V
+   #79 = InterfaceMethodref #28.#78       // dev/tr7zw/entityculling/access/Cullable.setOutOfCamera:(Z)V
+   #80 = Utf8               entityRenderer
+   #81 = Utf8               Ldev/tr7zw/entityculling/access/EntityRendererInter<Lnet/minecraft/entity/Entity;>;
+   #82 = Utf8               Ldev/tr7zw/entityculling/access/EntityRendererInter;
+   #83 = Utf8               entity
+   #84 = Utf8               Lnet/minecraft/entity/Entity;
+   #85 = Utf8               p_doRenderEntity_2_
+   #86 = Utf8               D
+   #87 = Utf8               d1
+   #88 = Utf8               d2
+   #89 = Utf8               tickDelta
+   #90 = Utf8               F
+   #91 = Utf8               p_doRenderEntity_9_
+   #92 = Utf8               p_doRenderEntity_10_
+   #93 = Utf8               info
+   #94 = Utf8               Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/lang/Boolean;>;
+   #95 = Utf8               Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;
+   #96 = Utf8               cullable
+   #97 = Utf8               Ldev/tr7zw/entityculling/access/Cullable;
+   #98 = Utf8               Code
+   #99 = Utf8               LocalVariableTable
+  #100 = Utf8               LineNumberTable
+  #101 = Utf8               Signature
+  #102 = Utf8               <T:Lnet/minecraft/entity/Entity;>(Lnet/minecraft/entity/Entity;)Lnet/minecraft/client/renderer/entity/Render<TT;>;
+  #103 = Utf8               RuntimeVisibleAnnotations
+  #104 = Utf8               LocalVariableTypeTable
+  #105 = Utf8               StackMapTable
+  #106 = Utf8               (Lnet/minecraft/entity/Entity;DDDFFZLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/lang/Boolean;>;)V
+  #107 = Utf8               SourceFile
+  #108 = Utf8               RuntimeInvisibleAnnotations
+{
+  public dev.tr7zw.entityculling.mixin.WorldRendererMixin();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #12                 // Method java/lang/Object."<init>":()V
+         4: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Ldev/tr7zw/entityculling/mixin/WorldRendererMixin;
+      LineNumberTable:
+        line 18: 0
+
+  public abstract <T extends net.minecraft.entity.Entity> net.minecraft.client.renderer.entity.Render<T> func_78713_a(net.minecraft.entity.Entity);
+    descriptor: (Lnet/minecraft/entity/Entity;)Lnet/minecraft/client/renderer/entity/Render;
+    flags: (0x0401) ACC_PUBLIC, ACC_ABSTRACT
+    Signature: #102                         // <T:Lnet/minecraft/entity/Entity;>(Lnet/minecraft/entity/Entity;)Lnet/minecraft/client/renderer/entity/Render<TT;>;
+    RuntimeVisibleAnnotations:
+      0: #17()
+        org.spongepowered.asm.mixin.Shadow
+
+  public void doRenderEntity(net.minecraft.entity.Entity, double, double, double, float, float, boolean, org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable<java.lang.Boolean>);
+    descriptor: (Lnet/minecraft/entity/Entity;DDDFFZLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=8, locals=14, args_size=9
+         0: aload_1
+         1: checkcast     #28                 // class dev/tr7zw/entityculling/access/Cullable
+         4: astore        12
+         6: aload         12
+         8: invokeinterface #32,  1           // InterfaceMethod dev/tr7zw/entityculling/access/Cullable.isForcedVisible:()Z
+        13: ifne          90
+        16: aload         12
+        18: invokeinterface #35,  1           // InterfaceMethod dev/tr7zw/entityculling/access/Cullable.isCulled:()Z
+        23: ifeq          90
+        26: aload_0
+        27: aload_1
+        28: invokevirtual #37                 // Method func_78713_a:(Lnet/minecraft/entity/Entity;)Lnet/minecraft/client/renderer/entity/Render;
+        31: checkcast     #39                 // class dev/tr7zw/entityculling/access/EntityRendererInter
+        34: astore        13
+        36: getstatic     #45                 // Field dev/tr7zw/entityculling/EntityCullingModBase.instance:Ldev/tr7zw/entityculling/EntityCullingModBase;
+        39: getfield      #49                 // Field dev/tr7zw/entityculling/EntityCullingModBase.config:Ldev/tr7zw/entityculling/Config;
+        42: getfield      #55                 // Field dev/tr7zw/entityculling/Config.renderNametagsThroughWalls:Z
+        45: ifeq          72
+        48: aload         13
+        50: aload_1
+        51: invokeinterface #59,  2           // InterfaceMethod dev/tr7zw/entityculling/access/EntityRendererInter.shadowShouldShowName:(Lnet/minecraft/entity/Entity;)Z
+        56: ifeq          72
+        59: aload         13
+        61: aload_1
+        62: dload_2
+        63: dload         4
+        65: dload         6
+        67: invokeinterface #63,  8           // InterfaceMethod dev/tr7zw/entityculling/access/EntityRendererInter.shadowRenderNameTag:(Lnet/minecraft/entity/Entity;DDD)V
+        72: getstatic     #45                 // Field dev/tr7zw/entityculling/EntityCullingModBase.instance:Ldev/tr7zw/entityculling/EntityCullingModBase;
+        75: dup
+        76: getfield      #67                 // Field dev/tr7zw/entityculling/EntityCullingModBase.skippedEntities:I
+        79: iconst_1
+        80: iadd
+        81: putfield      #67                 // Field dev/tr7zw/entityculling/EntityCullingModBase.skippedEntities:I
+        84: aload         11
+        86: invokevirtual #72                 // Method org/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable.cancel:()V
+        89: return
+        90: getstatic     #45                 // Field dev/tr7zw/entityculling/EntityCullingModBase.instance:Ldev/tr7zw/entityculling/EntityCullingModBase;
+        93: dup
+        94: getfield      #75                 // Field dev/tr7zw/entityculling/EntityCullingModBase.renderedEntities:I
+        97: iconst_1
+        98: iadd
+        99: putfield      #75                 // Field dev/tr7zw/entityculling/EntityCullingModBase.renderedEntities:I
+       102: aload         12
+       104: iconst_0
+       105: invokeinterface #79,  2           // InterfaceMethod dev/tr7zw/entityculling/access/Cullable.setOutOfCamera:(Z)V
+       110: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           36      54    13 entityRenderer   Ldev/tr7zw/entityculling/access/EntityRendererInter;
+            0     111     0  this   Ldev/tr7zw/entityculling/mixin/WorldRendererMixin;
+            0     111     1 entity   Lnet/minecraft/entity/Entity;
+            0     111     2 p_doRenderEntity_2_   D
+            0     111     4    d1   D
+            0     111     6    d2   D
+            0     111     8 tickDelta   F
+            0     111     9 p_doRenderEntity_9_   F
+            0     111    10 p_doRenderEntity_10_   Z
+            0     111    11  info   Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;
+            6     105    12 cullable   Ldev/tr7zw/entityculling/access/Cullable;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+           36      54    13 entityRenderer   Ldev/tr7zw/entityculling/access/EntityRendererInter<Lnet/minecraft/entity/Entity;>;
+            0     111    11  info   Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/lang/Boolean;>;
+      LineNumberTable:
+        line 29: 0
+        line 30: 6
+        line 31: 26
+        line 32: 36
+        line 33: 59
+        line 36: 72
+        line 37: 84
+        line 38: 89
+        line 40: 90
+        line 41: 102
+        line 42: 110
+      StackMapTable: number_of_entries = 2
+        frame_type = 253 /* append */
+          offset_delta = 72
+          locals = [ class dev/tr7zw/entityculling/access/Cullable, class dev/tr7zw/entityculling/access/EntityRendererInter ]
+        frame_type = 250 /* chop */
+          offset_delta = 17
+    Signature: #106                         // (Lnet/minecraft/entity/Entity;DDDFFZLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/lang/Boolean;>;)V
+    RuntimeVisibleAnnotations:
+      0: #20(#21=[@#22(#7=s#23)],#24=[s#18],#25=Z#26)
+        org.spongepowered.asm.mixin.injection.Inject(
+          at=[@org.spongepowered.asm.mixin.injection.At(
+            value="HEAD"
+          )]
+          method=["doRenderEntity"]
+          cancellable=true
+        )
+}
+SourceFile: "WorldRendererMixin.java"
+RuntimeInvisibleAnnotations:
+  0: #6(#7=[c#8])
+    org.spongepowered.asm.mixin.Mixin(
+      value=[class Lnet/minecraft/client/renderer/entity/RenderManager;]
+    )
+Classfile jar:file:///home/leite/Documents/GitHub/dolly-client/build/reference-mods/entityculling-forge-mc1.8.9-1.5.0.jar!/dev/tr7zw/entityculling/mixin/BlockEntityRenderDispatcherMixin.class
+  Last modified Dec 31, 1969; size 1821 bytes
+  SHA-256 checksum 12987b81451b77d9d3b7c03aea017aeb03ca9fcecda79650e220eb74ab84cc94
+  Compiled from "BlockEntityRenderDispatcherMixin.java"
+public class dev.tr7zw.entityculling.mixin.BlockEntityRenderDispatcherMixin
+  minor version: 0
+  major version: 52
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #2                          // dev/tr7zw/entityculling/mixin/BlockEntityRenderDispatcherMixin
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 2, attributes: 2
+Constant pool:
+   #1 = Utf8               dev/tr7zw/entityculling/mixin/BlockEntityRenderDispatcherMixin
+   #2 = Class              #1             // dev/tr7zw/entityculling/mixin/BlockEntityRenderDispatcherMixin
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               BlockEntityRenderDispatcherMixin.java
+   #6 = Utf8               Lorg/spongepowered/asm/mixin/Mixin;
+   #7 = Utf8               value
+   #8 = Utf8               Lnet/minecraft/client/renderer/tileentity/TileEntityRendererDispatcher;
+   #9 = Utf8               <init>
+  #10 = Utf8               ()V
+  #11 = NameAndType        #9:#10         // "<init>":()V
+  #12 = Methodref          #4.#11         // java/lang/Object."<init>":()V
+  #13 = Utf8               this
+  #14 = Utf8               Ldev/tr7zw/entityculling/mixin/BlockEntityRenderDispatcherMixin;
+  #15 = Utf8               renderTileEntityAt
+  #16 = Utf8               (Lnet/minecraft/tileentity/TileEntity;DDDFILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V
+  #17 = Utf8               Lorg/spongepowered/asm/mixin/injection/Inject;
+  #18 = Utf8               method
+  #19 = Utf8               Lnet/minecraft/client/renderer/tileentity/TileEntityRendererDispatcher;renderTileEntityAt(Lnet/minecraft/tileentity/TileEntity;DDDFI)V
+  #20 = Utf8               at
+  #21 = Utf8               Lorg/spongepowered/asm/mixin/injection/At;
+  #22 = Utf8               HEAD
+  #23 = Utf8               cancellable
+  #24 = Integer            1
+  #25 = Utf8               dev/tr7zw/entityculling/access/Cullable
+  #26 = Class              #25            // dev/tr7zw/entityculling/access/Cullable
+  #27 = Utf8               isForcedVisible
+  #28 = Utf8               ()Z
+  #29 = NameAndType        #27:#28        // isForcedVisible:()Z
+  #30 = InterfaceMethodref #26.#29        // dev/tr7zw/entityculling/access/Cullable.isForcedVisible:()Z
+  #31 = Utf8               isCulled
+  #32 = NameAndType        #31:#28        // isCulled:()Z
+  #33 = InterfaceMethodref #26.#32        // dev/tr7zw/entityculling/access/Cullable.isCulled:()Z
+  #34 = Utf8               dev/tr7zw/entityculling/EntityCullingModBase
+  #35 = Class              #34            // dev/tr7zw/entityculling/EntityCullingModBase
+  #36 = Utf8               instance
+  #37 = Utf8               Ldev/tr7zw/entityculling/EntityCullingModBase;
+  #38 = NameAndType        #36:#37        // instance:Ldev/tr7zw/entityculling/EntityCullingModBase;
+  #39 = Fieldref           #35.#38        // dev/tr7zw/entityculling/EntityCullingModBase.instance:Ldev/tr7zw/entityculling/EntityCullingModBase;
+  #40 = Utf8               skippedBlockEntities
+  #41 = Utf8               I
+  #42 = NameAndType        #40:#41        // skippedBlockEntities:I
+  #43 = Fieldref           #35.#42        // dev/tr7zw/entityculling/EntityCullingModBase.skippedBlockEntities:I
+  #44 = Utf8               org/spongepowered/asm/mixin/injection/callback/CallbackInfo
+  #45 = Class              #44            // org/spongepowered/asm/mixin/injection/callback/CallbackInfo
+  #46 = Utf8               cancel
+  #47 = NameAndType        #46:#10        // cancel:()V
+  #48 = Methodref          #45.#47        // org/spongepowered/asm/mixin/injection/callback/CallbackInfo.cancel:()V
+  #49 = Utf8               renderedBlockEntities
+  #50 = NameAndType        #49:#41        // renderedBlockEntities:I
+  #51 = Fieldref           #35.#50        // dev/tr7zw/entityculling/EntityCullingModBase.renderedBlockEntities:I
+  #52 = Utf8               blockEntity
+  #53 = Utf8               Lnet/minecraft/tileentity/TileEntity;
+  #54 = Utf8               p_renderTileEntityAt_2_
+  #55 = Utf8               D
+  #56 = Utf8               d1
+  #57 = Utf8               d2
+  #58 = Utf8               f1
+  #59 = Utf8               F
+  #60 = Utf8               p_renderTileEntityAt_9_
+  #61 = Utf8               info
+  #62 = Utf8               Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;
+  #63 = Utf8               Code
+  #64 = Utf8               LocalVariableTable
+  #65 = Utf8               LineNumberTable
+  #66 = Utf8               StackMapTable
+  #67 = Utf8               RuntimeVisibleAnnotations
+  #68 = Utf8               SourceFile
+  #69 = Utf8               RuntimeInvisibleAnnotations
+{
+  public dev.tr7zw.entityculling.mixin.BlockEntityRenderDispatcherMixin();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #12                 // Method java/lang/Object."<init>":()V
+         4: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Ldev/tr7zw/entityculling/mixin/BlockEntityRenderDispatcherMixin;
+      LineNumberTable:
+        line 14: 0
+
+  public void renderTileEntityAt(net.minecraft.tileentity.TileEntity, double, double, double, float, int, org.spongepowered.asm.mixin.injection.callback.CallbackInfo);
+    descriptor: (Lnet/minecraft/tileentity/TileEntity;DDDFILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=11, args_size=8
+         0: aload_1
+         1: checkcast     #26                 // class dev/tr7zw/entityculling/access/Cullable
+         4: invokeinterface #30,  1           // InterfaceMethod dev/tr7zw/entityculling/access/Cullable.isForcedVisible:()Z
+         9: ifne          42
+        12: aload_1
+        13: checkcast     #26                 // class dev/tr7zw/entityculling/access/Cullable
+        16: invokeinterface #33,  1           // InterfaceMethod dev/tr7zw/entityculling/access/Cullable.isCulled:()Z
+        21: ifeq          42
+        24: getstatic     #39                 // Field dev/tr7zw/entityculling/EntityCullingModBase.instance:Ldev/tr7zw/entityculling/EntityCullingModBase;
+        27: dup
+        28: getfield      #43                 // Field dev/tr7zw/entityculling/EntityCullingModBase.skippedBlockEntities:I
+        31: iconst_1
+        32: iadd
+        33: putfield      #43                 // Field dev/tr7zw/entityculling/EntityCullingModBase.skippedBlockEntities:I
+        36: aload         10
+        38: invokevirtual #48                 // Method org/spongepowered/asm/mixin/injection/callback/CallbackInfo.cancel:()V
+        41: return
+        42: getstatic     #39                 // Field dev/tr7zw/entityculling/EntityCullingModBase.instance:Ldev/tr7zw/entityculling/EntityCullingModBase;
+        45: dup
+        46: getfield      #51                 // Field dev/tr7zw/entityculling/EntityCullingModBase.renderedBlockEntities:I
+        49: iconst_1
+        50: iadd
+        51: putfield      #51                 // Field dev/tr7zw/entityculling/EntityCullingModBase.renderedBlockEntities:I
+        54: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      55     0  this   Ldev/tr7zw/entityculling/mixin/BlockEntityRenderDispatcherMixin;
+            0      55     1 blockEntity   Lnet/minecraft/tileentity/TileEntity;
+            0      55     2 p_renderTileEntityAt_2_   D
+            0      55     4    d1   D
+            0      55     6    d2   D
+            0      55     8    f1   F
+            0      55     9 p_renderTileEntityAt_9_   I
+            0      55    10  info   Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;
+      LineNumberTable:
+        line 19: 0
+        line 20: 24
+        line 21: 36
+        line 22: 41
+        line 24: 42
+        line 25: 54
+      StackMapTable: number_of_entries = 1
+        frame_type = 42 /* same */
+    RuntimeVisibleAnnotations:
+      0: #17(#18=[s#19],#20=[@#21(#7=s#22)],#23=Z#24)
+        org.spongepowered.asm.mixin.injection.Inject(
+          method=["Lnet/minecraft/client/renderer/tileentity/TileEntityRendererDispatcher;renderTileEntityAt(Lnet/minecraft/tileentity/TileEntity;DDDFI)V"]
+          at=[@org.spongepowered.asm.mixin.injection.At(
+            value="HEAD"
+          )]
+          cancellable=true
+        )
+}
+SourceFile: "BlockEntityRenderDispatcherMixin.java"
+RuntimeInvisibleAnnotations:
+  0: #6(#7=[c#8])
+    org.spongepowered.asm.mixin.Mixin(
+      value=[class Lnet/minecraft/client/renderer/tileentity/TileEntityRendererDispatcher;]
+    )
+Classfile jar:file:///home/leite/Documents/GitHub/dolly-client/build/reference-mods/entityculling-forge-mc1.8.9-1.5.0.jar!/dev/tr7zw/entityculling/mixin/CullableMixin.class
+  Last modified Dec 31, 1969; size 1425 bytes
+  SHA-256 checksum 22159a433a4f53f5ae033ea53703d64b76a035b210ca17841a514b11e93bf3a1
+  Compiled from "CullableMixin.java"
+public class dev.tr7zw.entityculling.mixin.CullableMixin implements dev.tr7zw.entityculling.access.Cullable
+  minor version: 0
+  major version: 52
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #2                          // dev/tr7zw/entityculling/mixin/CullableMixin
+  super_class: #4                         // java/lang/Object
+  interfaces: 1, fields: 3, methods: 7, attributes: 2
+Constant pool:
+   #1 = Utf8               dev/tr7zw/entityculling/mixin/CullableMixin
+   #2 = Class              #1             // dev/tr7zw/entityculling/mixin/CullableMixin
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               dev/tr7zw/entityculling/access/Cullable
+   #6 = Class              #5             // dev/tr7zw/entityculling/access/Cullable
+   #7 = Utf8               CullableMixin.java
+   #8 = Utf8               Lorg/spongepowered/asm/mixin/Mixin;
+   #9 = Utf8               value
+  #10 = Utf8               Lnet/minecraft/entity/Entity;
+  #11 = Utf8               Lnet/minecraft/tileentity/TileEntity;
+  #12 = Utf8               lasttime
+  #13 = Utf8               J
+  #14 = Utf8               culled
+  #15 = Utf8               Z
+  #16 = Utf8               outOfCamera
+  #17 = Utf8               <init>
+  #18 = Utf8               ()V
+  #19 = NameAndType        #17:#18        // "<init>":()V
+  #20 = Methodref          #4.#19         // java/lang/Object."<init>":()V
+  #21 = NameAndType        #12:#13        // lasttime:J
+  #22 = Fieldref           #2.#21         // dev/tr7zw/entityculling/mixin/CullableMixin.lasttime:J
+  #23 = NameAndType        #14:#15        // culled:Z
+  #24 = Fieldref           #2.#23         // dev/tr7zw/entityculling/mixin/CullableMixin.culled:Z
+  #25 = NameAndType        #16:#15        // outOfCamera:Z
+  #26 = Fieldref           #2.#25         // dev/tr7zw/entityculling/mixin/CullableMixin.outOfCamera:Z
+  #27 = Utf8               this
+  #28 = Utf8               Ldev/tr7zw/entityculling/mixin/CullableMixin;
+  #29 = Utf8               setTimeout
+  #30 = Utf8               java/lang/System
+  #31 = Class              #30            // java/lang/System
+  #32 = Utf8               currentTimeMillis
+  #33 = Utf8               ()J
+  #34 = NameAndType        #32:#33        // currentTimeMillis:()J
+  #35 = Methodref          #31.#34        // java/lang/System.currentTimeMillis:()J
+  #36 = Long               1000l
+  #38 = Utf8               isForcedVisible
+  #39 = Utf8               ()Z
+  #40 = Utf8               setCulled
+  #41 = Utf8               (Z)V
+  #42 = NameAndType        #29:#18        // setTimeout:()V
+  #43 = Methodref          #2.#42         // dev/tr7zw/entityculling/mixin/CullableMixin.setTimeout:()V
+  #44 = Utf8               isCulled
+  #45 = Utf8               dev/tr7zw/entityculling/EntityCullingModBase
+  #46 = Class              #45            // dev/tr7zw/entityculling/EntityCullingModBase
+  #47 = Utf8               enabled
+  #48 = NameAndType        #47:#15        // enabled:Z
+  #49 = Fieldref           #46.#48        // dev/tr7zw/entityculling/EntityCullingModBase.enabled:Z
+  #50 = Utf8               setOutOfCamera
+  #51 = Utf8               isOutOfCamera
+  #52 = Utf8               Code
+  #53 = Utf8               LocalVariableTable
+  #54 = Utf8               LineNumberTable
+  #55 = Utf8               StackMapTable
+  #56 = Utf8               SourceFile
+  #57 = Utf8               RuntimeInvisibleAnnotations
+{
+  private long lasttime;
+    descriptor: J
+    flags: (0x0002) ACC_PRIVATE
+
+  private boolean culled;
+    descriptor: Z
+    flags: (0x0002) ACC_PRIVATE
+
+  private boolean outOfCamera;
+    descriptor: Z
+    flags: (0x0002) ACC_PRIVATE
+
+  public dev.tr7zw.entityculling.mixin.CullableMixin();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #20                 // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: lconst_0
+         6: putfield      #22                 // Field lasttime:J
+         9: aload_0
+        10: iconst_0
+        11: putfield      #24                 // Field culled:Z
+        14: aload_0
+        15: iconst_0
+        16: putfield      #26                 // Field outOfCamera:Z
+        19: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      20     0  this   Ldev/tr7zw/entityculling/mixin/CullableMixin;
+      LineNumberTable:
+        line 11: 0
+        line 13: 4
+        line 14: 9
+        line 15: 14
+
+  public void setTimeout();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=1, args_size=1
+         0: aload_0
+         1: invokestatic  #35                 // Method java/lang/System.currentTimeMillis:()J
+         4: ldc2_w        #36                 // long 1000l
+         7: ladd
+         8: putfield      #22                 // Field lasttime:J
+        11: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      12     0  this   Ldev/tr7zw/entityculling/mixin/CullableMixin;
+      LineNumberTable:
+        line 19: 0
+        line 20: 11
+
+  public boolean isForcedVisible();
+    descriptor: ()Z
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #22                 // Field lasttime:J
+         4: invokestatic  #35                 // Method java/lang/System.currentTimeMillis:()J
+         7: lcmp
+         8: ifle          15
+        11: iconst_1
+        12: goto          16
+        15: iconst_0
+        16: ireturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      17     0  this   Ldev/tr7zw/entityculling/mixin/CullableMixin;
+      LineNumberTable:
+        line 24: 0
+      StackMapTable: number_of_entries = 2
+        frame_type = 15 /* same */
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ int ]
+
+  public void setCulled(boolean);
+    descriptor: (Z)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_0
+         1: iload_1
+         2: putfield      #24                 // Field culled:Z
+         5: iload_1
+         6: ifne          13
+         9: aload_0
+        10: invokevirtual #43                 // Method setTimeout:()V
+        13: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      14     0  this   Ldev/tr7zw/entityculling/mixin/CullableMixin;
+            0      14     1 value   Z
+      LineNumberTable:
+        line 29: 0
+        line 30: 5
+        line 31: 9
+        line 33: 13
+      StackMapTable: number_of_entries = 1
+        frame_type = 13 /* same */
+
+  public boolean isCulled();
+    descriptor: ()Z
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: getstatic     #49                 // Field dev/tr7zw/entityculling/EntityCullingModBase.enabled:Z
+         3: ifne          8
+         6: iconst_0
+         7: ireturn
+         8: aload_0
+         9: getfield      #24                 // Field culled:Z
+        12: ireturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      13     0  this   Ldev/tr7zw/entityculling/mixin/CullableMixin;
+      LineNumberTable:
+        line 37: 0
+        line 38: 8
+      StackMapTable: number_of_entries = 1
+        frame_type = 8 /* same */
+
+  public void setOutOfCamera(boolean);
+    descriptor: (Z)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_0
+         1: iload_1
+         2: putfield      #26                 // Field outOfCamera:Z
+         5: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       6     0  this   Ldev/tr7zw/entityculling/mixin/CullableMixin;
+            0       6     1 value   Z
+      LineNumberTable:
+        line 43: 0
+        line 44: 5
+
+  public boolean isOutOfCamera();
+    descriptor: ()Z
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: getstatic     #49                 // Field dev/tr7zw/entityculling/EntityCullingModBase.enabled:Z
+         3: ifne          8
+         6: iconst_0
+         7: ireturn
+         8: aload_0
+         9: getfield      #26                 // Field outOfCamera:Z
+        12: ireturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      13     0  this   Ldev/tr7zw/entityculling/mixin/CullableMixin;
+      LineNumberTable:
+        line 48: 0
+        line 49: 8
+      StackMapTable: number_of_entries = 1
+        frame_type = 8 /* same */
+}
+SourceFile: "CullableMixin.java"
+RuntimeInvisibleAnnotations:
+  0: #8(#9=[c#10,c#11])
+    org.spongepowered.asm.mixin.Mixin(
+      value=[class Lnet/minecraft/entity/Entity;,class Lnet/minecraft/tileentity/TileEntity;]
+    )

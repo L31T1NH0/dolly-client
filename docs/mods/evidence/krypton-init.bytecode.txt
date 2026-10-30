@@ -1,0 +1,125 @@
+Compiled from "KryptonClientInitializer.java"
+public class me.steinborn.krypton.mod.client.KryptonClientInitializer implements net.fabricmc.api.ClientModInitializer {
+  private static final org.apache.logging.log4j.Logger LOGGER;
+
+  public me.steinborn.krypton.mod.client.KryptonClientInitializer();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public void onInitializeClient();
+    Code:
+       0: getstatic     #7                  // Field LOGGER:Lorg/apache/logging/log4j/Logger;
+       3: ldc           #13                 // String Krypton is now accelerating your Minecraft client\'s networking stack 🚀
+       5: invokeinterface #15,  2           // InterfaceMethod org/apache/logging/log4j/Logger.info:(Ljava/lang/String;)V
+      10: getstatic     #7                  // Field LOGGER:Lorg/apache/logging/log4j/Logger;
+      13: ldc           #21                 // String Note that Krypton is most effective on servers, not the client.
+      15: invokeinterface #15,  2           // InterfaceMethod org/apache/logging/log4j/Logger.info:(Ljava/lang/String;)V
+      20: return
+
+  static {};
+    Code:
+       0: ldc           #8                  // class me/steinborn/krypton/mod/client/KryptonClientInitializer
+       2: invokestatic  #23                 // Method org/apache/logging/log4j/LogManager.getLogger:(Ljava/lang/Class;)Lorg/apache/logging/log4j/Logger;
+       5: putstatic     #7                  // Field LOGGER:Lorg/apache/logging/log4j/Logger;
+       8: return
+}
+Compiled from "KryptonServerInitializer.java"
+public class me.steinborn.krypton.mod.server.KryptonServerInitializer implements net.fabricmc.api.DedicatedServerModInitializer {
+  private static final org.apache.logging.log4j.Logger LOGGER;
+
+  public me.steinborn.krypton.mod.server.KryptonServerInitializer();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public void onInitializeServer();
+    Code:
+       0: getstatic     #7                  // Field LOGGER:Lorg/apache/logging/log4j/Logger;
+       3: ldc           #13                 // String Krypton is now accelerating your Minecraft server\'s networking stack 🚀
+       5: invokeinterface #15,  2           // InterfaceMethod org/apache/logging/log4j/Logger.info:(Ljava/lang/String;)V
+      10: return
+
+  static {};
+    Code:
+       0: ldc           #8                  // class me/steinborn/krypton/mod/server/KryptonServerInitializer
+       2: invokestatic  #21                 // Method org/apache/logging/log4j/LogManager.getLogger:(Ljava/lang/Class;)Lorg/apache/logging/log4j/Logger;
+       5: putstatic     #7                  // Field LOGGER:Lorg/apache/logging/log4j/Logger;
+       8: return
+}
+Compiled from "KryptonMixinPlugin.java"
+public class me.steinborn.krypton.mod.shared.KryptonMixinPlugin implements org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin {
+  public me.steinborn.krypton.mod.shared.KryptonMixinPlugin();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public void onLoad(java.lang.String);
+    Code:
+       0: return
+
+  public java.lang.String getRefMapperConfig();
+    Code:
+       0: aconst_null
+       1: areturn
+
+  public boolean shouldApplyMixin(java.lang.String, java.lang.String);
+    Code:
+       0: iconst_1
+       1: ireturn
+
+  public void acceptTargets(java.util.Set<java.lang.String>, java.util.Set<java.lang.String>);
+    Code:
+       0: return
+
+  public java.util.List<java.lang.String> getMixins();
+    Code:
+       0: aconst_null
+       1: areturn
+
+  public void preApply(java.lang.String, org.objectweb.asm.tree.ClassNode, java.lang.String, org.spongepowered.asm.mixin.extensibility.IMixinInfo);
+    Code:
+       0: return
+
+  public void postApply(java.lang.String, org.objectweb.asm.tree.ClassNode, java.lang.String, org.spongepowered.asm.mixin.extensibility.IMixinInfo);
+    Code:
+       0: return
+}
+Compiled from "KryptonSharedInitializer.java"
+public class me.steinborn.krypton.mod.shared.KryptonSharedInitializer implements net.fabricmc.api.ModInitializer {
+  private static final org.apache.logging.log4j.Logger LOGGER;
+
+  public me.steinborn.krypton.mod.shared.KryptonSharedInitializer();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public void onInitialize();
+    Code:
+       0: getstatic     #7                  // Field LOGGER:Lorg/apache/logging/log4j/Logger;
+       3: ldc           #13                 // String Compression will use {}, encryption will use {}
+       5: getstatic     #15                 // Field com/velocitypowered/natives/util/Natives.compress:Lcom/velocitypowered/natives/util/NativeCodeLoader;
+       8: invokevirtual #21                 // Method com/velocitypowered/natives/util/NativeCodeLoader.getLoadedVariant:()Ljava/lang/String;
+      11: getstatic     #27                 // Field com/velocitypowered/natives/util/Natives.cipher:Lcom/velocitypowered/natives/util/NativeCodeLoader;
+      14: invokevirtual #21                 // Method com/velocitypowered/natives/util/NativeCodeLoader.getLoadedVariant:()Ljava/lang/String;
+      17: invokeinterface #30,  4           // InterfaceMethod org/apache/logging/log4j/Logger.info:(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+      22: return
+
+  static {};
+    Code:
+       0: ldc           #8                  // class me/steinborn/krypton/mod/shared/KryptonSharedInitializer
+       2: invokestatic  #36                 // Method org/apache/logging/log4j/LogManager.getLogger:(Ljava/lang/Class;)Lorg/apache/logging/log4j/Logger;
+       5: putstatic     #7                  // Field LOGGER:Lorg/apache/logging/log4j/Logger;
+       8: ldc           #42                 // String io.netty.allocator.maxOrder
+      10: invokestatic  #44                 // Method java/lang/System.getProperty:(Ljava/lang/String;)Ljava/lang/String;
+      13: ifnonnull     24
+      16: ldc           #42                 // String io.netty.allocator.maxOrder
+      18: ldc           #50                 // String 9
+      20: invokestatic  #52                 // Method java/lang/System.setProperty:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+      23: pop
+      24: return
+}

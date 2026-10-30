@@ -1,0 +1,63 @@
+{
+  "artifact": "references/modrinth-mods.zip!foamfix-0.6.3a-anarchy-1.8.x.jar",
+  "artifact_sha256": "03fa102a9ad8dc580f9de2ac1689b30a89ceab5a5ee614f96d27915362c45f5c",
+  "method": "OpenJDK 21 javap -p -c -s; static only",
+  "evidence": [
+    {
+      "path": "foamfix-ProxyClient.txt",
+      "sha256": "ec4473486d5407e7c8a9f3c89582f7afd7fb7534a1b0e318399dfcad590ff5ee"
+    },
+    {
+      "path": "foamfix-client_Deduplicator.txt",
+      "sha256": "124751bf2216280a69fe9c54a1784edfd6b703d838f3ce8e62f54b283ded6fc8"
+    },
+    {
+      "path": "foamfix-client_FoamFixDynamicItemModels.txt",
+      "sha256": "1b80709935701422f6f3536e2dcf543dd5d5fcce3b16c3058c8588fe57cbe4ca"
+    },
+    {
+      "path": "foamfix-client_FoamFixModelDeduplicate.txt",
+      "sha256": "89f1d42509a27e974826163a822c6c7d935e96d91ac717fb05ccda880edf9976"
+    },
+    {
+      "path": "foamfix-client_FoamFixModelRegistryDuplicateWipe.txt",
+      "sha256": "e65d43a33b93eb85d4ddac9b1dc38023846a1fa77f505fded94b79640acadb63"
+    },
+    {
+      "path": "foamfix-client_FoamyItemLayerModel.txt",
+      "sha256": "e5c8e5e6f66f27b102028338b5067e52ea622acea7d661d989911b4c9197f7fd"
+    },
+    {
+      "path": "foamfix-client_FoamyItemLayerModel_Dynamic3DItemModel.txt",
+      "sha256": "75fd80cc6e7894649dab217a9fced588ca0c2ef5c99c17a263b8a651f5e5131b"
+    },
+    {
+      "path": "foamfix-client_FoamyItemLayerModel_DynamicItemModel.txt",
+      "sha256": "ca988b27a198315bcbf07d34249290e7cd80f4eca3e0e9325fbc942448f59097"
+    },
+    {
+      "path": "foamfix-common_FoamyBlockState.txt",
+      "sha256": "3f04c6b3ffa30e30a25b2a205c6d3e848de64eda731825de09a73212d5b63f8b"
+    },
+    {
+      "path": "foamfix-common_PropertyValueMapper.txt",
+      "sha256": "9e34bd0447d5ce87a3b054937061f523a55534ae0e21055dfface19f5ce4186b"
+    },
+    {
+      "path": "foamfix-coremod_BlockPosPatch.txt",
+      "sha256": "ff1f95e623b981660b1a76f7c56a07d9441b81afac205ff982aa5c3f66be15ec"
+    },
+    {
+      "path": "foamfix-coremod_FoamFixTransformer.txt",
+      "sha256": "95f5b58297e84356fd9f93ebb9d606e0f4f852c72893cad3db80e66edea1772e"
+    },
+    {
+      "path": "foamfix-extra.txt",
+      "sha256": "d4d1cadcf40b0e9f7c99250b20a747a33f5c6cbcc11a0f8eb2fe960b8d13bbfc"
+    },
+    {
+      "path": "foamfix-shared_FoamFixConfig.txt",
+      "sha256": "6def9e28c241b949ef7a51df61c2203a1696872b3287eaf96eb62c9733d16f66"
+    }
+  ]
+}

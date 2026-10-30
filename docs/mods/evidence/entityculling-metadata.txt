@@ -1,0 +1,69 @@
+META-INF/MANIFEST.MF
+Manifest-Version: 1.0
+TweakOrder: 0
+ModSide: CLIENT
+MixinConfigs: entityculling.mixins.json
+TweakClass: org.spongepowered.asm.launch.MixinTweaker
+ForceLoadAsMod: true
+
+
+
+entityculling.mixins.json
+{
+  "required": true,
+  "package": "dev.tr7zw.entityculling.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "entityculling.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+    "BlockEntityRenderDispatcherMixin",
+    "EntityRendererMixin",
+    "CullableMixin",
+    "DebugHudMixin",
+    "WorldRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
+
+
+entityculling.refmap.json
+{
+  "mappings": {
+    "dev/tr7zw/entityculling/mixin/DebugHudMixin": {
+      "call": "Lnet/minecraft/client/gui/GuiOverlayDebug;call()Ljava/util/List;"
+    },
+    "dev/tr7zw/entityculling/mixin/WorldRendererMixin": {
+      "doRenderEntity": "Lnet/minecraft/client/renderer/entity/RenderManager;func_147939_a(Lnet/minecraft/entity/Entity;DDDFFZ)Z"
+    },
+    "dev/tr7zw/entityculling/mixin/BlockEntityRenderDispatcherMixin": {
+      "Lnet/minecraft/client/renderer/tileentity/TileEntityRendererDispatcher;renderTileEntityAt(Lnet/minecraft/tileentity/TileEntity;DDDFI)V": "Lnet/minecraft/client/renderer/tileentity/TileEntityRendererDispatcher;func_178469_a(Lnet/minecraft/tileentity/TileEntity;DDDFI)V"
+    }
+  },
+  "data": {
+    "notch": {
+      "dev/tr7zw/entityculling/mixin/DebugHudMixin": {
+        "call": "Lavv;b()Ljava/util/List;"
+      },
+      "dev/tr7zw/entityculling/mixin/WorldRendererMixin": {
+        "doRenderEntity": "Lbiu;a(Lpk;DDDFFZ)Z"
+      },
+      "dev/tr7zw/entityculling/mixin/BlockEntityRenderDispatcherMixin": {
+        "Lnet/minecraft/client/renderer/tileentity/TileEntityRendererDispatcher;renderTileEntityAt(Lnet/minecraft/tileentity/TileEntity;DDDFI)V": "Lbhc;a(Lakw;DDDFI)V"
+      }
+    },
+    "searge": {
+      "dev/tr7zw/entityculling/mixin/DebugHudMixin": {
+        "call": "Lnet/minecraft/client/gui/GuiOverlayDebug;call()Ljava/util/List;"
+      },
+      "dev/tr7zw/entityculling/mixin/WorldRendererMixin": {
+        "doRenderEntity": "Lnet/minecraft/client/renderer/entity/RenderManager;func_147939_a(Lnet/minecraft/entity/Entity;DDDFFZ)Z"
+      },
+      "dev/tr7zw/entityculling/mixin/BlockEntityRenderDispatcherMixin": {
+        "Lnet/minecraft/client/renderer/tileentity/TileEntityRendererDispatcher;renderTileEntityAt(Lnet/minecraft/tileentity/TileEntity;DDDFI)V": "Lnet/minecraft/client/renderer/tileentity/TileEntityRendererDispatcher;func_178469_a(Lnet/minecraft/tileentity/TileEntity;DDDFI)V"
+      }
+    }
+  }
+}

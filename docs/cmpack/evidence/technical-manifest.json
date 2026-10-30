@@ -1,0 +1,30 @@
+{
+  "artifact": "references/cmpack_1.8.8_2.8.11-beta.zip",
+  "archive_sha256": "43e45120f1ffaf8793b692427a9b6eea376aadc56b054c608861b548a51722cc",
+  "member": "cmpack_1.8.8/CMPack_app.jar",
+  "app_jar_sha256": "464347bee470967072e3b7a2536d95e1f87645c1a02d2f8b0f120fcc9ebc4a80",
+  "method": "Static local javap bytecode inspection; no client execution, network queries or benchmarks.",
+  "report": "docs/cmpack/mecanismos-tecnicos.md",
+  "evidence": [
+    {
+      "file": "docs/cmpack/evidence/technical-input.bytecode.txt",
+      "sha256": "94d4432976514128adbc96be2996925c8494dcc2ecfb0c1b2923f80d546aba58",
+      "bytes": 17833
+    },
+    {
+      "file": "docs/cmpack/evidence/technical-render.bytecode.txt",
+      "sha256": "9f1036f8ee82629897bcbcdd3efd4a8ed698aba871b8136b5b0175740cb5db6d",
+      "bytes": 46636
+    },
+    {
+      "file": "docs/cmpack/evidence/technical-loading.bytecode.txt",
+      "sha256": "b84b5e5454bcb1f3ba3c073fb04246372cae24a429e0a91a24c6c40f9e8345e6",
+      "bytes": 47366
+    },
+    {
+      "file": "docs/cmpack/evidence/technical-runtime.bytecode.txt",
+      "sha256": "d048ddd47728de0d125e923d1b063a65672b98f7748e5ff8906226197e3961e3",
+      "bytes": 211418
+    }
+  ]
+}

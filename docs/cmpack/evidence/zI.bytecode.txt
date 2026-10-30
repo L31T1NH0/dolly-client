@@ -1,0 +1,77 @@
+CLASS zI EXTENDS java/lang/Object
+
+METHOD at (F)LQt;
+    0 fload_1            
+    1 fconst_1           
+    2 fcmpl              
+    3 ifne               19
+    6 aload_0            
+    7 aload_0            
+    8 getfield           zI.aPe:F
+   11 aload_0            
+   12 getfield           zI.aQb:F
+   15 invokevirtual      zI.j:(FF)LQt;
+   18 areturn            
+   19 aload_0            
+   20 getfield           zI.aPw:F
+   23 aload_0            
+   24 getfield           zI.aPe:F
+   27 aload_0            
+   28 getfield           zI.aPw:F
+   31 fsub               
+   32 fload_1            
+   33 fmul               
+   34 fadd               
+   35 fstore_2           
+   36 aload_0            
+   37 getfield           zI.aPF:F
+   40 aload_0            
+   41 getfield           zI.aQb:F
+   44 aload_0            
+   45 getfield           zI.aPF:F
+   48 fsub               
+   49 fload_1            
+   50 fmul               
+   51 fadd               
+   52 fstore_3           
+   53 aload_0            
+   54 fload_2            
+   55 fload_3            
+   56 invokevirtual      zI.j:(FF)LQt;
+   59 areturn            
+
+
+METHOD q (DF)LPY;
+    0 aload_0            
+    1 fload_3            
+    2 invokevirtual      zI.as:(F)LQt;
+    5 astore             4
+    7 aload_0            
+    8 fload_3            
+    9 invokevirtual      zI.at:(F)LQt;
+   12 astore             5
+   14 aload              4
+   16 aload              5
+   18 getfield           Qt.bVW:D
+   21 dload_1            
+   22 dmul               
+   23 aload              5
+   25 getfield           Qt.bVU:D
+   28 dload_1            
+   29 dmul               
+   30 aload              5
+   32 getfield           Qt.bVV:D
+   35 dload_1            
+   36 dmul               
+   37 invokevirtual      Qt.K:(DDD)LQt;
+   40 astore             6
+   42 aload_0            
+   43 getfield           zI.zF:LRe;
+   46 aload              4
+   48 aload              6
+   50 iconst_0           
+   51 iconst_0           
+   52 iconst_1           
+   53 invokevirtual      Re.q:(LQt;LQt;ZZZ)LPY;
+   56 areturn            
+

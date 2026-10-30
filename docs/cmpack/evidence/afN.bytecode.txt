@@ -1,0 +1,27 @@
+CLASS afN EXTENDS PV
+
+METHOD Vl ()V
+    0 aload_0            
+    1 aload_0            
+    2 getfield           afN.dcV:LafM;
+    5 getfield           afM.dcR:I
+    8 putfield           afN.bUC:I
+   11 aload_0            
+   12 getfield           afN.dcV:LafM;
+   15 sipush             2450
+   18 sipush             -16320
+   21 iand               
+   22 putfield           afM.dcR:I
+   25 aload_0            
+   26 aload_0            
+   27 getfield           afN.dcV:LafM;
+   30 getfield           afM.dcQ:I
+   33 ineg               
+   34 putfield           afN.bUB:I
+   37 aload_0            
+   38 getfield           afN.dcV:LafM;
+   41 sipush             18437
+   44 sipush             -31640
+   47 iand               
+   48 putfield           afM.dcQ:I
+   51 return             

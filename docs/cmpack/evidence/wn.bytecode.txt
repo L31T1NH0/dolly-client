@@ -1,0 +1,28 @@
+CLASS wn EXTENDS java/lang/Object
+
+METHOD vh ()V
+    0 getstatic          wn.aJu:Ljava/util/List;
+    3 invokeinterface    java/util/List.iterator:()Ljava/util/Iterator; 0100
+    8 astore_0           
+    9 aload_0            
+   10 invokeinterface    java/util/Iterator.hasNext:()Z 0100
+   15 ifeq               55
+   18 aload_0            
+   19 invokeinterface    java/util/Iterator.next:()Ljava/lang/Object; 0100
+   24 checkcast          wn
+   27 astore_1           
+   28 aload_1            
+   29 getfield           wn.mN:I
+   32 istore_2           
+   33 iload_2            
+   34 iflt               52
+   37 iload_2            
+   38 sipush             255
+   41 if_icmpgt          52
+   44 iload_2            
+   45 iload_2            
+   46 invokestatic       org/lwjgl/input/Keyboard.isKeyDown:(I)Z
+   49 invokestatic       wn.q:(IZ)V
+   52 goto               9
+   55 return             
+

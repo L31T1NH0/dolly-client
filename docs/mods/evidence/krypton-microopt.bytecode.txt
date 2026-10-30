@@ -1,0 +1,382 @@
+Compiled from "ServerEntityMixin.java"
+public class me.steinborn.krypton.mixin.shared.network.microopt.ServerEntityMixin {
+  public me.steinborn.krypton.mixin.shared.network.microopt.ServerEntityMixin();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public java.util.List<net.minecraft.world.entity.Entity> construct$initialPassengersListIsGuavaImmutableList();
+    Code:
+       0: invokestatic  #7                  // Method com/google/common/collect/ImmutableList.of:()Lcom/google/common/collect/ImmutableList;
+       3: areturn
+}
+Compiled from "Utf8StringMixin.java"
+public class me.steinborn.krypton.mixin.shared.network.microopt.Utf8StringMixin {
+  public me.steinborn.krypton.mixin.shared.network.microopt.Utf8StringMixin();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void write(io.netty.buffer.ByteBuf, java.lang.CharSequence, int);
+    Code:
+       0: aload_1
+       1: invokeinterface #7,  1            // InterfaceMethod java/lang/CharSequence.length:()I
+       6: iload_2
+       7: if_icmple     30
+      10: new           #13                 // class io/netty/handler/codec/EncoderException
+      13: dup
+      14: aload_1
+      15: invokeinterface #7,  1            // InterfaceMethod java/lang/CharSequence.length:()I
+      20: iload_2
+      21: invokedynamic #15,  0             // InvokeDynamic #0:makeConcatWithConstants:(II)Ljava/lang/String;
+      26: invokespecial #19                 // Method io/netty/handler/codec/EncoderException."<init>":(Ljava/lang/String;)V
+      29: athrow
+      30: aload_1
+      31: invokestatic  #22                 // Method io/netty/buffer/ByteBufUtil.utf8Bytes:(Ljava/lang/CharSequence;)I
+      34: istore_3
+      35: iload_2
+      36: invokestatic  #28                 // Method io/netty/buffer/ByteBufUtil.utf8MaxBytes:(I)I
+      39: istore        4
+      41: iload_3
+      42: iload         4
+      44: if_icmple     63
+      47: new           #13                 // class io/netty/handler/codec/EncoderException
+      50: dup
+      51: iload_3
+      52: iload         4
+      54: invokedynamic #32,  0             // InvokeDynamic #1:makeConcatWithConstants:(II)Ljava/lang/String;
+      59: invokespecial #19                 // Method io/netty/handler/codec/EncoderException."<init>":(Ljava/lang/String;)V
+      62: athrow
+      63: aload_0
+      64: iload_3
+      65: invokestatic  #33                 // Method net/minecraft/network/VarInt.write:(Lio/netty/buffer/ByteBuf;I)Lio/netty/buffer/ByteBuf;
+      68: pop
+      69: aload_0
+      70: aload_1
+      71: getstatic     #39                 // Field java/nio/charset/StandardCharsets.UTF_8:Ljava/nio/charset/Charset;
+      74: invokevirtual #45                 // Method io/netty/buffer/ByteBuf.writeCharSequence:(Ljava/lang/CharSequence;Ljava/nio/charset/Charset;)I
+      77: pop
+      78: return
+}
+Compiled from "VarIntMixin.java"
+public class me.steinborn.krypton.mixin.shared.network.microopt.VarIntMixin {
+  public me.steinborn.krypton.mixin.shared.network.microopt.VarIntMixin();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static int getByteSize(int);
+    Code:
+       0: iload_0
+       1: invokestatic  #7                  // Method me/steinborn/krypton/mod/shared/network/util/VarIntUtil.getVarIntLength:(I)I
+       4: ireturn
+
+  public static io.netty.buffer.ByteBuf write(io.netty.buffer.ByteBuf, int);
+    Code:
+       0: iload_1
+       1: bipush        -128
+       3: iand
+       4: ifne          16
+       7: aload_0
+       8: iload_1
+       9: invokevirtual #13                 // Method io/netty/buffer/ByteBuf.writeByte:(I)Lio/netty/buffer/ByteBuf;
+      12: pop
+      13: goto          55
+      16: iload_1
+      17: sipush        -16384
+      20: iand
+      21: ifne          50
+      24: iload_1
+      25: bipush        127
+      27: iand
+      28: sipush        128
+      31: ior
+      32: bipush        8
+      34: ishl
+      35: iload_1
+      36: bipush        7
+      38: iushr
+      39: ior
+      40: istore_2
+      41: aload_0
+      42: iload_2
+      43: invokevirtual #19                 // Method io/netty/buffer/ByteBuf.writeShort:(I)Lio/netty/buffer/ByteBuf;
+      46: pop
+      47: goto          55
+      50: aload_0
+      51: iload_1
+      52: invokestatic  #22                 // Method writeVarIntFull:(Lio/netty/buffer/ByteBuf;I)V
+      55: aload_0
+      56: areturn
+
+  private static void writeVarIntFull(io.netty.buffer.ByteBuf, int);
+    Code:
+       0: iload_1
+       1: bipush        -128
+       3: iand
+       4: ifne          16
+       7: aload_0
+       8: iload_1
+       9: invokevirtual #13                 // Method io/netty/buffer/ByteBuf.writeByte:(I)Lio/netty/buffer/ByteBuf;
+      12: pop
+      13: goto          230
+      16: iload_1
+      17: sipush        -16384
+      20: iand
+      21: ifne          50
+      24: iload_1
+      25: bipush        127
+      27: iand
+      28: sipush        128
+      31: ior
+      32: bipush        8
+      34: ishl
+      35: iload_1
+      36: bipush        7
+      38: iushr
+      39: ior
+      40: istore_2
+      41: aload_0
+      42: iload_2
+      43: invokevirtual #19                 // Method io/netty/buffer/ByteBuf.writeShort:(I)Lio/netty/buffer/ByteBuf;
+      46: pop
+      47: goto          230
+      50: iload_1
+      51: ldc           #28                 // int -2097152
+      53: iand
+      54: ifne          98
+      57: iload_1
+      58: bipush        127
+      60: iand
+      61: sipush        128
+      64: ior
+      65: bipush        16
+      67: ishl
+      68: iload_1
+      69: bipush        7
+      71: iushr
+      72: bipush        127
+      74: iand
+      75: sipush        128
+      78: ior
+      79: bipush        8
+      81: ishl
+      82: ior
+      83: iload_1
+      84: bipush        14
+      86: iushr
+      87: ior
+      88: istore_2
+      89: aload_0
+      90: iload_2
+      91: invokevirtual #29                 // Method io/netty/buffer/ByteBuf.writeMedium:(I)Lio/netty/buffer/ByteBuf;
+      94: pop
+      95: goto          230
+      98: iload_1
+      99: ldc           #32                 // int -268435456
+     101: iand
+     102: ifne          161
+     105: iload_1
+     106: bipush        127
+     108: iand
+     109: sipush        128
+     112: ior
+     113: bipush        24
+     115: ishl
+     116: iload_1
+     117: bipush        7
+     119: iushr
+     120: bipush        127
+     122: iand
+     123: sipush        128
+     126: ior
+     127: bipush        16
+     129: ishl
+     130: ior
+     131: iload_1
+     132: bipush        14
+     134: iushr
+     135: bipush        127
+     137: iand
+     138: sipush        128
+     141: ior
+     142: bipush        8
+     144: ishl
+     145: ior
+     146: iload_1
+     147: bipush        21
+     149: iushr
+     150: ior
+     151: istore_2
+     152: aload_0
+     153: iload_2
+     154: invokevirtual #33                 // Method io/netty/buffer/ByteBuf.writeInt:(I)Lio/netty/buffer/ByteBuf;
+     157: pop
+     158: goto          230
+     161: iload_1
+     162: bipush        127
+     164: iand
+     165: sipush        128
+     168: ior
+     169: bipush        24
+     171: ishl
+     172: iload_1
+     173: bipush        7
+     175: iushr
+     176: bipush        127
+     178: iand
+     179: sipush        128
+     182: ior
+     183: bipush        16
+     185: ishl
+     186: ior
+     187: iload_1
+     188: bipush        14
+     190: iushr
+     191: bipush        127
+     193: iand
+     194: sipush        128
+     197: ior
+     198: bipush        8
+     200: ishl
+     201: ior
+     202: iload_1
+     203: bipush        21
+     205: iushr
+     206: bipush        127
+     208: iand
+     209: sipush        128
+     212: ior
+     213: ior
+     214: istore_2
+     215: aload_0
+     216: iload_2
+     217: invokevirtual #33                 // Method io/netty/buffer/ByteBuf.writeInt:(I)Lio/netty/buffer/ByteBuf;
+     220: pop
+     221: aload_0
+     222: iload_1
+     223: bipush        28
+     225: iushr
+     226: invokevirtual #13                 // Method io/netty/buffer/ByteBuf.writeByte:(I)Lio/netty/buffer/ByteBuf;
+     229: pop
+     230: return
+}
+Compiled from "QuietDecoderException.java"
+public class me.steinborn.krypton.mod.shared.network.util.QuietDecoderException extends io.netty.handler.codec.DecoderException {
+  public me.steinborn.krypton.mod.shared.network.util.QuietDecoderException(java.lang.String);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokespecial #1                  // Method io/netty/handler/codec/DecoderException."<init>":(Ljava/lang/String;)V
+       5: return
+
+  public synchronized java.lang.Throwable fillInStackTrace();
+    Code:
+       0: aload_0
+       1: areturn
+}
+Compiled from "VarIntUtil.java"
+public class me.steinborn.krypton.mod.shared.network.util.VarIntUtil {
+  private static final int[] VARINT_EXACT_BYTE_LENGTHS;
+
+  public me.steinborn.krypton.mod.shared.network.util.VarIntUtil();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static int getVarIntLength(int);
+    Code:
+       0: getstatic     #7                  // Field VARINT_EXACT_BYTE_LENGTHS:[I
+       3: iload_0
+       4: invokestatic  #13                 // Method java/lang/Integer.numberOfLeadingZeros:(I)I
+       7: iaload
+       8: ireturn
+
+  static {};
+    Code:
+       0: bipush        33
+       2: newarray       int
+       4: putstatic     #7                  // Field VARINT_EXACT_BYTE_LENGTHS:[I
+       7: iconst_0
+       8: istore_0
+       9: iload_0
+      10: bipush        32
+      12: if_icmpgt     42
+      15: getstatic     #7                  // Field VARINT_EXACT_BYTE_LENGTHS:[I
+      18: iload_0
+      19: ldc2_w        #19                 // double 31.0d
+      22: iload_0
+      23: iconst_1
+      24: isub
+      25: i2d
+      26: dsub
+      27: ldc2_w        #21                 // double 7.0d
+      30: ddiv
+      31: invokestatic  #23                 // Method java/lang/Math.ceil:(D)D
+      34: d2i
+      35: iastore
+      36: iinc          0, 1
+      39: goto          9
+      42: getstatic     #7                  // Field VARINT_EXACT_BYTE_LENGTHS:[I
+      45: bipush        32
+      47: iconst_1
+      48: iastore
+      49: return
+}
+Compiled from "WellKnownExceptions.java"
+public final class me.steinborn.krypton.mod.shared.network.util.WellKnownExceptions extends java.lang.Enum<me.steinborn.krypton.mod.shared.network.util.WellKnownExceptions> {
+  public static final me.steinborn.krypton.mod.shared.network.util.QuietDecoderException BAD_LENGTH_CACHED;
+
+  public static final me.steinborn.krypton.mod.shared.network.util.QuietDecoderException VARINT_BIG_CACHED;
+
+  private static final me.steinborn.krypton.mod.shared.network.util.WellKnownExceptions[] $VALUES;
+
+  public static me.steinborn.krypton.mod.shared.network.util.WellKnownExceptions[] values();
+    Code:
+       0: getstatic     #3                  // Field $VALUES:[Lme/steinborn/krypton/mod/shared/network/util/WellKnownExceptions;
+       3: invokevirtual #7                  // Method "[Lme/steinborn/krypton/mod/shared/network/util/WellKnownExceptions;".clone:()Ljava/lang/Object;
+       6: checkcast     #8                  // class "[Lme/steinborn/krypton/mod/shared/network/util/WellKnownExceptions;"
+       9: areturn
+
+  public static me.steinborn.krypton.mod.shared.network.util.WellKnownExceptions valueOf(java.lang.String);
+    Code:
+       0: ldc           #1                  // class me/steinborn/krypton/mod/shared/network/util/WellKnownExceptions
+       2: aload_0
+       3: invokestatic  #12                 // Method java/lang/Enum.valueOf:(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+       6: checkcast     #1                  // class me/steinborn/krypton/mod/shared/network/util/WellKnownExceptions
+       9: areturn
+
+  private me.steinborn.krypton.mod.shared.network.util.WellKnownExceptions();
+    Code:
+       0: aload_0
+       1: aload_1
+       2: iload_2
+       3: invokespecial #18                 // Method java/lang/Enum."<init>":(Ljava/lang/String;I)V
+       6: return
+
+  private static me.steinborn.krypton.mod.shared.network.util.WellKnownExceptions[] $values();
+    Code:
+       0: iconst_0
+       1: anewarray     #1                  // class me/steinborn/krypton/mod/shared/network/util/WellKnownExceptions
+       4: areturn
+
+  static {};
+    Code:
+       0: invokestatic  #22                 // Method $values:()[Lme/steinborn/krypton/mod/shared/network/util/WellKnownExceptions;
+       3: putstatic     #3                  // Field $VALUES:[Lme/steinborn/krypton/mod/shared/network/util/WellKnownExceptions;
+       6: new           #26                 // class me/steinborn/krypton/mod/shared/network/util/QuietDecoderException
+       9: dup
+      10: ldc           #28                 // String Bad packet length
+      12: invokespecial #30                 // Method me/steinborn/krypton/mod/shared/network/util/QuietDecoderException."<init>":(Ljava/lang/String;)V
+      15: putstatic     #33                 // Field BAD_LENGTH_CACHED:Lme/steinborn/krypton/mod/shared/network/util/QuietDecoderException;
+      18: new           #26                 // class me/steinborn/krypton/mod/shared/network/util/QuietDecoderException
+      21: dup
+      22: ldc           #37                 // String VarInt too big
+      24: invokespecial #30                 // Method me/steinborn/krypton/mod/shared/network/util/QuietDecoderException."<init>":(Ljava/lang/String;)V
+      27: putstatic     #39                 // Field VARINT_BIG_CACHED:Lme/steinborn/krypton/mod/shared/network/util/QuietDecoderException;
+      30: return
+}

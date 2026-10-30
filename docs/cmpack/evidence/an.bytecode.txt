@@ -1,0 +1,23 @@
+CLASS an EXTENDS M
+
+METHOD <init> ()V
+    0 aload_0            
+    1 getstatic          q.q:[Ljava/lang/String;
+    4 sipush             25973
+    7 sipush             501
+   10 iand               
+   11 sipush             373
+   14 sipush             8543
+   17 iand               
+   18 iand               
+   19 aaload             
+   20 sipush             26814
+   23 sipush             591
+   26 iand               
+   27 invokespecial      M.<init>:(Ljava/lang/String;I)V
+   30 aload_0            
+   31 sipush             11827
+   34 sipush             -28667
+   37 iand               
+   38 invokevirtual      an.w:(Z)V
+   41 return             

@@ -1,0 +1,203 @@
+Compiled from "BlockPosPatch.java"
+public class pl.asie.foamfix.coremod.BlockPosPatch {
+  private static final java.util.HashMap<java.lang.String, java.lang.String> mutableFieldSwaps;
+    descriptor: Ljava/util/HashMap;
+
+  private static final java.util.HashSet<java.lang.String> mutableDeletedMethods;
+    descriptor: Ljava/util/HashSet;
+
+  private static final java.util.HashSet<java.lang.String> mutableOwners;
+    descriptor: Ljava/util/HashSet;
+
+  public pl.asie.foamfix.coremod.BlockPosPatch();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: invokespecial #22                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static byte[] patchVec3i(byte[]);
+    descriptor: ([B)[B
+    Code:
+       0: new           #28                 // class org/objectweb/asm/ClassReader
+       3: dup
+       4: aload_0
+       5: invokespecial #31                 // Method org/objectweb/asm/ClassReader."<init>":([B)V
+       8: astore_1
+       9: new           #33                 // class org/objectweb/asm/tree/ClassNode
+      12: dup
+      13: invokespecial #34                 // Method org/objectweb/asm/tree/ClassNode."<init>":()V
+      16: astore_2
+      17: aload_1
+      18: aload_2
+      19: iconst_0
+      20: invokevirtual #38                 // Method org/objectweb/asm/ClassReader.accept:(Lorg/objectweb/asm/ClassVisitor;I)V
+      23: aload_2
+      24: getfield      #42                 // Field org/objectweb/asm/tree/ClassNode.fields:Ljava/util/List;
+      27: invokeinterface #48,  1           // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+      32: astore_3
+      33: aload_3
+      34: invokeinterface #54,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+      39: ifeq          85
+      42: aload_3
+      43: invokeinterface #58,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      48: checkcast     #60                 // class org/objectweb/asm/tree/FieldNode
+      51: astore        4
+      53: ldc           #62                 // String I
+      55: aload         4
+      57: getfield      #66                 // Field org/objectweb/asm/tree/FieldNode.desc:Ljava/lang/String;
+      60: invokevirtual #72                 // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+      63: ifeq          82
+      66: aload         4
+      68: getfield      #75                 // Field org/objectweb/asm/tree/FieldNode.access:I
+      71: bipush        18
+      73: if_icmpne     82
+      76: aload         4
+      78: iconst_4
+      79: putfield      #75                 // Field org/objectweb/asm/tree/FieldNode.access:I
+      82: goto          33
+      85: new           #77                 // class org/objectweb/asm/ClassWriter
+      88: dup
+      89: iconst_0
+      90: invokespecial #80                 // Method org/objectweb/asm/ClassWriter."<init>":(I)V
+      93: astore_3
+      94: aload_2
+      95: aload_3
+      96: invokevirtual #83                 // Method org/objectweb/asm/tree/ClassNode.accept:(Lorg/objectweb/asm/ClassVisitor;)V
+      99: aload_3
+     100: invokevirtual #87                 // Method org/objectweb/asm/ClassWriter.toByteArray:()[B
+     103: areturn
+
+  public static byte[] patchOtherClass(byte[], boolean);
+    descriptor: ([BZ)[B
+    Code:
+       0: new           #28                 // class org/objectweb/asm/ClassReader
+       3: dup
+       4: aload_0
+       5: invokespecial #31                 // Method org/objectweb/asm/ClassReader."<init>":([B)V
+       8: astore_2
+       9: new           #10                 // class pl/asie/foamfix/coremod/BlockPosPatch$BlockPosClassVisitor
+      12: dup
+      13: ldc           #100                // int 327680
+      15: aconst_null
+      16: iload_1
+      17: invokespecial #103                // Method pl/asie/foamfix/coremod/BlockPosPatch$BlockPosClassVisitor."<init>":(ILorg/objectweb/asm/ClassVisitor;Z)V
+      20: astore_3
+      21: aload_2
+      22: aload_3
+      23: bipush        6
+      25: invokevirtual #38                 // Method org/objectweb/asm/ClassReader.accept:(Lorg/objectweb/asm/ClassVisitor;I)V
+      28: aload_3
+      29: invokestatic  #107                // Method pl/asie/foamfix/coremod/BlockPosPatch$BlockPosClassVisitor.access$300:(Lpl/asie/foamfix/coremod/BlockPosPatch$BlockPosClassVisitor;)Z
+      32: ifeq          63
+      35: new           #77                 // class org/objectweb/asm/ClassWriter
+      38: dup
+      39: iconst_0
+      40: invokespecial #80                 // Method org/objectweb/asm/ClassWriter."<init>":(I)V
+      43: astore        4
+      45: aload_3
+      46: aload         4
+      48: invokevirtual #110                // Method pl/asie/foamfix/coremod/BlockPosPatch$BlockPosClassVisitor.setCV:(Lorg/objectweb/asm/ClassVisitor;)V
+      51: aload_2
+      52: aload_3
+      53: iconst_0
+      54: invokevirtual #38                 // Method org/objectweb/asm/ClassReader.accept:(Lorg/objectweb/asm/ClassVisitor;I)V
+      57: aload         4
+      59: invokevirtual #87                 // Method org/objectweb/asm/ClassWriter.toByteArray:()[B
+      62: areturn
+      63: aload_0
+      64: areturn
+
+  static java.util.HashSet access$000();
+    descriptor: ()Ljava/util/HashSet;
+    Code:
+       0: getstatic     #118                // Field mutableOwners:Ljava/util/HashSet;
+       3: areturn
+
+  static java.util.HashMap access$100();
+    descriptor: ()Ljava/util/HashMap;
+    Code:
+       0: getstatic     #122                // Field mutableFieldSwaps:Ljava/util/HashMap;
+       3: areturn
+
+  static java.util.HashSet access$200();
+    descriptor: ()Ljava/util/HashSet;
+    Code:
+       0: getstatic     #125                // Field mutableDeletedMethods:Ljava/util/HashSet;
+       3: areturn
+
+  static {};
+    descriptor: ()V
+    Code:
+       0: new           #128                // class java/util/HashMap
+       3: dup
+       4: invokespecial #129                // Method java/util/HashMap."<init>":()V
+       7: putstatic     #122                // Field mutableFieldSwaps:Ljava/util/HashMap;
+      10: new           #131                // class java/util/HashSet
+      13: dup
+      14: invokespecial #132                // Method java/util/HashSet."<init>":()V
+      17: putstatic     #125                // Field mutableDeletedMethods:Ljava/util/HashSet;
+      20: new           #131                // class java/util/HashSet
+      23: dup
+      24: invokespecial #132                // Method java/util/HashSet."<init>":()V
+      27: putstatic     #118                // Field mutableOwners:Ljava/util/HashSet;
+      30: getstatic     #122                // Field mutableFieldSwaps:Ljava/util/HashMap;
+      33: ldc           #134                // String x
+      35: ldc           #134                // String x
+      37: invokevirtual #138                // Method java/util/HashMap.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+      40: pop
+      41: getstatic     #122                // Field mutableFieldSwaps:Ljava/util/HashMap;
+      44: ldc           #140                // String y
+      46: ldc           #140                // String y
+      48: invokevirtual #138                // Method java/util/HashMap.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+      51: pop
+      52: getstatic     #122                // Field mutableFieldSwaps:Ljava/util/HashMap;
+      55: ldc           #142                // String z
+      57: ldc           #142                // String z
+      59: invokevirtual #138                // Method java/util/HashMap.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+      62: pop
+      63: getstatic     #122                // Field mutableFieldSwaps:Ljava/util/HashMap;
+      66: ldc           #144                // String field_177997_b
+      68: ldc           #146                // String field_177962_a
+      70: invokevirtual #138                // Method java/util/HashMap.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+      73: pop
+      74: getstatic     #122                // Field mutableFieldSwaps:Ljava/util/HashMap;
+      77: ldc           #148                // String field_177998_c
+      79: ldc           #150                // String field_177960_b
+      81: invokevirtual #138                // Method java/util/HashMap.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+      84: pop
+      85: getstatic     #122                // Field mutableFieldSwaps:Ljava/util/HashMap;
+      88: ldc           #152                // String field_177996_d
+      90: ldc           #154                // String field_177961_c
+      92: invokevirtual #138                // Method java/util/HashMap.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+      95: pop
+      96: getstatic     #125                // Field mutableDeletedMethods:Ljava/util/HashSet;
+      99: ldc           #156                // String getX
+     101: invokevirtual #159                // Method java/util/HashSet.add:(Ljava/lang/Object;)Z
+     104: pop
+     105: getstatic     #125                // Field mutableDeletedMethods:Ljava/util/HashSet;
+     108: ldc           #161                // String getY
+     110: invokevirtual #159                // Method java/util/HashSet.add:(Ljava/lang/Object;)Z
+     113: pop
+     114: getstatic     #125                // Field mutableDeletedMethods:Ljava/util/HashSet;
+     117: ldc           #163                // String getZ
+     119: invokevirtual #159                // Method java/util/HashSet.add:(Ljava/lang/Object;)Z
+     122: pop
+     123: getstatic     #125                // Field mutableDeletedMethods:Ljava/util/HashSet;
+     126: ldc           #165                // String func_177958_n
+     128: invokevirtual #159                // Method java/util/HashSet.add:(Ljava/lang/Object;)Z
+     131: pop
+     132: getstatic     #125                // Field mutableDeletedMethods:Ljava/util/HashSet;
+     135: ldc           #167                // String func_177956_o
+     137: invokevirtual #159                // Method java/util/HashSet.add:(Ljava/lang/Object;)Z
+     140: pop
+     141: getstatic     #125                // Field mutableDeletedMethods:Ljava/util/HashSet;
+     144: ldc           #169                // String func_177952_p
+     146: invokevirtual #159                // Method java/util/HashSet.add:(Ljava/lang/Object;)Z
+     149: pop
+     150: getstatic     #118                // Field mutableOwners:Ljava/util/HashSet;
+     153: ldc           #171                // String net/minecraft/util/math/BlockPos$MutableBlockPos
+     155: invokevirtual #159                // Method java/util/HashSet.add:(Ljava/lang/Object;)Z
+     158: pop
+     159: return
+}

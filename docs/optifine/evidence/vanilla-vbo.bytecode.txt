@@ -1,0 +1,86 @@
+Vanilla Minecraft 1.8.9, direct class bytes from local base JAR.
+
+CLASS bmt SHA256 fc1a959a42354d48f4632e48f90c5af880877f7c5aaac6c89b703f78d345ee85
+
+METHOD <init> (Lbmu;)V
+    0 aload_0            
+    1 invokespecial      java/lang/Object.<init>:()V
+    4 aload_0            
+    5 aload_1            
+    6 putfield           bmt.b:Lbmu;
+    9 aload_0            
+   10 invokestatic       bqs.e:()I
+   13 putfield           bmt.a:I
+   16 return             
+
+
+METHOD a ()V
+    0 getstatic          bqs.R:I
+    3 aload_0            
+    4 getfield           bmt.a:I
+    7 invokestatic       bqs.g:(II)V
+   10 return             
+
+
+METHOD a (Ljava/nio/ByteBuffer;)V
+    0 aload_0            
+    1 invokevirtual      bmt.a:()V
+    4 getstatic          bqs.R:I
+    7 aload_1            
+    8 ldc                35044
+   10 invokestatic       bqs.a:(ILjava/nio/ByteBuffer;I)V
+   13 aload_0            
+   14 invokevirtual      bmt.b:()V
+   17 aload_0            
+   18 aload_1            
+   19 invokevirtual      java/nio/ByteBuffer.limit:()I
+   22 aload_0            
+   23 getfield           bmt.b:Lbmu;
+   26 invokevirtual      bmu.g:()I
+   29 idiv               
+   30 putfield           bmt.c:I
+   33 return             
+
+
+METHOD a (I)V
+    0 iload_1            
+    1 iconst_0           
+    2 aload_0            
+    3 getfield           bmt.c:I
+    6 invokestatic       org/lwjgl/opengl/GL11.glDrawArrays:(III)V
+    9 return             
+
+
+METHOD b ()V
+    0 getstatic          bqs.R:I
+    3 iconst_0           
+    4 invokestatic       bqs.g:(II)V
+    7 return             
+
+
+METHOD c ()V
+    0 aload_0            
+    1 getfield           bmt.a:I
+    4 iflt               19
+    7 aload_0            
+    8 getfield           bmt.a:I
+   11 invokestatic       bqs.g:(I)V
+   14 aload_0            
+   15 iconst_m1          
+   16 putfield           bmt.a:I
+   19 return             
+
+CLASS bqs SHA256 88a51a8c7cb80d5c24a1788597dd06837ea00c2987d30beb5fce1e32aee40da5
+
+METHOD f ()Z
+    0 getstatic          bqs.P:Z
+    3 ifeq               22
+    6 invokestatic       ave.A:()Lave;
+    9 getfield           ave.t:Lavh;
+   12 getfield           avh.u:Z
+   15 ifeq               22
+   18 iconst_1           
+   19 goto               23
+   22 iconst_0           
+   23 ireturn            
+

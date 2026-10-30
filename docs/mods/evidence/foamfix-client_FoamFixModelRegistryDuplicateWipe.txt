@@ -1,0 +1,155 @@
+Compiled from "FoamFixModelRegistryDuplicateWipe.java"
+public class pl.asie.foamfix.client.FoamFixModelRegistryDuplicateWipe {
+  public pl.asie.foamfix.client.FoamFixModelRegistryDuplicateWipe();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: invokespecial #14                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  public void onTextureStitchPost(net.minecraftforge.client.event.TextureStitchEvent$Post);
+    descriptor: (Lnet/minecraftforge/client/event/TextureStitchEvent$Post;)V
+    Code:
+       0: invokestatic  #27                 // Method net/minecraft/client/Minecraft.func_71410_x:()Lnet/minecraft/client/Minecraft;
+       3: invokevirtual #31                 // Method net/minecraft/client/Minecraft.func_175599_af:()Lnet/minecraft/client/renderer/entity/RenderItem;
+       6: invokevirtual #37                 // Method net/minecraft/client/renderer/entity/RenderItem.func_175037_a:()Lnet/minecraft/client/renderer/ItemModelMesher;
+       9: astore_2
+      10: invokestatic  #27                 // Method net/minecraft/client/Minecraft.func_71410_x:()Lnet/minecraft/client/Minecraft;
+      13: invokevirtual #41                 // Method net/minecraft/client/Minecraft.func_175602_ab:()Lnet/minecraft/client/renderer/BlockRendererDispatcher;
+      16: invokevirtual #47                 // Method net/minecraft/client/renderer/BlockRendererDispatcher.func_175023_a:()Lnet/minecraft/client/renderer/BlockModelShapes;
+      19: astore_3
+      20: aload_3
+      21: invokevirtual #53                 // Method net/minecraft/client/renderer/BlockModelShapes.func_178126_b:()Lnet/minecraft/client/resources/model/ModelManager;
+      24: astore        4
+      26: ldc           #55                 // class net/minecraft/client/resources/model/ModelManager
+      28: iconst_2
+      29: anewarray     #57                 // class java/lang/String
+      32: dup
+      33: iconst_0
+      34: ldc           #59                 // String modelRegistry
+      36: aastore
+      37: dup
+      38: iconst_1
+      39: ldc           #61                 // String field_174958_a
+      41: aastore
+      42: invokestatic  #67                 // Method net/minecraftforge/fml/relauncher/ReflectionHelper.findField:(Ljava/lang/Class;[Ljava/lang/String;)Ljava/lang/reflect/Field;
+      45: astore        5
+      47: aload         5
+      49: aload         4
+      51: invokevirtual #73                 // Method java/lang/reflect/Field.get:(Ljava/lang/Object;)Ljava/lang/Object;
+      54: checkcast     #75                 // class net/minecraft/util/RegistrySimple
+      57: astore        6
+      59: getstatic     #81                 // Field pl/asie/foamfix/FoamFix.logger:Lorg/apache/logging/log4j/Logger;
+      62: new           #83                 // class java/lang/StringBuilder
+      65: dup
+      66: invokespecial #84                 // Method java/lang/StringBuilder."<init>":()V
+      69: ldc           #86                 // String Clearing unnecessary model registry of size
+      71: invokevirtual #90                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      74: aload         6
+      76: invokevirtual #94                 // Method net/minecraft/util/RegistrySimple.func_148742_b:()Ljava/util/Set;
+      79: invokeinterface #100,  1          // InterfaceMethod java/util/Set.size:()I
+      84: invokevirtual #103                // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+      87: ldc           #105                // String .
+      89: invokevirtual #90                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      92: invokevirtual #109                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      95: invokeinterface #115,  2          // InterfaceMethod org/apache/logging/log4j/Logger.info:(Ljava/lang/String;)V
+     100: aload         6
+     102: invokevirtual #94                 // Method net/minecraft/util/RegistrySimple.func_148742_b:()Ljava/util/Set;
+     105: invokeinterface #119,  1          // InterfaceMethod java/util/Set.iterator:()Ljava/util/Iterator;
+     110: astore        7
+     112: aload         7
+     114: invokeinterface #127,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+     119: ifeq          147
+     122: aload         7
+     124: invokeinterface #131,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+     129: checkcast     #133                // class net/minecraft/client/resources/model/ModelResourceLocation
+     132: astore        8
+     134: aload         6
+     136: aload         8
+     138: getstatic     #139                // Field pl/asie/foamfix/ProxyClient.DUMMY_MODEL:Lnet/minecraft/client/resources/model/IBakedModel;
+     141: invokevirtual #143                // Method net/minecraft/util/RegistrySimple.func_82595_a:(Ljava/lang/Object;Ljava/lang/Object;)V
+     144: goto          112
+     147: goto          157
+     150: astore        6
+     152: aload         6
+     154: invokevirtual #146                // Method java/lang/Exception.printStackTrace:()V
+     157: ldc           #49                 // class net/minecraft/client/renderer/BlockModelShapes
+     159: iconst_2
+     160: anewarray     #57                 // class java/lang/String
+     163: dup
+     164: iconst_0
+     165: ldc           #148                // String bakedModelStore
+     167: aastore
+     168: dup
+     169: iconst_1
+     170: ldc           #150                // String field_178129_a
+     172: aastore
+     173: invokestatic  #67                 // Method net/minecraftforge/fml/relauncher/ReflectionHelper.findField:(Ljava/lang/Class;[Ljava/lang/String;)Ljava/lang/reflect/Field;
+     176: astore        5
+     178: aload         5
+     180: aload_3
+     181: invokevirtual #73                 // Method java/lang/reflect/Field.get:(Ljava/lang/Object;)Ljava/lang/Object;
+     184: checkcast     #152                // class java/util/Map
+     187: astore        6
+     189: getstatic     #81                 // Field pl/asie/foamfix/FoamFix.logger:Lorg/apache/logging/log4j/Logger;
+     192: new           #83                 // class java/lang/StringBuilder
+     195: dup
+     196: invokespecial #84                 // Method java/lang/StringBuilder."<init>":()V
+     199: ldc           #154                // String Clearing unnecessary model store of size
+     201: invokevirtual #90                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     204: aload         6
+     206: invokeinterface #155,  1          // InterfaceMethod java/util/Map.size:()I
+     211: invokevirtual #103                // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+     214: ldc           #105                // String .
+     216: invokevirtual #90                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     219: invokevirtual #109                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     222: invokeinterface #115,  2          // InterfaceMethod org/apache/logging/log4j/Logger.info:(Ljava/lang/String;)V
+     227: aload         6
+     229: invokeinterface #158,  1          // InterfaceMethod java/util/Map.clear:()V
+     234: goto          244
+     237: astore        6
+     239: aload         6
+     241: invokevirtual #146                // Method java/lang/Exception.printStackTrace:()V
+     244: aload_2
+     245: instanceof    #160                // class net/minecraftforge/client/ItemModelMesherForge
+     248: ifeq          329
+     251: ldc           #160                // class net/minecraftforge/client/ItemModelMesherForge
+     253: iconst_1
+     254: anewarray     #57                 // class java/lang/String
+     257: dup
+     258: iconst_0
+     259: ldc           #162                // String models
+     261: aastore
+     262: invokestatic  #67                 // Method net/minecraftforge/fml/relauncher/ReflectionHelper.findField:(Ljava/lang/Class;[Ljava/lang/String;)Ljava/lang/reflect/Field;
+     265: astore        5
+     267: aload         5
+     269: aload_2
+     270: invokevirtual #73                 // Method java/lang/reflect/Field.get:(Ljava/lang/Object;)Ljava/lang/Object;
+     273: checkcast     #164                // class java/util/IdentityHashMap
+     276: astore        6
+     278: getstatic     #81                 // Field pl/asie/foamfix/FoamFix.logger:Lorg/apache/logging/log4j/Logger;
+     281: new           #83                 // class java/lang/StringBuilder
+     284: dup
+     285: invokespecial #84                 // Method java/lang/StringBuilder."<init>":()V
+     288: ldc           #166                // String Clearing unnecessary item shapes cache of size
+     290: invokevirtual #90                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     293: aload         6
+     295: invokevirtual #167                // Method java/util/IdentityHashMap.size:()I
+     298: invokevirtual #103                // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+     301: ldc           #105                // String .
+     303: invokevirtual #90                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     306: invokevirtual #109                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     309: invokeinterface #115,  2          // InterfaceMethod org/apache/logging/log4j/Logger.info:(Ljava/lang/String;)V
+     314: aload         6
+     316: invokevirtual #168                // Method java/util/IdentityHashMap.clear:()V
+     319: goto          329
+     322: astore        6
+     324: aload         6
+     326: invokevirtual #146                // Method java/lang/Exception.printStackTrace:()V
+     329: return
+    Exception table:
+       from    to  target type
+          47   147   150   Class java/lang/Exception
+         178   234   237   Class java/lang/Exception
+         267   319   322   Class java/lang/Exception
+}

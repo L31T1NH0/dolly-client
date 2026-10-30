@@ -1,0 +1,110 @@
+Compiled from "FoamFixModelDeduplicate.java"
+public class pl.asie.foamfix.client.FoamFixModelDeduplicate {
+  public pl.asie.foamfix.client.FoamFixModelDeduplicate();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: invokespecial #14                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  public void onModelBake(net.minecraftforge.client.event.ModelBakeEvent);
+    descriptor: (Lnet/minecraftforge/client/event/ModelBakeEvent;)V
+    Code:
+       0: getstatic     #30                 // Field pl/asie/foamfix/shared/FoamFixShared.config:Lpl/asie/foamfix/shared/FoamFixConfig;
+       3: getfield      #36                 // Field pl/asie/foamfix/shared/FoamFixConfig.clDeduplicate:Z
+       6: ifeq          236
+       9: ldc           #38                 // String FoamFix: deduplicating
+      11: aload_1
+      12: getfield      #44                 // Field net/minecraftforge/client/event/ModelBakeEvent.modelRegistry:Lnet/minecraft/util/IRegistry;
+      15: checkcast     #46                 // class net/minecraft/util/RegistrySimple
+      18: invokevirtual #50                 // Method net/minecraft/util/RegistrySimple.func_148742_b:()Ljava/util/Set;
+      21: invokeinterface #56,  1           // InterfaceMethod java/util/Set.size:()I
+      26: invokestatic  #60                 // Method net/minecraftforge/fml/common/ProgressManager.push:(Ljava/lang/String;I)Lnet/minecraftforge/fml/common/ProgressManager$ProgressBar;
+      29: astore_2
+      30: getstatic     #66                 // Field pl/asie/foamfix/ProxyClient.deduplicator:Lpl/asie/foamfix/client/Deduplicator;
+      33: ifnonnull     46
+      36: new           #68                 // class pl/asie/foamfix/client/Deduplicator
+      39: dup
+      40: invokespecial #69                 // Method pl/asie/foamfix/client/Deduplicator."<init>":()V
+      43: putstatic     #66                 // Field pl/asie/foamfix/ProxyClient.deduplicator:Lpl/asie/foamfix/client/Deduplicator;
+      46: getstatic     #75                 // Field pl/asie/foamfix/FoamFix.logger:Lorg/apache/logging/log4j/Logger;
+      49: ldc           #77                 // String Deduplicating models...
+      51: invokeinterface #83,  2           // InterfaceMethod org/apache/logging/log4j/Logger.info:(Ljava/lang/String;)V
+      56: getstatic     #66                 // Field pl/asie/foamfix/ProxyClient.deduplicator:Lpl/asie/foamfix/client/Deduplicator;
+      59: getstatic     #30                 // Field pl/asie/foamfix/shared/FoamFixShared.config:Lpl/asie/foamfix/shared/FoamFixConfig;
+      62: getfield      #87                 // Field pl/asie/foamfix/shared/FoamFixConfig.clDeduplicateRecursionLevel:I
+      65: putfield      #90                 // Field pl/asie/foamfix/client/Deduplicator.maxRecursion:I
+      68: getstatic     #66                 // Field pl/asie/foamfix/ProxyClient.deduplicator:Lpl/asie/foamfix/client/Deduplicator;
+      71: getstatic     #96                 // Field net/minecraft/block/Block.field_149771_c:Lnet/minecraft/util/RegistryNamespacedDefaultedByKey;
+      74: invokevirtual #99                 // Method net/minecraft/util/RegistryNamespacedDefaultedByKey.func_148742_b:()Ljava/util/Set;
+      77: invokevirtual #103                // Method pl/asie/foamfix/client/Deduplicator.addObjects:(Ljava/util/Collection;)V
+      80: getstatic     #66                 // Field pl/asie/foamfix/ProxyClient.deduplicator:Lpl/asie/foamfix/client/Deduplicator;
+      83: getstatic     #109                // Field net/minecraft/item/Item.field_150901_e:Lnet/minecraft/util/RegistryNamespaced;
+      86: invokevirtual #112                // Method net/minecraft/util/RegistryNamespaced.func_148742_b:()Ljava/util/Set;
+      89: invokevirtual #103                // Method pl/asie/foamfix/client/Deduplicator.addObjects:(Ljava/util/Collection;)V
+      92: aload_1
+      93: getfield      #44                 // Field net/minecraftforge/client/event/ModelBakeEvent.modelRegistry:Lnet/minecraft/util/IRegistry;
+      96: checkcast     #46                 // class net/minecraft/util/RegistrySimple
+      99: invokevirtual #50                 // Method net/minecraft/util/RegistrySimple.func_148742_b:()Ljava/util/Set;
+     102: invokeinterface #116,  1          // InterfaceMethod java/util/Set.iterator:()Ljava/util/Iterator;
+     107: astore_3
+     108: aload_3
+     109: invokeinterface #122,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+     114: ifeq          195
+     117: aload_3
+     118: invokeinterface #126,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+     123: checkcast     #128                // class net/minecraft/client/resources/model/ModelResourceLocation
+     126: astore        4
+     128: aload_1
+     129: getfield      #44                 // Field net/minecraftforge/client/event/ModelBakeEvent.modelRegistry:Lnet/minecraft/util/IRegistry;
+     132: aload         4
+     134: invokeinterface #134,  2          // InterfaceMethod net/minecraft/util/IRegistry.func_82594_a:(Ljava/lang/Object;)Ljava/lang/Object;
+     139: checkcast     #136                // class net/minecraft/client/resources/model/IBakedModel
+     142: astore        5
+     144: aload         4
+     146: invokevirtual #140                // Method net/minecraft/client/resources/model/ModelResourceLocation.toString:()Ljava/lang/String;
+     149: astore        6
+     151: aload_2
+     152: ldc           #142                // String [%s]
+     154: iconst_1
+     155: anewarray     #4                  // class java/lang/Object
+     158: dup
+     159: iconst_0
+     160: aload         6
+     162: aastore
+     163: invokestatic  #148                // Method java/lang/String.format:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+     166: invokevirtual #151                // Method net/minecraftforge/fml/common/ProgressManager$ProgressBar.step:(Ljava/lang/String;)V
+     169: getstatic     #66                 // Field pl/asie/foamfix/ProxyClient.deduplicator:Lpl/asie/foamfix/client/Deduplicator;
+     172: aload         4
+     174: invokevirtual #155                // Method pl/asie/foamfix/client/Deduplicator.addObject:(Ljava/lang/Object;)V
+     177: getstatic     #66                 // Field pl/asie/foamfix/ProxyClient.deduplicator:Lpl/asie/foamfix/client/Deduplicator;
+     180: aload         5
+     182: iconst_0
+     183: invokevirtual #159                // Method pl/asie/foamfix/client/Deduplicator.deduplicateObject:(Ljava/lang/Object;I)Ljava/lang/Object;
+     186: pop
+     187: goto          192
+     190: astore        7
+     192: goto          108
+     195: aload_2
+     196: invokestatic  #163                // Method net/minecraftforge/fml/common/ProgressManager.pop:(Lnet/minecraftforge/fml/common/ProgressManager$ProgressBar;)V
+     199: getstatic     #75                 // Field pl/asie/foamfix/FoamFix.logger:Lorg/apache/logging/log4j/Logger;
+     202: new           #165                // class java/lang/StringBuilder
+     205: dup
+     206: invokespecial #166                // Method java/lang/StringBuilder."<init>":()V
+     209: ldc           #168                // String Deduplicated
+     211: invokevirtual #172                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     214: getstatic     #66                 // Field pl/asie/foamfix/ProxyClient.deduplicator:Lpl/asie/foamfix/client/Deduplicator;
+     217: getfield      #175                // Field pl/asie/foamfix/client/Deduplicator.successfuls:I
+     220: invokevirtual #178                // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+     223: ldc           #180                // String  objects.
+     225: invokevirtual #172                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     228: invokevirtual #181                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     231: invokeinterface #83,  2           // InterfaceMethod org/apache/logging/log4j/Logger.info:(Ljava/lang/String;)V
+     236: aconst_null
+     237: putstatic     #66                 // Field pl/asie/foamfix/ProxyClient.deduplicator:Lpl/asie/foamfix/client/Deduplicator;
+     240: invokestatic  #184                // Method pl/asie/foamfix/FoamFix.updateRamSaved:()V
+     243: return
+    Exception table:
+       from    to  target type
+         169   187   190   Class java/lang/Exception
+}

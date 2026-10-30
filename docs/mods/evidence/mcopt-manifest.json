@@ -1,0 +1,261 @@
+{
+  "scope": "Static source assessment of local working tree; no build, target execution, or performance measurement. Local changes mean HEAD alone does not identify this source tree. Source checkout left untouched.",
+  "repository": "/home/leite/Documents/GitHub/mcopt-linux",
+  "head": "b0253f4f7a5251e22dbed491691993b59e6c1485",
+  "working_tree_dirty": true,
+  "sources": [
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/README.md",
+      "sha256": "fb65488c00140b094a39508c4ea3e39aec731678d939dace4df54e761436c0e4",
+      "bytes": 6919
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/NOTICE",
+      "sha256": "140ae85f9edc3c55f91e14f01608914f894d41d9e0059050b1b7157198695724",
+      "bytes": 1563
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/gradle.properties",
+      "sha256": "f3886c5e8e58da26ee89639a4f2235131cdade96c0160a9f484076db04479132",
+      "bytes": 236
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/build.gradle",
+      "sha256": "c2138cb26335b79dcb01c6ad148f7f2e1330d7e7962d62be336874c85dd64df3",
+      "bytes": 4134
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/resources/fabric.mod.json",
+      "sha256": "3eddbe53d693ab1c49335ee3dbf7f2d0c687d83e3d275868affd3908d51ae107",
+      "bytes": 702
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/resources/mcopt/profiles/linux.properties",
+      "sha256": "e035c7fb7a5889d06538d55215d7555a1a0349d0adfbb48d7718dd2ffa60d174",
+      "bytes": 537
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/resources/mcopt-metal-cpu.mixins.json",
+      "sha256": "7cfa26dcddb26a65e7f3bb7ff6bdc2ad445d6f3ecc657b5a34e4afbd50d54a6e",
+      "bytes": 680
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/resources/mcopt-metal-chunk.mixins.json",
+      "sha256": "aaf8ba3d4aab934f2e39e710a150a7ec1ac35bb199ef88552b0137c4df62894b",
+      "bytes": 724
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/tools/PerformanceChecks.java",
+      "sha256": "88c2d62c371973acacc820a10f90c86628e15556cd6be8c66452f668b88fad48",
+      "bytes": 6782
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/tools/check-performance.py",
+      "sha256": "2f50c4d0d729ccff45748619c918f2e20b1a10e12e3cea4ffc9839c4b057764c",
+      "bytes": 2060
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/Profile.java",
+      "sha256": "a413fa344f942e15351a5d122f480d240b1f2047370894c78c226ff97efcdbbe",
+      "bytes": 3682
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/Startup.java",
+      "sha256": "d3ca90cde7a3f8e00bf8dd7bc2c8e2e56387e1710692165845b228dbb9ed6254",
+      "bytes": 5899
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/RustNative.java",
+      "sha256": "8a27e371d1613655245281d38bd8b0852367ac2f82ce2384cee6731bd1bb4e83",
+      "bytes": 1982
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/cpu/Cpu.java",
+      "sha256": "4f9f325bad885f7e71de53793750ad1e42280bc00aea2d6a9e8e5101cf7e6914",
+      "bytes": 4409
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/cpu/DrawMerge.java",
+      "sha256": "6b80a18e4cfb17450fec1a546ef840f739cdd31fc3ecc9b30a812e3ecc11ddd9",
+      "bytes": 4143
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/cpu/EntityBox.java",
+      "sha256": "33185e243d88f6b659f32d58b6ff616320a061b6ad682434d73b5864130944c4",
+      "bytes": 1930
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/cpu/CullReuse.java",
+      "sha256": "c78b03d10eb56a4580534f345b4851514a1dc41624d03bf25e578ab493410eae",
+      "bytes": 19020
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/chunk/ChunkOpt.java",
+      "sha256": "611b5c6d24b136001cfb83f0f24b5dae7ba344df3d43217214f2703dbbc2bd55",
+      "bytes": 7330
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/chunk/VisSweep.java",
+      "sha256": "3ad6863701d500118deee928d35c7e61cea533d977bdcdbe64702d69ca4380bc",
+      "bytes": 3883
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/chunk/SliceArrays.java",
+      "sha256": "831b46e15cd48cf582b9edfda13b2dc132f7d239fe43685487253323d2f44a18",
+      "bytes": 465
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/alloc/CowLong2ObjectMap.java",
+      "sha256": "48927b7a2fe6c8c314758d6f4a3c5f11fc85d5fd4e909ee03a96130f605d22df",
+      "bytes": 6812
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/lod/GenServerNoise.java",
+      "sha256": "3418a10b547be3d37a5f7c1867957a87d0ab70f9374ff2381818fbcfccf842a7",
+      "bytes": 637
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/mixin/cpu/CpuMixinPlugin.java",
+      "sha256": "1e5832e788cf394d3813a29db363c38a3a4abfc4190dc352928be36f459295c2",
+      "bytes": 1894
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/mixin/cpu/ModelLoopMixin.java",
+      "sha256": "45e7516fdcddbd81d736ff08d8575dd1324da1ad3e44daa0d3e8ce789f3413f0",
+      "bytes": 1295
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/mixin/cpu/ListRegionCacheMixin.java",
+      "sha256": "f0aeddc094a583bfc9bd7eec70b0f51c801093e72b6bb69fcff0e85c4cafcdd5",
+      "bytes": 1668
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/mixin/cpu/LoadingFpsMixin.java",
+      "sha256": "00259e125bdeae031e90ae26e7aac3969e6f579d9690d39dd47dc00d05b8a6eb",
+      "bytes": 1265
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/mixin/cpu/CullReuseManagerMixin.java",
+      "sha256": "b2b199ad025f9f4614bff4e080a2adb55a9217c4123cc9e5c2d7445620dcc2f9",
+      "bytes": 5327
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/mixin/cpu/DrawMergeMixin.java",
+      "sha256": "8624958088a54b14bd8a67767754cd26369b3c9e414825200c985b57fa7d1969",
+      "bytes": 1546
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/mixin/cpu/EntityBoxSodiumMixin.java",
+      "sha256": "dde1cdae730848f8f42e25520de8c9e171a80fb2d24b4d0293e16fe192647d3d",
+      "bytes": 1204
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/mixin/chunk/ChunkMixinPlugin.java",
+      "sha256": "79244c14b3a451dd642dfda56863d2c0db54cb6aecc9ec43c272552d5f2c6c0f",
+      "bytes": 2381
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/mixin/chunk/DirectionalVisGraphMixin.java",
+      "sha256": "1abf9873579c43799c73bafcaa89a6990ad5fb3c98323fd0f0578de48ed14e22",
+      "bytes": 2212
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/mixin/chunk/LevelSliceAirMixin.java",
+      "sha256": "98eddef25faf007facd2cad003e5935db081f6491d7955f0c6865cb510d95f31",
+      "bytes": 4183
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/mixin/chunk/LevelSliceBoundsMixin.java",
+      "sha256": "58b911217073193da913bf46e8d9beb4298e0a9df5aec1129a5d5f48cd6f0d7f",
+      "bytes": 3103
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/mixin/chunk/LevelBiomeSliceMixin.java",
+      "sha256": "723f3246f763259e3265430517aa5042cb3b887cba15434693610be3b95dd811",
+      "bytes": 2304
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/mixin/chunk/BlockRendererMixin.java",
+      "sha256": "d7ca2e22f6d55ca3b445234372b3635cd45442e474a5b6d91cf316f864f258b4",
+      "bytes": 3389
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/mixin/chunk/ClonedChunkSectionCacheMixin.java",
+      "sha256": "e440a79b969121b5dc0c4d1de3de5950e3f3a6c8ce303c3e3eb025d1fdc1d7b3",
+      "bytes": 2434
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/mixin/chunk/ClonedChunkSectionCacheCleanupMixin.java",
+      "sha256": "0da5ee2e7385333f6340b9f40b8be065737cb76fe839236895b61d032c254192",
+      "bytes": 4400
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/mixin/chunk/ChunkAccessSectionMixin.java",
+      "sha256": "9d74e73602f16da8f063fcd27a32c94f7388af58744ab1e736135361845e4cc9",
+      "bytes": 1734
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/mixin/chunk/ServerLevelTickMixin.java",
+      "sha256": "93e9c0ed12eae9decdb3fabff8a72bc57697995fac2b90f5c499c5d16ce4c0b2",
+      "bytes": 3197
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/mixin/chunk/RegionFileStorageMixin.java",
+      "sha256": "3d084b003957497694627ebdef6adefa792ba6226e94c849fea62822a7693f83",
+      "bytes": 3985
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/mixin/alloc/LightMapMixin.java",
+      "sha256": "a13e0bd82c13fa302813ae802e3ffd61f3581e13ff2126ae3b10adfd4d8bd743",
+      "bytes": 1461
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/mixin/alloc/AllocMixinPlugin.java",
+      "sha256": "09be98d7fb89c7867fdacdb53f99017dd75af7fe1436ef9df9d57dcbbdff20fa",
+      "bytes": 1458
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/mixin/startup/StartupMixinPlugin.java",
+      "sha256": "5550d53cb2825bf533e064080bab74cc0d7b79fcf03914d3b4c23ad74316eb04",
+      "bytes": 1785
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/mixin/gen/GenMixinPlugin.java",
+      "sha256": "f38fee7a5ab42dc76eeb7c66d7bc7ae1b06c82e6a83df755ddf5e9261357c661",
+      "bytes": 1521
+    },
+    {
+      "path": "/home/leite/Documents/GitHub/mcopt-linux/metal/src/main/java/mcopt/metal/mixin/gen/GenNoiseChunkMixin.java",
+      "sha256": "a9071e898331d31d393470a1912f975ad95e6316628429f1427ea708ab3c5227",
+      "bytes": 1102
+    }
+  ],
+  "dolly_comparison": [
+    {
+      "path": "/home/leite/Documents/GitHub/dolly-client/build/minecraft-optifine.jar",
+      "sha256": "6d98a5e569e7f951589e58769f391dafafdf594627816d38f3616c0d6a5dfcfe",
+      "bytes": 9659564
+    },
+    {
+      "path": "src/main/java/DollyFrameLimiter.java",
+      "sha256": "70a4d64386ee69c983837471c6ab0d369ecdeebd23fe0f84d79ebc7399f05814",
+      "bytes": 641
+    },
+    {
+      "path": "src/main/java/DollyProfiler.java",
+      "sha256": "0f0a9440ff41b888ffd91e1e478fdd82614591794d3c18c9be1a3d12cb5d27dd",
+      "bytes": 12925
+    },
+    {
+      "path": "src/main/java/DollyProfilerGame.java",
+      "sha256": "a008b31f8ac905a0c22ce52bf842ffaa4d74630ab30ab9ddb17540764d7a693e",
+      "bytes": 665
+    },
+    {
+      "path": "docs/mods/evidence/mcopt-dolly-overlap.bytecode.txt",
+      "sha256": "d37446e3f51264018fa50133532f1d70a1d0350eb73896853ef7fd06a569f565",
+      "bytes": 22478
+    }
+  ],
+  "javap_command": "java -m jdk.jdeps/com.sun.tools.javap.Main -c -p -classpath build/minecraft-optifine.jar bct amy net.optifine.render.VboRegion; retain five named methods"
+}

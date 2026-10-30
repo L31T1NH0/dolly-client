@@ -1,0 +1,449 @@
+CMPack technical input evidence. Static JVM bytecode via local javap; no target execution.
+Artifact CMPack_app.jar SHA256 464347bee470967072e3b7a2536d95e1f87645c1a02d2f8b0f120fcc9ebc4a80
+Commands: java -m jdk.jdeps/com.sun.tools.javap.Main -classpath /tmp/dolly-cmpack-app.jar -c -p <classes>
+NOTE: preserve signed immediates. Prior normalized default-consumers evidence displayed CONST 156 for raw bipush -100 at lE.q(III) offset 563.
+
+CLASS lE SHA256 2012f4166d855ab3d616cf4423b543915b7925a1b5a762902db7589aef31700b
+  protected boolean bp(int);
+    Code:
+       0: aload_0
+       1: getfield      #69                 // Field B:Lir;
+       4: getfield      #62                 // Field ir.Ft:Ljp;
+       7: getfield      #68                 // Field jp.bgf:LEh;
+      10: invokevirtual #120                // Method Eh.GM:()LHv;
+      13: ifnonnull     75
+      16: aload_0
+      17: getfield      #98                 // Field Vw:LFC;
+      20: ifnull        75
+      23: iconst_0
+      24: istore_2
+      25: iload_2
+      26: bipush        9
+      28: if_icmpge     75
+      31: iload_1
+      32: aload_0
+      33: getfield      #69                 // Field B:Lir;
+      36: getfield      #65                 // Field ir.Gv:Lwj;
+      39: getfield      #109                // Field wj.aEF:[Lwn;
+      42: iload_2
+      43: aaload
+      44: invokevirtual #198                // Method wn.ck:()I
+      47: if_icmpne     69
+      50: aload_0
+      51: aload_0
+      52: getfield      #98                 // Field Vw:LFC;
+      55: aload_0
+      56: getfield      #98                 // Field Vw:LFC;
+      59: getfield      #56                 // Field FC.bse:I
+      62: iload_2
+      63: iconst_2
+      64: invokevirtual #169                // Method q:(LFC;III)V
+      67: iconst_1
+      68: ireturn
+      69: iinc          2, 1
+      72: goto          25
+      75: iconst_0
+      76: ireturn
+
+
+protected void q(int, int, int); EXCERPT (538, 571)
+     538: iload_3
+     539: iconst_2
+     540: if_icmple     571
+     543: aload_0
+     544: getfield      #69                 // Field B:Lir;
+     547: getfield      #63                 // Field ir.Gk:LacQ;
+     550: invokevirtual #132                // Method acQ.arZ:()LD;
+     553: getfield      #50                 // Field D.bG:LbP;
+     556: invokevirtual #138                // Method bP.ak:()Z
+     559: ifeq          571
+     562: aload_0
+     563: bipush        -100
+     565: iload_3
+     566: iadd
+     567: invokevirtual #159                // Method bp:(I)Z
+     570: pop
+     571: return
+
+CLASS kB SHA256 33b277021666d64c986ab15a13530f7609c3f70e8191895739b9bb8d22c2d8d3
+  public void kU();
+    Code:
+       0: aload_0
+       1: getfield      #114                // Field B:Lir;
+       4: getfield      #109                // Field ir.Gk:LacQ;
+       7: invokevirtual #161                // Method acQ.arS:()Lz;
+      10: getfield      #140                // Field z.T:LC;
+      13: invokevirtual #141                // Method C.K:()Lan;
+      16: invokevirtual #166                // Method an.ad:()Z
+      19: ifeq          56
+      22: invokestatic  #239                // Method org/lwjgl/input/Keyboard.getEventCharacter:()C
+      25: istore_1
+      26: invokestatic  #240                // Method org/lwjgl/input/Keyboard.getEventKey:()I
+      29: istore_2
+      30: invokestatic  #241                // Method org/lwjgl/input/Keyboard.getEventKeyState:()Z
+      33: ifne          47
+      36: iload_2
+      37: ifne          53
+      40: iload_1
+      41: invokestatic  #189                // Method java/lang/Character.isDefined:(C)Z
+      44: ifeq          53
+      47: aload_0
+      48: iload_1
+      49: iload_2
+      50: invokevirtual #222                // Method q:(CI)V
+      53: goto          72
+      56: invokestatic  #241                // Method org/lwjgl/input/Keyboard.getEventKeyState:()Z
+      59: ifeq          72
+      62: aload_0
+      63: invokestatic  #239                // Method org/lwjgl/input/Keyboard.getEventCharacter:()C
+      66: invokestatic  #240                // Method org/lwjgl/input/Keyboard.getEventKey:()I
+      69: invokevirtual #222                // Method q:(CI)V
+      72: aload_0
+      73: getfield      #114                // Field B:Lir;
+      76: invokevirtual #176                // Method ir.gO:()V
+      79: return
+
+
+CLASS afM SHA256 4b5205af3bf7f64e3c182acda72d371bd49af9d4262aebef51da3a52d2ec3218
+FIELDS (plain ints, not volatile): public int dcQ; public int dcR;
+  private void auD();
+    Code:
+       0: new           #24                 // class net/java/games/input/DirectAndRawInputEnvironmentPlugin
+       3: dup
+       4: invokespecial #67                 // Method net/java/games/input/DirectAndRawInputEnvironmentPlugin."<init>":()V
+       7: astore_1
+       8: aload_0
+       9: aload_1
+      10: invokevirtual #68                 // Method net/java/games/input/DirectAndRawInputEnvironmentPlugin.getControllers:()[Lnet/java/games/input/Controller;
+      13: putfield      #34                 // Field dcO:[Lnet/java/games/input/Controller;
+      16: aload_0
+      17: aconst_null
+      18: putfield      #39                 // Field dcT:[Lnet/java/games/input/Controller;
+      21: aload_0
+      22: aconst_null
+      23: putfield      #38                 // Field dcS:Lnet/java/games/input/Mouse;
+      26: aload_0
+      27: getfield      #34                 // Field dcO:[Lnet/java/games/input/Controller;
+      30: astore_2
+      31: aload_2
+      32: arraylength
+      33: istore_3
+      34: sipush        28752
+      37: sipush        -31872
+      40: iand
+      41: istore        4
+      43: iload         4
+      45: iload_3
+      46: if_icmpge     90
+      49: aload_2
+      50: iload         4
+      52: aaload
+      53: astore        5
+      55: aload         5
+      57: invokeinterface #74,  1           // InterfaceMethod net/java/games/input/Controller.getType:()Lnet/java/games/input/Controller$Type;
+      62: getstatic     #47                 // Field net/java/games/input/Controller$Type.MOUSE:Lnet/java/games/input/Controller$Type;
+      65: if_acmpne     84
+      68: aload_0
+      69: aload_0
+      70: getfield      #39                 // Field dcT:[Lnet/java/games/input/Controller;
+      73: aload         5
+      75: invokestatic  #72                 // Method org/apache/commons/lang3/ArrayUtils.add:([Ljava/lang/Object;Ljava/lang/Object;)[Ljava/lang/Object;
+      78: checkcast     #7                  // class "[Lnet/java/games/input/Controller;"
+      81: putfield      #39                 // Field dcT:[Lnet/java/games/input/Controller;
+      84: iinc          4, 1
+      87: goto          43
+      90: aload_0
+      91: getfield      #38                 // Field dcS:Lnet/java/games/input/Mouse;
+      94: ifnonnull     196
+      97: aload_0
+      98: getfield      #39                 // Field dcT:[Lnet/java/games/input/Controller;
+     101: ifnull        90
+     104: aload_0
+     105: getfield      #39                 // Field dcT:[Lnet/java/games/input/Controller;
+     108: astore_2
+     109: aload_2
+     110: arraylength
+     111: istore_3
+     112: sipush        2434
+     115: sipush        1084
+     118: iand
+     119: istore        4
+     121: iload         4
+     123: iload_3
+     124: if_icmpge     193
+     127: aload_2
+     128: iload         4
+     130: aaload
+     131: astore        5
+     133: aload         5
+     135: invokeinterface #75,  1           // InterfaceMethod net/java/games/input/Controller.poll:()Z
+     140: pop
+     141: aload         5
+     143: checkcast     #25                 // class net/java/games/input/Mouse
+     146: invokevirtual #69                 // Method net/java/games/input/Mouse.getX:()Lnet/java/games/input/Component;
+     149: invokeinterface #73,  1           // InterfaceMethod net/java/games/input/Component.getPollData:()F
+     154: fstore        6
+     156: fload         6
+     158: ldc           #4                  // float 1.0615385f
+     160: ldc           #2                  // float 0.0942029f
+     162: fmul
+     163: fcmpl
+     164: ifgt          178
+     167: fload         6
+     169: ldc           #1                  // float -0.11f
+     171: ldc           #3                  // float 0.90909094f
+     173: fmul
+     174: fcmpg
+     175: ifge          187
+     178: aload_0
+     179: aload         5
+     181: checkcast     #25                 // class net/java/games/input/Mouse
+     184: putfield      #38                 // Field dcS:Lnet/java/games/input/Mouse;
+     187: iinc          4, 1
+     190: goto          121
+     193: goto          90
+     196: return
+
+
+  public void auE();
+    Code:
+       0: new           #18                 // class java/lang/Thread
+       3: dup
+       4: aload_0
+       5: invokedynamic #76,  0             // InvokeDynamic #0:run:(LafM;)Ljava/lang/Runnable;
+      10: invokespecial #62                 // Method java/lang/Thread."<init>":(Ljava/lang/Runnable;)V
+      13: astore_1
+      14: aload_1
+      15: getstatic     #48                 // Field o.q:[Ljava/lang/String;
+      18: sipush        23423
+      21: sipush        21119
+      24: iand
+      25: sipush        -21675
+      28: sipush        -26027
+      31: iand
+      32: iand
+      33: aaload
+      34: invokevirtual #63                 // Method java/lang/Thread.setName:(Ljava/lang/String;)V
+      37: aload_1
+      38: invokevirtual #65                 // Method java/lang/Thread.start:()V
+      41: return
+
+
+  public void dj(boolean);
+    Code:
+       0: aload_0
+       1: getfield      #40                 // Field dcU:Lir;
+       4: getfield      #43                 // Field ir.Ft:Ljp;
+       7: astore_2
+       8: aload_2
+       9: getfield      #46                 // Field jp.aQb:F
+      12: fstore_3
+      13: aload_2
+      14: getfield      #45                 // Field jp.aPe:F
+      17: fstore        4
+      19: iload_1
+      20: ifeq          27
+      23: aload_0
+      24: invokevirtual #56                 // Method auG:()V
+      27: aload_0
+      28: getfield      #40                 // Field dcU:Lir;
+      31: iload_1
+      32: ifeq          46
+      35: new           #13                 // class afN
+      38: dup
+      39: aload_0
+      40: invokespecial #59                 // Method afN."<init>":(LafM;)V
+      43: goto          53
+      46: new           #6                  // class PV
+      49: dup
+      50: invokespecial #49                 // Method PV."<init>":()V
+      53: putfield      #42                 // Field ir.Fq:LPV;
+      56: aload_2
+      57: fload_3
+      58: putfield      #46                 // Field jp.aQb:F
+      61: aload_2
+      62: fload         4
+      64: putfield      #45                 // Field jp.aPe:F
+      67: return
+
+
+  private void auF();
+    Code:
+       0: aload_0
+       1: getfield      #40                 // Field dcU:Lir;
+       4: getfield      #44                 // Field ir.Gk:LacQ;
+       7: invokevirtual #50                 // Method acQ.arZ:()LD;
+      10: getfield      #32                 // Field D.aS:LbP;
+      13: invokevirtual #60                 // Method bP.ak:()Z
+      16: ifeq          123
+      19: aload_0
+      20: getfield      #38                 // Field dcS:Lnet/java/games/input/Mouse;
+      23: ifnull        91
+      26: aload_0
+      27: getfield      #40                 // Field dcU:Lir;
+      30: getfield      #41                 // Field ir.FL:LkB;
+      33: ifnonnull     91
+      36: aload_0
+      37: getfield      #38                 // Field dcS:Lnet/java/games/input/Mouse;
+      40: invokevirtual #71                 // Method net/java/games/input/Mouse.poll:()Z
+      43: pop
+      44: aload_0
+      45: dup
+      46: getfield      #37                 // Field dcR:I
+      49: aload_0
+      50: getfield      #38                 // Field dcS:Lnet/java/games/input/Mouse;
+      53: invokevirtual #69                 // Method net/java/games/input/Mouse.getX:()Lnet/java/games/input/Component;
+      56: invokeinterface #73,  1           // InterfaceMethod net/java/games/input/Component.getPollData:()F
+      61: f2i
+      62: iadd
+      63: putfield      #37                 // Field dcR:I
+      66: aload_0
+      67: dup
+      68: getfield      #36                 // Field dcQ:I
+      71: aload_0
+      72: getfield      #38                 // Field dcS:Lnet/java/games/input/Mouse;
+      75: invokevirtual #70                 // Method net/java/games/input/Mouse.getY:()Lnet/java/games/input/Component;
+      78: invokeinterface #73,  1           // InterfaceMethod net/java/games/input/Component.getPollData:()F
+      83: f2i
+      84: iadd
+      85: putfield      #36                 // Field dcQ:I
+      88: goto          106
+      91: aload_0
+      92: getfield      #38                 // Field dcS:Lnet/java/games/input/Mouse;
+      95: ifnull        106
+      98: aload_0
+      99: getfield      #38                 // Field dcS:Lnet/java/games/input/Mouse;
+     102: invokevirtual #71                 // Method net/java/games/input/Mouse.poll:()Z
+     105: pop
+     106: ldc2_w        #28                 // long -7543227853437894267l
+     109: ldc2_w        #30                 // long 7543227853041715777l
+     112: land
+     113: invokestatic  #64                 // Method java/lang/Thread.sleep:(J)V
+     116: goto          0
+     119: astore_1
+     120: goto          0
+     123: return
+    Exception table:
+       from    to  target type
+         106   116   119   Class java/lang/InterruptedException
+
+
+CLASS afN SHA256 761cb4b19ebc5b8aecfe10d1cea107314c2cba059d13e63c78ee30444ebb34b1
+  public void Vl();
+    Code:
+       0: aload_0
+       1: aload_0
+       2: getfield      #13                 // Field dcV:LafM;
+       5: getfield      #10                 // Field afM.dcR:I
+       8: putfield      #12                 // Field bUC:I
+      11: aload_0
+      12: getfield      #13                 // Field dcV:LafM;
+      15: sipush        2450
+      18: sipush        -16320
+      21: iand
+      22: putfield      #10                 // Field afM.dcR:I
+      25: aload_0
+      26: aload_0
+      27: getfield      #13                 // Field dcV:LafM;
+      30: getfield      #9                  // Field afM.dcQ:I
+      33: ineg
+      34: putfield      #11                 // Field bUB:I
+      37: aload_0
+      38: getfield      #13                 // Field dcV:LafM;
+      41: sipush        18437
+      44: sipush        -31640
+      47: iand
+      48: putfield      #9                  // Field afM.dcQ:I
+      51: return
+}
+
+CLASS PV SHA256 5dc28e924107e565528f63d45496a3dc2ab7082845ab667453ee39397c1e1cf3
+  public void Vl();
+    Code:
+       0: aload_0
+       1: invokestatic  #8                  // Method org/lwjgl/input/Mouse.getDX:()I
+       4: putfield      #6                  // Field bUC:I
+       7: aload_0
+       8: invokestatic  #9                  // Method org/lwjgl/input/Mouse.getDY:()I
+      11: putfield      #5                  // Field bUB:I
+      14: return
+
+
+CLASS wn SHA256 fd6f6160d0461b91662e22bb336cbb75284ec8f8692755bae13f30c9c06f30b1
+  public static void q(int, boolean);
+    Code:
+       0: iload_0
+       1: ifeq          24
+       4: getstatic     #15                 // Field aJw:LPD;
+       7: iload_0
+       8: invokevirtual #23                 // Method PD.gB:(I)Ljava/lang/Object;
+      11: checkcast     #12                 // class wn
+      14: astore_2
+      15: aload_2
+      16: ifnull        24
+      19: aload_2
+      20: iload_1
+      21: putfield      #21                 // Field mP:Z
+      24: return
+
+
+  public static void vh();
+    Code:
+       0: getstatic     #13                 // Field aJu:Ljava/util/List;
+       3: invokeinterface #38,  1           // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+       8: astore_0
+       9: aload_0
+      10: invokeinterface #35,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+      15: ifeq          55
+      18: aload_0
+      19: invokeinterface #36,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      24: checkcast     #12                 // class wn
+      27: astore_1
+      28: aload_1
+      29: getfield      #19                 // Field mN:I
+      32: istore_2
+      33: iload_2
+      34: iflt          52
+      37: iload_2
+      38: sipush        255
+      41: if_icmpgt     52
+      44: iload_2
+      45: iload_2
+      46: invokestatic  #30                 // Method org/lwjgl/input/Keyboard.isKeyDown:(I)Z
+      49: invokestatic  #33                 // Method q:(IZ)V
+      52: goto          9
+      55: return
+
+
+CLASS ir SHA256 039df8e43227cedd8280a354d77b7923d704a8e1b42819f43270128bf552562a
+  public void gy();
+    Code:
+       0: invokestatic  #912                // Method org/lwjgl/opengl/Display.isActive:()Z
+       3: ifeq          62
+       6: aload_0
+       7: getfield      #384                // Field FP:Z
+      10: ifne          62
+      13: getstatic     #420                // Field Ga:Z
+      16: ifne          38
+      19: aload_0
+      20: getfield      #430                // Field Gk:LacQ;
+      23: invokevirtual #612                // Method acQ.arZ:()LD;
+      26: getfield      #298                // Field D.bD:LbP;
+      29: invokevirtual #634                // Method bP.ak:()Z
+      32: ifeq          38
+      35: invokestatic  #1033               // Method wn.vh:()V
+      38: aload_0
+      39: iconst_1
+      40: putfield      #384                // Field FP:Z
+      43: aload_0
+      44: getfield      #410                // Field Fq:LPV;
+      47: invokevirtual #586                // Method PV.Vm:()V
+      50: aload_0
+      51: aconst_null
+      52: invokevirtual #728                // Method r:(LkB;)V
+      55: aload_0
+      56: sipush        10000
+      59: putfield      #406                // Field Fl:I
+      62: return
+
+

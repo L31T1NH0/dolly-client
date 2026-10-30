@@ -1,0 +1,720 @@
+public class bK extends bf {
+  public static M lx;
+
+  private final kB ly;
+
+  private float lz;
+
+  private float lA;
+
+  public static M lB;
+
+  private lf k;
+
+  private float lC;
+
+  private float lD;
+
+  protected void w(int, int, int);
+    Code:
+       0: aload_0
+       1: iload_1
+       2: iload_2
+       3: iload_3
+       4: invokespecial #101                // Method bf.w:(III)V
+       7: aload_0
+       8: fconst_0
+       9: putfield      #48                 // Field lz:F
+      12: aload_0
+      13: fconst_0
+      14: putfield      #42                 // Field lA:F
+      17: getstatic     #46                 // Field lx:LM;
+      20: ifnull        39
+      23: getstatic     #46                 // Field lx:LM;
+      26: invokevirtual #67                 // Method M.Y:()V
+      29: aload_0
+      30: iload_1
+      31: iload_2
+      32: invokespecial #77                 // Method i:(II)V
+      35: aconst_null
+      36: putstatic     #46                 // Field lx:LM;
+      39: return
+
+  private void i(java.lang.Object);
+    Code:
+       0: aload_0
+       1: getfield      #36                 // Field B:Lir;
+       4: aload_0
+       5: getfield      #47                 // Field ly:LkB;
+       8: invokevirtual #109                // Method ir.r:(LkB;)V
+      11: return
+
+  private static boolean e(M);
+    Code:
+       0: aload_0
+       1: invokevirtual #64                 // Method M.T:()Z
+       4: ifeq          24
+       7: aload_0
+       8: invokevirtual #69                 // Method M.ad:()Z
+      11: ifeq          24
+      14: sipush        8709
+      17: sipush        1099
+      20: iand
+      21: goto          31
+      24: sipush        16650
+      27: sipush        2080
+      30: iand
+      31: ireturn
+
+  private void q(M, bq);
+    Code:
+       0: aload_1
+       1: putstatic     #46                 // Field lx:LM;
+       4: invokestatic  #122                // Method org/lwjgl/input/Mouse.getX:()I
+       7: i2f
+       8: aload_0
+       9: getfield      #41                 // Field k:Llf;
+      12: invokevirtual #119                // Method lf.lI:()I
+      15: i2f
+      16: fdiv
+      17: fstore_3
+      18: aload_0
+      19: getfield      #36                 // Field B:Lir;
+      22: getfield      #52                 // Field ir.Gb:I
+      25: invokestatic  #123                // Method org/lwjgl/input/Mouse.getY:()I
+      28: isub
+      29: i2f
+      30: aload_0
+      31: getfield      #41                 // Field k:Llf;
+      34: invokevirtual #119                // Method lf.lI:()I
+      37: i2f
+      38: fdiv
+      39: fstore        4
+      41: aload_0
+      42: fload_3
+      43: aload_1
+      44: invokevirtual #68                 // Method M.ab:()F
+      47: fsub
+      48: fneg
+      49: aload_1
+      50: aload_1
+      51: checkcast     #7                  // class L
+      54: invokevirtual #63                 // Method L.Q:()F
+      57: invokestatic  #89                 // Method bT.q:(LM;F)F
+      60: fsub
+      61: f2i
+      62: i2f
+      63: putfield      #44                 // Field lC:F
+      66: aload_0
+      67: fload         4
+      69: aload_1
+      70: invokevirtual #66                 // Method M.X:()F
+      73: fsub
+      74: fneg
+      75: aload_1
+      76: aload_1
+      77: checkcast     #7                  // class L
+      80: invokevirtual #62                 // Method L.P:()F
+      83: invokestatic  #91                 // Method bT.w:(LM;F)F
+      86: fsub
+      87: f2i
+      88: i2f
+      89: putfield      #45                 // Field lD:F
+      92: return
+
+  private void o(java.lang.Object);
+    Code:
+       0: aload_0
+       1: getfield      #36                 // Field B:Lir;
+       4: new           #12                 // class bM
+       7: dup
+       8: aload_0
+       9: invokespecial #88                 // Method bM."<init>":(LkB;)V
+      12: invokevirtual #109                // Method ir.r:(LkB;)V
+      15: return
+
+  private static boolean r(bq);
+    Code:
+       0: aload_0
+       1: instanceof    #21                 // class bt
+       4: ireturn
+
+  protected void q(int, int, int);
+    Code:
+       0: aload_0
+       1: iload_1
+       2: iload_2
+       3: iload_3
+       4: invokespecial #99                 // Method bf.q:(III)V
+       7: aload_0
+       8: getfield      #40                 // Field jz:Ljava/util/List;
+      11: invokeinterface #129,  1          // InterfaceMethod java/util/List.stream:()Ljava/util/stream/Stream;
+      16: invokedynamic #134,  0            // InvokeDynamic #0:test:()Ljava/util/function/Predicate;
+      21: invokeinterface #130,  2          // InterfaceMethod java/util/stream/Stream.filter:(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+      26: invokedynamic #135,  0            // InvokeDynamic #1:test:()Ljava/util/function/Predicate;
+      31: invokeinterface #133,  2          // InterfaceMethod java/util/stream/Stream.noneMatch:(Ljava/util/function/Predicate;)Z
+      36: ifeq          51
+      39: aload_0
+      40: iload_1
+      41: i2f
+      42: putfield      #48                 // Field lz:F
+      45: aload_0
+      46: iload_2
+      47: i2f
+      48: putfield      #42                 // Field lA:F
+      51: return
+
+  public void bl();
+    Code:
+       0: aload_0
+       1: invokespecial #96                 // Method bf.bl:()V
+       4: sipush        -24364
+       7: sipush        1794
+      10: iand
+      11: invokestatic  #121                // Method org/lwjgl/input/Keyboard.enableRepeatEvents:(Z)V
+      14: aconst_null
+      15: putstatic     #43                 // Field lB:LM;
+      18: aload_0
+      19: getfield      #36                 // Field B:Lir;
+      22: getfield      #53                 // Field ir.Gk:LacQ;
+      25: invokevirtual #71                 // Method acQ.arS:()Lz;
+      28: getfield      #55                 // Field z.N:Lv;
+      31: invokevirtual #125                // Method v.C:()V
+      34: return
+
+  private bt r(M);
+    Code:
+       0: new           #21                 // class bt
+       3: dup
+       4: aload_1
+       5: aload_0
+       6: aload_1
+       7: invokedynamic #136,  0            // InvokeDynamic #2:accept:(LbK;LM;)Ljava/util/function/Consumer;
+      12: aload_0
+      13: invokedynamic #137,  0            // InvokeDynamic #3:accept:(LbK;)Ljava/util/function/Consumer;
+      18: invokespecial #107                // Method bt."<init>":(LM;Ljava/util/function/Consumer;Ljava/util/function/Consumer;)V
+      21: areturn
+
+  private static void p(java.lang.Object);
+    Code:
+       0: return
+
+  private void i(int, int);
+    Code:
+       0: iload_1
+       1: i2f
+       2: getstatic     #46                 // Field lx:LM;
+       5: getstatic     #46                 // Field lx:LM;
+       8: invokevirtual #65                 // Method M.U:()LB;
+      11: invokevirtual #58                 // Method B.H:()Lb;
+      14: aload_0
+      15: getfield      #41                 // Field k:Llf;
+      18: invokevirtual #118                // Method lf.lH:()I
+      21: invokevirtual #72                 // Method b.r:(I)I
+      24: getstatic     #46                 // Field lx:LM;
+      27: checkcast     #7                  // class L
+      30: invokevirtual #63                 // Method L.Q:()F
+      33: invokestatic  #92                 // Method bT.w:(LM;IF)F
+      36: fsub
+      37: aload_0
+      38: getfield      #44                 // Field lC:F
+      41: fadd
+      42: fstore_3
+      43: iload_2
+      44: i2f
+      45: getstatic     #46                 // Field lx:LM;
+      48: getstatic     #46                 // Field lx:LM;
+      51: invokevirtual #65                 // Method M.U:()LB;
+      54: invokevirtual #58                 // Method B.H:()Lb;
+      57: aload_0
+      58: getfield      #41                 // Field k:Llf;
+      61: invokevirtual #120                // Method lf.lK:()I
+      64: invokevirtual #73                 // Method b.t:(I)I
+      67: getstatic     #46                 // Field lx:LM;
+      70: checkcast     #7                  // class L
+      73: invokevirtual #62                 // Method L.P:()F
+      76: invokestatic  #90                 // Method bT.q:(LM;IF)F
+      79: fsub
+      80: aload_0
+      81: getfield      #45                 // Field lD:F
+      84: fadd
+      85: fstore        4
+      87: getstatic     #46                 // Field lx:LM;
+      90: new           #5                  // class B
+      93: dup
+      94: getstatic     #46                 // Field lx:LM;
+      97: invokevirtual #65                 // Method M.U:()LB;
+     100: invokevirtual #58                 // Method B.H:()Lb;
+     103: fload_3
+     104: fload         4
+     106: invokespecial #57                 // Method B."<init>":(Lb;FF)V
+     109: invokevirtual #70                 // Method M.q:(LB;)V
+     112: return
+
+  public void s();
+    Code:
+       0: aload_0
+       1: invokespecial #100                // Method bf.s:()V
+       4: aconst_null
+       5: putstatic     #43                 // Field lB:LM;
+       8: aconst_null
+       9: putstatic     #46                 // Field lx:LM;
+      12: aload_0
+      13: new           #30                 // class lf
+      16: dup
+      17: aload_0
+      18: getfield      #36                 // Field B:Lir;
+      21: invokespecial #117                // Method lf."<init>":(Lir;)V
+      24: putfield      #41                 // Field k:Llf;
+      27: aload_0
+      28: getfield      #40                 // Field jz:Ljava/util/List;
+      31: invokeinterface #127,  1          // InterfaceMethod java/util/List.clear:()V
+      36: aload_0
+      37: getfield      #36                 // Field B:Lir;
+      40: getfield      #53                 // Field ir.Gk:LacQ;
+      43: invokevirtual #71                 // Method acQ.arS:()Lz;
+      46: getfield      #56                 // Field z.T:LC;
+      49: invokevirtual #61                 // Method C.M:()Ljava/util/LinkedHashSet;
+      52: invokevirtual #116                // Method java/util/LinkedHashSet.stream:()Ljava/util/stream/Stream;
+      55: invokedynamic #138,  0            // InvokeDynamic #4:test:()Ljava/util/function/Predicate;
+      60: invokeinterface #130,  2          // InterfaceMethod java/util/stream/Stream.filter:(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+      65: aload_0
+      66: invokedynamic #139,  0            // InvokeDynamic #5:apply:(LbK;)Ljava/util/function/Function;
+      71: invokeinterface #132,  2          // InterfaceMethod java/util/stream/Stream.map:(Ljava/util/function/Function;)Ljava/util/stream/Stream;
+      76: aload_0
+      77: getfield      #40                 // Field jz:Ljava/util/List;
+      80: dup
+      81: invokevirtual #114                // Method java/lang/Object.getClass:()Ljava/lang/Class;
+      84: pop
+      85: invokedynamic #140,  0            // InvokeDynamic #6:accept:(Ljava/util/List;)Ljava/util/function/Consumer;
+      90: invokeinterface #131,  2          // InterfaceMethod java/util/stream/Stream.forEach:(Ljava/util/function/Consumer;)V
+      95: aload_0
+      96: getfield      #39                 // Field jw:Ljava/util/List;
+      99: invokeinterface #127,  1          // InterfaceMethod java/util/List.clear:()V
+     104: aload_0
+     105: getfield      #39                 // Field jw:Ljava/util/List;
+     108: new           #16                 // class bm
+     111: dup
+     112: aload_0
+     113: getfield      #37                 // Field fU:I
+     116: sipush        16514
+     119: sipush        -30202
+     122: iand
+     123: idiv
+     124: sipush        2532
+     127: sipush        4133
+     130: iand
+     131: isub
+     132: aload_0
+     133: getfield      #38                 // Field gj:I
+     136: sipush        -24295
+     139: sipush        1593
+     142: iand
+     143: isub
+     144: aload_0
+     145: getfield      #37                 // Field fU:I
+     148: bipush        66
+     150: sipush        -32462
+     153: iand
+     154: idiv
+     155: sipush        308
+     158: sipush        -28636
+     161: iand
+     162: iadd
+     163: aload_0
+     164: getfield      #38                 // Field gj:I
+     167: sipush        26151
+     170: sipush        -32737
+     173: iand
+     174: isub
+     175: sipush        2429
+     178: sipush        -3443
+     181: iand
+     182: sipush        -32738
+     185: sipush        4495
+     188: iand
+     189: getstatic     #49                 // Field bn.ka:Lbn;
+     192: invokespecial #102                // Method bm."<init>":(IIIIIILbn;)V
+     195: sipush        25602
+     198: sipush        -32101
+     201: iand
+     202: sipush        8707
+     205: sipush        21562
+     208: iand
+     209: invokevirtual #105                // Method bm.r:(II)Lbm;
+     212: new           #20                 // class br
+     215: dup
+     216: sipush        9407
+     219: sipush        -26610
+     222: iand
+     223: sipush        1166
+     226: sipush        10350
+     229: iand
+     230: getstatic     #54                 // Field q.q:[Ljava/lang/String;
+     233: sipush        1783
+     236: sipush        18167
+     239: iand
+     240: sipush        31731
+     243: sipush        -22533
+     246: iand
+     247: iand
+     248: aaload
+     249: aload_0
+     250: invokedynamic #141,  0            // InvokeDynamic #7:accept:(LbK;)Ljava/util/function/Consumer;
+     255: invokespecial #106                // Method br."<init>":(IILjava/lang/String;Ljava/util/function/Consumer;)V
+     258: getstatic     #50                 // Field bo.kd:Lbo;
+     261: invokevirtual #103                // Method bm.q:(Lbq;Lbo;)Lbm;
+     264: new           #20                 // class br
+     267: dup
+     268: sipush        2127
+     271: sipush        -31218
+     274: iand
+     275: sipush        1071
+     278: sipush        16398
+     281: iand
+     282: getstatic     #54                 // Field q.q:[Ljava/lang/String;
+     285: sipush        -28932
+     288: sipush        17151
+     291: iand
+     292: sipush        24308
+     295: sipush        19197
+     298: iand
+     299: iand
+     300: aaload
+     301: invokedynamic #142,  0            // InvokeDynamic #8:accept:()Ljava/util/function/Consumer;
+     306: invokespecial #106                // Method br."<init>":(IILjava/lang/String;Ljava/util/function/Consumer;)V
+     309: getstatic     #50                 // Field bo.kd:Lbo;
+     312: sipush        18440
+     315: sipush        13319
+     318: iand
+     319: invokevirtual #104                // Method bm.q:(Lbq;Lbo;Z)Lbm;
+     322: new           #20                 // class br
+     325: dup
+     326: bipush        30
+     328: bipush        15
+     330: iand
+     331: sipush        -31729
+     334: sipush        814
+     337: iand
+     338: getstatic     #54                 // Field q.q:[Ljava/lang/String;
+     341: sipush        17141
+     344: sipush        9213
+     347: iand
+     348: sipush        -11267
+     351: sipush        -1291
+     354: iand
+     355: iand
+     356: aaload
+     357: aload_0
+     358: invokedynamic #143,  0            // InvokeDynamic #9:accept:(LbK;)Ljava/util/function/Consumer;
+     363: invokespecial #106                // Method br."<init>":(IILjava/lang/String;Ljava/util/function/Consumer;)V
+     366: getstatic     #50                 // Field bo.kd:Lbo;
+     369: invokevirtual #103                // Method bm.q:(Lbq;Lbo;)Lbm;
+     372: invokeinterface #126,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     377: pop
+     378: sipush        5655
+     381: sipush        2113
+     384: iand
+     385: invokestatic  #121                // Method org/lwjgl/input/Keyboard.enableRepeatEvents:(Z)V
+     388: return
+
+  public bK(kB);
+    Code:
+       0: aload_0
+       1: invokespecial #95                 // Method bf."<init>":()V
+       4: aload_0
+       5: aload_1
+       6: putfield      #47                 // Field ly:LkB;
+       9: return
+
+  private static boolean t(bq);
+    Code:
+       0: aload_0
+       1: getfield      #51                 // Field bq.jM:Z
+       4: ireturn
+
+  protected void q(char, int);
+    Code:
+       0: aload_0
+       1: iload_1
+       2: iload_2
+       3: invokespecial #98                 // Method bf.q:(CI)V
+       6: getstatic     #43                 // Field lB:LM;
+       9: ifnull        163
+      12: fconst_0
+      13: fstore_3
+      14: fconst_0
+      15: fstore        4
+      17: iload_2
+      18: tableswitch   { // 200 to 208
+                   200: 68
+                   201: 74
+                   202: 74
+                   203: 77
+                   204: 74
+                   205: 84
+                   206: 74
+                   207: 74
+                   208: 91
+               default: 74
+          }
+      68: fload         4
+      70: fconst_1
+      71: fsub
+      72: fstore        4
+      74: goto          97
+      77: fload_3
+      78: fconst_1
+      79: fsub
+      80: fstore_3
+      81: goto          97
+      84: fload_3
+      85: fconst_1
+      86: fadd
+      87: fstore_3
+      88: goto          97
+      91: fload         4
+      93: fconst_1
+      94: fadd
+      95: fstore        4
+      97: fload_3
+      98: fconst_0
+      99: fcmpl
+     100: ifne          110
+     103: fload         4
+     105: fconst_0
+     106: fcmpl
+     107: ifeq          163
+     110: getstatic     #43                 // Field lB:LM;
+     113: invokevirtual #65                 // Method M.U:()LB;
+     116: invokevirtual #59                 // Method B.I:()F
+     119: fload_3
+     120: fadd
+     121: fstore        5
+     123: getstatic     #43                 // Field lB:LM;
+     126: invokevirtual #65                 // Method M.U:()LB;
+     129: invokevirtual #60                 // Method B.J:()F
+     132: fload         4
+     134: fadd
+     135: fstore        6
+     137: getstatic     #43                 // Field lB:LM;
+     140: new           #5                  // class B
+     143: dup
+     144: getstatic     #43                 // Field lB:LM;
+     147: invokevirtual #65                 // Method M.U:()LB;
+     150: invokevirtual #58                 // Method B.H:()Lb;
+     153: fload         5
+     155: fload         6
+     157: invokespecial #57                 // Method B."<init>":(Lb;FF)V
+     160: invokevirtual #70                 // Method M.q:(LB;)V
+     163: return
+
+  private static int q(bq, bq);
+    Code:
+       0: aload_0
+       1: instanceof    #21                 // class bt
+       4: ifeq          28
+       7: aload_0
+       8: checkcast     #21                 // class bt
+      11: invokevirtual #108                // Method bt.bA:()LM;
+      14: getstatic     #46                 // Field lx:LM;
+      17: if_acmpne     28
+      20: sipush        20741
+      23: sipush        9249
+      26: iand
+      27: ireturn
+      28: aload_1
+      29: instanceof    #21                 // class bt
+      32: ifeq          52
+      35: aload_1
+      36: checkcast     #21                 // class bt
+      39: invokevirtual #108                // Method bt.bA:()LM;
+      42: getstatic     #46                 // Field lx:LM;
+      45: if_acmpne     52
+      48: iconst_m1
+      49: iconst_m1
+      50: iand
+      51: ireturn
+      52: iconst_0
+      53: sipush        19972
+      56: iand
+      57: ireturn
+
+  private void y(bq);
+    Code:
+       0: aload_0
+       1: getfield      #36                 // Field B:Lir;
+       4: new           #11                 // class bK
+       7: dup
+       8: aload_0
+       9: getfield      #47                 // Field ly:LkB;
+      12: invokespecial #74                 // Method "<init>":(LkB;)V
+      15: invokevirtual #109                // Method ir.r:(LkB;)V
+      18: return
+
+  public void e(int, int, float);
+    Code:
+       0: fconst_0
+       1: fconst_0
+       2: aload_0
+       3: getfield      #37                 // Field fU:I
+       6: i2f
+       7: aload_0
+       8: getfield      #38                 // Field gj:I
+      11: i2f
+      12: new           #23                 // class java/awt/Color
+      15: dup
+      16: bipush        118
+      18: sipush        18432
+      21: iand
+      22: sipush        -26110
+      25: sipush        16384
+      28: iand
+      29: sipush        -20864
+      32: sipush        4421
+      35: iand
+      36: sipush        17381
+      39: bipush        100
+      41: iand
+      42: invokespecial #110                // Method java/awt/Color."<init>":(IIII)V
+      45: invokevirtual #111                // Method java/awt/Color.getRGB:()I
+      48: invokestatic  #94                 // Method bX.w:(FFFFI)V
+      51: aload_0
+      52: aload_0
+      53: getfield      #37                 // Field fU:I
+      56: sipush        2307
+      59: sipush        13318
+      62: iand
+      63: idiv
+      64: sipush        4100
+      67: sipush        -32736
+      70: iand
+      71: aload_0
+      72: getfield      #38                 // Field gj:I
+      75: ldc           #4                  // int 1644167167
+      77: ldc           #3                  // int 1426063359
+      79: iand
+      80: invokevirtual #86                 // Method w:(IIII)V
+      83: aload_0
+      84: sipush        144
+      87: sipush        -9912
+      90: iand
+      91: aload_0
+      92: getfield      #37                 // Field fU:I
+      95: aload_0
+      96: getfield      #38                 // Field gj:I
+      99: sipush        2706
+     102: sipush        -12189
+     105: iand
+     106: idiv
+     107: ldc           #2                  // int 1124073471
+     109: ldc           #1                  // int -385875969
+     111: iand
+     112: invokevirtual #75                 // Method e:(IIII)V
+     115: sipush        5428
+     118: sipush        -30719
+     121: iand
+     122: invokestatic  #124                // Method org/lwjgl/input/Mouse.isButtonDown:(I)Z
+     125: ifeq          311
+     128: getstatic     #46                 // Field lx:LM;
+     131: ifnull        143
+     134: aload_0
+     135: iload_1
+     136: iload_2
+     137: invokespecial #77                 // Method i:(II)V
+     140: goto          311
+     143: aload_0
+     144: getfield      #48                 // Field lz:F
+     147: fconst_0
+     148: fcmpl
+     149: ifeq          311
+     152: aload_0
+     153: getfield      #42                 // Field lA:F
+     156: fconst_0
+     157: fcmpl
+     158: ifeq          311
+     161: aload_0
+     162: getfield      #48                 // Field lz:F
+     165: iload_1
+     166: i2f
+     167: fcmpl
+     168: ifeq          311
+     171: aload_0
+     172: getfield      #42                 // Field lA:F
+     175: iload_2
+     176: i2f
+     177: fcmpl
+     178: ifeq          311
+     181: aload_0
+     182: getfield      #48                 // Field lz:F
+     185: aload_0
+     186: getfield      #42                 // Field lA:F
+     189: iload_1
+     190: i2f
+     191: iload_2
+     192: i2f
+     193: new           #23                 // class java/awt/Color
+     196: dup
+     197: sipush        -30026
+     200: sipush        25758
+     203: iand
+     204: sipush        9622
+     207: sipush        2198
+     210: iand
+     211: sipush        -26978
+     214: sipush        18934
+     217: iand
+     218: sipush        622
+     221: sipush        -16012
+     224: iand
+     225: invokespecial #110                // Method java/awt/Color."<init>":(IIII)V
+     228: invokevirtual #111                // Method java/awt/Color.getRGB:()I
+     231: invokestatic  #94                 // Method bX.w:(FFFFI)V
+     234: aload_0
+     235: getfield      #48                 // Field lz:F
+     238: iload_1
+     239: i2f
+     240: invokestatic  #113                // Method java/lang/Math.min:(FF)F
+     243: aload_0
+     244: getfield      #42                 // Field lA:F
+     247: iload_2
+     248: i2f
+     249: invokestatic  #113                // Method java/lang/Math.min:(FF)F
+     252: aload_0
+     253: getfield      #48                 // Field lz:F
+     256: iload_1
+     257: i2f
+     258: invokestatic  #112                // Method java/lang/Math.max:(FF)F
+     261: aload_0
+     262: getfield      #42                 // Field lA:F
+     265: iload_2
+     266: i2f
+     267: invokestatic  #112                // Method java/lang/Math.max:(FF)F
+     270: new           #23                 // class java/awt/Color
+     273: dup
+     274: sipush        -22058
+     277: sipush        18102
+     280: iand
+     281: sipush        27798
+     284: sipush        -31849
+     287: iand
+     288: sipush        -19818
+     291: sipush        18646
+     294: iand
+     295: sipush        27574
+     298: sipush        -32554
+     301: iand
+     302: invokespecial #110                // Method java/awt/Color."<init>":(IIII)V
+     305: invokevirtual #111                // Method java/awt/Color.getRGB:()I
+     308: invokestatic  #93                 // Method bX.q:(FFFFI)V
+     311: aload_0
+     312: getfield      #40                 // Field jz:Ljava/util/List;
+     315: invokedynamic #144,  0            // InvokeDynamic #10:compare:()Ljava/util/Comparator;
+     320: invokeinterface #128,  2          // InterfaceMethod java/util/List.sort:(Ljava/util/Comparator;)V
+     325: aload_0
+     326: iload_1
+     327: iload_2
+     328: fload_3
+     329: invokespecial #97                 // Method bf.e:(IIF)V
+     332: return
+}

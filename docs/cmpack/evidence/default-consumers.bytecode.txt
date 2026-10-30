@@ -1,0 +1,549 @@
+Static evidence excerpts; no client execution. CONST arithmetic simplified for readability; JVM instruction offsets retained. STRING comments resolve shared constant-pool arrays. Omitted instructions are not claimed analyzed by this excerpt alone.
+
+CLASS D SHA256 2298e939b8beba4f267d32f214524f785d8cb9d91a8bc4b8c1868901a6a5295b
+
+METHOD <init> ()V [EXCERPT [(300, 357), (1470, 1527), (1799, 1967), (2987, 3189), (3340, 3482), (3513, 3630)]]
+  300 aload_0            
+  301 new                bP
+  304 dup                
+  305 aload_0            
+  306 getstatic          q.q:[Ljava/lang/String;
+  309 CONST 612
+  324 aaload              // STRING Mouse bind fix
+  325 getstatic          q.q:[Ljava/lang/String;
+  328 CONST 613
+  343 aaload              // STRING mouseBindFix
+  344 invokespecial      bP.<init>:(LM;Ljava/lang/String;Ljava/lang/String;)V
+  347 CONST 1
+  354 invokevirtual      bP.s:(Z)LbP;
+  357 putfield           D.bG:LbP;
+ 1470 aload_0            
+ 1471 new                bP
+ 1474 dup                
+ 1475 aload_0            
+ 1476 getstatic          q.q:[Ljava/lang/String;
+ 1479 CONST 646
+ 1494 aaload              // STRING Hotbar Scrolling
+ 1495 getstatic          q.q:[Ljava/lang/String;
+ 1498 CONST 647
+ 1513 aaload              // STRING hotbarScrolling
+ 1514 invokespecial      bP.<init>:(LM;Ljava/lang/String;Ljava/lang/String;)V
+ 1517 CONST 1
+ 1524 invokevirtual      bP.s:(Z)LbP;
+ 1527 putfield           D.aT:LbP;
+ 1799 aload_0            
+ 1800 new                bP
+ 1803 dup                
+ 1804 aload_0            
+ 1805 getstatic          q.q:[Ljava/lang/String;
+ 1808 CONST 654
+ 1823 aaload              // STRING FPS limit on inactive
+ 1824 getstatic          q.q:[Ljava/lang/String;
+ 1827 CONST 655
+ 1842 aaload              // STRING limitOnInactive
+ 1843 invokespecial      bP.<init>:(LM;Ljava/lang/String;Ljava/lang/String;)V
+ 1846 CONST 30
+ 1853 invokestatic       java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+ 1856 invokevirtual      bP.q:(Ljava/lang/Number;)LbP;
+ 1859 CONST 5
+ 1866 CONST 240
+ 1873 CONST 1
+ 1880 invokevirtual      bP.t:(III)LbP;
+ 1883 putfield           D.by:LbP;
+ 1886 aload_0            
+ 1887 new                bP
+ 1890 dup                
+ 1891 aload_0            
+ 1892 getstatic          q.q:[Ljava/lang/String;
+ 1895 CONST 656
+ 1910 aaload              // STRING FPS limit in Main Menu
+ 1911 getstatic          q.q:[Ljava/lang/String;
+ 1914 CONST 657
+ 1929 aaload              // STRING limitInMainMenu
+ 1930 invokespecial      bP.<init>:(LM;Ljava/lang/String;Ljava/lang/String;)V
+ 1933 aload_0            
+ 1934 invokespecial      D.O:()I
+ 1937 invokestatic       java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+ 1940 invokevirtual      bP.q:(Ljava/lang/Number;)LbP;
+ 1943 CONST 30
+ 1950 CONST 240
+ 1957 CONST 1
+ 1964 invokevirtual      bP.t:(III)LbP;
+ 1967 putfield           D.aK:LbP;
+ 2987 aload_0            
+ 2988 new                bP
+ 2991 dup                
+ 2992 aload_0            
+ 2993 getstatic          q.q:[Ljava/lang/String;
+ 2996 CONST 692
+ 3011 aaload              // STRING Render void fog and barrier particles
+ 3012 getstatic          q.q:[Ljava/lang/String;
+ 3015 CONST 693
+ 3030 aaload              // STRING renderVoidFogParticles
+ 3031 invokespecial      bP.<init>:(LM;Ljava/lang/String;Ljava/lang/String;)V
+ 3034 CONST 0
+ 3041 invokevirtual      bP.s:(Z)LbP;
+ 3044 putfield           D.bF:LbP;
+ 3047 aload_0            
+ 3048 new                bP
+ 3051 dup                
+ 3052 aload_0            
+ 3053 getstatic          q.q:[Ljava/lang/String;
+ 3056 CONST 694
+ 3071 aaload              // STRING Optimized void fog and barrier particles
+ 3072 getstatic          q.q:[Ljava/lang/String;
+ 3075 CONST 695
+ 3090 aaload              // STRING optimizedVoidFogParticles
+ 3091 invokespecial      bP.<init>:(LM;Ljava/lang/String;Ljava/lang/String;)V
+ 3094 CONST 1
+ 3099 invokevirtual      bP.s:(Z)LbP;
+ 3102 putfield           D.aD:LbP;
+ 3105 aload_0            
+ 3106 new                bP
+ 3109 dup                
+ 3110 aload_0            
+ 3111 getstatic          q.q:[Ljava/lang/String;
+ 3114 CONST 696
+ 3129 aaload              // STRING Particle limit
+ 3130 getstatic          q.q:[Ljava/lang/String;
+ 3133 CONST 697
+ 3148 aaload              // STRING particleLimit
+ 3149 invokespecial      bP.<init>:(LM;Ljava/lang/String;Ljava/lang/String;)V
+ 3152 CONST 1000
+ 3159 invokestatic       java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+ 3162 invokevirtual      bP.q:(Ljava/lang/Number;)LbP;
+ 3165 CONST 1
+ 3172 CONST 10000
+ 3179 CONST 1
+ 3186 invokevirtual      bP.t:(III)LbP;
+ 3189 putfield           D.bC:LbP;
+ 3340 aload_0            
+ 3341 new                I
+ 3344 dup                
+ 3345 aload_0            
+ 3346 aload_0            
+ 3347 getstatic          q.q:[Ljava/lang/String;
+ 3350 CONST 703
+ 3365 aaload              // STRING HUD Caching
+ 3366 getstatic          q.q:[Ljava/lang/String;
+ 3369 CONST 704
+ 3384 aaload              // STRING hudCaching
+ 3385 invokespecial      I.<init>:(LD;LM;Ljava/lang/String;Ljava/lang/String;)V
+ 3388 invokestatic       qy.pE:()Z
+ 3391 invokevirtual      I.s:(Z)LbP;
+ 3394 putfield           D.aU:LbP;
+ 3397 aload_0            
+ 3398 new                J
+ 3401 dup                
+ 3402 aload_0            
+ 3403 aload_0            
+ 3404 getstatic          q.q:[Ljava/lang/String;
+ 3407 CONST 705
+ 3422 aaload              // STRING Framelimit in HUD Caching
+ 3423 getstatic          q.q:[Ljava/lang/String;
+ 3426 CONST 706
+ 3441 aaload              // STRING limitHUD
+ 3442 invokespecial      J.<init>:(LD;LM;Ljava/lang/String;Ljava/lang/String;)V
+ 3445 CONST 60
+ 3452 invokestatic       java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+ 3455 invokevirtual      J.q:(Ljava/lang/Number;)LbP;
+ 3458 CONST 20
+ 3465 CONST 240
+ 3472 CONST 1
+ 3479 invokevirtual      bP.t:(III)LbP;
+ 3482 putfield           D.be:LbP;
+ 3513 aload_0            
+ 3514 new                bP
+ 3517 dup                
+ 3518 aload_0            
+ 3519 getstatic          q.q:[Ljava/lang/String;
+ 3522 CONST 708
+ 3537 aaload              // STRING Alternate DNS resolver
+ 3538 getstatic          q.q:[Ljava/lang/String;
+ 3541 CONST 709
+ 3556 aaload              // STRING alternateDNStest
+ 3557 invokespecial      bP.<init>:(LM;Ljava/lang/String;Ljava/lang/String;)V
+ 3560 CONST 1
+ 3567 invokevirtual      bP.s:(Z)LbP;
+ 3570 putfield           D.bp:LbP;
+ 3573 aload_0            
+ 3574 new                bP
+ 3577 dup                
+ 3578 aload_0            
+ 3579 getstatic          q.q:[Ljava/lang/String;
+ 3582 CONST 710
+ 3597 aaload              // STRING Fallback DNS resolver
+ 3598 getstatic          q.q:[Ljava/lang/String;
+ 3601 CONST 711
+ 3616 aaload              // STRING fallbackDNStest
+ 3617 invokespecial      bP.<init>:(LM;Ljava/lang/String;Ljava/lang/String;)V
+ 3620 CONST 0
+ 3627 invokevirtual      bP.s:(Z)LbP;
+ 3630 putfield           D.aX:LbP;
+
+METHOD O ()I
+    0 invokestatic       java/awt/GraphicsEnvironment.isHeadless:()Z
+    3 ifeq               14
+    6 CONST 60
+   13 ireturn            
+   14 invokestatic       java/awt/GraphicsEnvironment.getLocalGraphicsEnvironment:()Ljava/awt/GraphicsEnvironment;
+   17 invokevirtual      java/awt/GraphicsEnvironment.getScreenDevices:()[Ljava/awt/GraphicsDevice;
+   20 CONST 0
+   25 aaload             
+   26 invokevirtual      java/awt/GraphicsDevice.getDisplayMode:()Ljava/awt/DisplayMode;
+   29 invokevirtual      java/awt/DisplayMode.getRefreshRate:()I
+   32 istore_1           
+   33 iload_1            
+   34 ifne               45
+   37 CONST 60
+   44 istore_1           
+   45 iload_1            
+   46 ireturn            
+
+CLASS nM SHA256 419b2d32bf612840746f2c7a8189224a043bf3ba0d0c07ed0d0a5fb61bc35f4b
+
+METHOD r (Los;)V [EXCERPT [(0, 104)]]
+    0 aload_1            
+    1 ifnull             104
+    4 aload_1            
+    5 instanceof         ow
+    8 ifeq               17
+   11 invokestatic       Xv.adT:()Z
+   14 ifeq               104
+   17 aload_1            
+   18 invokevirtual      os.nK:()I
+   21 istore_2           
+   22 aload_1            
+   23 invokevirtual      os.nU:()F
+   26 CONST 1
+   27 fcmpl              
+   28 ifeq               35
+   31 CONST 0
+   32 goto               36
+   35 CONST 1
+   36 istore_3           
+   37 aload_0            
+   38 getfield           nM.aeO:[[Ljava/util/List;
+   41 iload_2            
+   42 aaload             
+   43 iload_3            
+   44 aaload             
+   45 invokeinterface    java/util/List.size:()I 0100
+   50 istore             4
+   52 iload              4
+   54 ifeq               89
+   57 iload              4
+   59 invokestatic       acQ.asg:()LacQ;
+   62 invokevirtual      acQ.arZ:()LD;
+   65 getfield           D.bC:LbP;
+   68 invokevirtual      bP.bU:()I
+   71 if_icmplt          89
+   74 aload_0            
+   75 getfield           nM.aeO:[[Ljava/util/List;
+   78 iload_2            
+   79 aaload             
+   80 iload_3            
+   81 aaload             
+   82 CONST 0
+   83 invokeinterface    java/util/List.remove:(I)Ljava/lang/Object; 0200
+   88 pop                
+   89 aload_0            
+   90 getfield           nM.aeO:[[Ljava/util/List;
+   93 iload_2            
+   94 aaload             
+   95 iload_3            
+   96 aaload             
+   97 aload_1            
+   98 invokeinterface    java/util/List.add:(Ljava/lang/Object;)Z 0200
+  103 pop                
+  104 return             
+
+CLASS nm SHA256 c7e8e7d3322edb1302a4b649839ba787821206d08c1d56d1e77e4333faf6826b
+
+METHOD k (III)V [EXCERPT [(0, 110)]]
+    0 CONST 16
+    2 istore             4
+    4 new                java/util/Random
+    7 dup                
+    8 invokespecial      java/util/Random.<init>:()V
+   11 astore             5
+   13 aload_0            
+   14 getfield           nm.adi:Lir;
+   17 getfield           ir.Ft:Ljp;
+   20 invokevirtual      jp.zd:()LHv;
+   23 astore             6
+   25 aload_0            
+   26 getfield           nm.adi:Lir;
+   29 getfield           ir.Gu:Lng;
+   32 invokevirtual      ng.mM:()LRw;
+   35 getstatic          Rw.bZO:LRw;
+   38 if_acmpne          64
+   41 aload              6
+   43 ifnull             64
+   46 aload              6
+   48 invokevirtual      Hv.eF:()LFK;
+   51 invokestatic       cU.q:(LFK;)LcU;
+   54 getstatic          Ey.bjv:LcU;
+   57 if_acmpne          64
+   60 CONST 1
+   61 goto               65
+   64 CONST 0
+   65 istore             7
+   67 aload_0            
+   68 getfield           nm.adg:LXm;
+   71 astore             8
+   73 aload_0            
+   74 getfield           nm.adi:Lir;
+   77 getfield           ir.Gk:LacQ;
+   80 invokevirtual      acQ.arZ:()LD;
+   83 getfield           D.aD:LbP;
+   86 invokevirtual      bP.ak:()Z
+   89 ifeq               97
+   92 CONST 100
+   94 goto               100
+   97 CONST 1000
+  100 istore             9
+  102 CONST 0
+  103 istore             10
+  105 iload              10
+  107 iload              9
+  109 if_icmpge          275
+
+CLASS lE SHA256 2012f4166d855ab3d616cf4423b543915b7925a1b5a762902db7589aef31700b
+
+METHOD bp (I)Z
+    0 aload_0            
+    1 getfield           lE.B:Lir;
+    4 getfield           ir.Ft:Ljp;
+    7 getfield           jp.bgf:LEh;
+   10 invokevirtual      Eh.GM:()LHv;
+   13 ifnonnull          75
+   16 aload_0            
+   17 getfield           lE.Vw:LFC;
+   20 ifnull             75
+   23 CONST 0
+   24 istore_2           
+   25 iload_2            
+   26 CONST 9
+   28 if_icmpge          75
+   31 iload_1            
+   32 aload_0            
+   33 getfield           lE.B:Lir;
+   36 getfield           ir.Gv:Lwj;
+   39 getfield           wj.aEF:[Lwn;
+   42 iload_2            
+   43 aaload             
+   44 invokevirtual      wn.ck:()I
+   47 if_icmpne          69
+   50 aload_0            
+   51 aload_0            
+   52 getfield           lE.Vw:LFC;
+   55 aload_0            
+   56 getfield           lE.Vw:LFC;
+   59 getfield           FC.bse:I
+   62 iload_2            
+   63 CONST 2
+   64 invokevirtual      lE.q:(LFC;III)V
+   67 CONST 1
+   68 ireturn            
+   69 iinc               0201
+   72 goto               25
+   75 CONST 0
+   76 ireturn            
+
+METHOD q (III)V [EXCERPT [(538, 571)]]
+  538 iload_3            
+  539 CONST 2
+  540 if_icmple          571
+  543 aload_0            
+  544 getfield           lE.B:Lir;
+  547 getfield           ir.Gk:LacQ;
+  550 invokevirtual      acQ.arZ:()LD;
+  553 getfield           D.bG:LbP;
+  556 invokevirtual      bP.ak:()Z
+  559 ifeq               571
+  562 aload_0            
+  563 CONST 156
+  565 iload_3            
+  566 iadd               
+  567 invokevirtual      lE.bp:(I)Z
+  570 pop                
+  571 return             
+
+CLASS ir SHA256 039df8e43227cedd8280a354d77b7923d704a8e1b42819f43270128bf552562a
+
+METHOD gw ()V [EXCERPT [(1553, 1624)]]
+ 1553 aload_0            
+ 1554 getfield           ir.FP:Z
+ 1557 ifne               1585
+ 1560 invokestatic       org/lwjgl/opengl/Display.isActive:()Z
+ 1563 ifne               1585
+ 1566 aload_0            
+ 1567 getfield           ir.Gk:LacQ;
+ 1570 invokevirtual      acQ.arZ:()LD;
+ 1573 getfield           D.by:LbP;
+ 1576 invokevirtual      bP.bU:()I
+ 1579 invokestatic       org/lwjgl/opengl/Display.sync:(I)V
+ 1582 goto               1624
+ 1585 aload_0            
+ 1586 invokespecial      ir.go:()Z
+ 1589 ifeq               1624
+ 1592 aload_0            
+ 1593 getfield           ir.Gg:LMl;
+ 1596 getstatic          e.q:[Ljava/lang/String;
+ 1599 CONST 198
+ 1606 aaload              // STRING fpslimit_wait
+ 1607 invokevirtual      Ml.cc:(Ljava/lang/String;)V
+ 1610 aload_0            
+ 1611 invokespecial      ir.gA:()I
+ 1614 invokestatic       org/lwjgl/opengl/Display.sync:(I)V
+ 1617 aload_0            
+ 1618 getfield           ir.Gg:LMl;
+ 1621 invokevirtual      Ml.OA:()V
+ 1624 aload_0            
+
+METHOD gA ()I
+    0 aload_0            
+    1 getfield           ir.Gc:Lnm;
+    4 ifnonnull          30
+    7 aload_0            
+    8 getfield           ir.FL:LkB;
+   11 ifnull             30
+   14 aload_0            
+   15 getfield           ir.Gk:LacQ;
+   18 invokevirtual      acQ.arZ:()LD;
+   21 getfield           D.aK:LbP;
+   24 invokevirtual      bP.bU:()I
+   27 goto               37
+   30 aload_0            
+   31 getfield           ir.Gv:Lwj;
+   34 getfield           wj.aFW:I
+   37 ireturn            
+
+METHOD hC ()V [EXCERPT [(641, 688), (2349, 2400)]]
+  641 aload_0            
+  642 getfield           ir.Gk:LacQ;
+  645 invokevirtual      acQ.arX:()LC;
+  648 invokevirtual      C.N:()LaS;
+  651 iload              4
+  653 i2d                
+  654 invokevirtual      aS.q:(D)Z
+  657 ifne               688
+  660 aload_0            
+  661 getfield           ir.Gk:LacQ;
+  664 invokevirtual      acQ.arZ:()LD;
+  667 getfield           D.aT:LbP;
+  670 invokevirtual      bP.ak:()Z
+  673 ifeq               688
+  676 aload_0            
+  677 getfield           ir.Ft:Ljp;
+  680 getfield           jp.bgf:LEh;
+  683 iload              4
+  685 invokevirtual      Eh.eL:(I)V
+  688 aload_0            
+ 2351 invokevirtual      acQ.arZ:()LD;
+ 2354 getfield           D.bF:LbP;
+ 2357 invokevirtual      bP.ak:()Z
+ 2360 ifeq               2400
+ 2363 aload_0            
+ 2364 getfield           ir.Gc:Lnm;
+ 2367 aload_0            
+ 2368 getfield           ir.Ft:Ljp;
+ 2371 getfield           jp.aPA:D
+ 2374 invokestatic       PN.n:(D)I
+ 2377 aload_0            
+ 2378 getfield           ir.Ft:Ljp;
+ 2381 getfield           jp.aPV:D
+ 2384 invokestatic       PN.n:(D)I
+ 2387 aload_0            
+ 2388 getfield           ir.Ft:Ljp;
+ 2391 getfield           jp.aPU:D
+ 2394 invokestatic       PN.n:(D)I
+ 2397 invokevirtual      nm.k:(III)V
+ 2400 aload_0            
+
+CLASS nh SHA256 6a07c664c3a863ae31c22c40712ecf3b25044f6f12268454aa3a5ba42c5b259c
+
+METHOD ae (Ljava/lang/String;)[Ljava/lang/String; [EXCERPT [(0, 190)]]
+    0 getstatic          e.q:[Ljava/lang/String;
+    3 CONST 314
+   10 aaload              // STRING com.sun.jndi.dns.DnsContextFactory
+   11 invokestatic       java/lang/Class.forName:(Ljava/lang/String;)Ljava/lang/Class;
+   14 pop                
+   15 new                java/util/Hashtable
+   18 dup                
+   19 invokespecial      java/util/Hashtable.<init>:()V
+   22 astore_1           
+   23 aload_1            
+   24 getstatic          e.q:[Ljava/lang/String;
+   27 CONST 315
+   34 aaload              // STRING java.naming.factory.initial
+   35 getstatic          e.q:[Ljava/lang/String;
+   38 CONST 314
+   45 aaload              // STRING com.sun.jndi.dns.DnsContextFactory
+   46 invokevirtual      java/util/Hashtable.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+   49 pop                
+   50 aload_1            
+   51 getstatic          e.q:[Ljava/lang/String;
+   54 CONST 316
+   61 aaload              // STRING java.naming.provider.url
+   62 getstatic          nh.acG:LacQ;
+   65 invokevirtual      acQ.arZ:()LD;
+   68 getfield           D.bp:LbP;
+   71 invokevirtual      bP.ak:()Z
+   74 ifeq               91
+   77 getstatic          e.q:[Ljava/lang/String;
+   80 CONST 317
+   87 aaload              // STRING dns://1.1.1.1
+   88 goto               102
+   91 getstatic          e.q:[Ljava/lang/String;
+   94 CONST 318
+  101 aaload              // STRING dns:
+  102 invokevirtual      java/util/Hashtable.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  105 pop                
+  106 aload_1            
+  107 getstatic          e.q:[Ljava/lang/String;
+  110 CONST 319
+  117 aaload              // STRING com.sun.jndi.dns.timeout.retries
+  118 getstatic          e.q:[Ljava/lang/String;
+  121 CONST 320
+  128 aaload              // STRING UNKNOWN
+  129 invokevirtual      java/util/Hashtable.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  132 pop                
+  133 new                javax/naming/directory/InitialDirContext
+  136 dup                
+  137 aload_1            
+  138 invokespecial      javax/naming/directory/InitialDirContext.<init>:(Ljava/util/Hashtable;)V
+  141 astore_2           
+  142 aload_2            
+  143 new                java/lang/StringBuilder
+  146 dup                
+  147 invokespecial      java/lang/StringBuilder.<init>:()V
+  150 getstatic          e.q:[Ljava/lang/String;
+  153 CONST 321
+  160 aaload              // STRING _minecraft._tcp.
+  161 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  164 aload_0            
+  165 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  168 invokevirtual      java/lang/StringBuilder.toString:()Ljava/lang/String;
+  171 CONST 1
+  172 anewarray          java/lang/String
+  175 dup                
+  176 CONST 0
+  177 getstatic          e.q:[Ljava/lang/String;
+  180 CONST 322
+  187 aaload              // STRING SRV
+  188 aastore            
+  189 invokeinterface    javax/naming/directory/DirContext.getAttributes:(Ljava/lang/String;[Ljava/lang/String;)Ljavax/naming/directory/Attributes; 0300
+
+CLASS Qs SHA256 a9958805f47705c78d07715c50473b2a3e500cf8e9f0ee0e1eadcb34a4e21001
+
+METHOD <clinit> ()V [EXCERPT [(44, 63)]]
+   44 new                Qs
+   47 dup                
+   48 getstatic          u.q:[Ljava/lang/String;
+   51 CONST 789
+   58 aaload              // STRING WINDOWS
+   59 CONST 2
+   60 invokespecial      Qs.<init>:(Ljava/lang/String;I)V
+   63 putstatic          Qs.bVQ:LQs;

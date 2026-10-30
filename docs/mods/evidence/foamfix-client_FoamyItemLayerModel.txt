@@ -1,0 +1,385 @@
+Compiled from "FoamyItemLayerModel.java"
+public class pl.asie.foamfix.client.FoamyItemLayerModel implements net.minecraftforge.client.model.IRetexturableModel<net.minecraftforge.client.model.ItemLayerModel> {
+  private static final net.minecraft.util.ResourceLocation MISSINGNO;
+    descriptor: Lnet/minecraft/util/ResourceLocation;
+
+  private static final java.lang.invoke.MethodHandle BUILD_QUAD;
+    descriptor: Ljava/lang/invoke/MethodHandle;
+
+  private static final java.lang.invoke.MethodHandle TEXTURES_GET;
+    descriptor: Ljava/lang/invoke/MethodHandle;
+
+  private final net.minecraftforge.client.model.ItemLayerModel parent;
+    descriptor: Lnet/minecraftforge/client/model/ItemLayerModel;
+
+  public pl.asie.foamfix.client.FoamyItemLayerModel(net.minecraftforge.client.model.ItemLayerModel);
+    descriptor: (Lnet/minecraftforge/client/model/ItemLayerModel;)V
+    Code:
+       0: aload_0
+       1: invokespecial #46                 // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: aload_1
+       6: putfield      #48                 // Field parent:Lnet/minecraftforge/client/model/ItemLayerModel;
+       9: return
+
+  public net.minecraftforge.client.model.IModel retexture(com.google.common.collect.ImmutableMap<java.lang.String, java.lang.String>);
+    descriptor: (Lcom/google/common/collect/ImmutableMap;)Lnet/minecraftforge/client/model/IModel;
+    Code:
+       0: new           #2                  // class pl/asie/foamfix/client/FoamyItemLayerModel
+       3: dup
+       4: aload_0
+       5: getfield      #48                 // Field parent:Lnet/minecraftforge/client/model/ItemLayerModel;
+       8: aload_1
+       9: invokevirtual #56                 // Method net/minecraftforge/client/model/ItemLayerModel.retexture:(Lcom/google/common/collect/ImmutableMap;)Lnet/minecraftforge/client/model/IModel;
+      12: checkcast     #54                 // class net/minecraftforge/client/model/ItemLayerModel
+      15: invokespecial #58                 // Method "<init>":(Lnet/minecraftforge/client/model/ItemLayerModel;)V
+      18: areturn
+
+  public java.util.Collection<net.minecraft.util.ResourceLocation> getDependencies();
+    descriptor: ()Ljava/util/Collection;
+    Code:
+       0: aload_0
+       1: getfield      #48                 // Field parent:Lnet/minecraftforge/client/model/ItemLayerModel;
+       4: invokevirtual #65                 // Method net/minecraftforge/client/model/ItemLayerModel.getDependencies:()Ljava/util/Collection;
+       7: areturn
+
+  public java.util.Collection<net.minecraft.util.ResourceLocation> getTextures();
+    descriptor: ()Ljava/util/Collection;
+    Code:
+       0: aload_0
+       1: getfield      #48                 // Field parent:Lnet/minecraftforge/client/model/ItemLayerModel;
+       4: invokevirtual #68                 // Method net/minecraftforge/client/model/ItemLayerModel.getTextures:()Ljava/util/Collection;
+       7: areturn
+
+  public net.minecraftforge.client.model.IFlexibleBakedModel bake(net.minecraftforge.client.model.IModelState, net.minecraft.client.renderer.vertex.VertexFormat, com.google.common.base.Function<net.minecraft.util.ResourceLocation, net.minecraft.client.renderer.texture.TextureAtlasSprite>);
+    descriptor: (Lnet/minecraftforge/client/model/IModelState;Lnet/minecraft/client/renderer/vertex/VertexFormat;Lcom/google/common/base/Function;)Lnet/minecraftforge/client/model/IFlexibleBakedModel;
+    Code:
+       0: aload_0
+       1: getfield      #48                 // Field parent:Lnet/minecraftforge/client/model/ItemLayerModel;
+       4: aload_1
+       5: aload_2
+       6: aload_3
+       7: invokestatic  #73                 // Method bake:(Lnet/minecraftforge/client/model/ItemLayerModel;Lnet/minecraftforge/client/model/IModelState;Lnet/minecraft/client/renderer/vertex/VertexFormat;Lcom/google/common/base/Function;)Lnet/minecraftforge/client/model/IFlexibleBakedModel;
+      10: areturn
+
+  public static net.minecraftforge.client.model.IFlexibleBakedModel bake(net.minecraftforge.client.model.ItemLayerModel, net.minecraftforge.client.model.IModelState, net.minecraft.client.renderer.vertex.VertexFormat, com.google.common.base.Function<net.minecraft.util.ResourceLocation, net.minecraft.client.renderer.texture.TextureAtlasSprite>);
+    descriptor: (Lnet/minecraftforge/client/model/ItemLayerModel;Lnet/minecraftforge/client/model/IModelState;Lnet/minecraft/client/renderer/vertex/VertexFormat;Lcom/google/common/base/Function;)Lnet/minecraftforge/client/model/IFlexibleBakedModel;
+    Code:
+       0: invokestatic  #86                 // Method com/google/common/collect/ImmutableList.builder:()Lcom/google/common/collect/ImmutableList$Builder;
+       3: astore        4
+       5: aload_1
+       6: invokestatic  #92                 // Method com/google/common/base/Optional.absent:()Lcom/google/common/base/Optional;
+       9: invokeinterface #98,  2           // InterfaceMethod net/minecraftforge/client/model/IModelState.apply:(Lcom/google/common/base/Optional;)Lcom/google/common/base/Optional;
+      14: astore        5
+      16: getstatic     #100                // Field TEXTURES_GET:Ljava/lang/invoke/MethodHandle;
+      19: aload_0
+      20: invokevirtual #106                // Method java/lang/invoke/MethodHandle.invoke:(Lnet/minecraftforge/client/model/ItemLayerModel;)Ljava/util/List;
+      23: astore        6
+      25: goto          40
+      28: astore        7
+      30: getstatic     #113                // Field net/minecraftforge/client/model/ItemLayerModel.instance:Lnet/minecraftforge/client/model/ItemLayerModel;
+      33: aload_1
+      34: aload_2
+      35: aload_3
+      36: invokevirtual #115                // Method net/minecraftforge/client/model/ItemLayerModel.bake:(Lnet/minecraftforge/client/model/IModelState;Lnet/minecraft/client/renderer/vertex/VertexFormat;Lcom/google/common/base/Function;)Lnet/minecraftforge/client/model/IFlexibleBakedModel;
+      39: areturn
+      40: new           #16                 // class com/google/common/collect/ImmutableList$Builder
+      43: dup
+      44: invokespecial #118                // Method com/google/common/collect/ImmutableList$Builder."<init>":()V
+      47: astore        7
+      49: getstatic     #120                // Field BUILD_QUAD:Ljava/lang/invoke/MethodHandle;
+      52: ifnull        198
+      55: iconst_0
+      56: istore        8
+      58: iload         8
+      60: aload         6
+      62: invokeinterface #124,  1          // InterfaceMethod java/util/List.size:()I
+      67: if_icmpge     195
+      70: aload_3
+      71: aload         6
+      73: iload         8
+      75: invokeinterface #128,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+      80: invokeinterface #131,  2          // InterfaceMethod com/google/common/base/Function.apply:(Ljava/lang/Object;)Ljava/lang/Object;
+      85: checkcast     #133                // class net/minecraft/client/renderer/texture/TextureAtlasSprite
+      88: astore        9
+      90: aload         7
+      92: aload         9
+      94: invokevirtual #137                // Method com/google/common/collect/ImmutableList$Builder.add:(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
+      97: pop
+      98: aload         4
+     100: getstatic     #120                // Field BUILD_QUAD:Ljava/lang/invoke/MethodHandle;
+     103: aload_2
+     104: aload         5
+     106: getstatic     #143                // Field net/minecraft/util/EnumFacing.SOUTH:Lnet/minecraft/util/EnumFacing;
+     109: iload         8
+     111: fconst_0
+     112: fconst_0
+     113: ldc           #144                // float 0.53125f
+     115: aload         9
+     117: invokevirtual #148                // Method net/minecraft/client/renderer/texture/TextureAtlasSprite.func_94209_e:()F
+     120: aload         9
+     122: invokevirtual #151                // Method net/minecraft/client/renderer/texture/TextureAtlasSprite.func_94210_h:()F
+     125: fconst_1
+     126: fconst_0
+     127: ldc           #144                // float 0.53125f
+     129: aload         9
+     131: invokevirtual #154                // Method net/minecraft/client/renderer/texture/TextureAtlasSprite.func_94212_f:()F
+     134: aload         9
+     136: invokevirtual #151                // Method net/minecraft/client/renderer/texture/TextureAtlasSprite.func_94210_h:()F
+     139: fconst_1
+     140: fconst_1
+     141: ldc           #144                // float 0.53125f
+     143: aload         9
+     145: invokevirtual #154                // Method net/minecraft/client/renderer/texture/TextureAtlasSprite.func_94212_f:()F
+     148: aload         9
+     150: invokevirtual #157                // Method net/minecraft/client/renderer/texture/TextureAtlasSprite.func_94206_g:()F
+     153: fconst_0
+     154: fconst_1
+     155: ldc           #144                // float 0.53125f
+     157: aload         9
+     159: invokevirtual #148                // Method net/minecraft/client/renderer/texture/TextureAtlasSprite.func_94209_e:()F
+     162: aload         9
+     164: invokevirtual #157                // Method net/minecraft/client/renderer/texture/TextureAtlasSprite.func_94206_g:()F
+     167: invokevirtual #161                // Method java/lang/invoke/MethodHandle.invokeExact:(Lnet/minecraft/client/renderer/vertex/VertexFormat;Lcom/google/common/base/Optional;Lnet/minecraft/util/EnumFacing;IFFFFFFFFFFFFFFFFFFFF)Lnet/minecraft/client/renderer/block/model/BakedQuad;
+     170: invokevirtual #137                // Method com/google/common/collect/ImmutableList$Builder.add:(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
+     173: pop
+     174: goto          189
+     177: astore        10
+     179: new           #163                // class java/lang/RuntimeException
+     182: dup
+     183: aload         10
+     185: invokespecial #166                // Method java/lang/RuntimeException."<init>":(Ljava/lang/Throwable;)V
+     188: athrow
+     189: iinc          8, 1
+     192: goto          58
+     195: goto          301
+     198: iconst_0
+     199: istore        8
+     201: iload         8
+     203: aload         6
+     205: invokeinterface #124,  1          // InterfaceMethod java/util/List.size:()I
+     210: if_icmpge     301
+     213: aload_3
+     214: aload         6
+     216: iload         8
+     218: invokeinterface #128,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+     223: invokeinterface #131,  2          // InterfaceMethod com/google/common/base/Function.apply:(Ljava/lang/Object;)Ljava/lang/Object;
+     228: checkcast     #133                // class net/minecraft/client/renderer/texture/TextureAtlasSprite
+     231: astore        9
+     233: getstatic     #113                // Field net/minecraftforge/client/model/ItemLayerModel.instance:Lnet/minecraftforge/client/model/ItemLayerModel;
+     236: iload         8
+     238: aload         9
+     240: aload_2
+     241: aload         5
+     243: invokevirtual #170                // Method net/minecraftforge/client/model/ItemLayerModel.getQuadsForSprite:(ILnet/minecraft/client/renderer/texture/TextureAtlasSprite;Lnet/minecraft/client/renderer/vertex/VertexFormat;Lcom/google/common/base/Optional;)Lcom/google/common/collect/ImmutableList;
+     246: invokevirtual #174                // Method com/google/common/collect/ImmutableList.iterator:()Lcom/google/common/collect/UnmodifiableIterator;
+     249: astore        10
+     251: aload         10
+     253: invokeinterface #180,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+     258: ifeq          295
+     261: aload         10
+     263: invokeinterface #184,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+     268: checkcast     #186                // class net/minecraft/client/renderer/block/model/BakedQuad
+     271: astore        11
+     273: aload         11
+     275: invokevirtual #190                // Method net/minecraft/client/renderer/block/model/BakedQuad.func_178210_d:()Lnet/minecraft/util/EnumFacing;
+     278: getstatic     #143                // Field net/minecraft/util/EnumFacing.SOUTH:Lnet/minecraft/util/EnumFacing;
+     281: if_acmpne     292
+     284: aload         4
+     286: aload         11
+     288: invokevirtual #137                // Method com/google/common/collect/ImmutableList$Builder.add:(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
+     291: pop
+     292: goto          251
+     295: iinc          8, 1
+     298: goto          201
+     301: aload_3
+     302: aload         6
+     304: invokeinterface #193,  1          // InterfaceMethod java/util/List.isEmpty:()Z
+     309: ifeq          318
+     312: getstatic     #195                // Field MISSINGNO:Lnet/minecraft/util/ResourceLocation;
+     315: goto          329
+     318: aload         6
+     320: iconst_0
+     321: invokeinterface #128,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+     326: checkcast     #197                // class net/minecraft/util/ResourceLocation
+     329: invokeinterface #131,  2          // InterfaceMethod com/google/common/base/Function.apply:(Ljava/lang/Object;)Ljava/lang/Object;
+     334: checkcast     #133                // class net/minecraft/client/renderer/texture/TextureAtlasSprite
+     337: astore        8
+     339: aload_1
+     340: invokestatic  #201                // Method net/minecraftforge/client/model/IPerspectiveAwareModel$MapWrapper.getTransforms:(Lnet/minecraftforge/client/model/IModelState;)Lcom/google/common/collect/ImmutableMap;
+     343: astore        9
+     345: new           #10                 // class pl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel
+     348: dup
+     349: aload         4
+     351: invokevirtual #205                // Method com/google/common/collect/ImmutableList$Builder.build:()Lcom/google/common/collect/ImmutableList;
+     354: aload         8
+     356: aload         9
+     358: aload         7
+     360: invokevirtual #205                // Method com/google/common/collect/ImmutableList$Builder.build:()Lcom/google/common/collect/ImmutableList;
+     363: aload_2
+     364: aload         5
+     366: invokespecial #208                // Method pl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel."<init>":(Lcom/google/common/collect/ImmutableList;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;Lcom/google/common/collect/ImmutableMap;Ljava/util/List;Lnet/minecraft/client/renderer/vertex/VertexFormat;Lcom/google/common/base/Optional;)V
+     369: invokestatic  #212                // Method pl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel.access$500:(Lpl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel;)Lnet/minecraftforge/client/model/IFlexibleBakedModel;
+     372: areturn
+    Exception table:
+       from    to  target type
+          16    25    28   Class java/lang/Throwable
+          98   174   177   Class java/lang/Throwable
+
+  public net.minecraftforge.client.model.IModelState getDefaultState();
+    descriptor: ()Lnet/minecraftforge/client/model/IModelState;
+    Code:
+       0: invokestatic  #240                // Method net/minecraftforge/client/model/TRSRTransformation.identity:()Lnet/minecraftforge/client/model/TRSRTransformation;
+       3: areturn
+
+  static {};
+    descriptor: ()V
+    Code:
+       0: new           #197                // class net/minecraft/util/ResourceLocation
+       3: dup
+       4: ldc           #245                // String missingno
+       6: invokespecial #248                // Method net/minecraft/util/ResourceLocation."<init>":(Ljava/lang/String;)V
+       9: putstatic     #195                // Field MISSINGNO:Lnet/minecraft/util/ResourceLocation;
+      12: aconst_null
+      13: astore_0
+      14: invokestatic  #252                // Method java/lang/invoke/MethodHandles.lookup:()Ljava/lang/invoke/MethodHandles$Lookup;
+      17: ldc           #54                 // class net/minecraftforge/client/model/ItemLayerModel
+      19: aconst_null
+      20: iconst_1
+      21: anewarray     #254                // class java/lang/String
+      24: dup
+      25: iconst_0
+      26: ldc_w         #256                // String buildQuad
+      29: aastore
+      30: bipush        24
+      32: anewarray     #258                // class java/lang/Class
+      35: dup
+      36: iconst_0
+      37: ldc           #108                // class net/minecraft/client/renderer/vertex/VertexFormat
+      39: aastore
+      40: dup
+      41: iconst_1
+      42: ldc           #88                 // class com/google/common/base/Optional
+      44: aastore
+      45: dup
+      46: iconst_2
+      47: ldc           #139                // class net/minecraft/util/EnumFacing
+      49: aastore
+      50: dup
+      51: iconst_3
+      52: getstatic     #264                // Field java/lang/Integer.TYPE:Ljava/lang/Class;
+      55: aastore
+      56: dup
+      57: iconst_4
+      58: getstatic     #267                // Field java/lang/Float.TYPE:Ljava/lang/Class;
+      61: aastore
+      62: dup
+      63: iconst_5
+      64: getstatic     #267                // Field java/lang/Float.TYPE:Ljava/lang/Class;
+      67: aastore
+      68: dup
+      69: bipush        6
+      71: getstatic     #267                // Field java/lang/Float.TYPE:Ljava/lang/Class;
+      74: aastore
+      75: dup
+      76: bipush        7
+      78: getstatic     #267                // Field java/lang/Float.TYPE:Ljava/lang/Class;
+      81: aastore
+      82: dup
+      83: bipush        8
+      85: getstatic     #267                // Field java/lang/Float.TYPE:Ljava/lang/Class;
+      88: aastore
+      89: dup
+      90: bipush        9
+      92: getstatic     #267                // Field java/lang/Float.TYPE:Ljava/lang/Class;
+      95: aastore
+      96: dup
+      97: bipush        10
+      99: getstatic     #267                // Field java/lang/Float.TYPE:Ljava/lang/Class;
+     102: aastore
+     103: dup
+     104: bipush        11
+     106: getstatic     #267                // Field java/lang/Float.TYPE:Ljava/lang/Class;
+     109: aastore
+     110: dup
+     111: bipush        12
+     113: getstatic     #267                // Field java/lang/Float.TYPE:Ljava/lang/Class;
+     116: aastore
+     117: dup
+     118: bipush        13
+     120: getstatic     #267                // Field java/lang/Float.TYPE:Ljava/lang/Class;
+     123: aastore
+     124: dup
+     125: bipush        14
+     127: getstatic     #267                // Field java/lang/Float.TYPE:Ljava/lang/Class;
+     130: aastore
+     131: dup
+     132: bipush        15
+     134: getstatic     #267                // Field java/lang/Float.TYPE:Ljava/lang/Class;
+     137: aastore
+     138: dup
+     139: bipush        16
+     141: getstatic     #267                // Field java/lang/Float.TYPE:Ljava/lang/Class;
+     144: aastore
+     145: dup
+     146: bipush        17
+     148: getstatic     #267                // Field java/lang/Float.TYPE:Ljava/lang/Class;
+     151: aastore
+     152: dup
+     153: bipush        18
+     155: getstatic     #267                // Field java/lang/Float.TYPE:Ljava/lang/Class;
+     158: aastore
+     159: dup
+     160: bipush        19
+     162: getstatic     #267                // Field java/lang/Float.TYPE:Ljava/lang/Class;
+     165: aastore
+     166: dup
+     167: bipush        20
+     169: getstatic     #267                // Field java/lang/Float.TYPE:Ljava/lang/Class;
+     172: aastore
+     173: dup
+     174: bipush        21
+     176: getstatic     #267                // Field java/lang/Float.TYPE:Ljava/lang/Class;
+     179: aastore
+     180: dup
+     181: bipush        22
+     183: getstatic     #267                // Field java/lang/Float.TYPE:Ljava/lang/Class;
+     186: aastore
+     187: dup
+     188: bipush        23
+     190: getstatic     #267                // Field java/lang/Float.TYPE:Ljava/lang/Class;
+     193: aastore
+     194: invokestatic  #273                // Method net/minecraftforge/fml/relauncher/ReflectionHelper.findMethod:(Ljava/lang/Class;Ljava/lang/Object;[Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+     197: invokevirtual #277                // Method java/lang/invoke/MethodHandles$Lookup.unreflect:(Ljava/lang/reflect/Method;)Ljava/lang/invoke/MethodHandle;
+     200: astore_0
+     201: goto          209
+     204: astore_1
+     205: aload_1
+     206: invokevirtual #280                // Method java/lang/Exception.printStackTrace:()V
+     209: aload_0
+     210: putstatic     #120                // Field BUILD_QUAD:Ljava/lang/invoke/MethodHandle;
+     213: aconst_null
+     214: astore_0
+     215: invokestatic  #252                // Method java/lang/invoke/MethodHandles.lookup:()Ljava/lang/invoke/MethodHandles$Lookup;
+     218: ldc           #54                 // class net/minecraftforge/client/model/ItemLayerModel
+     220: iconst_1
+     221: anewarray     #254                // class java/lang/String
+     224: dup
+     225: iconst_0
+     226: ldc_w         #281                // String textures
+     229: aastore
+     230: invokestatic  #285                // Method net/minecraftforge/fml/relauncher/ReflectionHelper.findField:(Ljava/lang/Class;[Ljava/lang/String;)Ljava/lang/reflect/Field;
+     233: invokevirtual #289                // Method java/lang/invoke/MethodHandles$Lookup.unreflectGetter:(Ljava/lang/reflect/Field;)Ljava/lang/invoke/MethodHandle;
+     236: astore_0
+     237: goto          245
+     240: astore_1
+     241: aload_1
+     242: invokevirtual #280                // Method java/lang/Exception.printStackTrace:()V
+     245: aload_0
+     246: putstatic     #100                // Field TEXTURES_GET:Ljava/lang/invoke/MethodHandle;
+     249: return
+    Exception table:
+       from    to  target type
+          14   201   204   Class java/lang/Exception
+         215   237   240   Class java/lang/Exception
+}

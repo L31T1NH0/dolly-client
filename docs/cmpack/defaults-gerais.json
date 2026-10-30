@@ -1,0 +1,470 @@
+{
+  "scope": "Constructor defaults only; existing configuration and later initialization may override. Enum indices are not boolean switches.",
+  "settings": [
+    {
+      "label": "Pause Menu Watermark",
+      "key": "pauseMenuWatermark",
+      "field": "D.bd",
+      "constructor_putfield_offset": 118,
+      "initial_value": true,
+      "type": "boolean"
+    },
+    {
+      "label": "Inventory Watermark",
+      "key": "inventoryWatermark",
+      "field": "D.aR",
+      "constructor_putfield_offset": 178,
+      "initial_value": true,
+      "type": "boolean"
+    },
+    {
+      "label": "Left hand mode",
+      "key": "leftHand",
+      "field": "D.bi",
+      "constructor_putfield_offset": 238,
+      "initial_value": false,
+      "type": "boolean"
+    },
+    {
+      "label": "Minimal View Bobbing",
+      "key": "minimalViewBobbing",
+      "field": "D.bu",
+      "constructor_putfield_offset": 297,
+      "initial_value": false,
+      "type": "boolean"
+    },
+    {
+      "label": "Mouse bind fix",
+      "key": "mouseBindFix",
+      "field": "D.bG",
+      "constructor_putfield_offset": 357,
+      "initial_value": true,
+      "type": "boolean"
+    },
+    {
+      "label": "Mouse delay fix",
+      "key": "mouseDelayFix",
+      "field": "D.bl",
+      "constructor_putfield_offset": 417,
+      "initial_value": true,
+      "type": "boolean"
+    },
+    {
+      "label": "Click delay fix",
+      "key": "hitDelayFix",
+      "field": "D.aN",
+      "constructor_putfield_offset": 477,
+      "initial_value": true,
+      "type": "boolean"
+    },
+    {
+      "label": "Raw Mouse Input",
+      "key": "rawMouseInput",
+      "field": "D.aS",
+      "constructor_putfield_offset": 538,
+      "initial_value": false,
+      "type": "boolean"
+    },
+    {
+      "label": "Show smooth FPS Counter",
+      "key": "smoothFpsCounter",
+      "field": "D.aJ",
+      "constructor_putfield_offset": 598,
+      "initial_value": false,
+      "type": "boolean"
+    },
+    {
+      "label": "Hide modules on Tab",
+      "key": "hideModulesOnTab",
+      "field": "D.aY",
+      "constructor_putfield_offset": 658,
+      "initial_value": false,
+      "type": "boolean"
+    },
+    {
+      "label": "Borderless Fullscreen",
+      "key": "borderlessWindow",
+      "field": "D.aW",
+      "constructor_putfield_offset": 772,
+      "initial_value": "Windows AND fullscreen resolution Default",
+      "type": "dynamic"
+    },
+    {
+      "label": "Modern Keybind Handling",
+      "key": "modernKeybindHandling",
+      "field": "D.bD",
+      "constructor_putfield_offset": 831,
+      "initial_value": true,
+      "type": "boolean"
+    },
+    {
+      "label": "Item Stitching Fix",
+      "key": "itemStitchingMode",
+      "field": "D.bz",
+      "constructor_putfield_offset": 991,
+      "initial_value": 0,
+      "type": "number_or_enum_index"
+    },
+    {
+      "label": "Inventory Mode",
+      "key": "inventoryMode",
+      "field": "D.bt",
+      "constructor_putfield_offset": 1177,
+      "initial_value": 0,
+      "type": "number_or_enum_index"
+    },
+    {
+      "label": "Transparent Background",
+      "key": "transparentBackground",
+      "field": "D.bI",
+      "constructor_putfield_offset": 1237,
+      "initial_value": false,
+      "type": "boolean"
+    },
+    {
+      "label": "Blur Background",
+      "key": "blurBackground",
+      "field": "D.bq",
+      "constructor_putfield_offset": 1297,
+      "initial_value": false,
+      "type": "boolean"
+    },
+    {
+      "label": "Blur Radius",
+      "key": "blurRadius",
+      "field": "D.aI",
+      "constructor_putfield_offset": 1368,
+      "initial_value": 5.0,
+      "type": "number_or_enum_index"
+    },
+    {
+      "label": "Blur Animation Speed",
+      "key": "blurAnimationSpeed",
+      "field": "D.aP",
+      "constructor_putfield_offset": 1439,
+      "initial_value": 15.0,
+      "type": "number_or_enum_index"
+    },
+    {
+      "label": "Hotbar Scrolling",
+      "key": "hotbarScrolling",
+      "field": "D.aT",
+      "constructor_putfield_offset": 1527,
+      "initial_value": true,
+      "type": "boolean"
+    },
+    {
+      "label": "Lazy Chunk Loading",
+      "key": "chunkUpdates",
+      "field": "D.br",
+      "constructor_putfield_offset": 1796,
+      "initial_value": 0,
+      "type": "number_or_enum_index"
+    },
+    {
+      "label": "FPS limit on inactive",
+      "key": "limitOnInactive",
+      "field": "D.by",
+      "constructor_putfield_offset": 1883,
+      "initial_value": 30,
+      "type": "number_or_enum_index"
+    },
+    {
+      "label": "FPS limit in Main Menu",
+      "key": "limitInMainMenu",
+      "field": "D.aK",
+      "constructor_putfield_offset": 1967,
+      "initial_value": "primary display refresh rate; fallback 60",
+      "type": "dynamic"
+    },
+    {
+      "label": "Show enchant glint",
+      "key": "showEnchantGlint",
+      "field": "D.bo",
+      "constructor_putfield_offset": 2027,
+      "initial_value": true,
+      "type": "boolean"
+    },
+    {
+      "label": "Digging particles",
+      "key": "diggingParticles",
+      "field": "D.aZ",
+      "constructor_putfield_offset": 2087,
+      "initial_value": true,
+      "type": "boolean"
+    },
+    {
+      "label": "Show achievements",
+      "key": "showAchievements",
+      "field": "D.bB",
+      "constructor_putfield_offset": 2146,
+      "initial_value": false,
+      "type": "boolean"
+    },
+    {
+      "label": "Show hurt camera",
+      "key": "showHurtCamera",
+      "field": "D.aM",
+      "constructor_putfield_offset": 2206,
+      "initial_value": true,
+      "type": "boolean"
+    },
+    {
+      "label": "Show fire on players",
+      "key": "showFireOnPlayers",
+      "field": "D.aH",
+      "constructor_putfield_offset": 2266,
+      "initial_value": true,
+      "type": "boolean"
+    },
+    {
+      "label": "Show fire on hud",
+      "key": "showFireOnHud",
+      "field": "D.bx",
+      "constructor_putfield_offset": 2326,
+      "initial_value": true,
+      "type": "boolean"
+    },
+    {
+      "label": "Show arrows on players",
+      "key": "showArrowsOnPlayers",
+      "field": "D.bE",
+      "constructor_putfield_offset": 2386,
+      "initial_value": true,
+      "type": "boolean"
+    },
+    {
+      "label": "Show arrows on ground",
+      "key": "showArrowsOnGround",
+      "field": "D.aV",
+      "constructor_putfield_offset": 2446,
+      "initial_value": true,
+      "type": "boolean"
+    },
+    {
+      "label": "Show end portals",
+      "key": "showEndPortals",
+      "field": "D.bH",
+      "constructor_putfield_offset": 2503,
+      "initial_value": true,
+      "type": "boolean"
+    },
+    {
+      "label": "Show item frames",
+      "key": "showItemFrames",
+      "field": "D.bk",
+      "constructor_putfield_offset": 2562,
+      "initial_value": true,
+      "type": "boolean"
+    },
+    {
+      "label": "Render foliage",
+      "key": "renderFoliage",
+      "field": "D.bm",
+      "constructor_putfield_offset": 2623,
+      "initial_value": true,
+      "type": "boolean"
+    },
+    {
+      "label": "Asynchronous screenshot",
+      "key": "asynchronousScreenshot",
+      "field": "D.bj",
+      "constructor_putfield_offset": 2683,
+      "initial_value": false,
+      "type": "boolean"
+    },
+    {
+      "label": "Fast world loading",
+      "key": "fastWorldLoading",
+      "field": "D.aQ",
+      "constructor_putfield_offset": 2743,
+      "initial_value": false,
+      "type": "boolean"
+    },
+    {
+      "label": "Fast language switch",
+      "key": "fastLanguageSwitch",
+      "field": "D.bc",
+      "constructor_putfield_offset": 2803,
+      "initial_value": false,
+      "type": "boolean"
+    },
+    {
+      "label": "Show downloading terrain screen",
+      "key": "showDownloadingTerrain",
+      "field": "D.bh",
+      "constructor_putfield_offset": 2863,
+      "initial_value": true,
+      "type": "boolean"
+    },
+    {
+      "label": "Optimized players updating",
+      "key": "optimizedPlayerUpdating",
+      "field": "D.bv",
+      "constructor_putfield_offset": 2923,
+      "initial_value": true,
+      "type": "boolean"
+    },
+    {
+      "label": "String Width Caching",
+      "key": "stringWidthCaching",
+      "field": "D.aE",
+      "constructor_putfield_offset": 2984,
+      "initial_value": true,
+      "type": "boolean"
+    },
+    {
+      "label": "Render void fog and barrier particles",
+      "key": "renderVoidFogParticles",
+      "field": "D.bF",
+      "constructor_putfield_offset": 3044,
+      "initial_value": false,
+      "type": "boolean"
+    },
+    {
+      "label": "Optimized void fog and barrier particles",
+      "key": "optimizedVoidFogParticles",
+      "field": "D.aD",
+      "constructor_putfield_offset": 3102,
+      "initial_value": true,
+      "type": "boolean"
+    },
+    {
+      "label": "Particle limit",
+      "key": "particleLimit",
+      "field": "D.bC",
+      "constructor_putfield_offset": 3189,
+      "initial_value": 1000,
+      "type": "number_or_enum_index"
+    },
+    {
+      "label": "Memory cleanup on disconnect",
+      "key": "memoryCleanup",
+      "field": "D.aC",
+      "constructor_putfield_offset": 3277,
+      "initial_value": false,
+      "type": "boolean"
+    },
+    {
+      "label": "Entity Culling",
+      "key": "entityCulling",
+      "field": "D.bs",
+      "constructor_putfield_offset": 3337,
+      "initial_value": true,
+      "type": "boolean"
+    },
+    {
+      "label": "HUD Caching",
+      "key": "hudCaching",
+      "field": "D.aU",
+      "constructor_putfield_offset": 3394,
+      "initial_value": "framebuffer capability",
+      "type": "dynamic"
+    },
+    {
+      "label": "Framelimit in HUD Caching",
+      "key": "limitHUD",
+      "field": "D.be",
+      "constructor_putfield_offset": 3482,
+      "initial_value": 60,
+      "type": "number_or_enum_index"
+    },
+    {
+      "label": "Alternate DNS resolver",
+      "key": "alternateDNStest",
+      "field": "D.bp",
+      "constructor_putfield_offset": 3570,
+      "initial_value": true,
+      "type": "boolean"
+    },
+    {
+      "label": "Fallback DNS resolver",
+      "key": "fallbackDNStest",
+      "field": "D.aX",
+      "constructor_putfield_offset": 3630,
+      "initial_value": false,
+      "type": "boolean"
+    },
+    {
+      "label": "Main menu particles",
+      "key": "mainMenuParticles",
+      "field": "D.aL",
+      "constructor_putfield_offset": 3717,
+      "initial_value": false,
+      "type": "boolean"
+    },
+    {
+      "label": "Modern background",
+      "key": "modernBackground",
+      "field": "D.bw",
+      "constructor_putfield_offset": 3776,
+      "initial_value": true,
+      "type": "boolean"
+    },
+    {
+      "label": "Modern selection box",
+      "key": "modernSelectionBox",
+      "field": "D.aO",
+      "constructor_putfield_offset": 3836,
+      "initial_value": true,
+      "type": "boolean"
+    },
+    {
+      "label": "Modern scroll bar",
+      "key": "modernScrollBar",
+      "field": "D.bf",
+      "constructor_putfield_offset": 3896,
+      "initial_value": true,
+      "type": "boolean"
+    },
+    {
+      "label": "Show GUI overlay",
+      "key": "showGuiOverlay",
+      "field": "D.aF",
+      "constructor_putfield_offset": 3954,
+      "initial_value": false,
+      "type": "boolean"
+    },
+    {
+      "label": "UI Color",
+      "key": "mainColor",
+      "field": "D.ba",
+      "constructor_putfield_offset": 4044,
+      "initial_value": null,
+      "type": "dynamic_or_enum_or_number"
+    },
+    {
+      "label": "Button type",
+      "key": "buttonType",
+      "field": "D.bA",
+      "constructor_putfield_offset": 4204,
+      "initial_value": 1,
+      "type": "number_or_enum_index"
+    },
+    {
+      "label": "Button Color",
+      "key": "buttonColor",
+      "field": "D.bn",
+      "constructor_putfield_offset": 4295,
+      "initial_value": null,
+      "type": "dynamic_or_enum_or_number"
+    },
+    {
+      "label": "Modern button font",
+      "key": "buttonFont",
+      "field": "D.aG",
+      "constructor_putfield_offset": 4355,
+      "initial_value": false,
+      "type": "boolean"
+    },
+    {
+      "label": "Anti Cheat",
+      "key": "antiCheat",
+      "field": "D.bg",
+      "constructor_putfield_offset": 4446,
+      "initial_value": true,
+      "type": "boolean",
+      "later_initialization_note": "acQ initialization 1617..1737 gates startup by cRt and otherwise hides and forces false; initial true does not prove operational on every OS."
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+CLASS ir EXTENDS java/lang/Object
+
+METHOD gr ()V
+    0 aload_0            
+    1 getfield           ir.Fl:I
+    4 ifgt               239
+    7 aload_0            
+    8 getfield           ir.Ft:Ljp;
+   11 invokevirtual      jp.ja:()V
+   14 aload_0            
+   15 getfield           ir.FR:LPY;
+   18 ifnonnull          75
+   21 getstatic          ir.EZ:Lorg/apache/logging/log4j/Logger;
+   24 getstatic          e.q:[Ljava/lang/String;
+   27 sipush             -24083
+   30 sipush             17119
+   33 iand               
+   34 aaload             
+   35 invokeinterface    org/apache/logging/log4j/Logger.error:(Ljava/lang/String;)V 0200
+   40 aload_0            
+   41 getfield           ir.Gu:Lng;
+   44 invokevirtual      ng.mP:()Z
+   47 ifeq               239
+   50 aload_0            
+   51 getfield           ir.Gk:LacQ;
+   54 invokevirtual      acQ.arZ:()LD;
+   57 getfield           D.aN:LbP;
+   60 invokevirtual      bP.ak:()Z
+   63 ifne               239
+   66 aload_0            
+   67 bipush             10
+   69 putfield           ir.Fl:I
+   72 goto               239
+   75 getstatic          iz.GF:[I
+   78 aload_0            
+   79 getfield           ir.FR:LPY;
+   82 getfield           PY.bUI:LPZ;
+   85 invokevirtual      PZ.ordinal:()I
+   88 iaload             
+   89 tableswitch        default=207 [(1, 116), (2, 158), (3, 207)]
+  116 aload_0            
+  117 getfield           ir.Gu:Lng;
+  120 aload_0            
+  121 getfield           ir.Ft:Ljp;
+  124 aload_0            
+  125 getfield           ir.FR:LPY;
+  128 getfield           PY.bUH:LzI;
+  131 invokevirtual      ng.q:(LEb;LzI;)V
+  134 aload_0            
+  135 getfield           ir.Gk:LacQ;
+  138 invokevirtual      acQ.asf:()Laet;
+  141 new                aez
+  144 dup                
+  145 aload_0            
+  146 getfield           ir.FR:LPY;
+  149 invokespecial      aez.<init>:(LPY;)V
+  152 invokevirtual      aet.q:(Laeu;)V
+  155 goto               239
+  158 aload_0            
+  159 getfield           ir.FR:LPY;
+  162 invokevirtual      PY.fm:()LOt;
+  165 astore_1           
+  166 aload_0            
+  167 getfield           ir.Gc:Lnm;
+  170 aload_1            
+  171 invokevirtual      nm.h:(LOt;)Lih;
+  174 invokeinterface    ih.eJ:()LcU; 0100
+  179 invokevirtual      cU.eh:()LhM;
+  182 getstatic          hM.DK:LhM;
+  185 if_acmpeq          207
+  188 aload_0            
+  189 getfield           ir.Gu:Lng;
+  192 aload_1            
+  193 aload_0            
+  194 getfield           ir.FR:LPY;
+  197 getfield           PY.bUJ:LPh;
+  200 invokevirtual      ng.w:(LOt;LPh;)Z
+  203 pop                
+  204 goto               239
+  207 aload_0            
+  208 getfield           ir.Gu:Lng;
+  211 invokevirtual      ng.mP:()Z
+  214 ifeq               239
+  217 aload_0            
+  218 getfield           ir.Gk:LacQ;
+  221 invokevirtual      acQ.arZ:()LD;
+  224 getfield           D.aN:LbP;
+  227 invokevirtual      bP.ak:()Z
+  230 ifne               239
+  233 aload_0            
+  234 bipush             10
+  236 putfield           ir.Fl:I
+  239 return             
+
+
+METHOD gy ()V
+    0 invokestatic       org/lwjgl/opengl/Display.isActive:()Z
+    3 ifeq               62
+    6 aload_0            
+    7 getfield           ir.FP:Z
+   10 ifne               62
+   13 getstatic          ir.Ga:Z
+   16 ifne               38
+   19 aload_0            
+   20 getfield           ir.Gk:LacQ;
+   23 invokevirtual      acQ.arZ:()LD;
+   26 getfield           D.bD:LbP;
+   29 invokevirtual      bP.ak:()Z
+   32 ifeq               38
+   35 invokestatic       wn.vh:()V
+   38 aload_0            
+   39 iconst_1           
+   40 putfield           ir.FP:Z
+   43 aload_0            
+   44 getfield           ir.Fq:LPV;
+   47 invokevirtual      PV.Vm:()V
+   50 aload_0            
+   51 aconst_null        
+   52 invokevirtual      ir.r:(LkB;)V
+   55 aload_0            
+   56 sipush             10000
+   59 putfield           ir.Fl:I
+   62 return             
+
+
+METHOD c (Z)V
+    0 iload_1            
+    1 ifne               9
+    4 aload_0            
+    5 iconst_0           
+    6 putfield           ir.Fl:I
+    9 aload_0            
+   10 getfield           ir.Fl:I
+   13 ifgt               158
+   16 aload_0            
+   17 getfield           ir.Ft:Ljp;
+   20 invokevirtual      jp.Gn:()Z
+   23 ifeq               38
+   26 getstatic          au.fI:Lau;
+   29 getfield           au.fM:LbP;
+   32 invokevirtual      bP.ak:()Z
+   35 ifeq               158
+   38 iload_1            
+   39 ifeq               151
+   42 aload_0            
+   43 getfield           ir.FR:LPY;
+   46 ifnull             151
+   49 aload_0            
+   50 getfield           ir.FR:LPY;
+   53 getfield           PY.bUI:LPZ;
+   56 getstatic          PZ.bUL:LPZ;
+   59 if_acmpne          151
+   62 aload_0            
+   63 getfield           ir.FR:LPY;
+   66 invokevirtual      PY.fm:()LOt;
+   69 astore_2           
+   70 aload_0            
+   71 getfield           ir.Gc:Lnm;
+   74 aload_2            
+   75 invokevirtual      nm.h:(LOt;)Lih;
+   78 invokeinterface    ih.eJ:()LcU; 0100
+   83 invokevirtual      cU.eh:()LhM;
+   86 getstatic          hM.DK:LhM;
+   89 if_acmpeq          148
+   92 aload_0            
+   93 getfield           ir.Gu:Lng;
+   96 aload_2            
+   97 aload_0            
+   98 getfield           ir.FR:LPY;
+  101 getfield           PY.bUJ:LPh;
+  104 invokevirtual      ng.r:(LOt;LPh;)Z
+  107 ifeq               148
+  110 aload_0            
+  111 getfield           ir.Gk:LacQ;
+  114 invokevirtual      acQ.arZ:()LD;
+  117 getfield           D.aZ:LbP;
+  120 invokevirtual      bP.ak:()Z
+  123 ifeq               141
+  126 aload_0            
+  127 getfield           ir.Fb:LnM;
+  130 aload_2            
+  131 aload_0            
+  132 getfield           ir.FR:LPY;
+  135 getfield           PY.bUJ:LPh;
+  138 invokevirtual      nM.t:(LOt;LPh;)V
+  141 aload_0            
+  142 getfield           ir.Ft:Ljp;
+  145 invokevirtual      jp.ja:()V
+  148 goto               158
+  151 aload_0            
+  152 getfield           ir.Gu:Lng;
+  155 invokevirtual      ng.mK:()V
+  158 return             
+
+METHOD hC ()V [EXCERPT offsets 725..742; remainder omitted]
+  725 aload_0            
+  726 getfield           ir.Fl:I
+  729 ifle               742
+  732 aload_0            
+  733 dup                
+  734 getfield           ir.Fl:I
+  737 iconst_1           
+  738 isub               
+  739 putfield           ir.Fl:I
+  742 aload_0            

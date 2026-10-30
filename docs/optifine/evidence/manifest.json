@@ -1,0 +1,80 @@
+{
+  "optifine_sha256": "2739760a70fca6ae5c7dc817bcc6283f18f55e38fa23778da7f387a6b724b2c4",
+  "base_sha256": "14f0d96d1a56fb4f5c3b2233d00699525893fe5ce3dcf181e7de59120595d298",
+  "patched_classes": [
+    {
+      "member": "avh.class",
+      "patched_sha256": "d5b070893c86317bb5fefb6d2984e09c96129ebe4036be2e52910e9d2d69ae14",
+      "base_sha256": "a239340264ca29805ca53e52609e0d4d27d692244534c5d575dd346e6c64e399",
+      "declared_patched_md5": "7a4eca00cb8f920e37a800579e9ddd46",
+      "md5_verified": true
+    },
+    {
+      "member": "bfr.class",
+      "patched_sha256": "a60c44bbc5535e985b1c4b3549bb298b126e3039074aa910f99da97378250619",
+      "base_sha256": "63e18af1ca83999654f7a295df85552f7809921bdf0b9c1b306afb198ace2ef0",
+      "declared_patched_md5": "43ee00d45c31d12274b01d6a82339a62",
+      "md5_verified": true
+    },
+    {
+      "member": "bfy.class",
+      "patched_sha256": "b970d66c99f7bd40110c6104e8c231bea7e427db19bfe08c117c543faeaa715c",
+      "base_sha256": "ffbca1bc6a732e4b6ea86ef54368b82818d872a21fe841268ff4683c12938c6d",
+      "declared_patched_md5": "32bbff9a0a62a67580a16f86b9c4ca37",
+      "md5_verified": true
+    },
+    {
+      "member": "bfz.class",
+      "patched_sha256": "39489af9cdbc61b8960f2a7a87e33943c0196837033e95cc1a7de5f3c895c053",
+      "base_sha256": "c3383d7b304895e0a69f5a71f9901cef883660e864cf3493e5ca41ea1e3e1729",
+      "declared_patched_md5": "f8fb95c9ddfc76f2f9189c748f77df1b",
+      "md5_verified": true
+    },
+    {
+      "member": "bga.class",
+      "patched_sha256": "2df1de7b5b74f7de37172369f732ba0e53c8634af9f85a544e3c7ab269f4606d",
+      "base_sha256": "37d3ff8c9794e1b3322f663b656a562d3c505f05e6521bbeb983cd73a4cfebe6",
+      "declared_patched_md5": "63b0972b793374edc6701e1ba692444a",
+      "md5_verified": true
+    },
+    {
+      "member": "bho.class",
+      "patched_sha256": "381976963d303e09ea0fba4fe4c0b0ec6db24db0b4da10e88fce999904e372c7",
+      "base_sha256": "55eb083cdc50f2f1794f8b7cd22ae677d3bdb62499f941adfbfed49cab378b31",
+      "declared_patched_md5": "30182150af73f79d038154a3323184d3",
+      "md5_verified": true
+    },
+    {
+      "member": "bht.class",
+      "patched_sha256": "c3c70f03dd2d95fb6be30e5869b4f470a97a5ec21284d832d2bb522519cd37d9",
+      "base_sha256": "7132b94b8608ea1b733a0eb76cbcdb8ebc75b27abac20793f733abdef739980a",
+      "declared_patched_md5": "f006b2ea64e2ebe9c570f4f24ab03549",
+      "md5_verified": true
+    },
+    {
+      "member": "bms.class",
+      "patched_sha256": "4bbecd5043b38c6917e1d8ae3b133f42c64c5d78a57f19690bffc314118efb8a",
+      "base_sha256": "93d9bc5afa9658810471ecd503af26b5ab5d8cfc7e9ab38e338cb90c0503a4ba",
+      "declared_patched_md5": "12bf69d81eaac59ea0f8057cc933b559",
+      "md5_verified": true
+    },
+    {
+      "member": "bmt.class",
+      "patched_sha256": "99e232f777e1fd6544cee059fe378effacc6625636357e5be983e2491596f248",
+      "base_sha256": "fc1a959a42354d48f4632e48f90c5af880877f7c5aaac6c89b703f78d345ee85",
+      "declared_patched_md5": "f64249014ce099e5be91308a5280d90c",
+      "md5_verified": true
+    },
+    {
+      "member": "bqs.class",
+      "patched_sha256": "6e51da6383889c601142ab90c8f48fb3d5418eb6c3431458651d2f8389560ff3",
+      "base_sha256": "88a51a8c7cb80d5c24a1788597dd06837ea00c2987d30beb5fce1e32aee40da5",
+      "declared_patched_md5": "ee21a190bee370544303233ee0956961",
+      "md5_verified": true
+    }
+  ],
+  "classes_reconstructed": 218,
+  "all_declared_md5_verified": true,
+  "rea_inventory_evidence_id": "ev_6b0b97a2e73c251b24374ee930ac8606b0c09e567194fb639a3aa5bf4e5282ad",
+  "coverage": "Archive identity; 218 class patches reconstructed and verified; focused VBO paths inspected, not the whole product. No GPU runtime measurements."
+}

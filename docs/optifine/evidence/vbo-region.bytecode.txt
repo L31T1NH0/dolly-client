@@ -1,0 +1,951 @@
+# OptiFine 1.8.9 HD U M5 — VBO region evidence
+# OptiFine SHA-256: 2739760a70fca6ae5c7dc817bcc6283f18f55e38fa23778da7f387a6b724b2c4
+# Offsets are JVM bytecode offsets. No target executed.
+# direct = class carried directly in supplied OptiFine archive; patched = class
+# reconstructed offline against exact local vanilla using supplied deltas, output MD5 verified.
+# vanilla = original local Minecraft 1.8.9 artifact. No source-equivalence claim.
+
+==============================================================================
+CLASS net/optifine/render/VboRegion ORIGIN direct
+SHA-256 38f2e59fa54ecc815e7ba8a1db398ecf79685b0bab1a0ebe143de8bc263da441
+METHOD <init> (Ladf;)V
+    0 aload_0            
+    1 invokespecial      java/lang/Object.<init>:()V
+    4 aload_0            
+    5 aconst_null        
+    6 putfield           net/optifine/render/VboRegion.layer:Ladf;
+    9 aload_0            
+   10 invokestatic       bqs.e:()I
+   13 putfield           net/optifine/render/VboRegion.glBufferId:I
+   16 aload_0            
+   17 sipush             4096
+   20 putfield           net/optifine/render/VboRegion.capacity:I
+   23 aload_0            
+   24 iconst_0           
+   25 putfield           net/optifine/render/VboRegion.positionTop:I
+   28 aload_0            
+   29 new                net/optifine/util/LinkedList
+   32 dup                
+   33 invokespecial      net/optifine/util/LinkedList.<init>:()V
+   36 putfield           net/optifine/render/VboRegion.rangeList:Lnet/optifine/util/LinkedList;
+   39 aload_0            
+   40 aconst_null        
+   41 putfield           net/optifine/render/VboRegion.compactRangeLast:Lnet/optifine/render/VboRange;
+   44 aload_0            
+   45 aload_0            
+   46 getfield           net/optifine/render/VboRegion.capacity:I
+   49 invokestatic       Config.createDirectIntBuffer:(I)Ljava/nio/IntBuffer;
+   52 putfield           net/optifine/render/VboRegion.bufferIndexVertex:Ljava/nio/IntBuffer;
+   55 aload_0            
+   56 aload_0            
+   57 getfield           net/optifine/render/VboRegion.capacity:I
+   60 invokestatic       Config.createDirectIntBuffer:(I)Ljava/nio/IntBuffer;
+   63 putfield           net/optifine/render/VboRegion.bufferCountVertex:Ljava/nio/IntBuffer;
+   66 aload_0            
+   67 bipush             7
+   69 putfield           net/optifine/render/VboRegion.drawMode:I
+   72 aload_0            
+   73 getstatic          bms.a:Lbmu;
+   76 invokevirtual      bmu.g:()I
+   79 putfield           net/optifine/render/VboRegion.vertexBytes:I
+   82 aload_0            
+   83 aload_1            
+   84 putfield           net/optifine/render/VboRegion.layer:Ladf;
+   87 aload_0            
+   88 invokevirtual      net/optifine/render/VboRegion.bindBuffer:()V
+   91 aload_0            
+   92 aload_0            
+   93 getfield           net/optifine/render/VboRegion.capacity:I
+   96 invokespecial      net/optifine/render/VboRegion.toBytes:(I)J
+   99 lstore_2           
+  100 getstatic          bqs.R:I
+  103 lload_2            
+  104 getstatic          bqs.S:I
+  107 invokestatic       bqs.glBufferData:(IJI)V
+  110 aload_0            
+  111 invokevirtual      net/optifine/render/VboRegion.unbindBuffer:()V
+  114 return             
+
+
+METHOD bufferData (Ljava/nio/ByteBuffer;Lnet/optifine/render/VboRange;)V
+    0 aload_2            
+    1 invokevirtual      net/optifine/render/VboRange.getPosition:()I
+    4 istore_3           
+    5 aload_2            
+    6 invokevirtual      net/optifine/render/VboRange.getSize:()I
+    9 istore             4
+   11 aload_0            
+   12 aload_1            
+   13 invokevirtual      java/nio/ByteBuffer.limit:()I
+   16 i2l                
+   17 invokespecial      net/optifine/render/VboRegion.toVertex:(J)I
+   20 istore             5
+   22 iload              5
+   24 ifgt               65
+   27 iload_3            
+   28 iflt               64
+   31 aload_2            
+   32 iconst_m1          
+   33 invokevirtual      net/optifine/render/VboRange.setPosition:(I)V
+   36 aload_2            
+   37 iconst_0           
+   38 invokevirtual      net/optifine/render/VboRange.setSize:(I)V
+   41 aload_0            
+   42 getfield           net/optifine/render/VboRegion.rangeList:Lnet/optifine/util/LinkedList;
+   45 aload_2            
+   46 invokevirtual      net/optifine/render/VboRange.getNode:()Lnet/optifine/util/LinkedList$Node;
+   49 invokevirtual      net/optifine/util/LinkedList.remove:(Lnet/optifine/util/LinkedList$Node;)Lnet/optifine/util/LinkedList$Node;
+   52 pop                
+   53 aload_0            
+   54 dup                
+   55 getfield           net/optifine/render/VboRegion.sizeUsed:I
+   58 iload              4
+   60 isub               
+   61 putfield           net/optifine/render/VboRegion.sizeUsed:I
+   64 return             
+   65 iload              5
+   67 iload              4
+   69 if_icmple          124
+   72 aload_2            
+   73 aload_0            
+   74 getfield           net/optifine/render/VboRegion.positionTop:I
+   77 invokevirtual      net/optifine/render/VboRange.setPosition:(I)V
+   80 aload_2            
+   81 iload              5
+   83 invokevirtual      net/optifine/render/VboRange.setSize:(I)V
+   86 aload_0            
+   87 dup                
+   88 getfield           net/optifine/render/VboRegion.positionTop:I
+   91 iload              5
+   93 iadd               
+   94 putfield           net/optifine/render/VboRegion.positionTop:I
+   97 iload_3            
+   98 iflt               113
+  101 aload_0            
+  102 getfield           net/optifine/render/VboRegion.rangeList:Lnet/optifine/util/LinkedList;
+  105 aload_2            
+  106 invokevirtual      net/optifine/render/VboRange.getNode:()Lnet/optifine/util/LinkedList$Node;
+  109 invokevirtual      net/optifine/util/LinkedList.remove:(Lnet/optifine/util/LinkedList$Node;)Lnet/optifine/util/LinkedList$Node;
+  112 pop                
+  113 aload_0            
+  114 getfield           net/optifine/render/VboRegion.rangeList:Lnet/optifine/util/LinkedList;
+  117 aload_2            
+  118 invokevirtual      net/optifine/render/VboRange.getNode:()Lnet/optifine/util/LinkedList$Node;
+  121 invokevirtual      net/optifine/util/LinkedList.addLast:(Lnet/optifine/util/LinkedList$Node;)V
+  124 aload_2            
+  125 iload              5
+  127 invokevirtual      net/optifine/render/VboRange.setSize:(I)V
+  130 aload_0            
+  131 dup                
+  132 getfield           net/optifine/render/VboRegion.sizeUsed:I
+  135 iload              5
+  137 iload              4
+  139 isub               
+  140 iadd               
+  141 putfield           net/optifine/render/VboRegion.sizeUsed:I
+  144 aload_0            
+  145 aload_2            
+  146 invokevirtual      net/optifine/render/VboRange.getPositionNext:()I
+  149 invokespecial      net/optifine/render/VboRegion.checkVboSize:(I)V
+  152 aload_0            
+  153 aload_2            
+  154 invokevirtual      net/optifine/render/VboRange.getPosition:()I
+  157 invokespecial      net/optifine/render/VboRegion.toBytes:(I)J
+  160 lstore             6
+  162 aload_0            
+  163 invokevirtual      net/optifine/render/VboRegion.bindBuffer:()V
+  166 getstatic          bqs.R:I
+  169 lload              6
+  171 aload_1            
+  172 invokestatic       bqs.glBufferSubData:(IJLjava/nio/ByteBuffer;)V
+  175 aload_0            
+  176 invokevirtual      net/optifine/render/VboRegion.unbindBuffer:()V
+  179 aload_0            
+  180 getfield           net/optifine/render/VboRegion.positionTop:I
+  183 aload_0            
+  184 getfield           net/optifine/render/VboRegion.sizeUsed:I
+  187 bipush             11
+  189 imul               
+  190 bipush             10
+  192 idiv               
+  193 if_icmple          201
+  196 aload_0            
+  197 iconst_1           
+  198 invokespecial      net/optifine/render/VboRegion.compactRanges:(I)V
+  201 return             
+
+
+METHOD compactRanges (I)V
+    0 aload_0            
+    1 getfield           net/optifine/render/VboRegion.rangeList:Lnet/optifine/util/LinkedList;
+    4 invokevirtual      net/optifine/util/LinkedList.isEmpty:()Z
+    7 ifeq               11
+   10 return             
+   11 aload_0            
+   12 getfield           net/optifine/render/VboRegion.compactRangeLast:Lnet/optifine/render/VboRange;
+   15 astore_2           
+   16 aload_2            
+   17 ifnull             34
+   20 aload_0            
+   21 getfield           net/optifine/render/VboRegion.rangeList:Lnet/optifine/util/LinkedList;
+   24 aload_2            
+   25 invokevirtual      net/optifine/render/VboRange.getNode:()Lnet/optifine/util/LinkedList$Node;
+   28 invokevirtual      net/optifine/util/LinkedList.contains:(Lnet/optifine/util/LinkedList$Node;)Z
+   31 ifne               48
+   34 aload_0            
+   35 getfield           net/optifine/render/VboRegion.rangeList:Lnet/optifine/util/LinkedList;
+   38 invokevirtual      net/optifine/util/LinkedList.getFirst:()Lnet/optifine/util/LinkedList$Node;
+   41 invokevirtual      net/optifine/util/LinkedList$Node.getItem:()Ljava/lang/Object;
+   44 checkcast          net/optifine/render/VboRange
+   47 astore_2           
+   48 aload_2            
+   49 invokevirtual      net/optifine/render/VboRange.getPosition:()I
+   52 istore_3           
+   53 aload_2            
+   54 invokevirtual      net/optifine/render/VboRange.getPrev:()Lnet/optifine/render/VboRange;
+   57 astore             4
+   59 aload              4
+   61 ifnonnull          69
+   64 iconst_0           
+   65 istore_3           
+   66 goto               75
+   69 aload              4
+   71 invokevirtual      net/optifine/render/VboRange.getPositionNext:()I
+   74 istore_3           
+   75 iconst_0           
+   76 istore             5
+   78 aload_2            
+   79 ifnull             249
+   82 iload              5
+   84 iload_1            
+   85 if_icmpge          249
+   88 iinc               0501
+   91 aload_2            
+   92 invokevirtual      net/optifine/render/VboRange.getPosition:()I
+   95 iload_3            
+   96 if_icmpne          114
+   99 iload_3            
+  100 aload_2            
+  101 invokevirtual      net/optifine/render/VboRange.getSize:()I
+  104 iadd               
+  105 istore_3           
+  106 aload_2            
+  107 invokevirtual      net/optifine/render/VboRange.getNext:()Lnet/optifine/render/VboRange;
+  110 astore_2           
+  111 goto               78
+  114 aload_2            
+  115 invokevirtual      net/optifine/render/VboRange.getPosition:()I
+  118 iload_3            
+  119 isub               
+  120 istore             6
+  122 aload_2            
+  123 invokevirtual      net/optifine/render/VboRange.getSize:()I
+  126 iload              6
+  128 if_icmpgt          164
+  131 aload_0            
+  132 aload_2            
+  133 invokevirtual      net/optifine/render/VboRange.getPosition:()I
+  136 iload_3            
+  137 aload_2            
+  138 invokevirtual      net/optifine/render/VboRange.getSize:()I
+  141 invokespecial      net/optifine/render/VboRegion.copyVboData:(III)V
+  144 aload_2            
+  145 iload_3            
+  146 invokevirtual      net/optifine/render/VboRange.setPosition:(I)V
+  149 iload_3            
+  150 aload_2            
+  151 invokevirtual      net/optifine/render/VboRange.getSize:()I
+  154 iadd               
+  155 istore_3           
+  156 aload_2            
+  157 invokevirtual      net/optifine/render/VboRange.getNext:()Lnet/optifine/render/VboRange;
+  160 astore_2           
+  161 goto               246
+  164 aload_0            
+  165 aload_0            
+  166 getfield           net/optifine/render/VboRegion.positionTop:I
+  169 aload_2            
+  170 invokevirtual      net/optifine/render/VboRange.getSize:()I
+  173 iadd               
+  174 invokespecial      net/optifine/render/VboRegion.checkVboSize:(I)V
+  177 aload_0            
+  178 aload_2            
+  179 invokevirtual      net/optifine/render/VboRange.getPosition:()I
+  182 aload_0            
+  183 getfield           net/optifine/render/VboRegion.positionTop:I
+  186 aload_2            
+  187 invokevirtual      net/optifine/render/VboRange.getSize:()I
+  190 invokespecial      net/optifine/render/VboRegion.copyVboData:(III)V
+  193 aload_2            
+  194 aload_0            
+  195 getfield           net/optifine/render/VboRegion.positionTop:I
+  198 invokevirtual      net/optifine/render/VboRange.setPosition:(I)V
+  201 aload_0            
+  202 dup                
+  203 getfield           net/optifine/render/VboRegion.positionTop:I
+  206 aload_2            
+  207 invokevirtual      net/optifine/render/VboRange.getSize:()I
+  210 iadd               
+  211 putfield           net/optifine/render/VboRegion.positionTop:I
+  214 aload_2            
+  215 invokevirtual      net/optifine/render/VboRange.getNext:()Lnet/optifine/render/VboRange;
+  218 astore             7
+  220 aload_0            
+  221 getfield           net/optifine/render/VboRegion.rangeList:Lnet/optifine/util/LinkedList;
+  224 aload_2            
+  225 invokevirtual      net/optifine/render/VboRange.getNode:()Lnet/optifine/util/LinkedList$Node;
+  228 invokevirtual      net/optifine/util/LinkedList.remove:(Lnet/optifine/util/LinkedList$Node;)Lnet/optifine/util/LinkedList$Node;
+  231 pop                
+  232 aload_0            
+  233 getfield           net/optifine/render/VboRegion.rangeList:Lnet/optifine/util/LinkedList;
+  236 aload_2            
+  237 invokevirtual      net/optifine/render/VboRange.getNode:()Lnet/optifine/util/LinkedList$Node;
+  240 invokevirtual      net/optifine/util/LinkedList.addLast:(Lnet/optifine/util/LinkedList$Node;)V
+  243 aload              7
+  245 astore_2           
+  246 goto               78
+  249 aload_2            
+  250 ifnonnull          273
+  253 aload_0            
+  254 aload_0            
+  255 getfield           net/optifine/render/VboRegion.rangeList:Lnet/optifine/util/LinkedList;
+  258 invokevirtual      net/optifine/util/LinkedList.getLast:()Lnet/optifine/util/LinkedList$Node;
+  261 invokevirtual      net/optifine/util/LinkedList$Node.getItem:()Ljava/lang/Object;
+  264 checkcast          net/optifine/render/VboRange
+  267 invokevirtual      net/optifine/render/VboRange.getPositionNext:()I
+  270 putfield           net/optifine/render/VboRegion.positionTop:I
+  273 aload_0            
+  274 aload_2            
+  275 putfield           net/optifine/render/VboRegion.compactRangeLast:Lnet/optifine/render/VboRange;
+  278 return             
+
+
+METHOD checkVboSize (I)V
+    0 aload_0            
+    1 getfield           net/optifine/render/VboRegion.capacity:I
+    4 iload_1            
+    5 if_icmpge          13
+    8 aload_0            
+    9 iload_1            
+   10 invokespecial      net/optifine/render/VboRegion.expandVbo:(I)V
+   13 return             
+
+
+METHOD copyVboData (III)V
+    0 aload_0            
+    1 iload_1            
+    2 invokespecial      net/optifine/render/VboRegion.toBytes:(I)J
+    5 lstore             4
+    7 aload_0            
+    8 iload_2            
+    9 invokespecial      net/optifine/render/VboRegion.toBytes:(I)J
+   12 lstore             6
+   14 aload_0            
+   15 iload_3            
+   16 invokespecial      net/optifine/render/VboRegion.toBytes:(I)J
+   19 lstore             8
+   21 getstatic          bqs.GL_COPY_READ_BUFFER:I
+   24 aload_0            
+   25 getfield           net/optifine/render/VboRegion.glBufferId:I
+   28 invokestatic       bqs.g:(II)V
+   31 getstatic          bqs.GL_COPY_WRITE_BUFFER:I
+   34 aload_0            
+   35 getfield           net/optifine/render/VboRegion.glBufferId:I
+   38 invokestatic       bqs.g:(II)V
+   41 getstatic          bqs.GL_COPY_READ_BUFFER:I
+   44 getstatic          bqs.GL_COPY_WRITE_BUFFER:I
+   47 lload              4
+   49 lload              6
+   51 lload              8
+   53 invokestatic       bqs.glCopyBufferSubData:(IIJJJ)V
+   56 ldc                Copy VBO range
+   58 invokestatic       Config.checkGlError:(Ljava/lang/String;)V
+   61 getstatic          bqs.GL_COPY_READ_BUFFER:I
+   64 iconst_0           
+   65 invokestatic       bqs.g:(II)V
+   68 getstatic          bqs.GL_COPY_WRITE_BUFFER:I
+   71 iconst_0           
+   72 invokestatic       bqs.g:(II)V
+   75 return             
+
+
+METHOD expandVbo (I)V
+    0 aload_0            
+    1 getfield           net/optifine/render/VboRegion.capacity:I
+    4 bipush             6
+    6 imul               
+    7 iconst_4           
+    8 idiv               
+    9 istore_2           
+   10 iload_2            
+   11 iload_1            
+   12 if_icmpge          25
+   15 iload_2            
+   16 bipush             6
+   18 imul               
+   19 iconst_4           
+   20 idiv               
+   21 istore_2           
+   22 goto               10
+   25 aload_0            
+   26 aload_0            
+   27 getfield           net/optifine/render/VboRegion.capacity:I
+   30 invokespecial      net/optifine/render/VboRegion.toBytes:(I)J
+   33 lstore_3           
+   34 aload_0            
+   35 iload_2            
+   36 invokespecial      net/optifine/render/VboRegion.toBytes:(I)J
+   39 lstore             5
+   41 invokestatic       bqs.e:()I
+   44 istore             7
+   46 getstatic          bqs.R:I
+   49 iload              7
+   51 invokestatic       bqs.g:(II)V
+   54 getstatic          bqs.R:I
+   57 lload              5
+   59 getstatic          bqs.S:I
+   62 invokestatic       bqs.glBufferData:(IJI)V
+   65 ldc_w              Expand VBO
+   68 invokestatic       Config.checkGlError:(Ljava/lang/String;)V
+   71 getstatic          bqs.R:I
+   74 iconst_0           
+   75 invokestatic       bqs.g:(II)V
+   78 getstatic          bqs.GL_COPY_READ_BUFFER:I
+   81 aload_0            
+   82 getfield           net/optifine/render/VboRegion.glBufferId:I
+   85 invokestatic       bqs.g:(II)V
+   88 getstatic          bqs.GL_COPY_WRITE_BUFFER:I
+   91 iload              7
+   93 invokestatic       bqs.g:(II)V
+   96 getstatic          bqs.GL_COPY_READ_BUFFER:I
+   99 getstatic          bqs.GL_COPY_WRITE_BUFFER:I
+  102 lconst_0           
+  103 lconst_0           
+  104 lload_3            
+  105 invokestatic       bqs.glCopyBufferSubData:(IIJJJ)V
+  108 new                java/lang/StringBuilder
+  111 dup                
+  112 invokespecial      java/lang/StringBuilder.<init>:()V
+  115 ldc_w              Copy VBO: 
+  118 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  121 lload              5
+  123 invokevirtual      java/lang/StringBuilder.append:(J)Ljava/lang/StringBuilder;
+  126 invokevirtual      java/lang/StringBuilder.toString:()Ljava/lang/String;
+  129 invokestatic       Config.checkGlError:(Ljava/lang/String;)V
+  132 getstatic          bqs.GL_COPY_READ_BUFFER:I
+  135 iconst_0           
+  136 invokestatic       bqs.g:(II)V
+  139 getstatic          bqs.GL_COPY_WRITE_BUFFER:I
+  142 iconst_0           
+  143 invokestatic       bqs.g:(II)V
+  146 aload_0            
+  147 getfield           net/optifine/render/VboRegion.glBufferId:I
+  150 invokestatic       bqs.g:(I)V
+  153 aload_0            
+  154 iload_2            
+  155 invokestatic       Config.createDirectIntBuffer:(I)Ljava/nio/IntBuffer;
+  158 putfield           net/optifine/render/VboRegion.bufferIndexVertex:Ljava/nio/IntBuffer;
+  161 aload_0            
+  162 iload_2            
+  163 invokestatic       Config.createDirectIntBuffer:(I)Ljava/nio/IntBuffer;
+  166 putfield           net/optifine/render/VboRegion.bufferCountVertex:Ljava/nio/IntBuffer;
+  169 aload_0            
+  170 iload              7
+  172 putfield           net/optifine/render/VboRegion.glBufferId:I
+  175 aload_0            
+  176 iload_2            
+  177 putfield           net/optifine/render/VboRegion.capacity:I
+  180 return             
+
+
+METHOD drawArrays (ILnet/optifine/render/VboRange;)V
+    0 aload_0            
+    1 getfield           net/optifine/render/VboRegion.drawMode:I
+    4 iload_1            
+    5 if_icmpeq          64
+    8 aload_0            
+    9 getfield           net/optifine/render/VboRegion.bufferIndexVertex:Ljava/nio/IntBuffer;
+   12 invokevirtual      java/nio/IntBuffer.position:()I
+   15 ifle               59
+   18 new                java/lang/IllegalArgumentException
+   21 dup                
+   22 new                java/lang/StringBuilder
+   25 dup                
+   26 invokespecial      java/lang/StringBuilder.<init>:()V
+   29 ldc_w              Mixed region draw modes: 
+   32 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   35 aload_0            
+   36 getfield           net/optifine/render/VboRegion.drawMode:I
+   39 invokevirtual      java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+   42 ldc_w               != 
+   45 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   48 iload_1            
+   49 invokevirtual      java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+   52 invokevirtual      java/lang/StringBuilder.toString:()Ljava/lang/String;
+   55 invokespecial      java/lang/IllegalArgumentException.<init>:(Ljava/lang/String;)V
+   58 athrow             
+   59 aload_0            
+   60 iload_1            
+   61 putfield           net/optifine/render/VboRegion.drawMode:I
+   64 aload_0            
+   65 getfield           net/optifine/render/VboRegion.bufferIndexVertex:Ljava/nio/IntBuffer;
+   68 aload_2            
+   69 invokevirtual      net/optifine/render/VboRange.getPosition:()I
+   72 invokevirtual      java/nio/IntBuffer.put:(I)Ljava/nio/IntBuffer;
+   75 pop                
+   76 aload_0            
+   77 getfield           net/optifine/render/VboRegion.bufferCountVertex:Ljava/nio/IntBuffer;
+   80 aload_2            
+   81 invokevirtual      net/optifine/render/VboRange.getSize:()I
+   84 invokevirtual      java/nio/IntBuffer.put:(I)Ljava/nio/IntBuffer;
+   87 pop                
+   88 return             
+
+
+METHOD finishDraw (Lbfy;)V
+    0 aload_0            
+    1 invokevirtual      net/optifine/render/VboRegion.bindBuffer:()V
+    4 aload_1            
+    5 invokevirtual      bfy.a:()V
+    8 aload_0            
+    9 getfield           net/optifine/render/VboRegion.bufferIndexVertex:Ljava/nio/IntBuffer;
+   12 invokevirtual      java/nio/IntBuffer.flip:()Ljava/nio/Buffer;
+   15 pop                
+   16 aload_0            
+   17 getfield           net/optifine/render/VboRegion.bufferCountVertex:Ljava/nio/IntBuffer;
+   20 invokevirtual      java/nio/IntBuffer.flip:()Ljava/nio/Buffer;
+   23 pop                
+   24 aload_0            
+   25 getfield           net/optifine/render/VboRegion.drawMode:I
+   28 aload_0            
+   29 getfield           net/optifine/render/VboRegion.bufferIndexVertex:Ljava/nio/IntBuffer;
+   32 aload_0            
+   33 getfield           net/optifine/render/VboRegion.bufferCountVertex:Ljava/nio/IntBuffer;
+   36 invokestatic       bfl.glMultiDrawArrays:(ILjava/nio/IntBuffer;Ljava/nio/IntBuffer;)V
+   39 aload_0            
+   40 getfield           net/optifine/render/VboRegion.bufferIndexVertex:Ljava/nio/IntBuffer;
+   43 aload_0            
+   44 getfield           net/optifine/render/VboRegion.bufferIndexVertex:Ljava/nio/IntBuffer;
+   47 invokevirtual      java/nio/IntBuffer.capacity:()I
+   50 invokevirtual      java/nio/IntBuffer.limit:(I)Ljava/nio/Buffer;
+   53 pop                
+   54 aload_0            
+   55 getfield           net/optifine/render/VboRegion.bufferCountVertex:Ljava/nio/IntBuffer;
+   58 aload_0            
+   59 getfield           net/optifine/render/VboRegion.bufferCountVertex:Ljava/nio/IntBuffer;
+   62 invokevirtual      java/nio/IntBuffer.capacity:()I
+   65 invokevirtual      java/nio/IntBuffer.limit:(I)Ljava/nio/Buffer;
+   68 pop                
+   69 aload_0            
+   70 getfield           net/optifine/render/VboRegion.positionTop:I
+   73 aload_0            
+   74 getfield           net/optifine/render/VboRegion.sizeUsed:I
+   77 bipush             11
+   79 imul               
+   80 bipush             10
+   82 idiv               
+   83 if_icmple          91
+   86 aload_0            
+   87 iconst_1           
+   88 invokespecial      net/optifine/render/VboRegion.compactRanges:(I)V
+   91 return             
+
+
+METHOD toBytes (I)J
+    0 iload_1            
+    1 i2l                
+    2 aload_0            
+    3 getfield           net/optifine/render/VboRegion.vertexBytes:I
+    6 i2l                
+    7 lmul               
+    8 lreturn            
+
+
+METHOD toVertex (J)I
+    0 lload_1            
+    1 aload_0            
+    2 getfield           net/optifine/render/VboRegion.vertexBytes:I
+    5 i2l                
+    6 ldiv               
+    7 l2i                
+    8 ireturn            
+
+
+METHOD deleteGlBuffers ()V
+    0 aload_0            
+    1 getfield           net/optifine/render/VboRegion.glBufferId:I
+    4 iflt               19
+    7 aload_0            
+    8 getfield           net/optifine/render/VboRegion.glBufferId:I
+   11 invokestatic       bqs.g:(I)V
+   14 aload_0            
+   15 iconst_m1          
+   16 putfield           net/optifine/render/VboRegion.glBufferId:I
+   19 return             
+
+
+==============================================================================
+CLASS net/optifine/render/VboRange ORIGIN direct
+SHA-256 05717f7c615c6410f486481eaffd3f70fed9b8be1ffb819b65346932292e50c9
+METHOD <init> ()V
+    0 aload_0            
+    1 invokespecial      java/lang/Object.<init>:()V
+    4 aload_0            
+    5 iconst_m1          
+    6 putfield           net/optifine/render/VboRange.position:I
+    9 aload_0            
+   10 iconst_0           
+   11 putfield           net/optifine/render/VboRange.size:I
+   14 aload_0            
+   15 new                net/optifine/util/LinkedList$Node
+   18 dup                
+   19 aload_0            
+   20 invokespecial      net/optifine/util/LinkedList$Node.<init>:(Ljava/lang/Object;)V
+   23 putfield           net/optifine/render/VboRange.node:Lnet/optifine/util/LinkedList$Node;
+   26 return             
+
+
+METHOD getPositionNext ()I
+    0 aload_0            
+    1 getfield           net/optifine/render/VboRange.position:I
+    4 aload_0            
+    5 getfield           net/optifine/render/VboRange.size:I
+    8 iadd               
+    9 ireturn            
+
+
+METHOD setPosition (I)V
+    0 aload_0            
+    1 iload_1            
+    2 putfield           net/optifine/render/VboRange.position:I
+    5 return             
+
+
+METHOD setSize (I)V
+    0 aload_0            
+    1 iload_1            
+    2 putfield           net/optifine/render/VboRange.size:I
+    5 return             
+
+
+==============================================================================
+CLASS bmt ORIGIN patched
+SHA-256 99e232f777e1fd6544cee059fe378effacc6625636357e5be983e2491596f248
+METHOD a (Ljava/nio/ByteBuffer;)V
+    0 aload_0            
+    1 getfield           bmt.vboRegion:Lnet/optifine/render/VboRegion;
+    4 ifnull             20
+    7 aload_0            
+    8 getfield           bmt.vboRegion:Lnet/optifine/render/VboRegion;
+   11 aload_1            
+   12 aload_0            
+   13 getfield           bmt.vboRange:Lnet/optifine/render/VboRange;
+   16 invokevirtual      net/optifine/render/VboRegion.bufferData:(Ljava/nio/ByteBuffer;Lnet/optifine/render/VboRange;)V
+   19 return             
+   20 aload_0            
+   21 invokevirtual      bmt.a:()V
+   24 getstatic          bqs.R:I
+   27 aload_1            
+   28 ldc                35044
+   30 invokestatic       bqs.a:(ILjava/nio/ByteBuffer;I)V
+   33 aload_0            
+   34 invokevirtual      bmt.b:()V
+   37 aload_0            
+   38 aload_1            
+   39 invokevirtual      java/nio/ByteBuffer.limit:()I
+   42 aload_0            
+   43 getfield           bmt.b:Lbmu;
+   46 invokevirtual      bmu.g:()I
+   49 idiv               
+   50 putfield           bmt.c:I
+   53 return             
+
+
+METHOD a (I)V
+    0 aload_0            
+    1 getfield           bmt.drawMode:I
+    4 ifle               12
+    7 aload_0            
+    8 getfield           bmt.drawMode:I
+   11 istore_1           
+   12 aload_0            
+   13 getfield           bmt.vboRegion:Lnet/optifine/render/VboRegion;
+   16 ifnull             34
+   19 aload_0            
+   20 getfield           bmt.vboRegion:Lnet/optifine/render/VboRegion;
+   23 iload_1            
+   24 aload_0            
+   25 getfield           bmt.vboRange:Lnet/optifine/render/VboRange;
+   28 invokevirtual      net/optifine/render/VboRegion.drawArrays:(ILnet/optifine/render/VboRange;)V
+   31 goto               43
+   34 iload_1            
+   35 iconst_0           
+   36 aload_0            
+   37 getfield           bmt.c:I
+   40 invokestatic       org/lwjgl/opengl/GL11.glDrawArrays:(III)V
+   43 return             
+
+
+METHOD setVboRegion (Lnet/optifine/render/VboRegion;)V
+    0 aload_1            
+    1 ifnonnull          5
+    4 return             
+    5 aload_0            
+    6 invokevirtual      bmt.c:()V
+    9 aload_0            
+   10 aload_1            
+   11 putfield           bmt.vboRegion:Lnet/optifine/render/VboRegion;
+   14 aload_0            
+   15 new                net/optifine/render/VboRange
+   18 dup                
+   19 invokespecial      net/optifine/render/VboRange.<init>:()V
+   22 putfield           bmt.vboRange:Lnet/optifine/render/VboRange;
+   25 return             
+
+
+==============================================================================
+CLASS bmt ORIGIN vanilla
+SHA-256 fc1a959a42354d48f4632e48f90c5af880877f7c5aaac6c89b703f78d345ee85
+METHOD a (Ljava/nio/ByteBuffer;)V
+    0 aload_0            
+    1 invokevirtual      bmt.a:()V
+    4 getstatic          bqs.R:I
+    7 aload_1            
+    8 ldc                35044
+   10 invokestatic       bqs.a:(ILjava/nio/ByteBuffer;I)V
+   13 aload_0            
+   14 invokevirtual      bmt.b:()V
+   17 aload_0            
+   18 aload_1            
+   19 invokevirtual      java/nio/ByteBuffer.limit:()I
+   22 aload_0            
+   23 getfield           bmt.b:Lbmu;
+   26 invokevirtual      bmu.g:()I
+   29 idiv               
+   30 putfield           bmt.c:I
+   33 return             
+
+
+METHOD a (I)V
+    0 iload_1            
+    1 iconst_0           
+    2 aload_0            
+    3 getfield           bmt.c:I
+    6 invokestatic       org/lwjgl/opengl/GL11.glDrawArrays:(III)V
+    9 return             
+
+
+==============================================================================
+CLASS bqs ORIGIN patched
+SHA-256 6e51da6383889c601142ab90c8f48fb3d5418eb6c3431458651d2f8389560ff3
+METHOD a ()V
+    0 invokestatic       Config.initDisplay:()V
+    3 invokestatic       org/lwjgl/opengl/GLContext.getCapabilities:()Lorg/lwjgl/opengl/ContextCapabilities;
+    6 astore_0           
+    7 aload_0            
+    8 getfield           org/lwjgl/opengl/ContextCapabilities.GL_ARB_multitexture:Z
+   11 ifeq               25
+   14 aload_0            
+   15 getfield           org/lwjgl/opengl/ContextCapabilities.OpenGL13:Z
+   18 ifne               25
+   21 iconst_1           
+   22 goto               26
+   25 iconst_0           
+   26 putstatic          bqs.W:Z
+   29 aload_0            
+   30 getfield           org/lwjgl/opengl/ContextCapabilities.GL_ARB_texture_env_combine:Z
+   33 ifeq               47
+   36 aload_0            
+   37 getfield           org/lwjgl/opengl/ContextCapabilities.OpenGL13:Z
+   40 ifne               47
+   43 iconst_1           
+   44 goto               48
+   47 iconst_0           
+   48 putstatic          bqs.X:Z
+   51 aload_0            
+   52 getfield           org/lwjgl/opengl/ContextCapabilities.OpenGL31:Z
+   55 putstatic          bqs.openGL31:Z
+   58 getstatic          bqs.openGL31:Z
+   61 ifeq               77
+   64 ldc                36662
+   66 putstatic          bqs.GL_COPY_READ_BUFFER:I
+   69 ldc                36663
+   71 putstatic          bqs.GL_COPY_WRITE_BUFFER:I
+   74 goto               87
+   77 ldc                36662
+   79 putstatic          bqs.GL_COPY_READ_BUFFER:I
+   82 ldc                36663
+   84 putstatic          bqs.GL_COPY_WRITE_BUFFER:I
+   87 getstatic          bqs.openGL31:Z
+   90 ifne               100
+   93 aload_0            
+   94 getfield           org/lwjgl/opengl/ContextCapabilities.GL_ARB_copy_buffer:Z
+   97 ifeq               104
+  100 iconst_1           
+  101 goto               105
+  104 iconst_0           
+  105 istore_1           
+  106 aload_0            
+  107 getfield           org/lwjgl/opengl/ContextCapabilities.OpenGL14:Z
+  110 istore_2           
+  111 iload_1            
+  112 ifeq               123
+  115 iload_2            
+  116 ifeq               123
+  119 iconst_1           
+  120 goto               124
+  123 iconst_0           
+  124 putstatic          bqs.vboRegions:Z
+  127 getstatic          bqs.vboRegions:Z
+  130 ifne               225
+  133 new                java/util/ArrayList
+  136 dup                
+  137 invokespecial      java/util/ArrayList.<init>:()V
+  140 astore_3           
+  141 iload_1            
+  142 ifne               154
+  145 aload_3            
+  146 ldc                OpenGL 1.3, ARB_copy_buffer
+  148 invokeinterface    java/util/List.add:(Ljava/lang/Object;)Z 0200
+  153 pop                
+  154 iload_2            
+  155 ifne               167
+  158 aload_3            
+  159 ldc                OpenGL 1.4
+  161 invokeinterface    java/util/List.add:(Ljava/lang/Object;)Z 0200
+  166 pop                
+  167 new                java/lang/StringBuilder
+  170 dup                
+  171 invokespecial      java/lang/StringBuilder.<init>:()V
+  174 ldc                VboRegions not supported, missing: 
+  176 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  179 aload_3            
+  180 invokestatic       Config.listToString:(Ljava/util/List;)Ljava/lang/String;
+  183 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  186 invokevirtual      java/lang/StringBuilder.toString:()Ljava/lang/String;
+  189 astore             4
+  191 aload              4
+  193 invokestatic       Config.dbg:(Ljava/lang/String;)V
+  196 new                java/lang/StringBuilder
+  199 dup                
+  200 invokespecial      java/lang/StringBuilder.<init>:()V
+  203 getstatic          bqs.Z:Ljava/lang/String;
+  206 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  209 aload              4
+  211 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  214 ldc                
+
+  216 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  219 invokevirtual      java/lang/StringBuilder.toString:()Ljava/lang/String;
+  222 putstatic          bqs.Z:Ljava/lang/String;
+  225 getstatic          bqs.W:Z
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+METHOD f ()Z
+    0 invokestatic       Config.isMultiTexture:()Z
+    3 ifeq               8
+    6 iconst_0           
+    7 ireturn            
+    8 invokestatic       Config.isRenderRegions:()Z
+   11 ifeq               22
+   14 getstatic          bqs.vboRegions:Z
+   17 ifne               22
+   20 iconst_0           
+   21 ireturn            
+   22 getstatic          bqs.P:Z
+   25 ifeq               44
+   28 invokestatic       ave.A:()Lave;
+   31 getfield           ave.t:Lavh;
+   34 getfield           avh.u:Z
+   37 ifeq               44
+   40 iconst_1           
+   41 goto               45
+   44 iconst_0           
+   45 ireturn            
+
+
+METHOD glCopyBufferSubData (IIJJJ)V
+    0 getstatic          bqs.openGL31:Z
+    3 ifeq               19
+    6 iload_0            
+    7 iload_1            
+    8 lload_2            
+    9 lload              4
+   11 lload              6
+   13 invokestatic       org/lwjgl/opengl/GL31.glCopyBufferSubData:(IIJJJ)V
+   16 goto               29
+   19 iload_0            
+   20 iload_1            
+   21 lload_2            
+   22 lload              4
+   24 lload              6
+   26 invokestatic       org/lwjgl/opengl/ARBCopyBuffer.glCopyBufferSubData:(IIJJJ)V
+   29 return             
+
+
+==============================================================================
+CLASS bfl ORIGIN patched
+SHA-256 7b22b0fa7123b26a746a68b6ff3afc75c3d85fa34c9a571e1cbf584d367a2233
+METHOD glMultiDrawArrays (ILjava/nio/IntBuffer;Ljava/nio/IntBuffer;)V
+    0 iload_0            
+    1 aload_1            
+    2 aload_2            
+    3 invokestatic       org/lwjgl/opengl/GL14.glMultiDrawArrays:(ILjava/nio/IntBuffer;Ljava/nio/IntBuffer;)V
+    6 invokestatic       Config.isShaders:()Z
+    9 ifeq               66
+   12 getstatic          bfl.creatingDisplayList:Z
+   15 ifne               66
+   18 getstatic          net/optifine/shaders/Shaders.activeProgram:Lnet/optifine/shaders/Program;
+   21 invokevirtual      net/optifine/shaders/Program.getCountInstances:()I
+   24 istore_3           
+   25 iload_3            
+   26 iconst_1           
+   27 if_icmple          66
+   30 iconst_1           
+   31 istore             4
+   33 iload              4
+   35 iload_3            
+   36 if_icmpge          59
+   39 getstatic          net/optifine/shaders/Shaders.uniform_instanceId:Lnet/optifine/shaders/uniform/ShaderUniform1i;
+   42 iload              4
+   44 invokevirtual      net/optifine/shaders/uniform/ShaderUniform1i.setValue:(I)V
+   47 iload_0            
+   48 aload_1            
+   49 aload_2            
+   50 invokestatic       org/lwjgl/opengl/GL14.glMultiDrawArrays:(ILjava/nio/IntBuffer;Ljava/nio/IntBuffer;)V
+   53 iinc               0401
+   56 goto               33
+   59 getstatic          net/optifine/shaders/Shaders.uniform_instanceId:Lnet/optifine/shaders/uniform/ShaderUniform1i;
+   62 iconst_0           
+   63 invokevirtual      net/optifine/shaders/uniform/ShaderUniform1i.setValue:(I)V
+   66 return             
+
+
+
+==============================================================================
+CLASS bmt ORIGIN vanilla
+SHA-256 fc1a959a42354d48f4632e48f90c5af880877f7c5aaac6c89b703f78d345ee85
+METHOD <init> (Lbmu;)V
+    0 aload_0            
+    1 invokespecial      java/lang/Object.<init>:()V
+    4 aload_0            
+    5 aload_1            
+    6 putfield           bmt.b:Lbmu;
+    9 aload_0            
+   10 invokestatic       bqs.e:()I
+   13 putfield           bmt.a:I
+   16 return             
+

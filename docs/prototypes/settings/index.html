@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dolly · Módulos e editor do HUD</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <svg class="icon-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/><path d="M8 3v6m8 0v6M10 15v6"/></symbol>
+    <symbol id="i-hud" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M12 7v10m-5-5h10"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></symbol>
+    <symbol id="i-zoom" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6M7 10h6m-3-3v6"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M3 7h5l2-3h4l2 3h5v13H3Z"/><circle cx="12" cy="13" r="4"/></symbol>
+    <symbol id="i-run" viewBox="0 0 24 24"><circle cx="15" cy="4" r="2"/><path d="m10 8 4-1 3 5h4M4 11l6-3-2 7 5 3-1 4M8 15l-3 5H1"/></symbol>
+    <symbol id="i-mouse" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="6"/><path d="M12 2v7M6 10h12"/></symbol>
+    <symbol id="i-slots" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12"/><path d="M8.5 6v12M15.5 6v12m-4-6h1"/></symbol>
+    <symbol id="i-signal" viewBox="0 0 24 24"><path d="M4 20v-4m5 4v-8m5 8V8m5 12V4"/></symbol>
+    <symbol id="i-timer" viewBox="0 0 24 24"><circle cx="12" cy="14" r="8"/><path d="M9 2h6m-3 0v4m6 1 2-2M12 10v5l3 2"/></symbol>
+    <symbol id="i-board" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18"/><path d="M8 8h8M8 12h5m-5 4h8"/></symbol>
+    <symbol id="i-sword" viewBox="0 0 24 24"><path d="m14 3 7-1-1 7L9 20l-5-5Zm-5 9 5 5M3 21l4-4M2 14l8 8"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 1v3m0 16v3M1 12h3m16 0h3M4 4l2 2m12 12 2 2M4 20l2-2M18 6l2-2"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m10 3 2 6 6 2-6 2-2 6-2-6-6-2 6-2ZM19 2v5m-2-3h4m-2 12v6m-3-3h6"/></symbol>
+    <symbol id="i-cube" viewBox="0 0 24 24"><path d="m12 2 10 5v10l-10 5-10-5V7Zm0 10L2 7m10 5L22 7M12 12v10"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="m14 2-10 12h7l-1 8L21 9h-8Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M3 21 20 4m-8-1h9v9M3 15v6h6"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 6Q7 2 2 4v15q5-2 10 2 5-4 10-2V4q-5-2-10 2Zm0 0v15"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 10 6-10 6L2 8Zm-10 11 10 6 10-6M2 18l10 5 10-5"/></symbol>
+    <symbol id="i-water" viewBox="0 0 24 24"><path d="M12 2s-7 8-7 13a7 7 0 0 0 14 0c0-5-7-13-7-13Z"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M13 2c2 7-2 6 0 10 2-1 3-3 3-5 8 9 4 15-4 15S1 15 6 10c0 4 2 4 3 4C6 8 12 8 13 2Z"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14"/><path d="M12 17v4m-5 0h10"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M3 3h18v14H9l-6 5Zm4 5h10M7 12h7"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18"/><circle cx="8" cy="8" r="2"/><path d="m3 18 6-6 4 4 3-5 5 7"/></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="6"/><path d="M12 8v5M4 17v-4h16v4"/><rect x="1" y="17" width="6" height="5"/><rect x="17" y="17" width="6" height="5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m5 5 14 14M5 19 19 5"/></symbol>
+    <symbol id="i-undo" viewBox="0 0 24 24"><path d="M3 10h11a7 7 0 0 1 0 14M3 10l6-6M3 10l6 6"/></symbol>
+  </defs></svg>
+
+  <div class="prototype-note"><span>Dolly Client</span><span>Protótipo interativo · preferências salvas somente neste navegador</span></div>
+  <main class="shell">
+    <aside class="rail">
+      <a class="brand" href="#modules" aria-label="Dolly, voltar aos módulos"><span class="brand-mark">D</span><span>Dolly<span class="brand-sub">Client 1.8.9</span></span></a>
+      <nav aria-label="Navegação principal">
+        <button class="nav-item active" data-view="modules" aria-current="page"><svg><use href="#i-grid"/></svg>Módulos</button>
+        <button class="nav-item" data-view="settings"><svg><use href="#i-settings"/></svg>Configurações</button>
+        <button class="nav-item" data-view="hud"><svg><use href="#i-hud"/></svg>Editar HUD</button>
+      </nav>
+      <div class="rail-bottom"><span class="connection-dot"></span>Seu client, do seu jeito.</div>
+    </aside>
+
+    <section class="workspace">
+      <header class="page-header"><div><h1 id="page-title">Módulos</h1><p id="page-description">Os recursos que você escolhe usar.</p></div><button id="save" class="button primary"><svg><use href="#i-check"/></svg>Salvar alterações</button></header>
+
+      <div id="modules-view" class="view modules-view">
+        <div class="module-browser">
+          <div class="module-toolbar"><label class="search"><svg><use href="#i-search"/></svg><input id="module-search" type="search" placeholder="Buscar módulo…" aria-label="Buscar módulo" autocomplete="off"></label><div class="filters" role="group" aria-label="Filtrar módulos"><button class="filter active" data-filter="all" aria-pressed="true">Todos</button><button class="filter" data-filter="on" aria-pressed="false">Ligados</button><button class="filter" data-filter="off" aria-pressed="false">Desligados</button></div></div>
+          <div class="list-caption"><span id="module-count"></span><span>Selecione para configurar</span></div>
+          <div id="module-list" class="module-list scroll-region" tabindex="0" aria-label="Lista contínua de módulos"></div>
+        </div>
+        <aside id="module-detail" class="inspector scroll-region" aria-label="Ajustes do módulo selecionado"></aside>
+      </div>
+
+      <div id="settings-view" class="view settings-view" hidden>
+        <nav id="settings-nav" class="settings-nav" aria-label="Grupos de configurações"></nav>
+        <div id="settings-content" class="settings-content scroll-region"></div>
+      </div>
+
+      <div id="hud-view" class="view hud-view" hidden>
+        <div class="hud-topbar"><label class="check"><input id="snap" type="checkbox" checked>Alinhar ao centro e às bordas</label><button id="undo" class="button subtle" disabled><svg><use href="#i-undo"/></svg>Desfazer</button><button id="reset-layout" class="button subtle">Restaurar posições</button></div>
+        <div class="hud-layout">
+          <div class="hud-stage">
+            <div id="hud-canvas" class="hud-canvas" aria-label="Prévia do HUD. Selecione e arraste um elemento.">
+              <div class="scene-label">PRÉVIA DO HUD</div><div class="crosshair" aria-hidden="true"></div>
+              <div id="guide-x" class="guide guide-x" hidden></div><div id="guide-y" class="guide guide-y" hidden></div>
+            </div>
+            <div class="hud-instructions"><span>Clique para selecionar · Arraste para mover</span><span>Setas: 1 px · Shift + setas: 10 px · Ctrl+Z: desfazer</span></div>
+            <p class="preview-context">Exemplos de conteúdo para editar o layout, inclusive fora de uma partida.</p>
+          </div>
+          <aside class="hud-inspector scroll-region"><h2>Elementos</h2><div id="hud-elements"></div><div id="hud-properties"></div></aside>
+        </div>
+      </div>
+
+      <footer class="statusbar"><span id="status" role="status" aria-live="polite">Pronto para personalizar.</span><span id="footer-hint">Lista única · role para ver todos os módulos</span></footer>
+    </section>
+  </main>
+  <div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+  <noscript>Ative JavaScript para experimentar os controles deste protótipo local.</noscript>
+</body>
+</html>

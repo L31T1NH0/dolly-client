@@ -1,0 +1,72 @@
+Compiled from "ProxyClient.java"
+public class pl.asie.foamfix.ProxyClient extends pl.asie.foamfix.ProxyCommon {
+  public static pl.asie.foamfix.client.Deduplicator deduplicator;
+    descriptor: Lpl/asie/foamfix/client/Deduplicator;
+
+  public static final net.minecraft.client.resources.model.IBakedModel DUMMY_MODEL;
+    descriptor: Lnet/minecraft/client/resources/model/IBakedModel;
+
+  public pl.asie.foamfix.ProxyClient();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: invokespecial #15                 // Method pl/asie/foamfix/ProxyCommon."<init>":()V
+       4: return
+
+  public void preInit();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: invokespecial #20                 // Method pl/asie/foamfix/ProxyCommon.preInit:()V
+       4: getstatic     #26                 // Field pl/asie/foamfix/shared/FoamFixShared.config:Lpl/asie/foamfix/shared/FoamFixConfig;
+       7: getfield      #32                 // Field pl/asie/foamfix/shared/FoamFixConfig.clDeduplicate:Z
+      10: ifne          17
+      13: aconst_null
+      14: putstatic     #34                 // Field deduplicator:Lpl/asie/foamfix/client/Deduplicator;
+      17: return
+
+  public void init();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: invokespecial #37                 // Method pl/asie/foamfix/ProxyCommon.init:()V
+       4: getstatic     #43                 // Field net/minecraftforge/common/MinecraftForge.EVENT_BUS:Lnet/minecraftforge/fml/common/eventhandler/EventBus;
+       7: new           #45                 // class pl/asie/foamfix/client/FoamFixModelDeduplicate
+      10: dup
+      11: invokespecial #46                 // Method pl/asie/foamfix/client/FoamFixModelDeduplicate."<init>":()V
+      14: invokevirtual #52                 // Method net/minecraftforge/fml/common/eventhandler/EventBus.register:(Ljava/lang/Object;)V
+      17: getstatic     #26                 // Field pl/asie/foamfix/shared/FoamFixShared.config:Lpl/asie/foamfix/shared/FoamFixConfig;
+      20: getfield      #55                 // Field pl/asie/foamfix/shared/FoamFixConfig.clCleanRedundantModelRegistry:Z
+      23: ifeq          39
+      26: getstatic     #43                 // Field net/minecraftforge/common/MinecraftForge.EVENT_BUS:Lnet/minecraftforge/fml/common/eventhandler/EventBus;
+      29: new           #57                 // class pl/asie/foamfix/client/FoamFixModelRegistryDuplicateWipe
+      32: dup
+      33: invokespecial #58                 // Method pl/asie/foamfix/client/FoamFixModelRegistryDuplicateWipe."<init>":()V
+      36: invokevirtual #52                 // Method net/minecraftforge/fml/common/eventhandler/EventBus.register:(Ljava/lang/Object;)V
+      39: return
+
+  public void postInit();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: invokespecial #61                 // Method pl/asie/foamfix/ProxyCommon.postInit:()V
+       4: getstatic     #34                 // Field deduplicator:Lpl/asie/foamfix/client/Deduplicator;
+       7: ifnull        17
+      10: getstatic     #34                 // Field deduplicator:Lpl/asie/foamfix/client/Deduplicator;
+      13: iconst_0
+      14: putfield      #67                 // Field pl/asie/foamfix/client/Deduplicator.successfuls:I
+      17: return
+
+  static {};
+    descriptor: ()V
+    Code:
+       0: new           #63                 // class pl/asie/foamfix/client/Deduplicator
+       3: dup
+       4: invokespecial #69                 // Method pl/asie/foamfix/client/Deduplicator."<init>":()V
+       7: putstatic     #34                 // Field deduplicator:Lpl/asie/foamfix/client/Deduplicator;
+      10: new           #7                  // class pl/asie/foamfix/ProxyClient$1
+      13: dup
+      14: invokespecial #70                 // Method pl/asie/foamfix/ProxyClient$1."<init>":()V
+      17: putstatic     #72                 // Field DUMMY_MODEL:Lnet/minecraft/client/resources/model/IBakedModel;
+      20: return
+}

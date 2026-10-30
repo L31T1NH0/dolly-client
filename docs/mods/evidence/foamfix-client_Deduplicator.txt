@@ -1,0 +1,1177 @@
+Compiled from "Deduplicator.java"
+public class pl.asie.foamfix.client.Deduplicator {
+  private static final java.util.Set<java.lang.Class> BLACKLIST_CLASS;
+    descriptor: Ljava/util/Set;
+
+  private static final java.util.Set<java.lang.Class> TRIM_ARRAYS_CLASSES;
+    descriptor: Ljava/util/Set;
+
+  private static final java.util.Map<java.lang.Class, java.util.Set<java.lang.invoke.MethodHandle[]>> CLASS_FIELDS;
+    descriptor: Ljava/util/Map;
+
+  private static final java.util.Map<java.lang.Class, java.lang.invoke.MethodHandle> COLLECTION_CONSTRUCTORS;
+    descriptor: Ljava/util/Map;
+
+  private static final java.lang.invoke.MethodHandle FIELD_UNPACKED_DATA_GETTER;
+    descriptor: Ljava/lang/invoke/MethodHandle;
+
+  private static final java.lang.invoke.MethodHandle FIELD_UNPACKED_DATA_SETTER;
+    descriptor: Ljava/lang/invoke/MethodHandle;
+
+  private static final java.lang.invoke.MethodHandle IPAM_MW_TRANSFORMS_GETTER;
+    descriptor: Ljava/lang/invoke/MethodHandle;
+
+  private static final java.lang.invoke.MethodHandle IPAM_MW_TRANSFORMS_SETTER;
+    descriptor: Ljava/lang/invoke/MethodHandle;
+
+  private static final java.lang.invoke.MethodHandle BIM_TRANSFORMS_GETTER;
+    descriptor: Ljava/lang/invoke/MethodHandle;
+
+  private static final java.lang.invoke.MethodHandle BIM_TRANSFORMS_SETTER;
+    descriptor: Ljava/lang/invoke/MethodHandle;
+
+  public int successfuls;
+    descriptor: I
+
+  public int maxRecursion;
+    descriptor: I
+
+  private final pl.asie.foamfix.client.IDeduplicatingStorage<float[]> FLOATA_STORAGE;
+    descriptor: Lpl/asie/foamfix/client/IDeduplicatingStorage;
+
+  private final pl.asie.foamfix.client.IDeduplicatingStorage<float[][]> FLOATAA_STORAGE;
+    descriptor: Lpl/asie/foamfix/client/IDeduplicatingStorage;
+
+  private final pl.asie.foamfix.client.IDeduplicatingStorage OBJECT_STORAGE;
+    descriptor: Lpl/asie/foamfix/client/IDeduplicatingStorage;
+
+  private final pl.asie.foamfix.client.IDeduplicatingStorage<net.minecraft.client.renderer.block.model.ItemCameraTransforms> ICT_STORAGE;
+    descriptor: Lpl/asie/foamfix/client/IDeduplicatingStorage;
+
+  private final java.util.Set<java.lang.Object> deduplicatedObjects;
+    descriptor: Ljava/util/Set;
+
+  public pl.asie.foamfix.client.Deduplicator();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: invokespecial #61                 // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: iconst_0
+       6: putfield      #63                 // Field successfuls:I
+       9: aload_0
+      10: iconst_0
+      11: putfield      #65                 // Field maxRecursion:I
+      14: aload_0
+      15: new           #67                 // class pl/asie/foamfix/client/DeduplicatingStorageTrove
+      18: dup
+      19: getstatic     #73                 // Field pl/asie/foamfix/util/HashingStrategies.FLOAT_ARRAY:Lgnu/trove/strategy/HashingStrategy;
+      22: invokespecial #76                 // Method pl/asie/foamfix/client/DeduplicatingStorageTrove."<init>":(Lgnu/trove/strategy/HashingStrategy;)V
+      25: putfield      #78                 // Field FLOATA_STORAGE:Lpl/asie/foamfix/client/IDeduplicatingStorage;
+      28: aload_0
+      29: new           #67                 // class pl/asie/foamfix/client/DeduplicatingStorageTrove
+      32: dup
+      33: getstatic     #81                 // Field pl/asie/foamfix/util/HashingStrategies.FLOAT_ARRAY_ARRAY:Lgnu/trove/strategy/HashingStrategy;
+      36: invokespecial #76                 // Method pl/asie/foamfix/client/DeduplicatingStorageTrove."<init>":(Lgnu/trove/strategy/HashingStrategy;)V
+      39: putfield      #83                 // Field FLOATAA_STORAGE:Lpl/asie/foamfix/client/IDeduplicatingStorage;
+      42: aload_0
+      43: new           #67                 // class pl/asie/foamfix/client/DeduplicatingStorageTrove
+      46: dup
+      47: getstatic     #86                 // Field pl/asie/foamfix/util/HashingStrategies.GENERIC:Lgnu/trove/strategy/HashingStrategy;
+      50: invokespecial #76                 // Method pl/asie/foamfix/client/DeduplicatingStorageTrove."<init>":(Lgnu/trove/strategy/HashingStrategy;)V
+      53: putfield      #88                 // Field OBJECT_STORAGE:Lpl/asie/foamfix/client/IDeduplicatingStorage;
+      56: aload_0
+      57: new           #67                 // class pl/asie/foamfix/client/DeduplicatingStorageTrove
+      60: dup
+      61: getstatic     #91                 // Field pl/asie/foamfix/util/HashingStrategies.ITEM_CAMERA_TRANSFORMS:Lgnu/trove/strategy/HashingStrategy;
+      64: invokespecial #76                 // Method pl/asie/foamfix/client/DeduplicatingStorageTrove."<init>":(Lgnu/trove/strategy/HashingStrategy;)V
+      67: putfield      #93                 // Field ICT_STORAGE:Lpl/asie/foamfix/client/IDeduplicatingStorage;
+      70: aload_0
+      71: new           #95                 // class gnu/trove/set/hash/TCustomHashSet
+      74: dup
+      75: getstatic     #98                 // Field pl/asie/foamfix/util/HashingStrategies.IDENTITY:Lgnu/trove/strategy/HashingStrategy;
+      78: invokespecial #99                 // Method gnu/trove/set/hash/TCustomHashSet."<init>":(Lgnu/trove/strategy/HashingStrategy;)V
+      81: putfield      #101                // Field deduplicatedObjects:Ljava/util/Set;
+      84: return
+
+  private boolean shouldCheckClass(java.lang.Class);
+    descriptor: (Ljava/lang/Class;)Z
+    Code:
+       0: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+       3: aload_1
+       4: invokeinterface #113,  2          // InterfaceMethod java/util/Set.contains:(Ljava/lang/Object;)Z
+       9: ifeq          14
+      12: iconst_0
+      13: ireturn
+      14: aload_1
+      15: invokevirtual #119                // Method java/lang/Class.isPrimitive:()Z
+      18: ifne          46
+      21: aload_1
+      22: invokevirtual #122                // Method java/lang/Class.isEnum:()Z
+      25: ifne          46
+      28: aload_1
+      29: invokevirtual #125                // Method java/lang/Class.isArray:()Z
+      32: ifeq          58
+      35: aload_0
+      36: aload_1
+      37: invokevirtual #129                // Method java/lang/Class.getComponentType:()Ljava/lang/Class;
+      40: invokespecial #131                // Method shouldCheckClass:(Ljava/lang/Class;)Z
+      43: ifne          58
+      46: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+      49: aload_1
+      50: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+      55: pop
+      56: iconst_0
+      57: ireturn
+      58: iconst_1
+      59: ireturn
+
+  public void addObject(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)V
+    Code:
+       0: aload_0
+       1: getfield      #88                 // Field OBJECT_STORAGE:Lpl/asie/foamfix/client/IDeduplicatingStorage;
+       4: aload_1
+       5: invokeinterface #144,  2          // InterfaceMethod pl/asie/foamfix/client/IDeduplicatingStorage.deduplicate:(Ljava/lang/Object;)Ljava/lang/Object;
+      10: pop
+      11: return
+
+  public void addObjects(java.util.Collection);
+    descriptor: (Ljava/util/Collection;)V
+    Code:
+       0: aload_1
+       1: invokeinterface #154,  1          // InterfaceMethod java/util/Collection.iterator:()Ljava/util/Iterator;
+       6: astore_2
+       7: aload_2
+       8: invokeinterface #159,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+      13: ifeq          37
+      16: aload_2
+      17: invokeinterface #163,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      22: astore_3
+      23: aload_0
+      24: getfield      #88                 // Field OBJECT_STORAGE:Lpl/asie/foamfix/client/IDeduplicatingStorage;
+      27: aload_3
+      28: invokeinterface #144,  2          // InterfaceMethod pl/asie/foamfix/client/IDeduplicatingStorage.deduplicate:(Ljava/lang/Object;)Ljava/lang/Object;
+      33: pop
+      34: goto          7
+      37: return
+
+  public java.lang.Object deduplicate0(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Ljava/lang/Object;
+    Code:
+       0: aload_1
+       1: astore_2
+       2: iconst_0
+       3: istore_3
+       4: aload_1
+       5: instanceof    #168                // class "[F"
+       8: ifeq          45
+      11: bipush        24
+      13: aload_1
+      14: checkcast     #168                // class "[F"
+      17: checkcast     #168                // class "[F"
+      20: arraylength
+      21: iconst_4
+      22: imul
+      23: iadd
+      24: istore_3
+      25: aload_0
+      26: getfield      #78                 // Field FLOATA_STORAGE:Lpl/asie/foamfix/client/IDeduplicatingStorage;
+      29: aload_1
+      30: checkcast     #168                // class "[F"
+      33: checkcast     #168                // class "[F"
+      36: invokeinterface #144,  2          // InterfaceMethod pl/asie/foamfix/client/IDeduplicatingStorage.deduplicate:(Ljava/lang/Object;)Ljava/lang/Object;
+      41: astore_2
+      42: goto          333
+      45: aload_1
+      46: instanceof    #170                // class "[[F"
+      49: ifeq          151
+      52: bipush        16
+      54: aload_1
+      55: checkcast     #170                // class "[[F"
+      58: checkcast     #170                // class "[[F"
+      61: arraylength
+      62: iconst_4
+      63: imul
+      64: iadd
+      65: istore_3
+      66: aload_0
+      67: getfield      #83                 // Field FLOATAA_STORAGE:Lpl/asie/foamfix/client/IDeduplicatingStorage;
+      70: aload_1
+      71: checkcast     #170                // class "[[F"
+      74: checkcast     #170                // class "[[F"
+      77: invokeinterface #144,  2          // InterfaceMethod pl/asie/foamfix/client/IDeduplicatingStorage.deduplicate:(Ljava/lang/Object;)Ljava/lang/Object;
+      82: checkcast     #170                // class "[[F"
+      85: astore        4
+      87: aload         4
+      89: aload_1
+      90: if_acmpeq     111
+      93: aload         4
+      95: astore_2
+      96: aload_0
+      97: dup
+      98: getfield      #63                 // Field successfuls:I
+     101: aload         4
+     103: arraylength
+     104: iadd
+     105: putfield      #63                 // Field successfuls:I
+     108: goto          148
+     111: iconst_0
+     112: istore        5
+     114: iload         5
+     116: aload         4
+     118: arraylength
+     119: if_icmpge     148
+     122: aload         4
+     124: iload         5
+     126: aload_0
+     127: aload         4
+     129: iload         5
+     131: aaload
+     132: invokevirtual #172                // Method deduplicate0:(Ljava/lang/Object;)Ljava/lang/Object;
+     135: checkcast     #168                // class "[F"
+     138: checkcast     #168                // class "[F"
+     141: aastore
+     142: iinc          5, 1
+     145: goto          114
+     148: goto          333
+     151: aload_1
+     152: instanceof    #174                // class "[[[F"
+     155: ifeq          207
+     158: aload_1
+     159: checkcast     #174                // class "[[[F"
+     162: checkcast     #174                // class "[[[F"
+     165: astore        4
+     167: iconst_0
+     168: istore        5
+     170: iload         5
+     172: aload         4
+     174: arraylength
+     175: if_icmpge     204
+     178: aload         4
+     180: iload         5
+     182: aload_0
+     183: aload         4
+     185: iload         5
+     187: aaload
+     188: invokevirtual #172                // Method deduplicate0:(Ljava/lang/Object;)Ljava/lang/Object;
+     191: checkcast     #170                // class "[[F"
+     194: checkcast     #170                // class "[[F"
+     197: aastore
+     198: iinc          5, 1
+     201: goto          170
+     204: goto          333
+     207: aload_1
+     208: instanceof    #176                // class com/google/common/collect/ImmutableList
+     211: ifne          228
+     214: aload_1
+     215: instanceof    #9                  // class com/google/common/collect/ImmutableSet
+     218: ifne          228
+     221: aload_1
+     222: instanceof    #178                // class com/google/common/collect/ImmutableMap
+     225: ifeq          242
+     228: aload_0
+     229: getfield      #88                 // Field OBJECT_STORAGE:Lpl/asie/foamfix/client/IDeduplicatingStorage;
+     232: aload_1
+     233: invokeinterface #144,  2          // InterfaceMethod pl/asie/foamfix/client/IDeduplicatingStorage.deduplicate:(Ljava/lang/Object;)Ljava/lang/Object;
+     238: astore_2
+     239: goto          333
+     242: aload_1
+     243: invokevirtual #181                // Method java/lang/Object.getClass:()Ljava/lang/Class;
+     246: astore        4
+     248: ldc           #183                // class net/minecraft/util/ResourceLocation
+     250: aload         4
+     252: if_acmpeq     262
+     255: ldc           #185                // class net/minecraft/client/resources/model/ModelResourceLocation
+     257: aload         4
+     259: if_acmpne     279
+     262: bipush        16
+     264: istore_3
+     265: aload_0
+     266: getfield      #88                 // Field OBJECT_STORAGE:Lpl/asie/foamfix/client/IDeduplicatingStorage;
+     269: aload_1
+     270: invokeinterface #144,  2          // InterfaceMethod pl/asie/foamfix/client/IDeduplicatingStorage.deduplicate:(Ljava/lang/Object;)Ljava/lang/Object;
+     275: astore_2
+     276: goto          333
+     279: ldc           #187                // class net/minecraftforge/client/model/TRSRTransformation
+     281: aload         4
+     283: if_acmpne     304
+     286: sipush        257
+     289: istore_3
+     290: aload_0
+     291: getfield      #88                 // Field OBJECT_STORAGE:Lpl/asie/foamfix/client/IDeduplicatingStorage;
+     294: aload_1
+     295: invokeinterface #144,  2          // InterfaceMethod pl/asie/foamfix/client/IDeduplicatingStorage.deduplicate:(Ljava/lang/Object;)Ljava/lang/Object;
+     300: astore_2
+     301: goto          333
+     304: ldc           #189                // class net/minecraft/client/renderer/block/model/ItemCameraTransforms
+     306: aload         4
+     308: if_acmpne     331
+     311: bipush        80
+     313: istore_3
+     314: aload_0
+     315: getfield      #93                 // Field ICT_STORAGE:Lpl/asie/foamfix/client/IDeduplicatingStorage;
+     318: aload_1
+     319: checkcast     #189                // class net/minecraft/client/renderer/block/model/ItemCameraTransforms
+     322: invokeinterface #144,  2          // InterfaceMethod pl/asie/foamfix/client/IDeduplicatingStorage.deduplicate:(Ljava/lang/Object;)Ljava/lang/Object;
+     327: astore_2
+     328: goto          333
+     331: aconst_null
+     332: areturn
+     333: aload_2
+     334: aload_1
+     335: if_acmpeq     356
+     338: aload_0
+     339: dup
+     340: getfield      #63                 // Field successfuls:I
+     343: iconst_1
+     344: iadd
+     345: putfield      #63                 // Field successfuls:I
+     348: getstatic     #194                // Field pl/asie/foamfix/shared/FoamFixShared.ramSaved:I
+     351: iload_3
+     352: iadd
+     353: putstatic     #194                // Field pl/asie/foamfix/shared/FoamFixShared.ramSaved:I
+     356: aload_2
+     357: areturn
+
+  public java.lang.Object deduplicateObject(java.lang.Object, int);
+    descriptor: (Ljava/lang/Object;I)Ljava/lang/Object;
+    Code:
+       0: aload_1
+       1: ifnull        12
+       4: iload_2
+       5: aload_0
+       6: getfield      #65                 // Field maxRecursion:I
+       9: if_icmple     14
+      12: aload_1
+      13: areturn
+      14: aload_1
+      15: invokevirtual #181                // Method java/lang/Object.getClass:()Ljava/lang/Class;
+      18: astore_3
+      19: aload_0
+      20: aload_3
+      21: invokespecial #131                // Method shouldCheckClass:(Ljava/lang/Class;)Z
+      24: ifne          29
+      27: aload_1
+      28: areturn
+      29: aload_0
+      30: getfield      #101                // Field deduplicatedObjects:Ljava/util/Set;
+      33: aload_1
+      34: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+      39: ifne          44
+      42: aload_1
+      43: areturn
+      44: aload_1
+      45: instanceof    #208                // class net/minecraft/client/resources/model/IBakedModel
+      48: ifeq          169
+      51: aload_1
+      52: instanceof    #12                 // class net/minecraftforge/client/model/IPerspectiveAwareModel$MapWrapper
+      55: ifeq          109
+      58: getstatic     #210                // Field IPAM_MW_TRANSFORMS_GETTER:Ljava/lang/invoke/MethodHandle;
+      61: aload_1
+      62: invokevirtual #215                // Method java/lang/invoke/MethodHandle.invoke:(Ljava/lang/Object;)Ljava/lang/Object;
+      65: astore        4
+      67: aload_0
+      68: aload         4
+      70: invokevirtual #172                // Method deduplicate0:(Ljava/lang/Object;)Ljava/lang/Object;
+      73: astore        5
+      75: aload         5
+      77: ifnull        96
+      80: aload         4
+      82: aload         5
+      84: if_acmpeq     96
+      87: getstatic     #217                // Field IPAM_MW_TRANSFORMS_SETTER:Ljava/lang/invoke/MethodHandle;
+      90: aload_1
+      91: aload         5
+      93: invokevirtual #220                // Method java/lang/invoke/MethodHandle.invoke:(Ljava/lang/Object;Ljava/lang/Object;)V
+      96: goto          169
+      99: astore        4
+     101: aload         4
+     103: invokevirtual #223                // Method java/lang/Throwable.printStackTrace:()V
+     106: goto          169
+     109: ldc           #225                // String net.minecraftforge.client.model.ItemLayerModel$BakedItemModel
+     111: aload_3
+     112: invokevirtual #229                // Method java/lang/Class.getName:()Ljava/lang/String;
+     115: invokevirtual #234                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+     118: ifeq          169
+     121: getstatic     #236                // Field BIM_TRANSFORMS_GETTER:Ljava/lang/invoke/MethodHandle;
+     124: aload_1
+     125: invokevirtual #215                // Method java/lang/invoke/MethodHandle.invoke:(Ljava/lang/Object;)Ljava/lang/Object;
+     128: astore        4
+     130: aload_0
+     131: aload         4
+     133: invokevirtual #172                // Method deduplicate0:(Ljava/lang/Object;)Ljava/lang/Object;
+     136: astore        5
+     138: aload         5
+     140: ifnull        159
+     143: aload         4
+     145: aload         5
+     147: if_acmpeq     159
+     150: getstatic     #238                // Field BIM_TRANSFORMS_SETTER:Ljava/lang/invoke/MethodHandle;
+     153: aload_1
+     154: aload         5
+     156: invokevirtual #220                // Method java/lang/invoke/MethodHandle.invoke:(Ljava/lang/Object;Ljava/lang/Object;)V
+     159: goto          169
+     162: astore        4
+     164: aload         4
+     166: invokevirtual #223                // Method java/lang/Throwable.printStackTrace:()V
+     169: aload_3
+     170: ldc           #240                // class net/minecraftforge/client/model/pipeline/UnpackedBakedQuad
+     172: if_acmpne     210
+     175: getstatic     #242                // Field FIELD_UNPACKED_DATA_GETTER:Ljava/lang/invoke/MethodHandle;
+     178: aload_1
+     179: checkcast     #240                // class net/minecraftforge/client/model/pipeline/UnpackedBakedQuad
+     182: invokevirtual #246                // Method java/lang/invoke/MethodHandle.invokeExact:(Lnet/minecraftforge/client/model/pipeline/UnpackedBakedQuad;)[[[F
+     185: checkcast     #174                // class "[[[F"
+     188: astore        4
+     190: aload_0
+     191: aload         4
+     193: invokevirtual #172                // Method deduplicate0:(Ljava/lang/Object;)Ljava/lang/Object;
+     196: pop
+     197: goto          1442
+     200: astore        4
+     202: aload         4
+     204: invokevirtual #223                // Method java/lang/Throwable.printStackTrace:()V
+     207: goto          1442
+     210: aload_1
+     211: instanceof    #183                // class net/minecraft/util/ResourceLocation
+     214: ifne          224
+     217: aload_1
+     218: instanceof    #187                // class net/minecraftforge/client/model/TRSRTransformation
+     221: ifeq          230
+     224: aload_0
+     225: aload_1
+     226: invokevirtual #172                // Method deduplicate0:(Ljava/lang/Object;)Ljava/lang/Object;
+     229: areturn
+     230: aload_3
+     231: ldc           #189                // class net/minecraft/client/renderer/block/model/ItemCameraTransforms
+     233: if_acmpne     254
+     236: aload_0
+     237: aload_1
+     238: invokevirtual #172                // Method deduplicate0:(Ljava/lang/Object;)Ljava/lang/Object;
+     241: astore        4
+     243: aload         4
+     245: aload_1
+     246: if_acmpeq     252
+     249: aload         4
+     251: areturn
+     252: aload_1
+     253: areturn
+     254: aload_1
+     255: instanceof    #248                // class net/minecraft/item/Item
+     258: ifne          296
+     261: aload_1
+     262: instanceof    #250                // class net/minecraft/block/Block
+     265: ifne          296
+     268: aload_1
+     269: instanceof    #252                // class net/minecraft/world/World
+     272: ifne          296
+     275: aload_1
+     276: instanceof    #254                // class net/minecraft/entity/Entity
+     279: ifne          296
+     282: aload_1
+     283: instanceof    #256                // class org/apache/logging/log4j/Logger
+     286: ifne          296
+     289: aload_1
+     290: instanceof    #258                // class net/minecraft/util/IRegistry
+     293: ifeq          309
+     296: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     299: aload_3
+     300: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     305: pop
+     306: goto          1442
+     309: aload_1
+     310: instanceof    #260                // class com/google/common/base/Optional
+     313: ifeq          368
+     316: aload_1
+     317: checkcast     #260                // class com/google/common/base/Optional
+     320: astore        4
+     322: aload         4
+     324: invokevirtual #263                // Method com/google/common/base/Optional.isPresent:()Z
+     327: ifeq          365
+     330: aload_0
+     331: aload         4
+     333: invokevirtual #266                // Method com/google/common/base/Optional.get:()Ljava/lang/Object;
+     336: iload_2
+     337: iconst_1
+     338: iadd
+     339: invokevirtual #268                // Method deduplicateObject:(Ljava/lang/Object;I)Ljava/lang/Object;
+     342: astore        5
+     344: aload         5
+     346: ifnull        365
+     349: aload         5
+     351: aload         4
+     353: invokevirtual #266                // Method com/google/common/base/Optional.get:()Ljava/lang/Object;
+     356: if_acmpeq     365
+     359: aload         5
+     361: invokestatic  #272                // Method com/google/common/base/Optional.of:(Ljava/lang/Object;)Lcom/google/common/base/Optional;
+     364: areturn
+     365: goto          1442
+     368: aload_1
+     369: instanceof    #274                // class com/google/common/collect/Multimap
+     372: ifeq          501
+     375: aload_1
+     376: instanceof    #276                // class com/google/common/collect/ImmutableMultimap
+     379: ifeq          385
+     382: goto          1442
+     385: aload_1
+     386: checkcast     #274                // class com/google/common/collect/Multimap
+     389: invokeinterface #280,  1          // InterfaceMethod com/google/common/collect/Multimap.keySet:()Ljava/util/Set;
+     394: invokeinterface #281,  1          // InterfaceMethod java/util/Set.iterator:()Ljava/util/Iterator;
+     399: astore        4
+     401: aload         4
+     403: invokeinterface #159,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+     408: ifeq          498
+     411: aload         4
+     413: invokeinterface #163,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+     418: astore        5
+     420: aload_1
+     421: checkcast     #274                // class com/google/common/collect/Multimap
+     424: invokeinterface #285,  1          // InterfaceMethod com/google/common/collect/Multimap.values:()Ljava/util/Collection;
+     429: invokestatic  #291                // Method com/google/common/collect/Lists.newArrayList:(Ljava/lang/Iterable;)Ljava/util/ArrayList;
+     432: astore        6
+     434: iconst_0
+     435: istore        7
+     437: iload         7
+     439: aload         6
+     441: invokeinterface #296,  1          // InterfaceMethod java/util/List.size:()I
+     446: if_icmpge     481
+     449: aload         6
+     451: iload         7
+     453: aload_0
+     454: aload         6
+     456: iload         7
+     458: invokeinterface #299,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+     463: iload_2
+     464: iconst_1
+     465: iadd
+     466: invokevirtual #268                // Method deduplicateObject:(Ljava/lang/Object;I)Ljava/lang/Object;
+     469: invokeinterface #303,  3          // InterfaceMethod java/util/List.set:(ILjava/lang/Object;)Ljava/lang/Object;
+     474: pop
+     475: iinc          7, 1
+     478: goto          437
+     481: aload_1
+     482: checkcast     #274                // class com/google/common/collect/Multimap
+     485: aload         5
+     487: aload         6
+     489: invokeinterface #307,  3          // InterfaceMethod com/google/common/collect/Multimap.replaceValues:(Ljava/lang/Object;Ljava/lang/Iterable;)Ljava/util/Collection;
+     494: pop
+     495: goto          401
+     498: goto          1442
+     501: aload_1
+     502: instanceof    #309                // class java/util/Map
+     505: ifeq          727
+     508: aload_1
+     509: instanceof    #178                // class com/google/common/collect/ImmutableMap
+     512: ifeq          636
+     515: aload_1
+     516: checkcast     #178                // class com/google/common/collect/ImmutableMap
+     519: astore        4
+     521: new           #311                // class java/util/HashMap
+     524: dup
+     525: invokespecial #312                // Method java/util/HashMap."<init>":()V
+     528: astore        5
+     530: iconst_0
+     531: istore        6
+     533: aload         4
+     535: invokevirtual #315                // Method com/google/common/collect/ImmutableMap.keySet:()Lcom/google/common/collect/ImmutableSet;
+     538: invokevirtual #318                // Method com/google/common/collect/ImmutableSet.iterator:()Lcom/google/common/collect/UnmodifiableIterator;
+     541: astore        7
+     543: aload         7
+     545: invokeinterface #159,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+     550: ifeq          622
+     553: aload         7
+     555: invokeinterface #163,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+     560: astore        8
+     562: aload         4
+     564: aload         8
+     566: invokevirtual #320                // Method com/google/common/collect/ImmutableMap.get:(Ljava/lang/Object;)Ljava/lang/Object;
+     569: astore        9
+     571: aload_0
+     572: aload         9
+     574: iload_2
+     575: iconst_1
+     576: iadd
+     577: invokevirtual #268                // Method deduplicateObject:(Ljava/lang/Object;I)Ljava/lang/Object;
+     580: astore        10
+     582: aload         5
+     584: aload         8
+     586: aload         10
+     588: ifnull        596
+     591: aload         10
+     593: goto          598
+     596: aload         9
+     598: invokeinterface #324,  3          // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+     603: pop
+     604: aload         10
+     606: ifnull        619
+     609: aload         10
+     611: aload         9
+     613: if_acmpeq     619
+     616: iconst_1
+     617: istore        6
+     619: goto          543
+     622: iload         6
+     624: ifeq          633
+     627: aload         5
+     629: invokestatic  #328                // Method com/google/common/collect/ImmutableMap.copyOf:(Ljava/util/Map;)Lcom/google/common/collect/ImmutableMap;
+     632: areturn
+     633: goto          1442
+     636: aload_1
+     637: checkcast     #309                // class java/util/Map
+     640: invokeinterface #329,  1          // InterfaceMethod java/util/Map.keySet:()Ljava/util/Set;
+     645: invokeinterface #281,  1          // InterfaceMethod java/util/Set.iterator:()Ljava/util/Iterator;
+     650: astore        4
+     652: aload         4
+     654: invokeinterface #159,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+     659: ifeq          724
+     662: aload         4
+     664: invokeinterface #163,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+     669: astore        5
+     671: aload_1
+     672: checkcast     #309                // class java/util/Map
+     675: aload         5
+     677: invokeinterface #330,  2          // InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+     682: astore        6
+     684: aload_0
+     685: aload         6
+     687: iload_2
+     688: iconst_1
+     689: iadd
+     690: invokevirtual #268                // Method deduplicateObject:(Ljava/lang/Object;I)Ljava/lang/Object;
+     693: astore        7
+     695: aload         7
+     697: ifnull        721
+     700: aload         6
+     702: aload         7
+     704: if_acmpeq     721
+     707: aload_1
+     708: checkcast     #309                // class java/util/Map
+     711: aload         5
+     713: aload         7
+     715: invokeinterface #324,  3          // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+     720: pop
+     721: goto          652
+     724: goto          1442
+     727: aload_1
+     728: instanceof    #293                // class java/util/List
+     731: ifeq          903
+     734: aload_1
+     735: instanceof    #176                // class com/google/common/collect/ImmutableList
+     738: ifeq          847
+     741: aload_1
+     742: checkcast     #176                // class com/google/common/collect/ImmutableList
+     745: astore        4
+     747: new           #332                // class java/util/ArrayList
+     750: dup
+     751: invokespecial #333                // Method java/util/ArrayList."<init>":()V
+     754: astore        5
+     756: iconst_0
+     757: istore        6
+     759: iconst_0
+     760: istore        7
+     762: iload         7
+     764: aload         4
+     766: invokevirtual #334                // Method com/google/common/collect/ImmutableList.size:()I
+     769: if_icmpge     833
+     772: aload         4
+     774: iload         7
+     776: invokevirtual #335                // Method com/google/common/collect/ImmutableList.get:(I)Ljava/lang/Object;
+     779: astore        8
+     781: aload_0
+     782: aload         8
+     784: iload_2
+     785: iconst_1
+     786: iadd
+     787: invokevirtual #268                // Method deduplicateObject:(Ljava/lang/Object;I)Ljava/lang/Object;
+     790: astore        9
+     792: aload         5
+     794: aload         9
+     796: ifnull        804
+     799: aload         9
+     801: goto          806
+     804: aload         8
+     806: invokeinterface #336,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     811: pop
+     812: aload         9
+     814: ifnull        827
+     817: aload         9
+     819: aload         8
+     821: if_acmpeq     827
+     824: iconst_1
+     825: istore        6
+     827: iinc          7, 1
+     830: goto          762
+     833: iload         6
+     835: ifeq          844
+     838: aload         5
+     840: invokestatic  #339                // Method com/google/common/collect/ImmutableList.copyOf:(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
+     843: areturn
+     844: goto          1442
+     847: aload_1
+     848: checkcast     #293                // class java/util/List
+     851: astore        4
+     853: iconst_0
+     854: istore        5
+     856: iload         5
+     858: aload         4
+     860: invokeinterface #296,  1          // InterfaceMethod java/util/List.size:()I
+     865: if_icmpge     900
+     868: aload         4
+     870: iload         5
+     872: aload_0
+     873: aload         4
+     875: iload         5
+     877: invokeinterface #299,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+     882: iload_2
+     883: iconst_1
+     884: iadd
+     885: invokevirtual #268                // Method deduplicateObject:(Ljava/lang/Object;I)Ljava/lang/Object;
+     888: invokeinterface #303,  3          // InterfaceMethod java/util/List.set:(ILjava/lang/Object;)Ljava/lang/Object;
+     893: pop
+     894: iinc          5, 1
+     897: goto          856
+     900: goto          1442
+     903: aload_1
+     904: instanceof    #150                // class java/util/Collection
+     907: ifeq          1088
+     910: getstatic     #341                // Field COLLECTION_CONSTRUCTORS:Ljava/util/Map;
+     913: aload_3
+     914: invokeinterface #344,  2          // InterfaceMethod java/util/Map.containsKey:(Ljava/lang/Object;)Z
+     919: ifne          961
+     922: getstatic     #341                // Field COLLECTION_CONSTRUCTORS:Ljava/util/Map;
+     925: aload_3
+     926: invokestatic  #348                // Method java/lang/invoke/MethodHandles.publicLookup:()Ljava/lang/invoke/MethodHandles$Lookup;
+     929: aload_3
+     930: getstatic     #353                // Field java/lang/Void.TYPE:Ljava/lang/Class;
+     933: invokestatic  #359                // Method java/lang/invoke/MethodType.methodType:(Ljava/lang/Class;)Ljava/lang/invoke/MethodType;
+     936: invokevirtual #363                // Method java/lang/invoke/MethodHandles$Lookup.findConstructor:(Ljava/lang/Class;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodHandle;
+     939: invokeinterface #324,  3          // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+     944: pop
+     945: goto          961
+     948: astore        4
+     950: getstatic     #341                // Field COLLECTION_CONSTRUCTORS:Ljava/util/Map;
+     953: aload_3
+     954: aconst_null
+     955: invokeinterface #324,  3          // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+     960: pop
+     961: getstatic     #341                // Field COLLECTION_CONSTRUCTORS:Ljava/util/Map;
+     964: aload_3
+     965: invokeinterface #330,  2          // InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+     970: checkcast     #212                // class java/lang/invoke/MethodHandle
+     973: astore        4
+     975: aload         4
+     977: ifnull        1042
+     980: aload         4
+     982: invokevirtual #365                // Method java/lang/invoke/MethodHandle.invoke:()Ljava/util/Collection;
+     985: astore        5
+     987: aload_1
+     988: checkcast     #150                // class java/util/Collection
+     991: invokeinterface #154,  1          // InterfaceMethod java/util/Collection.iterator:()Ljava/util/Iterator;
+     996: astore        6
+     998: aload         6
+    1000: invokeinterface #159,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+    1005: ifeq          1037
+    1008: aload         6
+    1010: invokeinterface #163,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+    1015: astore        7
+    1017: aload         5
+    1019: aload_0
+    1020: aload         7
+    1022: iload_2
+    1023: iconst_1
+    1024: iadd
+    1025: invokevirtual #268                // Method deduplicateObject:(Ljava/lang/Object;I)Ljava/lang/Object;
+    1028: invokeinterface #366,  2          // InterfaceMethod java/util/Collection.add:(Ljava/lang/Object;)Z
+    1033: pop
+    1034: goto          998
+    1037: aload         5
+    1039: areturn
+    1040: astore        5
+    1042: aload_1
+    1043: checkcast     #150                // class java/util/Collection
+    1046: invokeinterface #154,  1          // InterfaceMethod java/util/Collection.iterator:()Ljava/util/Iterator;
+    1051: astore        5
+    1053: aload         5
+    1055: invokeinterface #159,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+    1060: ifeq          1085
+    1063: aload         5
+    1065: invokeinterface #163,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+    1070: astore        6
+    1072: aload_0
+    1073: aload         6
+    1075: iload_2
+    1076: iconst_1
+    1077: iadd
+    1078: invokevirtual #268                // Method deduplicateObject:(Ljava/lang/Object;I)Ljava/lang/Object;
+    1081: pop
+    1082: goto          1053
+    1085: goto          1442
+    1088: aload_3
+    1089: invokevirtual #125                // Method java/lang/Class.isArray:()Z
+    1092: ifeq          1155
+    1095: iconst_0
+    1096: istore        4
+    1098: iload         4
+    1100: aload_1
+    1101: invokestatic  #372                // Method java/lang/reflect/Array.getLength:(Ljava/lang/Object;)I
+    1104: if_icmpge     1152
+    1107: aload_1
+    1108: iload         4
+    1110: invokestatic  #374                // Method java/lang/reflect/Array.get:(Ljava/lang/Object;I)Ljava/lang/Object;
+    1113: astore        5
+    1115: aload_0
+    1116: aload         5
+    1118: iload_2
+    1119: iconst_1
+    1120: iadd
+    1121: invokevirtual #268                // Method deduplicateObject:(Ljava/lang/Object;I)Ljava/lang/Object;
+    1124: astore        6
+    1126: aload         6
+    1128: ifnull        1146
+    1131: aload         5
+    1133: aload         6
+    1135: if_acmpeq     1146
+    1138: aload_1
+    1139: iload         4
+    1141: aload         6
+    1143: invokestatic  #377                // Method java/lang/reflect/Array.set:(Ljava/lang/Object;ILjava/lang/Object;)V
+    1146: iinc          4, 1
+    1149: goto          1098
+    1152: goto          1442
+    1155: getstatic     #379                // Field CLASS_FIELDS:Ljava/util/Map;
+    1158: aload_3
+    1159: invokeinterface #344,  2          // InterfaceMethod java/util/Map.containsKey:(Ljava/lang/Object;)Z
+    1164: ifne          1312
+    1167: invokestatic  #383                // Method com/google/common/collect/ImmutableSet.builder:()Lcom/google/common/collect/ImmutableSet$Builder;
+    1170: astore        4
+    1172: aload_3
+    1173: astore        5
+    1175: aload         5
+    1177: invokevirtual #387                // Method java/lang/Class.getDeclaredFields:()[Ljava/lang/reflect/Field;
+    1180: astore        6
+    1182: aload         6
+    1184: arraylength
+    1185: istore        7
+    1187: iconst_0
+    1188: istore        8
+    1190: iload         8
+    1192: iload         7
+    1194: if_icmpge     1284
+    1197: aload         6
+    1199: iload         8
+    1201: aaload
+    1202: astore        9
+    1204: aload         9
+    1206: iconst_1
+    1207: invokevirtual #395                // Method java/lang/reflect/Field.setAccessible:(Z)V
+    1210: aload         9
+    1212: invokevirtual #398                // Method java/lang/reflect/Field.getModifiers:()I
+    1215: bipush        8
+    1217: iand
+    1218: ifeq          1224
+    1221: goto          1278
+    1224: aload_0
+    1225: aload         9
+    1227: invokevirtual #401                // Method java/lang/reflect/Field.getType:()Ljava/lang/Class;
+    1230: invokespecial #131                // Method shouldCheckClass:(Ljava/lang/Class;)Z
+    1233: ifeq          1278
+    1236: aload         4
+    1238: iconst_2
+    1239: anewarray     #212                // class java/lang/invoke/MethodHandle
+    1242: dup
+    1243: iconst_0
+    1244: invokestatic  #404                // Method java/lang/invoke/MethodHandles.lookup:()Ljava/lang/invoke/MethodHandles$Lookup;
+    1247: aload         9
+    1249: invokevirtual #408                // Method java/lang/invoke/MethodHandles$Lookup.unreflectGetter:(Ljava/lang/reflect/Field;)Ljava/lang/invoke/MethodHandle;
+    1252: aastore
+    1253: dup
+    1254: iconst_1
+    1255: invokestatic  #404                // Method java/lang/invoke/MethodHandles.lookup:()Ljava/lang/invoke/MethodHandles$Lookup;
+    1258: aload         9
+    1260: invokevirtual #411                // Method java/lang/invoke/MethodHandles$Lookup.unreflectSetter:(Ljava/lang/reflect/Field;)Ljava/lang/invoke/MethodHandle;
+    1263: aastore
+    1264: invokevirtual #414                // Method com/google/common/collect/ImmutableSet$Builder.add:(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableSet$Builder;
+    1267: pop
+    1268: goto          1278
+    1271: astore        10
+    1273: aload         10
+    1275: invokevirtual #415                // Method java/lang/IllegalAccessException.printStackTrace:()V
+    1278: iinc          8, 1
+    1281: goto          1190
+    1284: aload         5
+    1286: invokevirtual #418                // Method java/lang/Class.getSuperclass:()Ljava/lang/Class;
+    1289: dup
+    1290: astore        5
+    1292: ldc           #4                  // class java/lang/Object
+    1294: if_acmpne     1175
+    1297: getstatic     #379                // Field CLASS_FIELDS:Ljava/util/Map;
+    1300: aload_3
+    1301: aload         4
+    1303: invokevirtual #421                // Method com/google/common/collect/ImmutableSet$Builder.build:()Lcom/google/common/collect/ImmutableSet;
+    1306: invokeinterface #324,  3          // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    1311: pop
+    1312: getstatic     #379                // Field CLASS_FIELDS:Ljava/util/Map;
+    1315: aload_3
+    1316: invokeinterface #330,  2          // InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+    1321: checkcast     #109                // class java/util/Set
+    1324: invokeinterface #281,  1          // InterfaceMethod java/util/Set.iterator:()Ljava/util/Iterator;
+    1329: astore        4
+    1331: aload         4
+    1333: invokeinterface #159,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+    1338: ifeq          1442
+    1341: aload         4
+    1343: invokeinterface #163,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+    1348: checkcast     #423                // class "[Ljava/lang/invoke/MethodHandle;"
+    1351: astore        5
+    1353: aload         5
+    1355: iconst_0
+    1356: aaload
+    1357: aload_1
+    1358: invokevirtual #215                // Method java/lang/invoke/MethodHandle.invoke:(Ljava/lang/Object;)Ljava/lang/Object;
+    1361: astore        6
+    1363: aload_0
+    1364: aload         6
+    1366: iload_2
+    1367: iconst_1
+    1368: iadd
+    1369: invokevirtual #268                // Method deduplicateObject:(Ljava/lang/Object;I)Ljava/lang/Object;
+    1372: astore        7
+    1374: getstatic     #425                // Field TRIM_ARRAYS_CLASSES:Ljava/util/Set;
+    1377: aload_3
+    1378: invokeinterface #113,  2          // InterfaceMethod java/util/Set.contains:(Ljava/lang/Object;)Z
+    1383: ifeq          1402
+    1386: aload         7
+    1388: instanceof    #332                // class java/util/ArrayList
+    1391: ifeq          1402
+    1394: aload         7
+    1396: checkcast     #332                // class java/util/ArrayList
+    1399: invokevirtual #428                // Method java/util/ArrayList.trimToSize:()V
+    1402: aload         7
+    1404: ifnull        1424
+    1407: aload         6
+    1409: aload         7
+    1411: if_acmpeq     1424
+    1414: aload         5
+    1416: iconst_1
+    1417: aaload
+    1418: aload_1
+    1419: aload         7
+    1421: invokevirtual #220                // Method java/lang/invoke/MethodHandle.invoke:(Ljava/lang/Object;Ljava/lang/Object;)V
+    1424: goto          1439
+    1427: astore        6
+    1429: goto          1439
+    1432: astore        6
+    1434: aload         6
+    1436: invokevirtual #223                // Method java/lang/Throwable.printStackTrace:()V
+    1439: goto          1331
+    1442: aload_1
+    1443: areturn
+    Exception table:
+       from    to  target type
+          58    96    99   Class java/lang/Throwable
+         121   159   162   Class java/lang/Throwable
+         175   197   200   Class java/lang/Throwable
+         922   945   948   Class java/lang/Exception
+         980  1039  1040   Class java/lang/Throwable
+        1236  1268  1271   Class java/lang/IllegalAccessException
+        1353  1424  1427   Class java/lang/IllegalAccessException
+        1353  1424  1432   Class java/lang/Throwable
+
+  static {};
+    descriptor: ()V
+    Code:
+       0: new           #95                 // class gnu/trove/set/hash/TCustomHashSet
+       3: dup
+       4: getstatic     #98                 // Field pl/asie/foamfix/util/HashingStrategies.IDENTITY:Lgnu/trove/strategy/HashingStrategy;
+       7: invokespecial #99                 // Method gnu/trove/set/hash/TCustomHashSet."<init>":(Lgnu/trove/strategy/HashingStrategy;)V
+      10: putstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+      13: new           #95                 // class gnu/trove/set/hash/TCustomHashSet
+      16: dup
+      17: getstatic     #98                 // Field pl/asie/foamfix/util/HashingStrategies.IDENTITY:Lgnu/trove/strategy/HashingStrategy;
+      20: invokespecial #99                 // Method gnu/trove/set/hash/TCustomHashSet."<init>":(Lgnu/trove/strategy/HashingStrategy;)V
+      23: putstatic     #425                // Field TRIM_ARRAYS_CLASSES:Ljava/util/Set;
+      26: new           #470                // class java/util/IdentityHashMap
+      29: dup
+      30: invokespecial #471                // Method java/util/IdentityHashMap."<init>":()V
+      33: putstatic     #379                // Field CLASS_FIELDS:Ljava/util/Map;
+      36: new           #470                // class java/util/IdentityHashMap
+      39: dup
+      40: invokespecial #471                // Method java/util/IdentityHashMap."<init>":()V
+      43: putstatic     #341                // Field COLLECTION_CONSTRUCTORS:Ljava/util/Map;
+      46: ldc           #240                // class net/minecraftforge/client/model/pipeline/UnpackedBakedQuad
+      48: iconst_1
+      49: anewarray     #231                // class java/lang/String
+      52: dup
+      53: iconst_0
+      54: ldc_w         #473                // String unpackedData
+      57: aastore
+      58: invokestatic  #479                // Method pl/asie/foamfix/util/MethodHandleHelper.findFieldGetter:(Ljava/lang/Class;[Ljava/lang/String;)Ljava/lang/invoke/MethodHandle;
+      61: putstatic     #242                // Field FIELD_UNPACKED_DATA_GETTER:Ljava/lang/invoke/MethodHandle;
+      64: ldc           #240                // class net/minecraftforge/client/model/pipeline/UnpackedBakedQuad
+      66: iconst_1
+      67: anewarray     #231                // class java/lang/String
+      70: dup
+      71: iconst_0
+      72: ldc_w         #473                // String unpackedData
+      75: aastore
+      76: invokestatic  #482                // Method pl/asie/foamfix/util/MethodHandleHelper.findFieldSetter:(Ljava/lang/Class;[Ljava/lang/String;)Ljava/lang/invoke/MethodHandle;
+      79: putstatic     #484                // Field FIELD_UNPACKED_DATA_SETTER:Ljava/lang/invoke/MethodHandle;
+      82: ldc           #12                 // class net/minecraftforge/client/model/IPerspectiveAwareModel$MapWrapper
+      84: iconst_1
+      85: anewarray     #231                // class java/lang/String
+      88: dup
+      89: iconst_0
+      90: ldc_w         #486                // String transforms
+      93: aastore
+      94: invokestatic  #479                // Method pl/asie/foamfix/util/MethodHandleHelper.findFieldGetter:(Ljava/lang/Class;[Ljava/lang/String;)Ljava/lang/invoke/MethodHandle;
+      97: putstatic     #210                // Field IPAM_MW_TRANSFORMS_GETTER:Ljava/lang/invoke/MethodHandle;
+     100: ldc           #12                 // class net/minecraftforge/client/model/IPerspectiveAwareModel$MapWrapper
+     102: iconst_1
+     103: anewarray     #231                // class java/lang/String
+     106: dup
+     107: iconst_0
+     108: ldc_w         #486                // String transforms
+     111: aastore
+     112: invokestatic  #482                // Method pl/asie/foamfix/util/MethodHandleHelper.findFieldSetter:(Ljava/lang/Class;[Ljava/lang/String;)Ljava/lang/invoke/MethodHandle;
+     115: putstatic     #217                // Field IPAM_MW_TRANSFORMS_SETTER:Ljava/lang/invoke/MethodHandle;
+     118: ldc           #225                // String net.minecraftforge.client.model.ItemLayerModel$BakedItemModel
+     120: iconst_1
+     121: anewarray     #231                // class java/lang/String
+     124: dup
+     125: iconst_0
+     126: ldc_w         #486                // String transforms
+     129: aastore
+     130: invokestatic  #489                // Method pl/asie/foamfix/util/MethodHandleHelper.findFieldGetter:(Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/invoke/MethodHandle;
+     133: putstatic     #236                // Field BIM_TRANSFORMS_GETTER:Ljava/lang/invoke/MethodHandle;
+     136: ldc           #225                // String net.minecraftforge.client.model.ItemLayerModel$BakedItemModel
+     138: iconst_1
+     139: anewarray     #231                // class java/lang/String
+     142: dup
+     143: iconst_0
+     144: ldc_w         #486                // String transforms
+     147: aastore
+     148: invokestatic  #491                // Method pl/asie/foamfix/util/MethodHandleHelper.findFieldSetter:(Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/invoke/MethodHandle;
+     151: putstatic     #238                // Field BIM_TRANSFORMS_SETTER:Ljava/lang/invoke/MethodHandle;
+     154: getstatic     #425                // Field TRIM_ARRAYS_CLASSES:Ljava/util/Set;
+     157: ldc           #17                 // class pl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel
+     159: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     164: pop
+     165: getstatic     #425                // Field TRIM_ARRAYS_CLASSES:Ljava/util/Set;
+     168: ldc_w         #493                // class net/minecraft/client/resources/model/SimpleBakedModel
+     171: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     176: pop
+     177: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     180: ldc           #22                 // class pl/asie/foamfix/client/FoamyItemLayerModel$Dynamic3DItemModel
+     182: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     187: pop
+     188: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     191: ldc           #4                  // class java/lang/Object
+     193: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     198: pop
+     199: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     202: ldc           #115                // class java/lang/Class
+     204: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     209: pop
+     210: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     213: ldc           #231                // class java/lang/String
+     215: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     220: pop
+     221: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     224: ldc_w         #495                // class java/lang/Integer
+     227: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     232: pop
+     233: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     236: ldc_w         #497                // class java/lang/Long
+     239: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     244: pop
+     245: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     248: ldc_w         #499                // class java/lang/Byte
+     251: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     256: pop
+     257: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     260: ldc_w         #501                // class java/lang/Boolean
+     263: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     268: pop
+     269: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     272: ldc_w         #503                // class java/lang/Float
+     275: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     280: pop
+     281: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     284: ldc_w         #505                // class java/lang/Double
+     287: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     292: pop
+     293: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     296: ldc_w         #507                // class java/lang/Short
+     299: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     304: pop
+     305: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     308: ldc_w         #509                // class net/minecraft/client/renderer/texture/TextureAtlasSprite
+     311: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     316: pop
+     317: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     320: ldc_w         #511                // class net/minecraft/item/ItemStack
+     323: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     328: pop
+     329: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     332: ldc_w         #513                // class com/google/gson/Gson
+     335: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     340: pop
+     341: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     344: ldc_w         #515                // class net/minecraftforge/client/model/ModelLoader
+     347: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     352: pop
+     353: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     356: ldc           #115                // class java/lang/Class
+     358: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     363: pop
+     364: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     367: ldc_w         #517                // class net/minecraft/client/renderer/block/model/BlockPart
+     370: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     375: pop
+     376: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     379: ldc_w         #519                // class net/minecraft/client/Minecraft
+     382: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     387: pop
+     388: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     391: ldc_w         #521                // class net/minecraft/client/renderer/BlockModelShapes
+     394: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     399: pop
+     400: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     403: ldc_w         #523                // class net/minecraft/client/resources/model/ModelManager
+     406: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     411: pop
+     412: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     415: ldc_w         #256                // class org/apache/logging/log4j/Logger
+     418: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     423: pop
+     424: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     427: ldc_w         #525                // class com/google/common/base/Joiner
+     430: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     435: pop
+     436: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     439: ldc_w         #527                // class net/minecraft/client/renderer/Tessellator
+     442: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     447: pop
+     448: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     451: ldc_w         #529                // class net/minecraft/client/renderer/WorldRenderer
+     454: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     459: pop
+     460: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     463: ldc_w         #531                // class com/google/common/cache/Cache
+     466: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     471: pop
+     472: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     475: ldc_w         #533                // class com/google/common/cache/LoadingCache
+     478: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     483: pop
+     484: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     487: ldc_w         #535                // class net/minecraft/client/renderer/vertex/VertexFormatElement
+     490: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     495: pop
+     496: getstatic     #107                // Field BLACKLIST_CLASS:Ljava/util/Set;
+     499: ldc_w         #537                // class net/minecraft/client/renderer/block/model/BakedQuad
+     502: invokeinterface #134,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+     507: pop
+     508: return
+}

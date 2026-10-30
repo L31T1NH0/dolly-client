@@ -1,0 +1,156 @@
+CLASS afM EXTENDS java/lang/Object
+
+METHOD auD ()V
+    0 new                net/java/games/input/DirectAndRawInputEnvironmentPlugin
+    3 dup                
+    4 invokespecial      net/java/games/input/DirectAndRawInputEnvironmentPlugin.<init>:()V
+    7 astore_1           
+    8 aload_0            
+    9 aload_1            
+   10 invokevirtual      net/java/games/input/DirectAndRawInputEnvironmentPlugin.getControllers:()[Lnet/java/games/input/Controller;
+   13 putfield           afM.dcO:[Lnet/java/games/input/Controller;
+   16 aload_0            
+   17 aconst_null        
+   18 putfield           afM.dcT:[Lnet/java/games/input/Controller;
+   21 aload_0            
+   22 aconst_null        
+   23 putfield           afM.dcS:Lnet/java/games/input/Mouse;
+   26 aload_0            
+   27 getfield           afM.dcO:[Lnet/java/games/input/Controller;
+   30 astore_2           
+   31 aload_2            
+   32 arraylength        
+   33 istore_3           
+   34 sipush             28752
+   37 sipush             -31872
+   40 iand               
+   41 istore             4
+   43 iload              4
+   45 iload_3            
+   46 if_icmpge          90
+   49 aload_2            
+   50 iload              4
+   52 aaload             
+   53 astore             5
+   55 aload              5
+   57 invokeinterface    net/java/games/input/Controller.getType:()Lnet/java/games/input/Controller$Type; 0100
+   62 getstatic          net/java/games/input/Controller$Type.MOUSE:Lnet/java/games/input/Controller$Type;
+   65 if_acmpne          84
+   68 aload_0            
+   69 aload_0            
+   70 getfield           afM.dcT:[Lnet/java/games/input/Controller;
+   73 aload              5
+   75 invokestatic       org/apache/commons/lang3/ArrayUtils.add:([Ljava/lang/Object;Ljava/lang/Object;)[Ljava/lang/Object;
+   78 checkcast          [Lnet/java/games/input/Controller;
+   81 putfield           afM.dcT:[Lnet/java/games/input/Controller;
+   84 iinc               0401
+   87 goto               43
+   90 aload_0            
+   91 getfield           afM.dcS:Lnet/java/games/input/Mouse;
+   94 ifnonnull          196
+   97 aload_0            
+   98 getfield           afM.dcT:[Lnet/java/games/input/Controller;
+  101 ifnull             90
+  104 aload_0            
+  105 getfield           afM.dcT:[Lnet/java/games/input/Controller;
+  108 astore_2           
+  109 aload_2            
+  110 arraylength        
+  111 istore_3           
+  112 sipush             2434
+  115 sipush             1084
+  118 iand               
+  119 istore             4
+  121 iload              4
+  123 iload_3            
+  124 if_icmpge          193
+  127 aload_2            
+  128 iload              4
+  130 aaload             
+  131 astore             5
+  133 aload              5
+  135 invokeinterface    net/java/games/input/Controller.poll:()Z 0100
+  140 pop                
+  141 aload              5
+  143 checkcast          net/java/games/input/Mouse
+  146 invokevirtual      net/java/games/input/Mouse.getX:()Lnet/java/games/input/Component;
+  149 invokeinterface    net/java/games/input/Component.getPollData:()F 0100
+  154 fstore             6
+  156 fload              6
+  158 ldc                1.0615384578704834
+  160 ldc                0.09420289844274521
+  162 fmul               
+  163 fcmpl              
+  164 ifgt               178
+  167 fload              6
+  169 ldc                -0.10999999940395355
+  171 ldc                0.9090909361839294
+  173 fmul               
+  174 fcmpg              
+  175 ifge               187
+  178 aload_0            
+  179 aload              5
+  181 checkcast          net/java/games/input/Mouse
+  184 putfield           afM.dcS:Lnet/java/games/input/Mouse;
+  187 iinc               0401
+  190 goto               121
+  193 goto               90
+  196 return             
+
+
+METHOD auF ()V
+    0 aload_0            
+    1 getfield           afM.dcU:Lir;
+    4 getfield           ir.Gk:LacQ;
+    7 invokevirtual      acQ.arZ:()LD;
+   10 getfield           D.aS:LbP;
+   13 invokevirtual      bP.ak:()Z
+   16 ifeq               123
+   19 aload_0            
+   20 getfield           afM.dcS:Lnet/java/games/input/Mouse;
+   23 ifnull             91
+   26 aload_0            
+   27 getfield           afM.dcU:Lir;
+   30 getfield           ir.FL:LkB;
+   33 ifnonnull          91
+   36 aload_0            
+   37 getfield           afM.dcS:Lnet/java/games/input/Mouse;
+   40 invokevirtual      net/java/games/input/Mouse.poll:()Z
+   43 pop                
+   44 aload_0            
+   45 dup                
+   46 getfield           afM.dcR:I
+   49 aload_0            
+   50 getfield           afM.dcS:Lnet/java/games/input/Mouse;
+   53 invokevirtual      net/java/games/input/Mouse.getX:()Lnet/java/games/input/Component;
+   56 invokeinterface    net/java/games/input/Component.getPollData:()F 0100
+   61 f2i                
+   62 iadd               
+   63 putfield           afM.dcR:I
+   66 aload_0            
+   67 dup                
+   68 getfield           afM.dcQ:I
+   71 aload_0            
+   72 getfield           afM.dcS:Lnet/java/games/input/Mouse;
+   75 invokevirtual      net/java/games/input/Mouse.getY:()Lnet/java/games/input/Component;
+   78 invokeinterface    net/java/games/input/Component.getPollData:()F 0100
+   83 f2i                
+   84 iadd               
+   85 putfield           afM.dcQ:I
+   88 goto               106
+   91 aload_0            
+   92 getfield           afM.dcS:Lnet/java/games/input/Mouse;
+   95 ifnull             106
+   98 aload_0            
+   99 getfield           afM.dcS:Lnet/java/games/input/Mouse;
+  102 invokevirtual      net/java/games/input/Mouse.poll:()Z
+  105 pop                
+  106 ldc2_w             9751123ba8008185
+  109 ldc2_w             68aeedc440624a41
+  112 land               
+  113 invokestatic       java/lang/Thread.sleep:(J)V
+  116 goto               0
+  119 astore_1           
+  120 goto               0
+  123 return             
+

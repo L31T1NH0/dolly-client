@@ -1,0 +1,148 @@
+Compiled from "FoamyItemLayerModel.java"
+public class pl.asie.foamfix.client.FoamyItemLayerModel$Dynamic3DItemModel implements net.minecraftforge.client.model.IPerspectiveAwareModel,net.minecraftforge.client.model.IFlexibleBakedModel {
+  private final pl.asie.foamfix.client.FoamyItemLayerModel$DynamicItemModel parent;
+    descriptor: Lpl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel;
+
+  private java.lang.ref.SoftReference<java.util.List<net.minecraft.client.renderer.block.model.BakedQuad>> quadsSoft;
+    descriptor: Ljava/lang/ref/SoftReference;
+
+  public pl.asie.foamfix.client.FoamyItemLayerModel$Dynamic3DItemModel(pl.asie.foamfix.client.FoamyItemLayerModel$DynamicItemModel);
+    descriptor: (Lpl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel;)V
+    Code:
+       0: aload_0
+       1: invokespecial #38                 // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: aconst_null
+       6: putfield      #40                 // Field quadsSoft:Ljava/lang/ref/SoftReference;
+       9: aload_0
+      10: aload_1
+      11: putfield      #42                 // Field parent:Lpl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel;
+      14: return
+
+  public org.apache.commons.lang3.tuple.Pair<? extends net.minecraftforge.client.model.IFlexibleBakedModel, javax.vecmath.Matrix4f> handlePerspective(net.minecraft.client.renderer.block.model.ItemCameraTransforms$TransformType);
+    descriptor: (Lnet/minecraft/client/renderer/block/model/ItemCameraTransforms$TransformType;)Lorg/apache/commons/lang3/tuple/Pair;
+    Code:
+       0: aload_0
+       1: aload_0
+       2: getfield      #42                 // Field parent:Lpl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel;
+       5: invokestatic  #50                 // Method pl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel.access$000:(Lpl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel;)Lcom/google/common/collect/ImmutableMap;
+       8: aload_1
+       9: invokestatic  #53                 // Method net/minecraftforge/client/model/IPerspectiveAwareModel$MapWrapper.handlePerspective:(Lnet/minecraftforge/client/model/IFlexibleBakedModel;Lcom/google/common/collect/ImmutableMap;Lnet/minecraft/client/renderer/block/model/ItemCameraTransforms$TransformType;)Lorg/apache/commons/lang3/tuple/Pair;
+      12: astore_2
+      13: aload_1
+      14: getstatic     #57                 // Field net/minecraft/client/renderer/block/model/ItemCameraTransforms$TransformType.GUI:Lnet/minecraft/client/renderer/block/model/ItemCameraTransforms$TransformType;
+      17: if_acmpne     36
+      20: aload_2
+      21: invokevirtual #63                 // Method org/apache/commons/lang3/tuple/Pair.getRight:()Ljava/lang/Object;
+      24: ifnonnull     36
+      27: aload_0
+      28: getfield      #42                 // Field parent:Lpl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel;
+      31: aconst_null
+      32: invokestatic  #67                 // Method org/apache/commons/lang3/tuple/Pair.of:(Ljava/lang/Object;Ljava/lang/Object;)Lorg/apache/commons/lang3/tuple/Pair;
+      35: areturn
+      36: aload_2
+      37: areturn
+
+  public java.util.List<net.minecraft.client.renderer.block.model.BakedQuad> func_177551_a(net.minecraft.util.EnumFacing);
+    descriptor: (Lnet/minecraft/util/EnumFacing;)Ljava/util/List;
+    Code:
+       0: getstatic     #79                 // Field java/util/Collections.EMPTY_LIST:Ljava/util/List;
+       3: areturn
+
+  public java.util.List<net.minecraft.client.renderer.block.model.BakedQuad> func_177550_a();
+    descriptor: ()Ljava/util/List;
+    Code:
+       0: aload_0
+       1: getfield      #40                 // Field quadsSoft:Ljava/lang/ref/SoftReference;
+       4: ifnull        17
+       7: aload_0
+       8: getfield      #40                 // Field quadsSoft:Ljava/lang/ref/SoftReference;
+      11: invokevirtual #88                 // Method java/lang/ref/SoftReference.get:()Ljava/lang/Object;
+      14: ifnonnull     108
+      17: new           #22                 // class com/google/common/collect/ImmutableList$Builder
+      20: dup
+      21: invokespecial #89                 // Method com/google/common/collect/ImmutableList$Builder."<init>":()V
+      24: astore_1
+      25: iconst_0
+      26: istore_2
+      27: iload_2
+      28: aload_0
+      29: getfield      #42                 // Field parent:Lpl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel;
+      32: invokestatic  #93                 // Method pl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel.access$100:(Lpl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel;)Ljava/util/List;
+      35: invokeinterface #99,  1           // InterfaceMethod java/util/List.size:()I
+      40: if_icmpge     93
+      43: aload_0
+      44: getfield      #42                 // Field parent:Lpl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel;
+      47: invokestatic  #93                 // Method pl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel.access$100:(Lpl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel;)Ljava/util/List;
+      50: iload_2
+      51: invokeinterface #102,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+      56: checkcast     #104                // class net/minecraft/client/renderer/texture/TextureAtlasSprite
+      59: astore_3
+      60: aload_1
+      61: getstatic     #110                // Field net/minecraftforge/client/model/ItemLayerModel.instance:Lnet/minecraftforge/client/model/ItemLayerModel;
+      64: iload_2
+      65: aload_3
+      66: aload_0
+      67: getfield      #42                 // Field parent:Lpl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel;
+      70: invokestatic  #114                // Method pl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel.access$200:(Lpl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel;)Lnet/minecraft/client/renderer/vertex/VertexFormat;
+      73: aload_0
+      74: getfield      #42                 // Field parent:Lpl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel;
+      77: invokestatic  #118                // Method pl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel.access$300:(Lpl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel;)Lcom/google/common/base/Optional;
+      80: invokevirtual #122                // Method net/minecraftforge/client/model/ItemLayerModel.getQuadsForSprite:(ILnet/minecraft/client/renderer/texture/TextureAtlasSprite;Lnet/minecraft/client/renderer/vertex/VertexFormat;Lcom/google/common/base/Optional;)Lcom/google/common/collect/ImmutableList;
+      83: invokevirtual #126                // Method com/google/common/collect/ImmutableList$Builder.addAll:(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableList$Builder;
+      86: pop
+      87: iinc          2, 1
+      90: goto          27
+      93: aload_0
+      94: new           #85                 // class java/lang/ref/SoftReference
+      97: dup
+      98: aload_1
+      99: invokevirtual #130                // Method com/google/common/collect/ImmutableList$Builder.build:()Lcom/google/common/collect/ImmutableList;
+     102: invokespecial #133                // Method java/lang/ref/SoftReference."<init>":(Ljava/lang/Object;)V
+     105: putfield      #40                 // Field quadsSoft:Ljava/lang/ref/SoftReference;
+     108: aload_0
+     109: getfield      #40                 // Field quadsSoft:Ljava/lang/ref/SoftReference;
+     112: invokevirtual #88                 // Method java/lang/ref/SoftReference.get:()Ljava/lang/Object;
+     115: checkcast     #95                 // class java/util/List
+     118: areturn
+
+  public boolean func_177555_b();
+    descriptor: ()Z
+    Code:
+       0: iconst_1
+       1: ireturn
+
+  public boolean func_177556_c();
+    descriptor: ()Z
+    Code:
+       0: iconst_0
+       1: ireturn
+
+  public boolean func_177553_d();
+    descriptor: ()Z
+    Code:
+       0: iconst_0
+       1: ireturn
+
+  public net.minecraft.client.renderer.texture.TextureAtlasSprite func_177554_e();
+    descriptor: ()Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;
+    Code:
+       0: aload_0
+       1: getfield      #42                 // Field parent:Lpl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel;
+       4: invokestatic  #150                // Method pl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel.access$400:(Lpl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel;)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;
+       7: areturn
+
+  public net.minecraft.client.renderer.block.model.ItemCameraTransforms func_177552_f();
+    descriptor: ()Lnet/minecraft/client/renderer/block/model/ItemCameraTransforms;
+    Code:
+       0: getstatic     #156                // Field net/minecraft/client/renderer/block/model/ItemCameraTransforms.field_178357_a:Lnet/minecraft/client/renderer/block/model/ItemCameraTransforms;
+       3: areturn
+
+  public net.minecraft.client.renderer.vertex.VertexFormat getFormat();
+    descriptor: ()Lnet/minecraft/client/renderer/vertex/VertexFormat;
+    Code:
+       0: aload_0
+       1: getfield      #42                 // Field parent:Lpl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel;
+       4: invokevirtual #160                // Method pl/asie/foamfix/client/FoamyItemLayerModel$DynamicItemModel.getFormat:()Lnet/minecraft/client/renderer/vertex/VertexFormat;
+       7: areturn
+}

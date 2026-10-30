@@ -1,0 +1,225 @@
+CLASS ng EXTENDS java/lang/Object
+
+METHOD mH ()Z
+    0 getstatic          au.fI:Lau;
+    3 getfield           au.fM:LbP;
+    6 invokevirtual      bP.ak:()Z
+    9 ifne               23
+   12 aload_0            
+   13 getfield           ng.acB:Z
+   16 ifeq               23
+   19 iconst_1           
+   20 goto               24
+   23 iconst_0           
+   24 ireturn            
+
+
+METHOD r (LEb;)V
+    0 aload_0            
+    1 getfield           ng.acu:LRw;
+    4 aload_1            
+    5 getfield           Eb.bfQ:LEj;
+    8 invokevirtual      Rw.q:(LEj;)V
+   11 return             
+
+
+METHOD r (LOt;LPh;)Z
+    0 getstatic          au.fI:Lau;
+    3 getfield           au.fM:LbP;
+    6 invokevirtual      bP.ak:()Z
+    9 ifeq               27
+   12 aload_0            
+   13 getfield           ng.acA:Lir;
+   16 getfield           ir.Ft:Ljp;
+   19 invokevirtual      jp.Gn:()Z
+   22 ifeq               27
+   25 iconst_1           
+   26 ireturn            
+   27 aload_0            
+   28 invokespecial      ng.mI:()V
+   31 aload_0            
+   32 getfield           ng.acz:I
+   35 ifle               50
+   38 aload_0            
+   39 dup                
+   40 getfield           ng.acz:I
+   43 iconst_1           
+   44 isub               
+   45 putfield           ng.acz:I
+   48 iconst_1           
+   49 ireturn            
+   50 aload_0            
+   51 getfield           ng.acu:LRw;
+   54 invokevirtual      Rw.QE:()Z
+   57 ifeq               113
+   60 aload_0            
+   61 getfield           ng.acA:Lir;
+   64 getfield           ir.Gc:Lnm;
+   67 invokevirtual      nm.wu:()LSl;
+   70 aload_1            
+   71 invokevirtual      Sl.aM:(LOt;)Z
+   74 ifeq               113
+   77 aload_0            
+   78 iconst_5           
+   79 putfield           ng.acz:I
+   82 aload_0            
+   83 getfield           ng.acx:Lny;
+   86 new                JJ
+   89 dup                
+   90 getstatic          JK.byG:LJK;
+   93 aload_1            
+   94 aload_2            
+   95 invokespecial      JJ.<init>:(LJK;LOt;LPh;)V
+   98 invokevirtual      ny.q:(LJd;)V
+  101 aload_0            
+  102 getfield           ng.acA:Lir;
+  105 aload_0            
+  106 aload_1            
+  107 aload_2            
+  108 invokestatic       ng.q:(Lir;Lng;LOt;LPh;)V
+  111 iconst_1           
+  112 ireturn            
+  113 aload_0            
+  114 aload_1            
+  115 invokespecial      ng.s:(LOt;)Z
+  118 ifeq               376
+  121 aload_0            
+  122 getfield           ng.acA:Lir;
+  125 getfield           ir.Gc:Lnm;
+  128 aload_1            
+  129 invokevirtual      nm.h:(LOt;)Lih;
+  132 invokeinterface    ih.eJ:()LcU; 0100
+  137 astore_3           
+  138 aload_3            
+  139 invokevirtual      cU.eh:()LhM;
+  142 getstatic          hM.DK:LhM;
+  145 if_acmpne          155
+  148 aload_0            
+  149 iconst_0           
+  150 putfield           ng.acB:Z
+  153 iconst_0           
+  154 ireturn            
+  155 aload_0            
+  156 dup                
+  157 getfield           ng.act:F
+  160 aload_3            
+  161 aload_0            
+  162 getfield           ng.acA:Lir;
+  165 getfield           ir.Ft:Ljp;
+  168 aload_0            
+  169 getfield           ng.acA:Lir;
+  172 getfield           ir.Ft:Ljp;
+  175 getfield           jp.zF:LRe;
+  178 aload_1            
+  179 invokevirtual      cU.q:(LEb;LRe;LOt;)F
+  182 fadd               
+  183 putfield           ng.act:F
+  186 aload_0            
+  187 getfield           ng.acv:F
+  190 ldc                4.0
+  192 frem               
+  193 fconst_0           
+  194 fcmpl              
+  195 ifne               275
+  198 aload_0            
+  199 getfield           ng.acA:Lir;
+  202 invokevirtual      ir.gF:()LiX;
+  205 new                iT
+  208 dup                
+  209 new                Qg
+  212 dup                
+  213 aload_3            
+  214 getfield           cU.qL:Lda;
+  217 invokevirtual      da.eu:()Ljava/lang/String;
+  220 invokespecial      Qg.<init>:(Ljava/lang/String;)V
+  223 aload_3            
+  224 getfield           cU.qL:Lda;
+  227 invokevirtual      da.ew:()F
+  230 fconst_1           
+  231 fadd               
+  232 ldc                8.0
+  234 fdiv               
+  235 aload_3            
+  236 getfield           cU.qL:Lda;
+  239 invokevirtual      da.ev:()F
+  242 ldc                0.5
+  244 fmul               
+  245 aload_1            
+  246 invokevirtual      Ot.by:()I
+  249 i2f                
+  250 ldc                0.5
+  252 fadd               
+  253 aload_1            
+  254 invokevirtual      Ot.bz:()I
+  257 i2f                
+  258 ldc                0.5
+  260 fadd               
+  261 aload_1            
+  262 invokevirtual      Ot.KW:()I
+  265 i2f                
+  266 ldc                0.5
+  268 fadd               
+  269 invokespecial      iT.<init>:(LQg;FFFFF)V
+  272 invokevirtual      iX.e:(LiJ;)V
+  275 aload_0            
+  276 dup                
+  277 getfield           ng.acv:F
+  280 fconst_1           
+  281 fadd               
+  282 putfield           ng.acv:F
+  285 aload_0            
+  286 getfield           ng.act:F
+  289 fconst_1           
+  290 fcmpl              
+  291 iflt               340
+  294 aload_0            
+  295 iconst_0           
+  296 putfield           ng.acB:Z
+  299 aload_0            
+  300 getfield           ng.acx:Lny;
+  303 new                JJ
+  306 dup                
+  307 getstatic          JK.byI:LJK;
+  310 aload_1            
+  311 aload_2            
+  312 invokespecial      JJ.<init>:(LJK;LOt;LPh;)V
+  315 invokevirtual      ny.q:(LJd;)V
+  318 aload_0            
+  319 aload_1            
+  320 aload_2            
+  321 invokevirtual      ng.e:(LOt;LPh;)Z
+  324 pop                
+  325 aload_0            
+  326 fconst_0           
+  327 putfield           ng.act:F
+  330 aload_0            
+  331 fconst_0           
+  332 putfield           ng.acv:F
+  335 aload_0            
+  336 iconst_5           
+  337 putfield           ng.acz:I
+  340 aload_0            
+  341 getfield           ng.acA:Lir;
+  344 getfield           ir.Gc:Lnm;
+  347 aload_0            
+  348 getfield           ng.acA:Lir;
+  351 getfield           ir.Ft:Ljp;
+  354 invokevirtual      jp.yn:()I
+  357 aload_0            
+  358 getfield           ng.acC:LOt;
+  361 aload_0            
+  362 getfield           ng.act:F
+  365 ldc                10.0
+  367 fmul               
+  368 f2i                
+  369 iconst_1           
+  370 isub               
+  371 invokevirtual      nm.q:(ILOt;I)V
+  374 iconst_1           
+  375 ireturn            
+  376 aload_0            
+  377 aload_1            
+  378 aload_2            
+  379 invokevirtual      ng.w:(LOt;LPh;)Z
+  382 ireturn            
+

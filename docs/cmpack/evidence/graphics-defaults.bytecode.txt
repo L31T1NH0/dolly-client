@@ -1,0 +1,1185 @@
+# CMClient graphics defaults — static JVM evidence excerpts
+# Artifact: references/cmpack_1.8.8_2.8.11-beta.zip / cmpack_1.8.8/CMPack_app.jar
+# JAR SHA-256: 464347bee470967072e3b7a2536d95e1f87645c1a02d2f8b0f120fcc9ebc4a80
+# Offsets are original JVM bytecode offsets. CONST folds obfuscated integer expressions;
+# STRING resolves constant-pool static string arrays. Listings are normalized, not original source.
+# Only explicitly listed offset intervals are retained; omitted code is not represented.
+# No client execution or measurements performed. Constructor defaults may be overwritten by config.
+
+===========================================================================
+CLASS wj — SHA-256 392ac2b923055971a8d14e0949c2f63dfa329d8bb4a5bde001141c09a39a6a71
+METHOD <init> (Lir;Ljava/io/File;)V
+# EXCERPT offsets 0..181; code outside this interval omitted
+    0 aload_0            
+    1 invokespecial      java/lang/Object.<init>:()V
+    4 aload_0            
+    5 CONST 0.5
+    7 putfield           wj.aHl:F
+   10 aload_0            
+   11 CONST -1
+   12 putfield           wj.anE:I
+   15 aload_0            
+   16 CONST 1
+   17 putfield           wj.aGL:Z
+   20 aload_0            
+   21 CONST 1
+   22 putfield           wj.aHa:Z
+   25 aload_0            
+   26 CONST 120
+   28 putfield           wj.aFW:I
+   31 aload_0            
+   32 CONST 2
+   33 putfield           wj.aEU:I
+   36 aload_0            
+   37 CONST 1
+   38 putfield           wj.vi:Z
+   41 aload_0            
+   42 CONST 2
+   43 putfield           wj.aFO:I
+   46 aload_0            
+   47 invokestatic       com/google/common/collect/Lists.newArrayList:()Ljava/util/ArrayList;
+   50 putfield           wj.aBa:Ljava/util/List;
+   53 aload_0            
+   54 invokestatic       com/google/common/collect/Lists.newArrayList:()Ljava/util/ArrayList;
+   57 putfield           wj.aGU:Ljava/util/List;
+   60 aload_0            
+   61 getstatic          Ed.bgw:LEd;
+   64 putfield           wj.aES:LEd;
+   67 aload_0            
+   68 CONST 1
+   69 putfield           wj.aEC:Z
+   72 aload_0            
+   73 CONST 1
+   74 putfield           wj.aGV:Z
+   77 aload_0            
+   78 CONST 1
+   79 putfield           wj.aGO:Z
+   82 aload_0            
+   83 CONST 1
+   84 putfield           wj.aGt:F
+   87 aload_0            
+   88 CONST 1
+   89 putfield           wj.aGp:Z
+   92 aload_0            
+   93 CONST 1
+   94 putfield           wj.aFb:Z
+   97 aload_0            
+   98 invokestatic       ahe.awe:()Z
+  101 putfield           wj.aFh:Z
+  104 aload_0            
+  105 CONST 1
+  106 putfield           wj.aFm:Z
+  109 aload_0            
+  110 CONST 0
+  111 putfield           wj.aEL:Z
+  114 aload_0            
+  115 CONST 1
+  116 putfield           wj.aFT:Z
+  119 aload_0            
+  120 invokestatic       Eg.values:()[LEg;
+  123 invokestatic       com/google/common/collect/Sets.newHashSet:([Ljava/lang/Object;)Ljava/util/HashSet;
+  126 putfield           wj.aEr:Ljava/util/Set;
+  129 aload_0            
+  130 CONST 1
+  131 putfield           wj.aGT:Z
+  134 aload_0            
+  135 CONST 1
+  136 putfield           wj.aEW:F
+  139 aload_0            
+  140 CONST 1
+  141 putfield           wj.aFC:F
+  144 aload_0            
+  145 CONST 0.44366195797920227
+  147 putfield           wj.aHi:F
+  150 aload_0            
+  151 CONST 1
+  152 putfield           wj.aFQ:F
+  155 aload_0            
+  156 CONST 1
+  157 putfield           wj.aFR:Z
+  160 aload_0            
+  161 CONST 4
+  162 putfield           wj.axx:I
+  165 aload_0            
+  166 ldc                iU
+  168 invokestatic       com/google/common/collect/Maps.newEnumMap:(Ljava/lang/Class;)Ljava/util/EnumMap;
+  171 putfield           wj.aGR:Ljava/util/Map;
+  174 aload_0            
+  175 CONST 1
+  176 putfield           wj.aHr:Z
+  179 aload_0            
+  180 CONST 1
+  181 putfield           wj.aFn:Z
+# EXCERPT offsets 1440..1769; code outside this interval omitted
+ 1440 aload_0            
+ 1441 CONST 1
+ 1442 putfield           wj.aFa:I
+ 1445 aload_0            
+ 1446 CONST 0.800000011920929
+ 1448 putfield           wj.aGd:F
+ 1451 aload_0            
+ 1452 CONST 0
+ 1453 putfield           wj.aGe:I
+ 1456 aload_0            
+ 1457 CONST 0
+ 1458 putfield           wj.aGY:Z
+ 1461 aload_0            
+ 1462 CONST 0
+ 1463 putfield           wj.aEt:Z
+ 1466 aload_0            
+ 1467 invokestatic       Xv.acq:()Z
+ 1470 putfield           wj.aEx:Z
+ 1473 aload_0            
+ 1474 invokestatic       Xv.acq:()Z
+ 1477 putfield           wj.aEK:Z
+ 1480 aload_0            
+ 1481 CONST 1
+ 1482 putfield           wj.aFv:F
+ 1485 aload_0            
+ 1486 CONST 0
+ 1487 putfield           wj.aGS:I
+ 1490 aload_0            
+ 1491 CONST 1
+ 1492 putfield           wj.aGy:I
+ 1495 aload_0            
+ 1496 CONST 0
+ 1497 putfield           wj.aET:I
+ 1500 aload_0            
+ 1501 CONST 0
+ 1502 putfield           wj.aFc:F
+ 1505 aload_0            
+ 1506 CONST 0
+ 1507 putfield           wj.aFY:I
+ 1510 aload_0            
+ 1511 CONST 0
+ 1512 putfield           wj.aGE:I
+ 1515 aload_0            
+ 1516 CONST 0
+ 1517 putfield           wj.aEE:I
+ 1520 aload_0            
+ 1521 CONST 3
+ 1522 putfield           wj.aHj:I
+ 1525 aload_0            
+ 1526 CONST 4000
+ 1529 putfield           wj.aHq:I
+ 1532 aload_0            
+ 1533 CONST 0
+ 1534 putfield           wj.aFl:Z
+ 1537 aload_0            
+ 1538 CONST 0
+ 1539 putfield           wj.aFD:Z
+ 1542 aload_0            
+ 1543 CONST 1
+ 1544 putfield           wj.aEy:Z
+ 1547 aload_0            
+ 1548 CONST 1
+ 1549 putfield           wj.aHk:Z
+ 1552 aload_0            
+ 1553 CONST 1
+ 1554 putfield           wj.aGP:Z
+ 1557 aload_0            
+ 1558 CONST 1
+ 1559 putfield           wj.aGw:Z
+ 1562 aload_0            
+ 1563 CONST 0
+ 1564 putfield           wj.aGo:I
+ 1567 aload_0            
+ 1568 CONST 1
+ 1569 putfield           wj.aGx:I
+ 1572 aload_0            
+ 1573 CONST 0
+ 1574 putfield           wj.aFg:Z
+ 1577 aload_0            
+ 1578 CONST 0
+ 1579 putfield           wj.aGb:I
+ 1582 aload_0            
+ 1583 CONST 0
+ 1584 putfield           wj.aFu:Z
+ 1587 aload_0            
+ 1588 CONST 0
+ 1589 putfield           wj.aGz:Z
+ 1592 aload_0            
+ 1593 getstatic          q.q:[Ljava/lang/String;
+ 1596 CONST 626
+ 1603 aaload              // STRING Default
+ 1604 putfield           wj.aGK:Ljava/lang/String;
+ 1607 aload_0            
+ 1608 CONST 1
+ 1609 putfield           wj.aFK:Z
+ 1612 aload_0            
+ 1613 CONST 1
+ 1614 putfield           wj.aHo:Z
+ 1617 aload_0            
+ 1618 CONST 1
+ 1619 putfield           wj.aFX:Z
+ 1622 aload_0            
+ 1623 CONST 1
+ 1624 putfield           wj.aGn:Z
+ 1627 aload_0            
+ 1628 CONST 1
+ 1629 putfield           wj.aFA:Z
+ 1632 aload_0            
+ 1633 CONST 1
+ 1634 putfield           wj.aGX:Z
+ 1637 aload_0            
+ 1638 CONST 2
+ 1639 putfield           wj.aFP:I
+ 1642 aload_0            
+ 1643 CONST 1
+ 1644 putfield           wj.aGk:Z
+ 1647 aload_0            
+ 1648 CONST 0
+ 1649 putfield           wj.aEA:Z
+ 1652 aload_0            
+ 1653 CONST 0
+ 1654 putfield           wj.aFE:Z
+ 1657 aload_0            
+ 1658 CONST 1
+ 1659 putfield           wj.aGJ:Z
+ 1662 aload_0            
+ 1663 CONST 0
+ 1664 putfield           wj.aFo:I
+ 1667 aload_0            
+ 1668 CONST 1
+ 1669 putfield           wj.aEO:Z
+ 1672 aload_0            
+ 1673 CONST 1
+ 1674 putfield           wj.aGg:Z
+ 1677 aload_0            
+ 1678 CONST 1
+ 1679 putfield           wj.aFt:I
+ 1682 aload_0            
+ 1683 CONST 3
+ 1684 putfield           wj.aER:I
+ 1687 aload_0            
+ 1688 CONST 0
+ 1689 putfield           wj.aGh:I
+ 1692 aload_0            
+ 1693 CONST 0
+ 1694 putfield           wj.aHn:I
+ 1697 aload_0            
+ 1698 CONST 1
+ 1699 putfield           wj.aFN:Z
+ 1702 aload_0            
+ 1703 CONST 1
+ 1704 putfield           wj.aEv:Z
+ 1707 aload_0            
+ 1708 CONST 1
+ 1709 putfield           wj.aGj:Z
+ 1712 aload_0            
+ 1713 CONST 1
+ 1714 putfield           wj.aGs:Z
+ 1717 aload_0            
+ 1718 CONST 1
+ 1719 putfield           wj.aFf:Z
+ 1722 aload_0            
+ 1723 CONST 1
+ 1724 putfield           wj.aGA:Z
+ 1727 aload_0            
+ 1728 CONST 1
+ 1729 putfield           wj.aFF:Z
+ 1732 aload_0            
+ 1733 CONST 1
+ 1734 putfield           wj.aED:Z
+ 1737 aload_0            
+ 1738 CONST 1
+ 1739 putfield           wj.aEB:Z
+ 1742 aload_0            
+ 1743 CONST 1
+ 1744 putfield           wj.aGl:Z
+ 1747 aload_0            
+ 1748 CONST 1
+ 1749 putfield           wj.aHp:Z
+ 1752 aload_0            
+ 1753 CONST 1
+ 1754 putfield           wj.aEs:Z
+ 1757 aload_0            
+ 1758 CONST 1
+ 1759 putfield           wj.aGD:Z
+ 1762 aload_0            
+ 1763 CONST 1
+ 1764 putfield           wj.aGG:Z
+ 1767 aload_0            
+ 1768 CONST 1
+ 1769 putfield           wj.aFd:Z
+# EXCERPT offsets 2001..2209; code outside this interval omitted
+ 2001 aload_0            
+ 2002 getstatic          QN.bXk:LQN;
+ 2005 putfield           wj.aEJ:LQN;
+ 2008 aload_0            
+ 2009 getstatic          q.q:[Ljava/lang/String;
+ 2012 CONST 104
+ 2019 aaload              // STRING  
+ 2020 putfield           wj.aEV:Ljava/lang/String;
+ 2023 aload_0            
+ 2024 CONST 70.0
+ 2026 putfield           wj.aGr:F
+ 2029 aload_0            
+ 2030 getstatic          r.q:[Ljava/lang/String;
+ 2033 CONST 298
+ 2040 aaload              // STRING en_US
+ 2041 putfield           wj.aFq:Ljava/lang/String;
+ 2044 aload_0            
+ 2045 CONST 0
+ 2046 putfield           wj.aGM:Z
+ 2049 aload_0            
+ 2050 aload_1            
+ 2051 putfield           wj.B:Lir;
+ 2054 aload_0            
+ 2055 new                java/io/File
+ 2058 dup                
+ 2059 aload_2            
+ 2060 getstatic          r.q:[Ljava/lang/String;
+ 2063 CONST 437
+ 2070 aaload              // STRING options.txt
+ 2071 invokespecial      java/io/File.<init>:(Ljava/io/File;Ljava/lang/String;)V
+ 2074 putfield           wj.aGQ:Ljava/io/File;
+ 2077 aload_0            
+ 2078 new                java/io/File
+ 2081 dup                
+ 2082 aload_2            
+ 2083 getstatic          r.q:[Ljava/lang/String;
+ 2086 CONST 438
+ 2093 aaload              // STRING optionsof.txt
+ 2094 invokespecial      java/io/File.<init>:(Ljava/io/File;Ljava/lang/String;)V
+ 2097 putfield           wj.aEz:Ljava/io/File;
+ 2100 aload_0            
+ 2101 new                java/io/File
+ 2104 dup                
+ 2105 aload_2            
+ 2106 getstatic          r.q:[Ljava/lang/String;
+ 2109 CONST 439
+ 2116 aaload              // STRING optionscp.dat
+ 2117 invokespecial      java/io/File.<init>:(Ljava/io/File;Ljava/lang/String;)V
+ 2120 putfield           wj.aEu:Ljava/io/File;
+ 2123 aload_0            
+ 2124 getstatic          wm.aHC:Lwm;
+ 2127 invokevirtual      wm.vd:()F
+ 2130 f2i                
+ 2131 putfield           wj.aFW:I
+ 2134 aload_0            
+ 2135 new                wn
+ 2138 dup                
+ 2139 getstatic          r.q:[Ljava/lang/String;
+ 2142 CONST 440
+ 2149 aaload              // STRING of.key.zoom
+ 2150 CONST 46
+ 2152 getstatic          r.q:[Ljava/lang/String;
+ 2155 CONST 423
+ 2162 aaload              // STRING key.categories.misc
+ 2163 invokespecial      wn.<init>:(Ljava/lang/String;ILjava/lang/String;)V
+ 2166 putfield           wj.aEN:Lwn;
+ 2169 aload_0            
+ 2170 aload_0            
+ 2171 getfield           wj.aEX:[Lwn;
+ 2174 aload_0            
+ 2175 getfield           wj.aEN:Lwn;
+ 2178 invokestatic       org/apache/commons/lang3/ArrayUtils.add:([Ljava/lang/Object;Ljava/lang/Object;)[Ljava/lang/Object;
+ 2181 checkcast          [Lwn;
+ 2184 putfield           wj.aEX:[Lwn;
+ 2187 getstatic          wm.aHz:Lwm;
+ 2190 CONST 32.0
+ 2192 invokevirtual      wm.ak:(F)V
+ 2195 aload_0            
+ 2196 CONST 8
+ 2198 putfield           wj.anE:I
+ 2201 aload_0            
+ 2202 invokevirtual      wj.uO:()V
+ 2205 aload_0            
+ 2206 invokestatic       Xv.q:(Lwj;)V
+ 2209 return             
+
+===========================================================================
+CLASS wj — SHA-256 392ac2b923055971a8d14e0949c2f63dfa329d8bb4a5bde001141c09a39a6a71
+METHOD uY ()V
+# EXCERPT offsets 0..179; code outside this interval omitted
+    0 aload_0            
+    1 CONST 8
+    3 putfield           wj.anE:I
+    6 aload_0            
+    7 CONST 1
+    8 putfield           wj.aGL:Z
+   11 aload_0            
+   12 CONST 0
+   13 putfield           wj.aFi:Z
+   16 aload_0            
+   17 getstatic          wm.aHC:Lwm;
+   20 invokevirtual      wm.vd:()F
+   23 f2i                
+   24 putfield           wj.aFW:I
+   27 aload_0            
+   28 CONST 0
+   29 putfield           wj.aFb:Z
+   32 aload_0            
+   33 invokevirtual      wj.uS:()V
+   36 aload_0            
+   37 CONST 4
+   38 putfield           wj.axx:I
+   41 aload_0            
+   42 CONST 1
+   43 putfield           wj.vi:Z
+   46 aload_0            
+   47 CONST 2
+   48 putfield           wj.aFO:I
+   51 aload_0            
+   52 CONST 2
+   53 putfield           wj.aEU:I
+   56 aload_0            
+   57 CONST 70.0
+   59 putfield           wj.aGr:F
+   62 aload_0            
+   63 CONST 0
+   64 putfield           wj.aFJ:F
+   67 aload_0            
+   68 CONST 0
+   69 putfield           wj.aHe:I
+   72 aload_0            
+   73 CONST 0
+   74 putfield           wj.aFG:I
+   77 aload_0            
+   78 CONST 1
+   79 putfield           wj.aGT:Z
+   82 aload_0            
+   83 invokestatic       ahe.awe:()Z
+   86 putfield           wj.aFh:Z
+   89 aload_0            
+   90 CONST 1
+   91 putfield           wj.aFm:Z
+   94 aload_0            
+   95 CONST 0
+   96 putfield           wj.aGM:Z
+   99 aload_0            
+  100 CONST 1
+  101 putfield           wj.aFa:I
+  104 aload_0            
+  105 CONST 0.800000011920929
+  107 putfield           wj.aGd:F
+  110 aload_0            
+  111 CONST 0
+  112 putfield           wj.aGe:I
+  115 aload_0            
+  116 CONST 0
+  117 putfield           wj.aGY:Z
+  120 aload_0            
+  121 CONST 0
+  122 putfield           wj.aEt:Z
+  125 invokestatic       Xv.add:()V
+  128 aload_0            
+  129 invokestatic       Xv.acq:()Z
+  132 putfield           wj.aEx:Z
+  135 aload_0            
+  136 invokestatic       Xv.acq:()Z
+  139 putfield           wj.aEK:Z
+  142 aload_0            
+  143 CONST 0
+  144 putfield           wj.aFE:Z
+  147 aload_0            
+  148 CONST 0
+  149 putfield           wj.aGJ:Z
+  152 aload_0            
+  153 CONST 0
+  154 putfield           wj.aFo:I
+  157 aload_0            
+  158 CONST 1
+  159 putfield           wj.aEO:Z
+  162 aload_0            
+  163 CONST 3
+  164 putfield           wj.aER:I
+  167 aload_0            
+  168 CONST 1
+  169 putfield           wj.aFt:I
+  172 aload_0            
+  173 CONST 1
+  174 putfield           wj.aGg:Z
+  177 aload_0            
+  178 CONST 1
+  179 putfield           wj.aFv:F
+# EXCERPT offsets 429..461; code outside this interval omitted
+  429 getstatic          aii.dkQ:Ljava/lang/String;
+  432 invokestatic       aii.hf:(Ljava/lang/String;)V
+  435 CONST 0
+  436 putstatic          aii.dmL:I
+  439 invokestatic       aii.ayo:()V
+  442 invokestatic       aii.axB:()V
+  445 aload_0            
+  446 invokespecial      wj.uW:()V
+  449 aload_0            
+  450 getfield           wj.B:Lir;
+  453 invokevirtual      ir.hs:()V
+  456 aload_0            
+  457 invokevirtual      wj.uR:()V
+  460 return             
+
+===========================================================================
+CLASS wj — SHA-256 392ac2b923055971a8d14e0949c2f63dfa329d8bb4a5bde001141c09a39a6a71
+METHOD uO ()V
+# EXCERPT offsets 0..45; code outside this interval omitted
+    0 aload_0            
+    1 getfield           wj.aGQ:Ljava/io/File;
+    4 invokevirtual      java/io/File.exists:()Z
+    7 ifne               11
+   10 return             
+   11 new                java/io/BufferedReader
+   14 dup                
+   15 new                java/io/FileReader
+   18 dup                
+   19 aload_0            
+   20 getfield           wj.aGQ:Ljava/io/File;
+   23 invokespecial      java/io/FileReader.<init>:(Ljava/io/File;)V
+   26 invokespecial      java/io/BufferedReader.<init>:(Ljava/io/Reader;)V
+   29 astore_1           
+   30 aload_0            
+   31 getfield           wj.aGR:Ljava/util/Map;
+   34 invokeinterface    java/util/Map.clear:()V 0100
+   39 aload_1            
+   40 invokevirtual      java/io/BufferedReader.readLine:()Ljava/lang/String;
+   43 dup                
+   44 astore_2           
+   45 ifnull             2274
+# EXCERPT offsets 64..163; code outside this interval omitted
+   64 aload_3            
+   65 CONST 0
+   66 aaload             
+   67 getstatic          r.q:[Ljava/lang/String;
+   70 CONST 456
+   77 aaload              // STRING mouseSensitivity
+   78 invokevirtual      java/lang/String.equals:(Ljava/lang/Object;)Z
+   81 ifeq               95
+   84 aload_0            
+   85 aload_0            
+   86 aload_3            
+   87 CONST 1
+   88 aaload             
+   89 invokespecial      wj.aE:(Ljava/lang/String;)F
+   92 putfield           wj.aHl:F
+   95 aload_3            
+   96 CONST 0
+   97 aaload             
+   98 getstatic          r.q:[Ljava/lang/String;
+  101 CONST 457
+  108 aaload              // STRING fov
+  109 invokevirtual      java/lang/String.equals:(Ljava/lang/Object;)Z
+  112 ifeq               132
+  115 aload_0            
+  116 aload_0            
+  117 aload_3            
+  118 CONST 1
+  119 aaload             
+  120 invokespecial      wj.aE:(Ljava/lang/String;)F
+  123 CONST 40.0
+  125 fmul               
+  126 CONST 70.0
+  128 fadd               
+  129 putfield           wj.aGr:F
+  132 aload_3            
+  133 CONST 0
+  134 aaload             
+  135 getstatic          r.q:[Ljava/lang/String;
+  138 CONST 458
+  145 aaload              // STRING gamma
+  146 invokevirtual      java/lang/String.equals:(Ljava/lang/Object;)Z
+  149 ifeq               163
+  152 aload_0            
+  153 aload_0            
+  154 aload_3            
+  155 CONST 1
+  156 aaload             
+  157 invokespecial      wj.aE:(Ljava/lang/String;)F
+  160 putfield           wj.aFJ:F
+  163 aload_3            
+# EXCERPT offsets 366..428; code outside this interval omitted
+  366 aload_3            
+  367 CONST 0
+  368 aaload             
+  369 getstatic          r.q:[Ljava/lang/String;
+  372 CONST 464
+  379 aaload              // STRING maxFps
+  380 invokevirtual      java/lang/String.equals:(Ljava/lang/Object;)Z
+  383 ifeq               428
+  386 aload_0            
+  387 aload_3            
+  388 CONST 1
+  389 aaload             
+  390 invokestatic       java/lang/Integer.parseInt:(Ljava/lang/String;)I
+  393 putfield           wj.aFW:I
+  396 aload_0            
+  397 CONST 0
+  398 putfield           wj.aFb:Z
+  401 aload_0            
+  402 getfield           wj.aFW:I
+  405 ifgt               424
+  408 aload_0            
+  409 getstatic          wm.aHC:Lwm;
+  412 invokevirtual      wm.vd:()F
+  415 f2i                
+  416 putfield           wj.aFW:I
+  419 aload_0            
+  420 CONST 1
+  421 putfield           wj.aFb:Z
+  424 aload_0            
+  425 invokevirtual      wj.uS:()V
+  428 aload_3            
+# EXCERPT offsets 1195..1240; code outside this interval omitted
+ 1196 putfield           wj.aEQ:Z
+ 1199 aload_3            
+ 1200 CONST 0
+ 1201 aaload             
+ 1202 getstatic          r.q:[Ljava/lang/String;
+ 1205 CONST 481
+ 1212 aaload              // STRING enableVsync
+ 1213 invokevirtual      java/lang/String.equals:(Ljava/lang/Object;)Z
+ 1216 ifeq               1244
+ 1219 aload_0            
+ 1220 aload_3            
+ 1221 CONST 1
+ 1222 aaload             
+ 1223 getstatic          e.q:[Ljava/lang/String;
+ 1226 CONST 108
+ 1233 aaload              // STRING true
+ 1234 invokevirtual      java/lang/String.equals:(Ljava/lang/Object;)Z
+ 1237 putfield           wj.aFb:Z
+ 1240 aload_0            
+# EXCERPT offsets 2274..2309; code outside this interval omitted
+ 2274 invokestatic       wn.ve:()V
+ 2277 aload_1            
+ 2278 invokevirtual      java/io/BufferedReader.close:()V
+ 2281 goto               2305
+ 2284 astore_1           
+ 2285 getstatic          wj.aFz:Lorg/apache/logging/log4j/Logger;
+ 2288 getstatic          r.q:[Ljava/lang/String;
+ 2291 CONST 505
+ 2298 aaload              // STRING Failed to load options
+ 2299 aload_1            
+ 2300 invokeinterface    org/apache/logging/log4j/Logger.error:(Ljava/lang/String;Ljava/lang/Throwable;)V 0300
+ 2305 aload_0            
+ 2306 invokevirtual      wj.uV:()V
+ 2309 return             
+
+===========================================================================
+CLASS wj — SHA-256 392ac2b923055971a8d14e0949c2f63dfa329d8bb4a5bde001141c09a39a6a71
+METHOD uV ()V
+# EXCERPT offsets 0..47; code outside this interval omitted
+    0 aload_0            
+    1 getfield           wj.aEz:Ljava/io/File;
+    4 astore_1           
+    5 aload_1            
+    6 invokevirtual      java/io/File.exists:()Z
+    9 ifne               17
+   12 aload_0            
+   13 getfield           wj.aGQ:Ljava/io/File;
+   16 astore_1           
+   17 aload_1            
+   18 invokevirtual      java/io/File.exists:()Z
+   21 ifne               25
+   24 return             
+   25 new                java/io/BufferedReader
+   28 dup                
+   29 new                java/io/FileReader
+   32 dup                
+   33 aload_1            
+   34 invokespecial      java/io/FileReader.<init>:(Ljava/io/File;)V
+   37 invokespecial      java/io/BufferedReader.<init>:(Ljava/io/Reader;)V
+   40 astore_2           
+   41 aload_2            
+   42 invokevirtual      java/io/BufferedReader.readLine:()Ljava/lang/String;
+   45 dup                
+   46 astore_3           
+   47 ifnull             2963
+# EXCERPT offsets 2720..2820; code outside this interval omitted
+ 2720 aaload             
+ 2721 putfield           wj.aGK:Ljava/lang/String;
+ 2724 aload              4
+ 2726 CONST 0
+ 2727 aaload             
+ 2728 getstatic          r.q:[Ljava/lang/String;
+ 2731 CONST 640
+ 2738 aaload              // STRING ofFastMath
+ 2739 invokevirtual      java/lang/String.equals:(Ljava/lang/Object;)Z
+ 2742 ifeq               2770
+ 2745 aload              4
+ 2747 arraylength        
+ 2748 CONST 2
+ 2749 if_icmplt          2770
+ 2752 aload_0            
+ 2753 aload              4
+ 2755 CONST 1
+ 2756 aaload             
+ 2757 invokestatic       java/lang/Boolean.parseBoolean:(Ljava/lang/String;)Z
+ 2760 putfield           wj.aFE:Z
+ 2763 aload_0            
+ 2764 getfield           wj.aFE:Z
+ 2767 putstatic          PN.bUm:Z
+ 2770 aload              4
+ 2772 CONST 0
+ 2773 aaload             
+ 2774 getstatic          r.q:[Ljava/lang/String;
+ 2777 CONST 641
+ 2784 aaload              // STRING ofFastRender
+ 2785 invokevirtual      java/lang/String.equals:(Ljava/lang/Object;)Z
+ 2788 ifeq               2809
+ 2791 aload              4
+ 2793 arraylength        
+ 2794 CONST 2
+ 2795 if_icmplt          2809
+ 2798 aload_0            
+ 2799 aload              4
+ 2801 CONST 1
+ 2802 aaload             
+ 2803 invokestatic       java/lang/Boolean.parseBoolean:(Ljava/lang/String;)Z
+ 2806 putfield           wj.aGJ:Z
+ 2809 aload              4
+ 2811 CONST 0
+ 2812 aaload             
+ 2813 getstatic          r.q:[Ljava/lang/String;
+ 2816 CONST 642
+# EXCERPT offsets 2963..2992; code outside this interval omitted
+ 2963 invokestatic       wn.ve:()V
+ 2966 aload_2            
+ 2967 invokevirtual      java/io/BufferedReader.close:()V
+ 2970 goto               2992
+ 2973 astore_1           
+ 2974 getstatic          r.q:[Ljava/lang/String;
+ 2977 CONST 505
+ 2984 aaload              // STRING Failed to load options
+ 2985 invokestatic       Xv.dF:(Ljava/lang/String;)V
+ 2988 aload_1            
+ 2989 invokevirtual      java/lang/Exception.printStackTrace:()V
+ 2992 return             
+
+===========================================================================
+CLASS wj — SHA-256 392ac2b923055971a8d14e0949c2f63dfa329d8bb4a5bde001141c09a39a6a71
+METHOD uS ()V
+    0 aload_0            
+    1 getfield           wj.aFb:Z
+    4 invokestatic       org/lwjgl/opengl/Display.setVSyncEnabled:(Z)V
+    7 return             
+
+===========================================================================
+CLASS wj — SHA-256 392ac2b923055971a8d14e0949c2f63dfa329d8bb4a5bde001141c09a39a6a71
+METHOD uQ ()V
+# EXCERPT offsets 178..232; code outside this interval omitted
+  178 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  181 aload_0            
+  182 getfield           wj.aGY:Z
+  185 invokevirtual      java/lang/StringBuilder.append:(Z)Ljava/lang/StringBuilder;
+  188 invokevirtual      java/lang/StringBuilder.toString:()Ljava/lang/String;
+  191 invokevirtual      java/io/PrintWriter.println:(Ljava/lang/String;)V
+  194 aload_1            
+  195 new                java/lang/StringBuilder
+  198 dup                
+  199 invokespecial      java/lang/StringBuilder.<init>:()V
+  202 getstatic          r.q:[Ljava/lang/String;
+  205 CONST 648
+  212 aaload              // STRING ofSmoothWorld:
+  213 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  216 aload_0            
+  217 getfield           wj.aEx:Z
+  220 invokevirtual      java/lang/StringBuilder.append:(Z)Ljava/lang/StringBuilder;
+  223 invokevirtual      java/lang/StringBuilder.toString:()Ljava/lang/String;
+  226 invokevirtual      java/io/PrintWriter.println:(Ljava/lang/String;)V
+  229 aload_1            
+  230 new                java/lang/StringBuilder
+# EXCERPT offsets 1350..1430; code outside this interval omitted
+ 1350 new                java/lang/StringBuilder
+ 1353 dup                
+ 1354 invokespecial      java/lang/StringBuilder.<init>:()V
+ 1357 getstatic          r.q:[Ljava/lang/String;
+ 1360 CONST 681
+ 1367 aaload              // STRING ofChunkUpdates:
+ 1368 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+ 1371 aload_0            
+ 1372 getfield           wj.aGx:I
+ 1375 invokevirtual      java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+ 1378 invokevirtual      java/lang/StringBuilder.toString:()Ljava/lang/String;
+ 1381 invokevirtual      java/io/PrintWriter.println:(Ljava/lang/String;)V
+ 1384 aload_1            
+ 1385 new                java/lang/StringBuilder
+ 1388 dup                
+ 1389 invokespecial      java/lang/StringBuilder.<init>:()V
+ 1392 getstatic          r.q:[Ljava/lang/String;
+ 1395 CONST 682
+ 1402 aaload              // STRING ofChunkUpdatesDynamic:
+ 1403 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+ 1406 aload_0            
+ 1407 getfield           wj.aFg:Z
+ 1410 invokevirtual      java/lang/StringBuilder.append:(Z)Ljava/lang/StringBuilder;
+ 1413 invokevirtual      java/lang/StringBuilder.toString:()Ljava/lang/String;
+ 1416 invokevirtual      java/io/PrintWriter.println:(Ljava/lang/String;)V
+ 1419 aload_1            
+ 1420 new                java/lang/StringBuilder
+ 1423 dup                
+ 1424 invokespecial      java/lang/StringBuilder.<init>:()V
+ 1427 getstatic          r.q:[Ljava/lang/String;
+ 1430 CONST 683
+# EXCERPT offsets 1910..1955; code outside this interval omitted
+ 1910 new                java/lang/StringBuilder
+ 1913 dup                
+ 1914 invokespecial      java/lang/StringBuilder.<init>:()V
+ 1917 getstatic          r.q:[Ljava/lang/String;
+ 1920 CONST 697
+ 1927 aaload              // STRING ofLazyChunkLoading:
+ 1928 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+ 1931 aload_0            
+ 1932 getfield           wj.aEK:Z
+ 1935 invokevirtual      java/lang/StringBuilder.append:(Z)Ljava/lang/StringBuilder;
+ 1938 invokevirtual      java/lang/StringBuilder.toString:()Ljava/lang/String;
+ 1941 invokevirtual      java/io/PrintWriter.println:(Ljava/lang/String;)V
+ 1944 aload_1            
+ 1945 new                java/lang/StringBuilder
+ 1948 dup                
+ 1949 invokespecial      java/lang/StringBuilder.<init>:()V
+ 1952 getstatic          r.q:[Ljava/lang/String;
+ 1955 CONST 698
+# EXCERPT offsets 2120..2224; code outside this interval omitted
+ 2120 new                java/lang/StringBuilder
+ 2123 dup                
+ 2124 invokespecial      java/lang/StringBuilder.<init>:()V
+ 2127 getstatic          r.q:[Ljava/lang/String;
+ 2130 CONST 703
+ 2137 aaload              // STRING ofFastMath:
+ 2138 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+ 2141 aload_0            
+ 2142 getfield           wj.aFE:Z
+ 2145 invokevirtual      java/lang/StringBuilder.append:(Z)Ljava/lang/StringBuilder;
+ 2148 invokevirtual      java/lang/StringBuilder.toString:()Ljava/lang/String;
+ 2151 invokevirtual      java/io/PrintWriter.println:(Ljava/lang/String;)V
+ 2154 aload_1            
+ 2155 new                java/lang/StringBuilder
+ 2158 dup                
+ 2159 invokespecial      java/lang/StringBuilder.<init>:()V
+ 2162 getstatic          r.q:[Ljava/lang/String;
+ 2165 CONST 704
+ 2172 aaload              // STRING ofFastRender:
+ 2173 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+ 2176 aload_0            
+ 2177 getfield           wj.aGJ:Z
+ 2180 invokevirtual      java/lang/StringBuilder.append:(Z)Ljava/lang/StringBuilder;
+ 2183 invokevirtual      java/lang/StringBuilder.toString:()Ljava/lang/String;
+ 2186 invokevirtual      java/io/PrintWriter.println:(Ljava/lang/String;)V
+ 2189 aload_1            
+ 2190 new                java/lang/StringBuilder
+ 2193 dup                
+ 2194 invokespecial      java/lang/StringBuilder.<init>:()V
+ 2197 getstatic          r.q:[Ljava/lang/String;
+ 2200 CONST 705
+ 2207 aaload              // STRING ofTranslucentBlocks:
+ 2208 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+ 2211 aload_0            
+ 2212 getfield           wj.aFo:I
+ 2215 invokevirtual      java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+ 2218 invokevirtual      java/lang/StringBuilder.toString:()Ljava/lang/String;
+ 2221 invokevirtual      java/io/PrintWriter.println:(Ljava/lang/String;)V
+ 2224 aload_1            
+
+===========================================================================
+CLASS wj — SHA-256 392ac2b923055971a8d14e0949c2f63dfa329d8bb4a5bde001141c09a39a6a71
+METHOD uR ()V
+# EXCERPT offsets 54..160; code outside this interval omitted
+   54 aload_1            
+   55 new                java/lang/StringBuilder
+   58 dup                
+   59 invokespecial      java/lang/StringBuilder.<init>:()V
+   62 getstatic          r.q:[Ljava/lang/String;
+   65 CONST 507
+   72 aaload              // STRING mouseSensitivity:
+   73 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   76 aload_0            
+   77 getfield           wj.aHl:F
+   80 invokevirtual      java/lang/StringBuilder.append:(F)Ljava/lang/StringBuilder;
+   83 invokevirtual      java/lang/StringBuilder.toString:()Ljava/lang/String;
+   86 invokevirtual      java/io/PrintWriter.println:(Ljava/lang/String;)V
+   89 aload_1            
+   90 new                java/lang/StringBuilder
+   93 dup                
+   94 invokespecial      java/lang/StringBuilder.<init>:()V
+   97 getstatic          r.q:[Ljava/lang/String;
+  100 CONST 508
+  107 aaload              // STRING fov:
+  108 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  111 aload_0            
+  112 getfield           wj.aGr:F
+  115 CONST 70.0
+  117 fsub               
+  118 CONST 40.0
+  120 fdiv               
+  121 invokevirtual      java/lang/StringBuilder.append:(F)Ljava/lang/StringBuilder;
+  124 invokevirtual      java/lang/StringBuilder.toString:()Ljava/lang/String;
+  127 invokevirtual      java/io/PrintWriter.println:(Ljava/lang/String;)V
+  130 aload_1            
+  131 new                java/lang/StringBuilder
+  134 dup                
+  135 invokespecial      java/lang/StringBuilder.<init>:()V
+  138 getstatic          r.q:[Ljava/lang/String;
+  141 CONST 509
+  148 aaload              // STRING gamma:
+  149 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  152 aload_0            
+  153 getfield           wj.aFJ:F
+  156 invokevirtual      java/lang/StringBuilder.append:(F)Ljava/lang/StringBuilder;
+  159 invokevirtual      java/lang/StringBuilder.toString:()Ljava/lang/String;
+# EXCERPT offsets 1000..1080; code outside this interval omitted
+ 1000 new                java/lang/StringBuilder
+ 1003 dup                
+ 1004 invokespecial      java/lang/StringBuilder.<init>:()V
+ 1007 getstatic          r.q:[Ljava/lang/String;
+ 1010 CONST 534
+ 1017 aaload              // STRING enableVsync:
+ 1018 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+ 1021 aload_0            
+ 1022 getfield           wj.aFb:Z
+ 1025 invokevirtual      java/lang/StringBuilder.append:(Z)Ljava/lang/StringBuilder;
+ 1028 invokevirtual      java/lang/StringBuilder.toString:()Ljava/lang/String;
+ 1031 invokevirtual      java/io/PrintWriter.println:(Ljava/lang/String;)V
+ 1034 aload_1            
+ 1035 new                java/lang/StringBuilder
+ 1038 dup                
+ 1039 invokespecial      java/lang/StringBuilder.<init>:()V
+ 1042 getstatic          r.q:[Ljava/lang/String;
+ 1045 CONST 535
+ 1052 aaload              // STRING useVbo:
+ 1053 invokevirtual      java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+ 1056 aload_0            
+ 1057 getfield           wj.aFh:Z
+ 1060 invokevirtual      java/lang/StringBuilder.append:(Z)Ljava/lang/StringBuilder;
+ 1063 invokevirtual      java/lang/StringBuilder.toString:()Ljava/lang/String;
+ 1066 invokevirtual      java/io/PrintWriter.println:(Ljava/lang/String;)V
+ 1069 aload_1            
+ 1070 new                java/lang/StringBuilder
+ 1073 dup                
+ 1074 invokespecial      java/lang/StringBuilder.<init>:()V
+ 1077 getstatic          r.q:[Ljava/lang/String;
+ 1080 CONST 536
+# EXCERPT offsets 1993..2001; code outside this interval omitted
+ 1993 aload_0            
+ 1994 invokevirtual      wj.uQ:()V
+ 1997 aload_0            
+ 1998 invokevirtual      wj.uX:()V
+ 2001 return             
+
+===========================================================================
+CLASS ahe — SHA-256 38a57f8bfac45ede641afb0c8b6946d19d0c1e92097ece59df2e0370381a8946
+METHOD <clinit> ()V
+    0 invokestatic       ahe.awd:()Lahf;
+    3 putstatic          ahe.dgW:Lahf;
+    6 return             
+
+===========================================================================
+CLASS ahe — SHA-256 38a57f8bfac45ede641afb0c8b6946d19d0c1e92097ece59df2e0370381a8946
+METHOD awd ()Lahf;
+# EXCERPT offsets 0..20; code outside this interval omitted
+    0 getstatic          Xv.cqt:Ljava/lang/String;
+    3 astore_0           
+    4 aload_0            
+    5 ifnonnull          12
+    8 getstatic          ahf.dhc:Lahf;
+   11 areturn            
+   12 aload_0            
+   13 invokevirtual      java/lang/String.toLowerCase:()Ljava/lang/String;
+   16 invokevirtual      java/lang/String.trim:()Ljava/lang/String;
+   19 astore_0           
+   20 aload_0            
+# EXCERPT offsets 148..180; code outside this interval omitted
+  148 aload_0            
+  149 getstatic          o.q:[Ljava/lang/String;
+  152 CONST 817
+  167 aaload              // STRING intel
+  168 invokevirtual      java/lang/String.startsWith:(Ljava/lang/String;)Z
+  171 ifeq               180
+  174 getstatic          ahf.dgZ:Lahf;
+  177 goto               343
+  180 aload_0            
+
+===========================================================================
+CLASS ahe — SHA-256 38a57f8bfac45ede641afb0c8b6946d19d0c1e92097ece59df2e0370381a8946
+METHOD awe ()Z
+    0 getstatic          ahe.dgW:Lahf;
+    3 getstatic          ahf.dgZ:Lahf;
+    6 if_acmpne          18
+    9 CONST 1
+   15 goto               25
+   18 CONST 0
+   25 ireturn            
+
+===========================================================================
+CLASS ahf — SHA-256 5adc5bad5058d4b9e88ab9ad2d27f5dcdef172e2cab8ca2a6c047935600d6984
+METHOD <clinit> ()V
+# EXCERPT offsets 71..104; code outside this interval omitted
+   71 new                ahf
+   74 dup                
+   75 getstatic          o.q:[Ljava/lang/String;
+   78 CONST 823
+   93 aaload              // STRING MC_GL_RENDERER_INTEL
+   94 CONST 2
+  101 invokespecial      ahf.<init>:(Ljava/lang/String;I)V
+  104 putstatic          ahf.dgZ:Lahf;
+
+===========================================================================
+CLASS wm — SHA-256 332acf3724c57809b4e5ad3d6510d9fb4d9c0421c9170a2764396865a56c1723
+METHOD <clinit> ()V
+# EXCERPT offsets 389..440; code outside this interval omitted
+  389 new                wm
+  392 dup                
+  393 getstatic          r.q:[Ljava/lang/String;
+  396 CONST 732
+  403 aaload              // STRING FRAMERATE_LIMIT
+  404 CONST 8
+  406 getstatic          r.q:[Ljava/lang/String;
+  409 CONST 732
+  416 aaload              // STRING FRAMERATE_LIMIT
+  417 CONST 8
+  419 getstatic          r.q:[Ljava/lang/String;
+  422 CONST 733
+  429 aaload              // STRING options.framerateLimit
+  430 CONST 1
+  431 CONST 0
+  432 CONST 0
+  433 CONST 260.0
+  435 CONST 5.0
+  437 invokespecial      wm.<init>:(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;ZZFFF)V
+  440 putstatic          wm.aHC:Lwm;
+# EXCERPT offsets 1830..1872; code outside this interval omitted
+ 1832 CONST 790
+ 1839 aaload              // STRING SMOOTH_FPS
+ 1840 CONST 37
+ 1842 getstatic          q.q:[Ljava/lang/String;
+ 1845 CONST 104
+ 1852 aaload              // STRING  
+ 1853 CONST 999
+ 1856 getstatic          r.q:[Ljava/lang/String;
+ 1859 CONST 791
+ 1866 aaload              // STRING of.options.SMOOTH_FPS
+ 1867 CONST 0
+ 1868 CONST 0
+ 1869 invokespecial      wm.<init>:(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;ZZ)V
+ 1872 putstatic          wm.aIf:Lwm;
+
+===========================================================================
+CLASS wm — SHA-256 332acf3724c57809b4e5ad3d6510d9fb4d9c0421c9170a2764396865a56c1723
+METHOD vd ()F
+    0 aload_0            
+    1 getfield           wm.aJs:F
+    4 freturn            
+
+===========================================================================
+CLASS wm — SHA-256 332acf3724c57809b4e5ad3d6510d9fb4d9c0421c9170a2764396865a56c1723
+METHOD <init> (Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;ZZFFF)V
+    0 aload_0            
+    1 aload_1            
+    2 iload_2            
+    3 invokespecial      java/lang/Enum.<init>:(Ljava/lang/String;I)V
+    6 aload_0            
+    7 aload              5
+    9 putfield           wm.aJp:Ljava/lang/String;
+   12 aload_0            
+   13 iload              6
+   15 putfield           wm.aJn:Z
+   18 aload_0            
+   19 iload              7
+   21 putfield           wm.aJo:Z
+   24 aload_0            
+   25 fload              8
+   27 putfield           wm.aJr:F
+   30 aload_0            
+   31 fload              9
+   33 putfield           wm.aJs:F
+   36 aload_0            
+   37 fload              10
+   39 putfield           wm.aJq:F
+   42 return             
+
+===========================================================================
+CLASS Xv — SHA-256 61b0ebb9640583ba098bd0a84005d2e17953510ca2579cfaf67c91c916072648
+METHOD acq ()Z
+    0 invokestatic       Xv.adD:()I
+    3 CONST 1
+    4 if_icmpgt          11
+    7 CONST 1
+    8 goto               12
+   11 CONST 0
+   12 ireturn            
+
+===========================================================================
+CLASS Xv — SHA-256 61b0ebb9640583ba098bd0a84005d2e17953510ca2579cfaf67c91c916072648
+METHOD adD ()I
+    0 getstatic          Xv.cqx:I
+    3 ireturn            
+
+===========================================================================
+CLASS Xv — SHA-256 61b0ebb9640583ba098bd0a84005d2e17953510ca2579cfaf67c91c916072648
+METHOD add ()V
+    0 invokestatic       java/lang/Runtime.getRuntime:()Ljava/lang/Runtime;
+    3 invokevirtual      java/lang/Runtime.availableProcessors:()I
+    6 putstatic          Xv.cqx:I
+    9 return             
+
+===========================================================================
+CLASS Xv — SHA-256 61b0ebb9640583ba098bd0a84005d2e17953510ca2579cfaf67c91c916072648
+METHOD q (Lwj;)V
+    0 getstatic          Xv.Gv:Lwj;
+    3 ifnonnull          19
+    6 aload_0            
+    7 putstatic          Xv.Gv:Lwj;
+   10 invokestatic       org/lwjgl/opengl/Display.getDesktopDisplayMode:()Lorg/lwjgl/opengl/DisplayMode;
+   13 putstatic          Xv.cqG:Lorg/lwjgl/opengl/DisplayMode;
+   16 invokestatic       Xv.add:()V
+   19 return             
+
+===========================================================================
+CLASS Xv — SHA-256 61b0ebb9640583ba098bd0a84005d2e17953510ca2579cfaf67c91c916072648
+METHOD <clinit> ()V
+# EXCERPT offsets 62..68; code outside this interval omitted
+   62 CONST 0
+   63 putstatic          Xv.cqy:I
+   66 CONST 0
+   67 putstatic          Xv.cqx:I
+
+===========================================================================
+CLASS ir — SHA-256 039df8e43227cedd8280a354d77b7923d704a8e1b42819f43270128bf552562a
+METHOD go ()Z
+    0 aload_0            
+    1 invokespecial      ir.gA:()I
+    4 i2f                
+    5 getstatic          wm.aHC:Lwm;
+    8 invokevirtual      wm.vd:()F
+   11 fcmpg              
+   12 ifge               19
+   15 CONST 1
+   16 goto               20
+   19 CONST 0
+   20 ireturn            
+
+===========================================================================
+CLASS ir — SHA-256 039df8e43227cedd8280a354d77b7923d704a8e1b42819f43270128bf552562a
+METHOD gw ()V
+# EXCERPT offsets 953..1024; code outside this interval omitted
+  953 dup                
+  954 CONST 0
+  955 aload_0            
+  956 getfield           ir.Gv:Lwj;
+  959 getfield           wj.aFW:I
+  962 i2f                
+  963 getstatic          wm.aHC:Lwm;
+  966 invokevirtual      wm.vd:()F
+  969 fcmpl              
+  970 ifne               987
+  973 getstatic          e.q:[Ljava/lang/String;
+  976 CONST 190
+  983 aaload              // STRING inf
+  984 goto               997
+  987 aload_0            
+  988 getfield           ir.Gv:Lwj;
+  991 getfield           wj.aFW:I
+  994 invokestatic       java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+  997 aastore            
+  998 dup                
+  999 CONST 1
+ 1000 aload_0            
+ 1001 getfield           ir.Gv:Lwj;
+ 1004 getfield           wj.aFb:Z
+ 1007 ifeq               1024
+ 1010 getstatic          e.q:[Ljava/lang/String;
+ 1013 CONST 191
+ 1020 aaload              // STRING vsync
+ 1021 goto               1035
+ 1024 getstatic          q.q:[Ljava/lang/String;
+

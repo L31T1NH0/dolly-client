@@ -1,0 +1,418 @@
+Compiled from "FoamFixTransformer.java"
+final class pl.asie.foamfix.coremod.FoamFixTransformer$5 implements pl.asie.foamfix.coremod.TransformerFunction {
+  pl.asie.foamfix.coremod.FoamFixTransformer$5();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: invokespecial #15                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  public byte[] transform(byte[], java.lang.String);
+    descriptor: ([BLjava/lang/String;)[B
+    Code:
+       0: new           #21                 // class org/objectweb/asm/ClassReader
+       3: dup
+       4: aload_1
+       5: invokespecial #24                 // Method org/objectweb/asm/ClassReader."<init>":([B)V
+       8: astore_3
+       9: new           #26                 // class org/objectweb/asm/ClassWriter
+      12: dup
+      13: iconst_0
+      14: invokespecial #29                 // Method org/objectweb/asm/ClassWriter."<init>":(I)V
+      17: astore        4
+      19: aload_3
+      20: new           #31                 // class pl/asie/foamfix/coremod/FoamFixReplaceClassSimpleName
+      23: dup
+      24: iconst_2
+      25: anewarray     #33                 // class java/lang/String
+      28: dup
+      29: iconst_0
+      30: ldc           #35                 // String updateEntities
+      32: aastore
+      33: dup
+      34: iconst_1
+      35: ldc           #37                 // String func_72939_s
+      37: aastore
+      38: invokespecial #40                 // Method pl/asie/foamfix/coremod/FoamFixReplaceClassSimpleName."<init>":([Ljava/lang/String;)V
+      41: ldc           #41                 // int 327680
+      43: aload         4
+      45: invokevirtual #45                 // Method pl/asie/foamfix/coremod/FoamFixReplaceClassSimpleName.getClassVisitor:(ILorg/objectweb/asm/ClassVisitor;)Lorg/objectweb/asm/ClassVisitor;
+      48: iconst_0
+      49: invokevirtual #49                 // Method org/objectweb/asm/ClassReader.accept:(Lorg/objectweb/asm/ClassVisitor;I)V
+      52: aload         4
+      54: invokevirtual #53                 // Method org/objectweb/asm/ClassWriter.toByteArray:()[B
+      57: areturn
+}
+Compiled from "FoamFixReplaceClassSimpleName.java"
+class pl.asie.foamfix.coremod.FoamFixReplaceClassSimpleName$FFMethodVisitor extends org.objectweb.asm.MethodVisitor {
+  final pl.asie.foamfix.coremod.FoamFixReplaceClassSimpleName this$0;
+    descriptor: Lpl/asie/foamfix/coremod/FoamFixReplaceClassSimpleName;
+
+  public pl.asie.foamfix.coremod.FoamFixReplaceClassSimpleName$FFMethodVisitor(pl.asie.foamfix.coremod.FoamFixReplaceClassSimpleName, int, org.objectweb.asm.MethodVisitor);
+    descriptor: (Lpl/asie/foamfix/coremod/FoamFixReplaceClassSimpleName;ILorg/objectweb/asm/MethodVisitor;)V
+    Code:
+       0: aload_0
+       1: aload_1
+       2: putfield      #14                 // Field this$0:Lpl/asie/foamfix/coremod/FoamFixReplaceClassSimpleName;
+       5: aload_0
+       6: iload_2
+       7: aload_3
+       8: invokespecial #17                 // Method org/objectweb/asm/MethodVisitor."<init>":(ILorg/objectweb/asm/MethodVisitor;)V
+      11: return
+
+  public void visitMethodInsn(int, java.lang.String, java.lang.String, java.lang.String, boolean);
+    descriptor: (ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+    Code:
+       0: iload_1
+       1: sipush        182
+       4: if_icmpne     48
+       7: ldc           #27                 // String getSimpleName
+       9: aload_3
+      10: invokevirtual #33                 // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+      13: ifeq          48
+      16: ldc           #35                 // String java/lang/Class
+      18: aload_2
+      19: invokevirtual #33                 // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+      22: ifeq          48
+      25: getstatic     #41                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      28: ldc           #43                 // String Replaced INVOKEVIRTUAL getSimpleName
+      30: invokevirtual #49                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      33: aload_0
+      34: iload_1
+      35: aload_2
+      36: ldc           #51                 // String getName
+      38: aload         4
+      40: iload         5
+      42: invokespecial #53                 // Method org/objectweb/asm/MethodVisitor.visitMethodInsn:(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+      45: goto          59
+      48: aload_0
+      49: iload_1
+      50: aload_2
+      51: aload_3
+      52: aload         4
+      54: iload         5
+      56: invokespecial #53                 // Method org/objectweb/asm/MethodVisitor.visitMethodInsn:(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+      59: return
+}
+Compiled from "FoamyBlockStateContainer.java"
+public class pl.asie.foamfix.common.FoamyBlockStateContainer extends net.minecraft.block.state.BlockState {
+  public pl.asie.foamfix.common.FoamyBlockStateContainer(net.minecraft.block.Block, net.minecraft.block.properties.IProperty<?>...);
+    descriptor: (Lnet/minecraft/block/Block;[Lnet/minecraft/block/properties/IProperty;)V
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: invokespecial #12                 // Method net/minecraft/block/state/BlockState."<init>":(Lnet/minecraft/block/Block;[Lnet/minecraft/block/properties/IProperty;)V
+       6: return
+
+  protected net.minecraft.block.state.BlockState$StateImplementation createState(net.minecraft.block.Block, com.google.common.collect.ImmutableMap<net.minecraft.block.properties.IProperty, java.lang.Comparable>, com.google.common.collect.ImmutableMap<net.minecraftforge.common.property.IUnlistedProperty<?>, com.google.common.base.Optional<?>>);
+    descriptor: (Lnet/minecraft/block/Block;Lcom/google/common/collect/ImmutableMap;Lcom/google/common/collect/ImmutableMap;)Lnet/minecraft/block/state/BlockState$StateImplementation;
+    Code:
+       0: new           #23                 // class pl/asie/foamfix/common/FoamyBlockState
+       3: dup
+       4: aload_0
+       5: invokestatic  #29                 // Method pl/asie/foamfix/common/PropertyValueMapper.getOrCreate:(Lnet/minecraft/block/state/BlockState;)Lpl/asie/foamfix/common/PropertyValueMapper;
+       8: aload_1
+       9: aload_2
+      10: invokespecial #32                 // Method pl/asie/foamfix/common/FoamyBlockState."<init>":(Lpl/asie/foamfix/common/PropertyValueMapper;Lnet/minecraft/block/Block;Lcom/google/common/collect/ImmutableMap;)V
+      13: areturn
+}
+Compiled from "ProxyCommon.java"
+public class pl.asie.foamfix.ProxyCommon {
+  public pl.asie.foamfix.ProxyCommon();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: invokespecial #9                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  private void optimizeLaunchWrapper();
+    descriptor: ()V
+    Code:
+       0: getstatic     #20                 // Field pl/asie/foamfix/shared/FoamFixShared.config:Lpl/asie/foamfix/shared/FoamFixConfig;
+       3: getfield      #26                 // Field pl/asie/foamfix/shared/FoamFixConfig.lwWeakenResourceCache:Z
+       6: ifeq          93
+       9: getstatic     #32                 // Field pl/asie/foamfix/FoamFix.logger:Lorg/apache/logging/log4j/Logger;
+      12: ldc           #34                 // String Weakening LaunchWrapper resource cache...
+      14: invokeinterface #40,  2           // InterfaceMethod org/apache/logging/log4j/Logger.info:(Ljava/lang/String;)V
+      19: aload_0
+      20: invokevirtual #44                 // Method java/lang/Object.getClass:()Ljava/lang/Class;
+      23: invokevirtual #50                 // Method java/lang/Class.getClassLoader:()Ljava/lang/ClassLoader;
+      26: checkcast     #52                 // class net/minecraft/launchwrapper/LaunchClassLoader
+      29: astore_1
+      30: ldc           #52                 // class net/minecraft/launchwrapper/LaunchClassLoader
+      32: iconst_1
+      33: anewarray     #54                 // class java/lang/String
+      36: dup
+      37: iconst_0
+      38: ldc           #56                 // String resourceCache
+      40: aastore
+      41: invokestatic  #62                 // Method net/minecraftforge/fml/relauncher/ReflectionHelper.findField:(Ljava/lang/Class;[Ljava/lang/String;)Ljava/lang/reflect/Field;
+      44: astore_2
+      45: aload_2
+      46: aload_1
+      47: invokevirtual #68                 // Method java/lang/reflect/Field.get:(Ljava/lang/Object;)Ljava/lang/Object;
+      50: checkcast     #70                 // class java/util/Map
+      53: astore_3
+      54: invokestatic  #76                 // Method com/google/common/cache/CacheBuilder.newBuilder:()Lcom/google/common/cache/CacheBuilder;
+      57: invokevirtual #79                 // Method com/google/common/cache/CacheBuilder.weakValues:()Lcom/google/common/cache/CacheBuilder;
+      60: invokevirtual #83                 // Method com/google/common/cache/CacheBuilder.build:()Lcom/google/common/cache/Cache;
+      63: invokeinterface #89,  1           // InterfaceMethod com/google/common/cache/Cache.asMap:()Ljava/util/concurrent/ConcurrentMap;
+      68: astore        4
+      70: aload         4
+      72: aload_3
+      73: invokeinterface #93,  2           // InterfaceMethod java/util/Map.putAll:(Ljava/util/Map;)V
+      78: aload_2
+      79: aload_1
+      80: aload         4
+      82: invokevirtual #97                 // Method java/lang/reflect/Field.set:(Ljava/lang/Object;Ljava/lang/Object;)V
+      85: goto          93
+      88: astore_1
+      89: aload_1
+      90: invokevirtual #100                // Method java/lang/Exception.printStackTrace:()V
+      93: return
+    Exception table:
+       from    to  target type
+          19    85    88   Class java/lang/Exception
+
+  private void optimizeForgeRegistries();
+    descriptor: ()V
+    Code:
+       0: iconst_0
+       1: istore_1
+       2: iconst_0
+       3: istore_2
+       4: ldc           #112                // String net.minecraftforge.fml.common.registry.PersistentRegistryManager$PersistentRegistry
+       6: invokestatic  #116                // Method java/lang/Class.forName:(Ljava/lang/String;)Ljava/lang/Class;
+       9: astore_3
+      10: aload_3
+      11: ldc           #118                // String registries
+      13: invokevirtual #122                // Method java/lang/Class.getDeclaredField:(Ljava/lang/String;)Ljava/lang/reflect/Field;
+      16: astore        4
+      18: ldc           #124                // class net/minecraftforge/fml/common/registry/FMLControlledNamespacedRegistry
+      20: ldc           #126                // String availabilityMap
+      22: invokevirtual #122                // Method java/lang/Class.getDeclaredField:(Ljava/lang/String;)Ljava/lang/reflect/Field;
+      25: astore        5
+      27: ldc           #128                // class java/util/BitSet
+      29: ldc           #130                // String sizeIsSticky
+      31: invokevirtual #122                // Method java/lang/Class.getDeclaredField:(Ljava/lang/String;)Ljava/lang/reflect/Field;
+      34: astore        6
+      36: ldc           #128                // class java/util/BitSet
+      38: ldc           #132                // String trimToSize
+      40: iconst_0
+      41: anewarray     #46                 // class java/lang/Class
+      44: invokevirtual #136                // Method java/lang/Class.getDeclaredMethod:(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+      47: astore        7
+      49: aload         4
+      51: iconst_1
+      52: invokevirtual #140                // Method java/lang/reflect/Field.setAccessible:(Z)V
+      55: aload         5
+      57: iconst_1
+      58: invokevirtual #140                // Method java/lang/reflect/Field.setAccessible:(Z)V
+      61: aload         6
+      63: iconst_1
+      64: invokevirtual #140                // Method java/lang/reflect/Field.setAccessible:(Z)V
+      67: aload         7
+      69: iconst_1
+      70: invokevirtual #143                // Method java/lang/reflect/Method.setAccessible:(Z)V
+      73: aload_3
+      74: invokevirtual #147                // Method java/lang/Class.getEnumConstants:()[Ljava/lang/Object;
+      77: astore        8
+      79: aload         8
+      81: arraylength
+      82: istore        9
+      84: iconst_0
+      85: istore        10
+      87: iload         10
+      89: iload         9
+      91: if_icmpge     223
+      94: aload         8
+      96: iload         10
+      98: aaload
+      99: astore        11
+     101: aload         4
+     103: aload         11
+     105: invokevirtual #68                 // Method java/lang/reflect/Field.get:(Ljava/lang/Object;)Ljava/lang/Object;
+     108: checkcast     #151                // class com/google/common/collect/BiMap
+     111: astore        12
+     113: aload         12
+     115: invokeinterface #155,  1          // InterfaceMethod com/google/common/collect/BiMap.values:()Ljava/util/Set;
+     120: invokeinterface #161,  1          // InterfaceMethod java/util/Set.iterator:()Ljava/util/Iterator;
+     125: astore        13
+     127: aload         13
+     129: invokeinterface #167,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+     134: ifeq          217
+     137: aload         13
+     139: invokeinterface #171,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+     144: checkcast     #124                // class net/minecraftforge/fml/common/registry/FMLControlledNamespacedRegistry
+     147: astore        14
+     149: aload         5
+     151: aload         14
+     153: invokevirtual #68                 // Method java/lang/reflect/Field.get:(Ljava/lang/Object;)Ljava/lang/Object;
+     156: checkcast     #128                // class java/util/BitSet
+     159: astore        15
+     161: aload         15
+     163: invokevirtual #175                // Method java/util/BitSet.size:()I
+     166: istore        16
+     168: iload         16
+     170: ldc           #176                // int 65536
+     172: if_icmple     214
+     175: aload         6
+     177: aload         15
+     179: iconst_0
+     180: invokestatic  #182                // Method java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+     183: invokevirtual #97                 // Method java/lang/reflect/Field.set:(Ljava/lang/Object;Ljava/lang/Object;)V
+     186: aload         7
+     188: aload         15
+     190: iconst_0
+     191: anewarray     #4                  // class java/lang/Object
+     194: invokevirtual #186                // Method java/lang/reflect/Method.invoke:(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+     197: pop
+     198: iinc          1, 1
+     201: iload_2
+     202: iload         16
+     204: aload         15
+     206: invokevirtual #175                // Method java/util/BitSet.size:()I
+     209: isub
+     210: iconst_3
+     211: ishr
+     212: iadd
+     213: istore_2
+     214: goto          127
+     217: iinc          10, 1
+     220: goto          87
+     223: getstatic     #190                // Field pl/asie/foamfix/shared/FoamFixShared.ramSaved:I
+     226: iload_2
+     227: iadd
+     228: putstatic     #190                // Field pl/asie/foamfix/shared/FoamFixShared.ramSaved:I
+     231: getstatic     #32                 // Field pl/asie/foamfix/FoamFix.logger:Lorg/apache/logging/log4j/Logger;
+     234: new           #192                // class java/lang/StringBuilder
+     237: dup
+     238: invokespecial #193                // Method java/lang/StringBuilder."<init>":()V
+     241: ldc           #195                // String Optimized
+     243: invokevirtual #199                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     246: iload_1
+     247: invokevirtual #202                // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+     250: ldc           #204                // String  FML registries, saving
+     252: invokevirtual #199                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     255: iload_2
+     256: invokevirtual #202                // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+     259: ldc           #206                // String  bytes.
+     261: invokevirtual #199                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     264: invokevirtual #210                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     267: invokeinterface #40,  2           // InterfaceMethod org/apache/logging/log4j/Logger.info:(Ljava/lang/String;)V
+     272: goto          280
+     275: astore_1
+     276: aload_1
+     277: invokevirtual #100                // Method java/lang/Exception.printStackTrace:()V
+     280: return
+    Exception table:
+       from    to  target type
+           0   272   275   Class java/lang/Exception
+
+  public void preInit();
+    descriptor: ()V
+    Code:
+       0: return
+
+  public void init();
+    descriptor: ()V
+    Code:
+       0: return
+
+  public void postInit();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: invokespecial #232                // Method optimizeLaunchWrapper:()V
+       4: getstatic     #20                 // Field pl/asie/foamfix/shared/FoamFixShared.config:Lpl/asie/foamfix/shared/FoamFixConfig;
+       7: getfield      #235                // Field pl/asie/foamfix/shared/FoamFixConfig.geDynamicRegistrySizeScaling:Z
+      10: ifeq          17
+      13: aload_0
+      14: invokespecial #237                // Method optimizeForgeRegistries:()V
+      17: invokestatic  #240                // Method pl/asie/foamfix/FoamFix.updateRamSaved:()V
+      20: return
+}
+Compiled from "FoamFix.java"
+public class pl.asie.foamfix.FoamFix {
+  public static pl.asie.foamfix.ProxyCommon proxy;
+    descriptor: Lpl/asie/foamfix/ProxyCommon;
+
+  public static org.apache.logging.log4j.Logger logger;
+    descriptor: Lorg/apache/logging/log4j/Logger;
+
+  public static int stage;
+    descriptor: I
+
+  private static final java.text.DecimalFormat RAM_SAVED_DF;
+    descriptor: Ljava/text/DecimalFormat;
+
+  public pl.asie.foamfix.FoamFix();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: invokespecial #39                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  public void preInit(net.minecraftforge.fml.common.event.FMLPreInitializationEvent);
+    descriptor: (Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
+    Code:
+       0: new           #46                 // class pl/asie/foamfix/common/FoamFixHelper
+       3: dup
+       4: invokespecial #47                 // Method pl/asie/foamfix/common/FoamFixHelper."<init>":()V
+       7: putstatic     #53                 // Field pl/asie/foamfix/api/FoamFixAPI.HELPER:Lpl/asie/foamfix/api/IFoamFixHelper;
+      10: ldc           #54                 // String foamfix
+      12: invokestatic  #60                 // Method org/apache/logging/log4j/LogManager.getLogger:(Ljava/lang/String;)Lorg/apache/logging/log4j/Logger;
+      15: putstatic     #62                 // Field logger:Lorg/apache/logging/log4j/Logger;
+      18: iconst_0
+      19: putstatic     #64                 // Field stage:I
+      22: getstatic     #70                 // Field pl/asie/foamfix/shared/FoamFixShared.config:Lpl/asie/foamfix/shared/FoamFixConfig;
+      25: aload_1
+      26: invokevirtual #76                 // Method net/minecraftforge/fml/common/event/FMLPreInitializationEvent.getSuggestedConfigurationFile:()Ljava/io/File;
+      29: iconst_0
+      30: invokevirtual #82                 // Method pl/asie/foamfix/shared/FoamFixConfig.init:(Ljava/io/File;Z)V
+      33: getstatic     #84                 // Field proxy:Lpl/asie/foamfix/ProxyCommon;
+      36: invokevirtual #88                 // Method pl/asie/foamfix/ProxyCommon.preInit:()V
+      39: return
+
+  public void init(net.minecraftforge.fml.common.event.FMLInitializationEvent);
+    descriptor: (Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
+    Code:
+       0: iconst_1
+       1: putstatic     #64                 // Field stage:I
+       4: getstatic     #97                 // Field net/minecraftforge/common/MinecraftForge.EVENT_BUS:Lnet/minecraftforge/fml/common/eventhandler/EventBus;
+       7: getstatic     #84                 // Field proxy:Lpl/asie/foamfix/ProxyCommon;
+      10: invokevirtual #103                // Method net/minecraftforge/fml/common/eventhandler/EventBus.register:(Ljava/lang/Object;)V
+      13: getstatic     #84                 // Field proxy:Lpl/asie/foamfix/ProxyCommon;
+      16: invokevirtual #105                // Method pl/asie/foamfix/ProxyCommon.init:()V
+      19: return
+
+  public void postInit(net.minecraftforge.fml.common.event.FMLPostInitializationEvent);
+    descriptor: (Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
+    Code:
+       0: iconst_2
+       1: putstatic     #64                 // Field stage:I
+       4: getstatic     #84                 // Field proxy:Lpl/asie/foamfix/ProxyCommon;
+       7: invokevirtual #110                // Method pl/asie/foamfix/ProxyCommon.postInit:()V
+      10: return
+
+  public void serverStopping(net.minecraftforge.fml.common.event.FMLServerStoppingEvent);
+    descriptor: (Lnet/minecraftforge/fml/common/event/FMLServerStoppingEvent;)V
+    Code:
+       0: return
+
+  public static void updateRamSaved();
+    descriptor: ()V
+    Code:
+       0: return
+
+  static {};
+    descriptor: ()V
+    Code:
+       0: new           #118                // class java/text/DecimalFormat
+       3: dup
+       4: ldc           #120                // String 0.#
+       6: invokespecial #123                // Method java/text/DecimalFormat."<init>":(Ljava/lang/String;)V
+       9: putstatic     #125                // Field RAM_SAVED_DF:Ljava/text/DecimalFormat;
+      12: return
+}
